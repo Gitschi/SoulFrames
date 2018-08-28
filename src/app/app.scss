@@ -1,16 +1,157 @@
-// http://ionicframework.com/docs/theming/
+// Global SASS Styles
 
+.toolbar-background {
+    background: linear-gradient(to bottom right, #262141, #1e395e);
+  }
 
-// App Global Sass
-// --------------------------------------------------
-// Put style rules here that you want to apply globally. These
-// styles are for the entire app and not just one component.
-// Additionally, this file can be also used as an entry point
-// to import other Sass files to be included in the output CSS.
-//
-// Shared Sass variables, which can be used to adjust Ionic's
-// default Sass variables, belong in "theme/variables.scss".
-//
-// To declare rules for a specific mode, create a child rule
-// for the .md, .ios, or .wp mode classes. The mode class is
-// automatically applied to the <body> element in the app.
+#navTitle{
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+#navIcon{
+    color: white;
+}
+
+ion-header ion-icon.back-button-icon.icon {
+    color: white;
+}
+
+#menuTitle{
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+.helpIcon{
+    position: absolute;
+    right: 20px;
+    top: 13px;
+    color: white;
+    font-size: 30px
+}
+
+ion-content{
+    background: linear-gradient(to bottom right, #1e395e, #d9c471);
+}
+
+#pageHeader{
+    text-align: center;
+    color: white;
+    margin-bottom: 50px;
+}
+
+.contentContainer{
+    background-color: white;
+    width: 100%;
+    border-radius: 10px; 
+    padding: 15px 10px;
+    margin: auto;
+}
+
+.charContainer{
+    width: 120px;
+    height: 120px;
+    background-color: white;
+    text-align: center;
+    border-radius: 10px;
+    margin: 20px auto 0 auto;
+}
+
+.charHeader{
+    font-weight: 600;
+    font-size: 15px;
+    padding-top: 5px;
+    margin: 0 0 10px 0;
+}
+
+.cardImage{
+    width: 70%;
+}
+
+.shadow {
+    box-shadow: 0 0 50px 5px black;
+}
+
+.scrollContainer{
+    height: 100%;
+}
+
+.headerRow{
+    position: sticky;
+    top: 0px;
+    font-weight: 700;
+    line-height: 30px;
+    z-index: 2;
+    min-width: 790px;
+}
+
+.sheetRow:nth-of-type(odd) ion-col{
+    background: rgb(44, 44, 44);
+}
+
+.spreadGap{
+    color: White;
+    padding-left: 10px;
+}
+
+.gapHeader{
+    margin: 8px 0 8px 0;
+    font-size: 20px;
+    font-weight: 700;
+    text-shadow: 1px 1px black;
+}
+
+.gapHeaderStance{
+    color: #84b2ff;
+}
+
+.sheetColumn{
+    background: rgb(32, 32, 32);
+    color: white;
+    text-align: center;
+}
+
+.wideCol{
+    min-width: 180px;
+}
+
+.narrowCol{
+    min-width: 50px;
+}
+
+ion-col div{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.inputImg{
+    height: 20px;
+    margin: 0 2px 0 2px;
+}
+
+.inputImgWide{
+    width: 27px;
+}
+
+.command{
+    margin-top: 2px;
+}
+
+.negVal{
+    color: #ff5b5b;
+}
+
+.posVal{
+    color: #53fc8b;
+}
+
+.specVal{
+    color: #f2ef63;
+}
+
+.neutVal{
+    color: white;
+}

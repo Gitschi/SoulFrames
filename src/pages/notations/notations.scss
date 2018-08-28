@@ -1,0 +1,35 @@
+.notationHeaders{
+    font-size: 25px;
+    text-align: center;
+}
+
+.subHeaderContainer{
+    background-color: rgb(32, 32, 32);
+    width: 100px;
+    height: 30px;
+    border-radius: 10px; 
+    color: White;
+    font-weight: 700;
+    text-align: center;
+    line-height: 2.2;
+}
+
+.notationSubHeaders{
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.leftCol{
+    max-width: 120px;
+}
+
+.notationImage{
+    width: 50px;
+    margin-left: 25px;
+}
+
+.horizontalAlign{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}

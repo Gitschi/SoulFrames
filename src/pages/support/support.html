@@ -1,0 +1,58 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle id="navIcon">
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title><p id="navTitle">Support our Work</p></ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <div class="shadow contentContainer contentGap">
+    <div class="headerDiv headerDivOrange">
+        <h2 class="headersText">Follow us on Twitter</h2>
+    </div>
+    <p>Stay up to date with the apps development and our other Fighting Game related projects.</p>
+    <div class="buttonContainer">
+      <a href="https://twitter.com/SuperTurboKanji?lang=en" class="contactLink">
+        <button class="supportBtn btnMedium"><ion-icon name="logo-twitter" class="contactIcon"></ion-icon>@superturbokanji</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="shadow contentContainer contentGap">
+    <div class="headerDiv headerDivPurple">
+        <h2 class="headersText">Send Feedback</h2>
+    </div>
+    <p>Report bugs and inaccuracies or let us know about features you would like to see added.<br>Send us an E-mail or slide into the DMs.</p>
+    <div class="buttonContainer">
+      <a href="mailto:superturbokanji@gmail.com" class="contactLink">
+        <button class="supportBtn btnLarge"><ion-icon name="mail" class="contactIcon"></ion-icon>superturbokanji@gmail.com</button>
+      </a><br>
+      <a href="https://twitter.com/SuperTurboKanji?lang=en" class="contactLink">
+        <button class="supportBtn btnMedium"><ion-icon name="logo-twitter" class="contactIcon"></ion-icon>@superturbokanji</button>
+      </a>
+    </div>
+  </div>
+
+  <div class="shadow contentContainer contentGap">
+      <div class="headerDiv headerDivRed">
+          <h2 class="headersText">Donate</h2>
+      </div>
+      <p>I want as many people as possible to experience the joy of understanding fighting games at a deeper level, which is why this app will always be free and ad-free.<br><br>
+        However making and updating an app like this takes a high amount of time and effort. Having some donations flowing in would enable me to spend more time improving and evolving this app.</p>
+        
+        <div class="buttonContainer">
+          <button class="supportBtn btnMedium">Paypal</button>  
+
+          <p class="paymentHeader">Bitcoin Public Key</p>  
+          <input type="text" value="1EDdqgoFUNFBf7C3F9HsW2BuNjsepNYzXD" id="btcAddress" readonly="readonly">
+          <button (click)="btcCopy()" id="btcBtn" class="supportBtn btnSmall">Copy</button>
+
+          <p class="paymentHeader">Ethereum Public Key</p>  
+          <input type="text" value="0x0F772Ae292F0f5F318aE3022b2847Da2B53e7F18" id="etherAddress" readonly="readonly">
+          <button (click)="etherCopy()" id="etherBtn" class="supportBtn btnSmall">Copy</button>
+        </div>
+  </div>  
+    
+</ion-content>

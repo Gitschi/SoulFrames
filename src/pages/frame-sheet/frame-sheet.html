@@ -1,0 +1,129 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title><p id="navTitle">SC6 {{ this.charService.selectedChar.name }}</p></ion-title>
+    <ion-icon name="help-circle" class="helpIcon" (click)="goToOtherPageNotations()"></ion-icon>
+  </ion-navbar>
+</ion-header>
+
+<ion-content has-bouncing="true">
+    <ion-scroll scrollX="true" scrollY="true" class="scrollContainer">
+      <ion-row nowrap class="headerRow shadow">
+        <ion-col class="sheetColumn wideCol">
+          <div>Move</div>
+        </ion-col>
+        <ion-col class="sheetColumn wideCol">
+          <div>Command</div>
+        </ion-col>
+        <ion-col class="sheetColumn narrowCol">
+          <div>Level</div>
+        </ion-col>
+        <ion-col class="sheetColumn narrowCol">
+          <div>SU</div>
+        </ion-col>
+        <ion-col class="sheetColumn narrowCol">
+          <div>GRD</div>
+        </ion-col>
+        <ion-col class="sheetColumn narrowCol">
+          <div>Hit</div>
+        </ion-col>
+        <ion-col class="sheetColumn narrowCol">
+          <div>CH</div>
+        </ion-col>
+        <ion-col class="sheetColumn narrowCol">
+          <div>DMG</div>
+        </ion-col>
+        <ion-col class="sheetColumn wideCol">
+          <div>Notes</div>
+        </ion-col>
+      </ion-row>
+  
+    <div *ngFor="let category of this.moveList; let i = index">
+			<div *ngIf="i < 6"> <!-- Loop for all categorys except stances -->
+				<div *ngIf="this.moveList[i][0]">  <!-- Only Shows header if array holds moves -->
+					<ion-row nowrap class="spreadGap"> 
+						<div>
+							<p class="gapHeader">{{ this.categoryList[i] }}</p>
+						</div>
+					</ion-row>
+				
+					<ion-row class="sheetRow" nowrap *ngFor="let move of category">
+						<ion-col class="sheetColumn wideCol">
+							<div>{{ move.term }}</div>
+						</ion-col>
+						<ion-col class="sheetColumn wideCol">
+							<div class="command">{{ move.command }}</div>
+						</ion-col>
+						<ion-col class="sheetColumn narrowCol">
+							<div>{{ move.level }}</div>
+						</ion-col>
+						<ion-col class="sheetColumn narrowCol">
+							<div>{{ move.startup }}</div>
+						</ion-col>
+						<ion-col class="sheetColumn narrowCol">
+							<div class="targetNum">{{ move.guard }}</div>
+						</ion-col>
+						<ion-col class="sheetColumn narrowCol">
+							<div class="targetNum">{{ move.hit }}</div>
+						</ion-col>
+						<ion-col class="sheetColumn narrowCol">
+							<div class="targetNum">{{ move.counterHit }}</div>
+						</ion-col>
+						<ion-col class="sheetColumn narrowCol">
+							<div>{{ move.damage }}</div>
+						</ion-col>
+						<ion-col class="sheetColumn wideCol">
+							<div>{{ move.notes }}</div>
+						</ion-col>
+					</ion-row>
+				</div>
+			</div>
+				
+			<!-- If statement here possibly causes lag -->
+			 <div *ngIf="i === 6"> <!-- Loop for stances -->
+				<div *ngFor="let stance of category; let j = index">
+					<div *ngIf="this.moveList[i][j][0]"> <!-- Only Shows header if array holds moves -->
+						<ion-row nowrap class="spreadGap"> 
+							<div>
+								<p class="gapHeader gapHeaderStance">{{ this.charService.selectedChar.stanceList[j].term }}</p>
+							</div>
+						</ion-row>
+				
+						<ion-row class="sheetRow" nowrap *ngFor="let stanceMove of stance">
+							<ion-col class="sheetColumn wideCol">
+								<div>{{ stanceMove.term }}</div>
+							</ion-col>
+							<ion-col class="sheetColumn wideCol">
+								<div class="command">{{ stanceMove.command }}</div>
+							</ion-col>
+							<ion-col class="sheetColumn narrowCol">
+								<div>{{ stanceMove.level }}</div>
+							</ion-col>
+							<ion-col class="sheetColumn narrowCol">
+								<div>{{ stanceMove.startup }}</div>
+							</ion-col>
+							<ion-col class="sheetColumn narrowCol">
+								<div class="targetNum">{{ stanceMove.guard }}</div>
+							</ion-col>
+							<ion-col class="sheetColumn narrowCol">
+								<div class="targetNum">{{ stanceMove.hit }}</div>
+							</ion-col>
+							<ion-col class="sheetColumn narrowCol">
+								<div class="targetNum">{{ stanceMove.counterHit }}</div>
+							</ion-col>
+							<ion-col class="sheetColumn narrowCol">
+								<div>{{ stanceMove.damage }}</div>
+							</ion-col>
+							<ion-col class="sheetColumn wideCol">
+								<div>{{ stanceMove.notes }}</div>
+							</ion-col>
+						</ion-row>
+					</div>
+				</div>
+			</div>   
+    </div>
+  
+		<button (click)="filter()">Stance Filter</button>
+		<button (click)="reset()">Filter Reset</button>
+
+    </ion-scroll>
+  </ion-content>  

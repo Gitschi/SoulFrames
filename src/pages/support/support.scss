@@ -1,0 +1,84 @@
+    .contentGap{
+        margin-bottom: 20px;
+    }
+    
+    .headerDiv{
+        margin: -15px -10px 0 -10px;
+        padding: 10px 0 10px 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom: 1px solid #7c7c7c;
+        color: white;
+    }
+    
+    .headerDivOrange{
+        background-color: #ffc148;
+    }
+
+    .headerDivPurple{
+        background-color: #761fd0;
+    }
+
+    .headerDivRed{
+        background-color: #a42a2d;
+    }
+
+    .headersText{
+        text-align: center;
+        margin: 0;
+        text-shadow: 1px 1px #7c7c7c;
+    }
+
+    .buttonContainer{
+        text-align: center;
+    }
+
+    .supportBtn{
+        height: 30px;
+        border-radius: 5px;
+        border: 1px solid  #7c7c7c;
+        font-weight: 700;
+        text-decoration: none;
+        color: white;
+        background-color: #387ef5;
+    }
+
+    .supportBtnCopied{
+        background-color: #32db64;
+    }
+
+    .btnSmall{
+        width: 80px;
+    }
+
+    .btnMedium{
+        width: 150px;
+    }
+
+    .btnLarge{
+        width: 210px;
+        margin-bottom: 10px;
+    }
+
+    .contactLink{
+        text-decoration: none;
+    }
+
+    .contactIcon{
+        margin-right: 5px;
+    }
+
+    .paymentHeader{
+        font-weight: 700;
+        text-align: center;
+    }
+
+    #btcAddress, #etherAddress{
+        width: 180px;
+        border: 1px solid #7c7c7c;
+    }
+
+    #etherIcon{
+        width: 10px;
+        margin-right: 5px;
+    }

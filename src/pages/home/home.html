@@ -1,18 +1,25 @@
 <ion-header>
   <ion-navbar>
-    <button ion-button menuToggle>
+    <button ion-button menuToggle id="navIcon">
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
+    <ion-title><p id="navTitle">Soul Calibur 6</p></ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
+  <h3 id="pageHeader">Frame Data Sheets</h3>
 
-  <button ion-button secondary menuToggle>Toggle Menu</button>
+  <ion-grid>
+    <ion-row align-items-center>
+      <ion-col *ngFor="let char of this.chars">
+        <div class="charContainer shadow" (click)="toFrameSheet(char.name)">
+            <p class="charHeader">{{ char.name }}</p>
+            <img class="cardImage" [src]="char.imagePath">        
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid> 
+
 </ion-content>

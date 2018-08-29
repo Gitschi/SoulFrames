@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { Char, CharStance } from "../models/char.model";
 import { MoveService } from "./move.service";
 import { StanceService } from "./stance.service";
+import { StringManipulationService } from "./string-manipulation.service";
 
 @Injectable()
 
@@ -28,7 +29,11 @@ export class CharService{
 
   public selectedChar;
 
-  constructor(private moveService: MoveService, private stanceService: StanceService){}
+  constructor(
+    private moveService: MoveService,
+    private stanceService: StanceService,
+    private stringManipulationService: StringManipulationService
+  ){}
 
   getChars(){
     return this.chars.slice();
@@ -38,8 +43,9 @@ export class CharService{
     for(let i = 0; i < this.chars.length; i++){
       if(this.chars[i].name === selected){
         this.selectedChar = this.chars[i];
+        this.stringManipulationService.charStances = this.selectedChar.stanceList;
+        this.stringManipulationService.preloadCommandImages(this.selectedChar.moveList)
       }
     }
   }
-
 }

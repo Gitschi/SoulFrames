@@ -15,6 +15,7 @@ import { FrameSheetPage } from '../pages/frame-sheet/frame-sheet';
 import { CharService } from '../services/char.service';
 import { MoveService } from '../services/move.service';
 import { StanceService } from '../services/stance.service';
+import { StringManipulationService } from '../services/string-manipulation.service';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { StanceService } from '../services/stance.service';
     CharService,
     MoveService,
     StanceService,
+    StringManipulationService,
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })

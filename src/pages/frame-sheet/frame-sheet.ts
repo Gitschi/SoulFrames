@@ -9,13 +9,15 @@ import { StringManipulationService } from '../../services/string-manipulation.se
 @Component({
   selector: 'page-frame-sheet',
   templateUrl: 'frame-sheet.html',
-  providers: [StringManipulationService]
+  providers: []
 })
 
 export class FrameSheetPage {
+  // Imports moveList and makes a copy of it
   origMoveList = this.charService.selectedChar.moveList;
   moveList = Object.assign([], this.origMoveList);
 
+  // Sets categories for headers
   categoryList: string[] = [
     "Horizontal Moves", "Vertical Moves", "Kick Moves", "Simultaneous Press Moves", "8-Way Run Moves", "Throws"
   ];
@@ -25,18 +27,17 @@ export class FrameSheetPage {
     public navParams: NavParams,
     private charService: CharService,
     private stringManipulationService: StringManipulationService
-  ){
-    // Sends movelist to string manipulation service when constructing
-    if(this.charService.selectedChar.stanceList){
-      this.stringManipulationService.charStances = this.charService.selectedChar.stanceList;
-    }
-  }
+  ){}
 
+  // Resets moveList to original
   reset(){
     this.moveList = Object.assign([], this.origMoveList);
+    console.log(this.moveList);
   }
 
+  // Filters moveList to only show StanceMoves
   filter(){
+    //Only execute if moveList[6] exist, which means the character has stances
     if(this.moveList[6]){
       for(let i = 0; i < this.moveList.length -1; i++){
         this.moveList[i] = this.moveList[i].filter(
@@ -51,7 +52,7 @@ export class FrameSheetPage {
   }
 
   ionViewDidLoad() {
-    this.stringManipulationService.changeSheetStyle();
+    this.stringManipulationService.changeNumberColoration();
   }
 
   goToOtherPageNotations() {

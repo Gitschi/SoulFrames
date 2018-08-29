@@ -51,7 +51,9 @@
 							<div>{{ move.term }}</div>
 						</ion-col>
 						<ion-col class="sheetColumn wideCol">
-							<div class="command">{{ move.command }}</div>
+							<div class="command">
+								<img class="inputImg" *ngFor="let commandImg of move.command" [src]="commandImg">
+							</div>
 						</ion-col>
 						<ion-col class="sheetColumn narrowCol">
 							<div>{{ move.level }}</div>
@@ -93,7 +95,9 @@
 								<div>{{ stanceMove.term }}</div>
 							</ion-col>
 							<ion-col class="sheetColumn wideCol">
-								<div class="command">{{ stanceMove.command }}</div>
+								<div class="command">
+										<img class="inputImg" *ngFor="let commandImg of stanceMove.command" [src]="commandImg">
+								</div>
 							</ion-col>
 							<ion-col class="sheetColumn narrowCol">
 								<div>{{ stanceMove.level }}</div>

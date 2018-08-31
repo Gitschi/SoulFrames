@@ -60,12 +60,6 @@ export class StringManipulationService{
     }
   }
 
-  changeSheetStyle(moveList: any[]){
-    // this.changeCommandImages();
-    // this.preloadCommandImages(moveList);
-    this.changeNumberColoration();
-  }
-
   alphanumericToImagepath(alphaNum: string){
     switch(alphaNum){
 

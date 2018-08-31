@@ -32,6 +32,8 @@ export class FrameSheetPage {
   // Resets moveList to original
   reset(){
     this.moveList = Object.assign([], this.origMoveList);
+    
+    // Movelist isn't correctly resetting for stancemoves
     console.log(this.moveList);
   }
 

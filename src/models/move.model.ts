@@ -8,21 +8,7 @@ export class Move{
     public hit: any,
     public counterHit: any,
     public damage: any,
-    public notes: string
-  ){};
-}
-
-export class MoveStance{
-  constructor(
-    public term: string,
-    public command: string,
-    public level: string,
-    public startup: any,
-    public guard: any,
-    public hit: any,
-    public counterHit: any,
-    public damage: any,
-    public notes: string,
-    public intoStance: boolean
+    public notes?: string,
+    public intoStance?: boolean
   ){};
 }

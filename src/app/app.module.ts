@@ -16,6 +16,7 @@ import { CharService } from '../services/char.service';
 import { MoveService } from '../services/move.service';
 import { StanceService } from '../services/stance.service';
 import { StringManipulationService } from '../services/string-manipulation.service';
+import { FiltersComponent } from '../components/filters/filters';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { StringManipulationService } from '../services/string-manipulation.servi
     NotationsPage,
     HowtousePage,
     SupportPage,
-    FrameSheetPage
+    FrameSheetPage,
+    FiltersComponent
   ],
   imports: [
     BrowserModule,

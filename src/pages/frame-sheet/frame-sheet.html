@@ -5,6 +5,9 @@
   </ion-navbar>
 </ion-header>
 
+<!-- Adds filter menu on the right -->
+<filters></filters>
+
 <ion-content has-bouncing="true">
     <ion-scroll scrollX="true" scrollY="true" class="scrollContainer">
       <ion-row nowrap class="headerRow shadow">
@@ -125,9 +128,5 @@
 				</div>
 			</div>   
     </div>
-  
-		<button (click)="filter()">Stance Filter</button>
-		<button (click)="reset()">Filter Reset</button>
-
-    </ion-scroll>
-  </ion-content>  
+  </ion-scroll>
+</ion-content>

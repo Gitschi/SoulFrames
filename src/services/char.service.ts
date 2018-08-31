@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { Char, CharStance } from "../models/char.model";
+import { Char } from "../models/char.model";
 import { MoveService } from "./move.service";
 import { StanceService } from "./stance.service";
 import { StringManipulationService } from "./string-manipulation.service";
@@ -7,9 +7,11 @@ import { StringManipulationService } from "./string-manipulation.service";
 @Injectable()
 
 export class CharService{
+  private initializedChars: string[] = []; // Will hold an array of initialized chars
+
   private chars: Char[] = [
-    new CharStance("Mitsurugi", "assets/imgs/Silhouettes/MitsuSilhouette.png", this.moveService.Mitsurugi, this.stanceService.Mitsurugi),
-    new CharStance("Sophitia", "assets/imgs/Silhouettes/SophitiaSilhouette.png", this.moveService.Sophitia, this.stanceService.Sophitia),
+    new Char("Mitsurugi", "assets/imgs/Silhouettes/MitsuSilhouette.png", this.moveService.Mitsurugi, this.stanceService.Mitsurugi),
+    new Char("Sophitia", "assets/imgs/Silhouettes/SophitiaSilhouette.png", this.moveService.Sophitia, this.stanceService.Sophitia),
     new Char("Groh", "assets/imgs/Silhouettes/MitsuSilhouette.png", this.moveService.Sophitia),
     new Char("Kilik", "assets/imgs/Silhouettes/MitsuSilhouette.png", this.moveService.Sophitia),
     new Char("Xianghua", "assets/imgs/Silhouettes/MitsuSilhouette.png", this.moveService.Sophitia),
@@ -25,6 +27,8 @@ export class CharService{
     new Char("Voldo", "assets/imgs/Silhouettes/NightmareSilhouette.png", this.moveService.Sophitia),
     new Char("Astaroth", "assets/imgs/Silhouettes/NightmareSilhouette.png", this.moveService.Sophitia),
     new Char("Seong Mi-Na", "assets/imgs/Silhouettes/NightmareSilhouette.png", this.moveService.Sophitia),
+    new Char("Talim", "assets/imgs/Silhouettes/NightmareSilhouette.png", this.moveService.Sophitia),
+    new Char("Azwel", "assets/imgs/Silhouettes/NightmareSilhouette.png", this.moveService.Sophitia)
   ];
 
   public selectedChar;
@@ -35,17 +39,35 @@ export class CharService{
     private stringManipulationService: StringManipulationService
   ){}
 
+  // Returns characters
   getChars(){
     return this.chars.slice();
   }
 
+  // Uses info of clicked character to change variables and preload images
   charSelect(selected){
     for(let i = 0; i < this.chars.length; i++){
       if(this.chars[i].name === selected){
         this.selectedChar = this.chars[i];
         this.stringManipulationService.charStances = this.selectedChar.stanceList;
-        this.stringManipulationService.preloadCommandImages(this.selectedChar.moveList)
+
+        // Only executes if not already initialized once
+        if(!this.initCheck(selected)){
+          this.initializedChars.push(selected);
+          this.stringManipulationService.preloadCommandImages(this.selectedChar.moveList)  
+        }
       }
     }
+  }
+
+  // Checks if the picked characters images have already been initialized
+  initCheck(charName){
+    let isInit: boolean = false;
+    for(let i = 0; i < this.initializedChars.length; i++){
+      if(charName === this.initializedChars[i]){
+        isInit = true;
+      }
+    }
+    return isInit;
   }
 }

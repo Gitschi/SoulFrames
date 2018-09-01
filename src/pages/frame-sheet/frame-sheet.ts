@@ -19,7 +19,7 @@ export class FrameSheetPage {
 
   // Sets categories for headers
   categoryList: string[] = [
-    "Horizontal Moves", "Vertical Moves", "Kick Moves", "Simultaneous Press Moves", "8-Way Run Moves", "Throws"
+    "Horizontal Attacks", "Vertical Attacks", "Kicks", "Dual Button Attacks", "8-Way Run Moves", "Throws"
   ];
 
   constructor(

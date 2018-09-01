@@ -113,7 +113,7 @@ export class StringManipulationService{
       case "(": //Hold Upper Right
         return "assets/imgs/input/I9.png";
 
-      //Standard Buttons
+      //Attack Buttons
       case "A": //Horizontal
         return "assets/imgs/input/A.png";
       
@@ -126,7 +126,7 @@ export class StringManipulationService{
       case "G": //Guard
         return "assets/imgs/input/G.png";
 
-      //Inverted Standard Buttons
+      //Inverted Attack Buttons
       case "a": //Hold Horizontal
         return "assets/imgs/input/Ia.png";
       
@@ -139,6 +139,16 @@ export class StringManipulationService{
       case "g": //Hold Guard
         return "assets/imgs/input/Ig.png";
 
+      //Small Attack Buttons
+      /*case "z": //Slide A
+        return "assets/imgs/input/Sa.png";
+      
+      case "x": //Slide B
+        return "assets/imgs/input/Sb.png";
+
+      case "c": //Slide C
+        return "assets/imgs/input/Sk.png";*/
+      
       //Multi Button
       case "M": // A~B Horizontal ~ Vertical
         return "assets/imgs/input/M.png";
@@ -162,11 +172,27 @@ export class StringManipulationService{
       case "R": // Run
         return "assets/imgs/input/R.png";
       
+      /*case "J": // Jump
+        return "assets/imgs/input/J.png";*/
+
       case "W": // While Rising
         return "assets/imgs/input/W.png";
       
       case "H": // Counter Hit
         return "assets/imgs/input/H.png";
+      
+      /*case "v": // During Hit
+        return "assets/imgs/input/v.png";*/
+
+      // Throws
+      /*case "Z": // Left Side throw
+        return "assets/imgs/input/leftT.png";
+
+      case "X": // Right Side Throw
+        return "assets/imgs/input/rightT.png";
+
+      case "V": //Back throw
+        return "assets/imgs/input/backT.png";*/
 
       // Symbols
       case "+": // Plus
@@ -181,6 +207,12 @@ export class StringManipulationService{
 
       case "]": // Stance 2
         return this.charStances[1].imagePath;
+
+      case "{": // Stance 3
+        return this.charStances[2].imagePath;
+
+      case "}": // Stance 4
+        return this.charStances[3].imagePath;
     }
   }
 }

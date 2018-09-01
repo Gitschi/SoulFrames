@@ -10,4 +10,11 @@ export class StanceService{
     new Stance("Angel Step", "assets/imgs/input/SophitiaAngelStep.png"),
     new Stance("Angel Side Step", "assets/imgs/input/SophitiaAngelSideStep.png")
   ]
+
+  Raphael = [
+    new Stance("Preperation", "assets/imgs/input/SophitiaAngelStep.png"),
+    new Stance("Aerial Shift", "assets/imgs/input/SophitiaAngelSideStep.png"),
+    new Stance("Shadow Evade", "assets/imgs/input/MitsuMist.png"),
+    new Stance("Quick Parade", "assets/imgs/input/MitsuSilent.png")
+  ]
 }

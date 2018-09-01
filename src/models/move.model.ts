@@ -3,7 +3,7 @@ export class Move{
     public term: string,
     public command: string,
     public level: string,
-    public startup: any,
+    public impact: number,
     public guard: any,
     public hit: any,
     public counterHit: any,

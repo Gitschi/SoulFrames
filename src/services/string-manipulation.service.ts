@@ -140,14 +140,14 @@ export class StringManipulationService{
         return "assets/imgs/input/Ig.png";
 
       //Small Attack Buttons
-      /*case "z": //Slide A
+      case "z": //Slide A
         return "assets/imgs/input/Sa.png";
       
       case "x": //Slide B
         return "assets/imgs/input/Sb.png";
 
       case "c": //Slide C
-        return "assets/imgs/input/Sk.png";*/
+        return "assets/imgs/input/Sk.png";
       
       //Multi Button
       case "M": // A~B Horizontal ~ Vertical
@@ -172,8 +172,8 @@ export class StringManipulationService{
       case "R": // Run
         return "assets/imgs/input/R.png";
       
-      /*case "J": // Jump
-        return "assets/imgs/input/J.png";*/
+      case "J": // Jump
+        return "assets/imgs/input/J.png";
 
       case "W": // While Rising
         return "assets/imgs/input/W.png";
@@ -181,18 +181,18 @@ export class StringManipulationService{
       case "H": // Counter Hit
         return "assets/imgs/input/H.png";
       
-      /*case "v": // During Hit
-        return "assets/imgs/input/v.png";*/
+      case "v": // During Hit
+        return "assets/imgs/input/v.png";
 
       // Throws
-      /*case "Z": // Left Side throw
-        return "assets/imgs/input/leftT.png";
+      case "Z": // Left Side throw
+        return "assets/imgs/input/left.png";
 
       case "X": // Right Side Throw
-        return "assets/imgs/input/rightT.png";
+        return "assets/imgs/input/right.png";
 
       case "V": //Back throw
-        return "assets/imgs/input/backT.png";*/
+        return "assets/imgs/input/back.png";
 
       // Symbols
       case "+": // Plus

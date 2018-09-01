@@ -282,7 +282,7 @@ export class MoveService{
   ]
 
   Raphael = [
-    // Reversal Edge not implemented yet
+    // Reversal Edge and Gauge Attacks not implemented
     // Horizontal Moves
     [
       new Move("Temple Bayonet", "AA", "HH", null, null, null, null, null), // G cancel
@@ -308,10 +308,10 @@ export class MoveService{
       new Move("Single Montante", "x4", "M", null, null, null, null, null),
       new Move("Triple Botta in Tempo", "6BBB", "HHM", null, null, null, null, null),
       new Move("Triple Botta in Tempo(just)", "6BBB", "HHM", null, null, null, null, null),
-      new Move("Triple Botta in Tempo ~ Aerial Shift", "6B4", "H", null, null, null, null, null, null, true),// Guard Impact
+      new Move("Triple Botta in Tempo ~ Aerial Shift", "6B4", "H", null, null, null, null, null, null, true), // Guard Impact
       new Move("Triple Botta in Tempo ~ Preparation", "6Bb", "HH", null, null, null, null, null, "Dodges high attacks", true),
-      new Move("Raptor Rush", "3B", "M", null, null, null, null, null, "Dodges high attacks"),
-      new Move("Raptor Rush ~ Preparation", "3b", "M", null, null, null, null, null, null, true),
+      new Move("Raptor Rush", "3B", "M", null, null, null, null, null, null),
+      new Move("Raptor Rush ~ Preparation", "3b", "M", null, null, null, null, null, "Dodges high attacks", true),
       new Move("Fendante", "2B", "M", null, null, null, null, null), // ~FC
       new Move("Striking Snake", "1B", "L", null, null, null, null, null),
       new Move("Striking Snake ~ Preparation", "1b", "L", null, null, null, null, null, "Dodges high attacks", true),
@@ -373,13 +373,13 @@ export class MoveService{
       new Move("Squalambrato Concierto", "!|$|uAB", "MM", null, null, null, null, null),
       new Move("Squalambrato Concierto ~ Preparation", "!|$|uAb", "MM", null, null, null, null, null, "Dodges high attacks", true),
       new Move("Broken Thrust", "^B", "M", null, null, null, null, null),
-      new Move("Broken Thrust ~Preparation", "^b", "M", null, null, null, null, null, "Dodges high attacks", true),
+      new Move("Broken Thrust ~ Preparation", "^b", "M", null, null, null, null, null, "Dodges high attacks", true),
       new Move("Death Guise", "#|(B", "L", null, null, null, null, null),
       new Move("Valiant Falcon", "@|*BB", "MM", null, null, null, null, null),
       new Move("Aiming Shaft", "!|$|u", "", null, null, null, null, null),
       new Move("Venom Side Kick", "#|^|(K", "H", null, null, null, null, null),
       new Move("Venom Roundhouse", "@|*K", "H", null, null, null, null, null),
-      new Move("Dark Moon", "!|%|uK", "M", null, null, null, null, null, "Into Back turned on hit"),
+      new Move("Dark Moon", "!|$|uK", "M", null, null, null, null, null, "Into Back turned on hit"),
       new Move("Wyvern's Tail", "#|^|(A+B", "M", null, null, null, null, null), // G cancel
       new Move("Bloody Funeral", "!|$|uA+B", "M", null, null, null, null, null), // Unblockable Art
       new Move("Bloody Funeral ~ Preparation", "!|$|uA+BG", null, null, null, null, null, null, "Dodges high attacks", true),
@@ -391,9 +391,9 @@ export class MoveService{
     [
       new Move("Unending Stings", "A+G", "H", null, null, null, null, null, "Breakable"),
       new Move("Death Puppet", "4A+G", "H", null, null, null, null, null, "Breakable"),
-      new Move("A Lesson in Massacre", "Z", "H", null, null, null, null, null),
-      new Move("Undertaker", "X", "H", null, null, null, null, null),
-      new Move("Pure Sacrifice", "V", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth"),
+      new Move("A Lesson in Massacre", "ZA+G", "H", null, null, null, null, null),
+      new Move("Undertaker", "XA+G", "H", null, null, null, null, null),
+      new Move("Pure Sacrifice", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth"),
       new Move("Thousand Hornets", "A+G", "H", null, null, null, null, null, "Breakable") // While Soul Charged
     ],
     // Stances

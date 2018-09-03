@@ -13,6 +13,21 @@ import { StringManipulationService } from '../../services/string-manipulation.se
 })
 
 export class FrameSheetPage {
+  // Sets how many arrays the object has before stances
+  nonStanceCategories: number = 6;
+
+  // Array of status image paths
+  attributes: object = {
+    BA: "assets/imgs/attributes/BA.png",
+    GI: "assets/imgs/attributes/GI.png",
+    LH: "assets/imgs/attributes/LH.png",
+    RE: "assets/imgs/attributes/RE.png",
+    SC: "assets/imgs/attributes/SC.png",
+    SS: "assets/imgs/attributes/SS.png",
+    TH: "assets/imgs/attributes/TH.png",
+    UA: "assets/imgs/attributes/UA.png"
+  }
+
   // Imports moveList and makes a copy of it
   origMoveList = this.charService.selectedChar.moveList;
   moveList = Object.assign([], this.origMoveList);

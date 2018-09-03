@@ -9,6 +9,7 @@ export class Move{
     public counterHit: any,
     public damage: any,
     public notes?: string,
-    public intoStance?: boolean
+    public intoStance?: boolean,
+    public lethalHit?: boolean
   ){};
 }

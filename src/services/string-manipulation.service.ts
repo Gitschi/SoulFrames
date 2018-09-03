@@ -2,7 +2,7 @@ export class StringManipulationService{
   charStances = null;
   nonStanceCategories: number = 6;
 
-  // Loops through move-list and exchanges alphanumeric notation for image-paths
+  // Loops through move-list and exchanges alphanumeric notations and levels for image-paths
   preloadCommandImages(moveList: any[]) {
 
     // Loop through all categories except for stances
@@ -11,14 +11,25 @@ export class StringManipulationService{
       // Loop through single move
       for(let j = 0; j < moveList[i].length; j++){
         let fieldCommandImages: string[] = [];
+        let fieldLevelImages: string[] = [];
 
-        // Loop through single alphanumeric
+        // Loop through single alphanumeric of command
         for(let k = 0; k < moveList[i][j].command.length; k++){
-          let singleCommandImage: string = this.alphanumericToImagepath(moveList[i][j].command[k]);
+          let singleCommandImage: string = this.commandToImagepath(moveList[i][j].command[k]);
           fieldCommandImages.push(singleCommandImage);
         }
-
+        // Exchanges old command data with new data
         moveList[i][j].command = fieldCommandImages;
+
+        // Loop through single letter of level
+        if(moveList[i][j].level){
+          for(let k = 0; k < moveList[i][j].level.length; k++){
+            let singleLevelImage: string = this.levelToImagepath(moveList[i][j].level[k]);
+            fieldLevelImages.push(singleLevelImage);
+          }
+          // Exchanges old level data with new data
+          moveList[i][j].level = fieldLevelImages;  
+        }
       }
     }
 
@@ -31,14 +42,25 @@ export class StringManipulationService{
         // Loop through single move
         for(let k = 0; k < moveList[i][j].length; k++){
           let fieldCommandImages: string[] = [];
+          let fieldLevelImages: string[] = [];
 
-          // Loop through single alphanumeric
+          // Loop through single alphanumeric of command
           for(let l = 0; l < moveList[i][j][k].command.length; l++){
-            let singleCommandImage: string = this.alphanumericToImagepath(moveList[i][j][k].command[l]);
+            let singleCommandImage: string = this.commandToImagepath(moveList[i][j][k].command[l]);
             fieldCommandImages.push(singleCommandImage);
           }
-
+          // Exchanges old command data with new data
           moveList[i][j][k].command = fieldCommandImages;
+
+          // Loop through single letter of level
+          if(moveList[i][j][k].level){
+            for(let l = 0; l < moveList[i][j][k].level.length; l++){
+              let singleLevelImage: string = this.levelToImagepath(moveList[i][j][k].level[l]);
+              fieldLevelImages.push(singleLevelImage);
+            }
+            // Exchanges old level data with new data
+            moveList[i][j][k].level = fieldLevelImages;  
+          }
         }
       }
     }
@@ -60,9 +82,35 @@ export class StringManipulationService{
     }
   }
 
-  alphanumericToImagepath(alphaNum: string){
+  commandToImagepath(alphaNum: string){
     switch(alphaNum){
+      
+      //Attack Buttons
+      case "A": //Horizontal
+        return "assets/imgs/input/A.png";
+      
+      case "B": //Vertical
+        return "assets/imgs/input/B.png";
 
+      case "K": //Kick
+        return  "assets/imgs/input/K.png";
+
+      case "G": //Guard
+        return "assets/imgs/input/G.png";
+
+      //Inverted Attack Buttons
+      case "a": //Hold Horizontal
+        return "assets/imgs/input/Ia.png";
+      
+      case "b": //Hold Vertical
+        return "assets/imgs/input/Ib.png";
+
+      case "k": //Hold Kick
+        return "assets/imgs/input/Ik.png";
+
+      case "g": //Hold Guard
+        return "assets/imgs/input/Ig.png";
+      
       //Directions
       case "1": //Lower Left
         return "assets/imgs/input/1.png"
@@ -112,32 +160,6 @@ export class StringManipulationService{
       
       case "(": //Hold Upper Right
         return "assets/imgs/input/I9.png";
-
-      //Attack Buttons
-      case "A": //Horizontal
-        return "assets/imgs/input/A.png";
-      
-      case "B": //Vertical
-        return "assets/imgs/input/B.png";
-
-      case "K": //Kick
-        return  "assets/imgs/input/K.png";
-
-      case "G": //Guard
-        return "assets/imgs/input/G.png";
-
-      //Inverted Attack Buttons
-      case "a": //Hold Horizontal
-        return "assets/imgs/input/Ia.png";
-      
-      case "b": //Hold Vertical
-        return "assets/imgs/input/Ib.png";
-
-      case "k": //Hold Kick
-        return "assets/imgs/input/Ik.png";
-
-      case "g": //Hold Guard
-        return "assets/imgs/input/Ig.png";
 
       //Small Attack Buttons
       case "z": //Slide A
@@ -213,6 +235,26 @@ export class StringManipulationService{
 
       case "}": // Stance 4
         return this.charStances[3].imagePath;
+    }
+  }
+
+  levelToImagepath(level: string){
+    switch(level){
+      //Directions
+      case "L": // Low
+        return "assets/imgs/levels/Low.png"
+
+      case "M": // Mid
+        return "assets/imgs/levels/Mid.png";
+
+      case "H": // High
+        return "assets/imgs/levels/High.png";
+
+      case "S": // Special Low
+        return "assets/imgs/levels/Slow.png";
+
+      default: // Null
+        return null;
     }
   }
 }

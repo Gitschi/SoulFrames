@@ -34,14 +34,17 @@
         </ion-col>
         <ion-col class="sheetColumn narrowCol">
           <div>DMG</div>
-        </ion-col>
+				</ion-col>
+				<ion-col class="sheetColumn narrowCol">
+						<div>Attr</div>
+				</ion-col>	
         <ion-col class="sheetColumn wideCol">
           <div>Notes</div>
         </ion-col>
       </ion-row>
   
     <div *ngFor="let category of this.moveList; let i = index">
-			<div *ngIf="i < 6"> <!-- Loop for all categorys except stances -->
+			<div *ngIf="i < this.nonStanceCategories"> <!-- Loop for all categorys except stances -->
 				<div *ngIf="this.moveList[i][0]">  <!-- Only Shows header if array holds moves -->
 					<ion-row nowrap class="spreadGap"> 
 						<div>
@@ -54,12 +57,14 @@
 							<div>{{ move.term }}</div>
 						</ion-col>
 						<ion-col class="sheetColumn wideCol">
-							<div class="command">
+							<div class="colInnerDiv">
 								<img class="inputImg" *ngFor="let commandImg of move.command" [src]="commandImg">
 							</div>
 						</ion-col>
 						<ion-col class="sheetColumn narrowCol">
-							<div>{{ move.level }}</div>
+							<div class="colInnerDiv">
+								<img class="levelImg" *ngFor="let levelImg of move.level" [src]="levelImg">
+							</div>
 						</ion-col>
 						<ion-col class="sheetColumn narrowCol">
 							<div>{{ move.impact }}</div>
@@ -76,15 +81,21 @@
 						<ion-col class="sheetColumn narrowCol">
 							<div>{{ move.damage }}</div>
 						</ion-col>
+						<ion-col class="sheetColumn narrowCol">
+							<div class="colInnerDiv">
+								<img *ngIf="move.intoStance" [src]="this.attributes.SS" class="attributeImage">
+								<img *ngIf="move.lethalHit" [src]="this.attributes.LH" class="attributeImage">
+							</div>
+						</ion-col>			
 						<ion-col class="sheetColumn wideCol">
-							<div>{{ move.notes }}</div>
+							<div>{{ move.notes }}</div>		
 						</ion-col>
 					</ion-row>
 				</div>
 			</div>
 				
 			<!-- If statement here possibly causes lag -->
-			 <div *ngIf="i === 6"> <!-- Loop for stances -->
+			 <div *ngIf="i === this.nonStanceCategories"> <!-- Loop for stances -->
 				<div *ngFor="let stance of category; let j = index">
 					<div *ngIf="this.moveList[i][j][0]"> <!-- Only Shows header if array holds moves -->
 						<ion-row nowrap class="spreadGap"> 
@@ -98,12 +109,14 @@
 								<div>{{ stanceMove.term }}</div>
 							</ion-col>
 							<ion-col class="sheetColumn wideCol">
-								<div class="command">
+								<div class="colInnerDiv">
 										<img class="inputImg" *ngFor="let commandImg of stanceMove.command" [src]="commandImg">
 								</div>
 							</ion-col>
 							<ion-col class="sheetColumn narrowCol">
-								<div>{{ stanceMove.level }}</div>
+								<div class="colInnerDiv">
+										<img class="levelImg" *ngFor="let levelImg of stanceMove.level" [src]="levelImg">
+								</div>			
 							</ion-col>
 							<ion-col class="sheetColumn narrowCol">
 								<div>{{ stanceMove.impact }}</div>
@@ -120,8 +133,14 @@
 							<ion-col class="sheetColumn narrowCol">
 								<div>{{ stanceMove.damage }}</div>
 							</ion-col>
+							<ion-col class="sheetColumn narrowCol">
+								<div class="colInnerDiv">
+									<img *ngIf="stanceMove.intoStance" [src]="this.attributes.SS" class="attributeImage">
+									<img *ngIf="stanceMove.lethalHit" [src]="this.attributes.LH" class="attributeImage">
+								</div>
+							</ion-col>					
 							<ion-col class="sheetColumn wideCol">
-								<div>{{ stanceMove.notes }}</div>
+									<div>{{ stanceMove.notes }}</div>		
 							</ion-col>
 						</ion-row>
 					</div>

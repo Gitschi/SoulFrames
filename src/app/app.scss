@@ -129,15 +129,26 @@ ion-col div{
 
 .inputImg{
     height: 20px;
-    margin: 0 2px 0 2px;
+    margin: 0 2px;
 }
 
 .inputImgWide{
     width: 27px;
 }
 
-.command{
+.levelImg{
+    height: 15px;
+    margin: 0 1px;
+}
+
+.colInnerDiv{
     margin-top: 2px;
+}
+
+.attributeImage{
+    width: 25px;
+    margin: 0 1px;
+    display: inline-flex;
 }
 
 .negVal{

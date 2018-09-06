@@ -10,6 +10,13 @@ export class Move{
     public damage: any,
     public notes?: string,
     public intoStance?: boolean,
-    public lethalHit?: boolean
+    public lethalHit?: boolean,
+    public intoCrouch?: boolean,
+    public guardImpact?: boolean,
+    public reversalEdge?: boolean,
+    public soulCharge?: boolean,
+    public grab?: boolean,
+    public breakAttack?: boolean,
+    public unblockableArt?: boolean
   ){};
 }

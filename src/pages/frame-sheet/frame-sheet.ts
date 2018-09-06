@@ -25,7 +25,8 @@ export class FrameSheetPage {
     SC: "assets/imgs/attributes/SC.png",
     SS: "assets/imgs/attributes/SS.png",
     TH: "assets/imgs/attributes/TH.png",
-    UA: "assets/imgs/attributes/UA.png"
+    UA: "assets/imgs/attributes/UA.png",
+    C: "assets/imgs/attributes/C.png"
   }
 
   // Imports moveList and makes a copy of it

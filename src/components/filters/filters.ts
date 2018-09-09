@@ -7,21 +7,42 @@ import { FrameSheetPage } from '../../pages/frame-sheet/frame-sheet';
 })
 
 export class FiltersComponent {
+  viewMode: string = "categoryView";
+  dropDownShow = {
+    attributes: false
+  }
+  // Also adjust all dropDownshows upon closing menu
 
-  /*filterHeaders: string[] = [
-    "into Stance only",
-    "Reset"
-  ] */
+  filterSelection = {
+    intoStance: false,
+    intoCrouch: false,
+    breakAttack: false,
+    guardImpact: false,
+    unblockableArt: false,
+    reversalEdge: false,
+    soulCharge: false,
+    lethalHit: false,
+    throw: false
+  }
 
   constructor(
     private frameSheetPage: FrameSheetPage
   ){}
 
-  filter(){
-    this.frameSheetPage.filter();
+  menuSwitch(header: string){
+    switch(header){
+      case "attributes":
+      this.dropDownShow.attributes = !this.dropDownShow.attributes; 
+    }
   }
 
   reset(){
     this.frameSheetPage.reset();
+    Object.keys(this.filterSelection).forEach(v => this.filterSelection[v] = false)
   }
-}
+
+  apply(){
+    console.log(this.viewMode);
+    this.frameSheetPage.applyAttributeFilter(this.filterSelection);
+  }
+ }

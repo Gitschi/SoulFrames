@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, MenuController } from 'ionic-angular';
 import { NotationsPage } from '../notations/notations';
 
 import { CharService } from '../../services/char.service';
@@ -30,8 +30,8 @@ export class FrameSheetPage {
   }
 
   // Imports moveList and makes a copy of it
-  origMoveList = this.charService.selectedChar.moveList;
-  moveList = Object.assign([], this.origMoveList);
+  readonly origMoveList = this.charService.getMoveList();
+  moveList = this.origMoveList.slice();
 
   // Sets categories for headers
   categoryList: string[] = [
@@ -41,39 +41,176 @@ export class FrameSheetPage {
   constructor(
     public navCtrl: NavController,
     public navParams: NavParams,
+    public menuCtrl: MenuController,
     private charService: CharService,
     private stringManipulationService: StringManipulationService
   ){}
 
   // Resets moveList to original
   reset(){
-    this.moveList = Object.assign([], this.origMoveList);
+    this.moveList = this.origMoveList.slice();
     
     // Movelist isn't correctly resetting for stancemoves
+    console.log(this.charService.getMoveList());
+    console.log(this.origMoveList);
     console.log(this.moveList);
   }
 
-  // Filters moveList to only show StanceMoves
-  filter(){
-    //Only execute if moveList[6] exist, which means the character has stances
-    if(this.moveList[6]){
-      for(let i = 0; i < this.moveList.length -1; i++){
-        this.moveList[i] = this.moveList[i].filter(
-          move => move.intoStance);  
-      }
-  
-      for(let i = 0; i < this.moveList[6].length; i++){
-          this.moveList[6][i] = this.moveList[6][i].filter(
-            move => move.intoStance);    
-      }  
-    }
-  }
-
   ionViewDidLoad() {
+    // Changes colors for numerical values
     this.stringManipulationService.changeNumberColoration();
   }
 
+  // Goes to navigation page when pressing question mark icon
   goToOtherPageNotations() {
     this.navCtrl.push(NotationsPage);
   }
+
+  // Opens filter menu when button is pressed
+  openFilterMenu(){
+    this.menuCtrl.open('filtersMenu');
+  }
+
+  // Disables menu swipe on this page
+  ionViewDidEnter() {
+    this.menuCtrl.swipeEnable(false, 'mainMenu');
+    this.menuCtrl.swipeEnable(false, 'filtersMenu');
+  }
+
+  // Re-enables menu swipe when leaving page
+  ionViewWillLeave() {
+    this.menuCtrl.swipeEnable(true, 'mainMenu');
+    this.menuCtrl.swipeEnable(true, 'filtersMenu');
+  }
+
+  // Apply attribute filter from filters.ts
+  applyAttributeFilter(filterSelection: any){
+    // Resets array before applying filter
+    this.reset();
+    let index = 0; // Index for iteration
+      for (let value in filterSelection) {
+        // Manipulates Array when true
+        if(filterSelection[value] === true){
+          switch(index){
+            // intoStance
+            case 0:
+              for(let i = 0; i < this.moveList.length -1; i++){
+                this.moveList[i] = this.moveList[i].filter(
+                  move => move.intoStance);  
+              }
+      
+              for(let i = 0; i < this.moveList[this.nonStanceCategories].length; i++){
+                  this.moveList[this.nonStanceCategories][i] = this.moveList[this.nonStanceCategories][i].filter(
+                    move => move.intoStance);    
+              } 
+              break;
+              
+            // intoCrouch
+            case 1:
+              for(let i = 0; i < this.moveList.length -1; i++){
+                this.moveList[i] = this.moveList[i].filter(
+                  move => move.intoCrouch);  
+              }
+      
+              for(let i = 0; i < this.moveList[this.nonStanceCategories].length; i++){
+                  this.moveList[this.nonStanceCategories][i] = this.moveList[this.nonStanceCategories][i].filter(
+                    move => move.intoCrouch);    
+              }  
+              break;
+
+            // breakAttack
+            case 2:
+              for(let i = 0; i < this.moveList.length -1; i++){
+                this.moveList[i] = this.moveList[i].filter(
+                  move => move.breakAttack);  
+              }
+      
+              for(let i = 0; i < this.moveList[this.nonStanceCategories].length; i++){
+                  this.moveList[this.nonStanceCategories][i] = this.moveList[this.nonStanceCategories][i].filter(
+                    move => move.breakAttack);    
+              }  
+              break;
+
+            // guardImpact
+            case 3:
+              for(let i = 0; i < this.moveList.length -1; i++){
+                this.moveList[i] = this.moveList[i].filter(
+                  move => move.guardImpact);  
+              }
+      
+              for(let i = 0; i < this.moveList[this.nonStanceCategories].length; i++){
+                  this.moveList[this.nonStanceCategories][i] = this.moveList[this.nonStanceCategories][i].filter(
+                    move => move.guardImpact);    
+              }  
+              break;
+
+            // unblockableArt
+            case 4:
+              for(let i = 0; i < this.moveList.length -1; i++){
+                this.moveList[i] = this.moveList[i].filter(
+                  move => move.unblockableArt);  
+              }
+      
+              for(let i = 0; i < this.moveList[this.nonStanceCategories].length; i++){
+                  this.moveList[this.nonStanceCategories][i] = this.moveList[this.nonStanceCategories][i].filter(
+                    move => move.unblockableArt);    
+              }  
+              break;
+
+            // reversalEdge
+            case 5:
+              for(let i = 0; i < this.moveList.length -1; i++){
+                this.moveList[i] = this.moveList[i].filter(
+                  move => move.reversalEdge);  
+              }
+      
+              for(let i = 0; i < this.moveList[this.nonStanceCategories].length; i++){
+                  this.moveList[this.nonStanceCategories][i] = this.moveList[this.nonStanceCategories][i].filter(
+                    move => move.reversalEdge);    
+              }  
+              break;
+
+            // soulCharge
+            case 6:
+              for(let i = 0; i < this.moveList.length -1; i++){
+                this.moveList[i] = this.moveList[i].filter(
+                  move => move.soulCharge);  
+              }
+      
+              for(let i = 0; i < this.moveList[this.nonStanceCategories].length; i++){
+                  this.moveList[this.nonStanceCategories][i] = this.moveList[this.nonStanceCategories][i].filter(
+                    move => move.soulCharge);    
+              }  
+              break;
+
+            // lethalHit
+            case 7:
+              for(let i = 0; i < this.moveList.length -1; i++){
+                this.moveList[i] = this.moveList[i].filter(
+                  move => move.lethalHit);  
+              }
+      
+              for(let i = 0; i < this.moveList[this.nonStanceCategories].length; i++){
+                  this.moveList[this.nonStanceCategories][i] = this.moveList[this.nonStanceCategories][i].filter(
+                    move => move.lethalHit);    
+              }  
+              break;
+
+            // grab
+            case 8:
+              for(let i = 0; i < this.moveList.length -1; i++){
+                this.moveList[i] = this.moveList[i].filter(
+                  move => move.grab);  
+              }
+      
+              for(let i = 0; i < this.moveList[this.nonStanceCategories].length; i++){
+                  this.moveList[this.nonStanceCategories][i] = this.moveList[this.nonStanceCategories][i].filter(
+                    move => move.grab);    
+              }
+              break;
+          }
+        }
+        index ++;
+    }
+  }  
 }

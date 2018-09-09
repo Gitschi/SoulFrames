@@ -1,21 +1,74 @@
-<ion-menu side="right" [content]="content">
+<ion-menu side="right" id="filtersMenu" [content]="content">
     <ion-header>
       <ion-toolbar>
-        <ion-title><p id="menuTitle">Filters</p></ion-title>
+        <ion-title><p class="menuTitle" id="filtersTitle">Filters</p>
+        <button ion-button class="filterTopButton" (click)="apply()">Apply</button>
+        <button ion-button color="danger" class="filterTopButton" (click)="reset()">Reset</button>            
+      </ion-title>
       </ion-toolbar>
     </ion-header>
   
     <ion-content>
+      <!-- Radio Buttons for view selection -->
+      <p class="filterHeader">Sheet View</p>
+      <ion-list radio-group [(ngModel)]="viewMode">
+        <ion-item>
+          <ion-label>Category View</ion-label>
+          <ion-radio value="categoryView" checked></ion-radio>
+        </ion-item>
+        <ion-item>
+          <ion-label>No Categories</ion-label>
+          <ion-radio value="noCategories"></ion-radio>
+        </ion-item>
+      </ion-list>
+        
+      <!-- Menus for drop Downs -->
+      <!-- Attributes Menu -->
       <ion-list>
-
-        <button menuClose ion-item (click)="filter()">
-          Into Stance only
+        <button menuClose ion-item (click)="menuSwitch('attributes')">
+          Filter by Attributes:  
+          <ion-icon *ngIf="!this.dropDownShow.attributes" class="filterMenuIcon" name="arrow-dropdown"></ion-icon>
+          <ion-icon *ngIf="this.dropDownShow.attributes" class="filterMenuIcon" name="arrow-dropup"></ion-icon>
         </button>
 
-        <button menuClose ion-item (click)="reset()">
-          Reset
-        </button> 
-
+        <div *ngIf="this.dropDownShow.attributes">
+          <ion-item>
+            <ion-label>Into Stance</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.intoStance"></ion-checkbox>
+          </ion-item>   
+          <ion-item>
+            <ion-label>Into Crouch</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.intoCrouch"></ion-checkbox>
+          </ion-item>     
+          <ion-item>
+            <ion-label>Break Attack</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.breakAttack"></ion-checkbox>
+          </ion-item>     
+          <ion-item>
+            <ion-label>Guard Impact</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.guardImpact"></ion-checkbox>
+          </ion-item>     
+          <ion-item>
+            <ion-label>Unblockable Art</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.unblockableArt"></ion-checkbox>
+          </ion-item>  
+          <ion-item>
+            <ion-label>Reversal Edge</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.reversalEdge"></ion-checkbox>
+          </ion-item>     
+          <ion-item>
+            <ion-label>Soul Charge</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.soulCharge"></ion-checkbox>
+          </ion-item>     
+          <ion-item>
+            <ion-label>Lethal Hit</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.lethalHit"></ion-checkbox>
+          </ion-item>     
+          <ion-item>
+            <ion-label>Throw</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.throw"></ion-checkbox>
+          </ion-item>     
+        </div>
       </ion-list>
     </ion-content>
 </ion-menu>  

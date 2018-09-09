@@ -18,18 +18,46 @@ ion-header ion-icon.back-button-icon.icon {
     color: white;
 }
 
-#menuTitle{
+.menuTitle{
     font-weight: 700;
     color: white;
     margin: 0;
 }
 
-.helpIcon{
+#filtersTitle{
+    float: left;
+    line-height: 2.2;
+}
+
+.filterTopButton{
+    float: right;
+}
+
+.filterHeader{
+    color: white;
+    text-align: center;
+    font-weight: 800;
+}
+
+.navBarIcon{
     position: absolute;
-    right: 20px;
-    top: 13px;
     color: white;
     font-size: 30px
+}
+
+#navHelpIcon{
+    right: 20px;
+    top: 13px;
+}
+
+#navFunnelIcon{
+    right: 60px;
+    top: 13px;
+}
+
+.filterMenuIcon{
+    float: right;
+    margin-right: 5px;
 }
 
 ion-content{

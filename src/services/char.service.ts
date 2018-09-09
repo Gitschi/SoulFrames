@@ -35,7 +35,7 @@ export class CharService{
     new Char("Raphael", "assets/imgs/Silhouettes/NightmareSilhouette.png", this.moveService.Raphael, this.stanceService.Raphael)
   ];
 
-  public selectedChar;
+  private selectedChar;
 
   constructor(
     private moveService: MoveService,
@@ -44,8 +44,12 @@ export class CharService{
   ){}
 
   // Returns characters
-  getChars(){
+  public getChars(){
     return this.chars.slice();
+  }
+
+  public getMoveList(){
+    return this.selectedChar.moveList.slice();
   }
 
   // Uses info of clicked character to change variables and preload images

@@ -6,7 +6,7 @@ export class StringManipulationService{
   preloadCommandImages(moveList: any[]) {
 
     // Loop through all categories except for stances
-    for(let i = 0; i < this.nonStanceCategories; i++){
+    for(let i = 0; i < moveList.length; i++){
 
       // Loop through single move
       for(let j = 0; j < moveList[i].length; j++){
@@ -32,56 +32,9 @@ export class StringManipulationService{
         }
       }
     }
-
-    // Loop through all stance lists
-    for(let i = this.nonStanceCategories; i < moveList.length; i++){
-
-      // Loop through single stance list
-      for(let j = 0; j < moveList[i].length; j++){
-
-        // Loop through single move
-        for(let k = 0; k < moveList[i][j].length; k++){
-          let fieldCommandImages: string[] = [];
-          let fieldLevelImages: string[] = [];
-
-          // Loop through single alphanumeric of command
-          for(let l = 0; l < moveList[i][j][k].command.length; l++){
-            let singleCommandImage: string = this.commandToImagepath(moveList[i][j][k].command[l]);
-            fieldCommandImages.push(singleCommandImage);
-          }
-          // Exchanges old command data with new data
-          moveList[i][j][k].command = fieldCommandImages;
-
-          // Loop through single letter of level
-          if(moveList[i][j][k].level){
-            for(let l = 0; l < moveList[i][j][k].level.length; l++){
-              let singleLevelImage: string = this.levelToImagepath(moveList[i][j][k].level[l]);
-              fieldLevelImages.push(singleLevelImage);
-            }
-            // Exchanges old level data with new data
-            moveList[i][j][k].level = fieldLevelImages;  
-          }
-        }
-      }
-    }
   }
 
-  changeNumberColoration(){
-    let numArr = document.getElementsByClassName("targetNum"); // Fetches a nodelist with all numeral cells
-    for(let i = 0; i < numArr.length; i+1){
-      let elString = numArr[i].innerHTML;
-      if(elString[0] == "-"){
-        numArr[i].setAttribute("class", "negVal");
-      } else if(elString == "KND" || elString == "STN" || elString == "SLNC" || elString == "AT" || elString == "LNC") {
-        numArr[i].setAttribute("class", "specVal");
-      } else if(elString == "0" || elString == "X"){
-        numArr[i].setAttribute("class", "neutVal");
-      } else {
-        numArr[i].setAttribute("class", "posVal");
-      }
-    }
-  }
-
+  // Changes from string annotation to imagepath
   commandToImagepath(alphaNum: string){
     switch(alphaNum){
       
@@ -251,7 +204,7 @@ export class StringManipulationService{
         return "assets/imgs/levels/High.png";
 
       case "S": // Special Low
-        return "assets/imgs/levels/Slow.png";
+        return "assets/imgs/levels/SpecLow.png";
 
       default: // Null
         return null;

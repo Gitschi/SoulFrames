@@ -106,38 +106,38 @@ export class MoveService{
     [
       new Move("Sea of Madness", "A+G", "H", 17, null, "KND", "KND", 50)
     ],
-    // Stances
+    // ************ Stances *************
+    // Silent Step
     [
-      [
-        new Move("Silent Step", "236", null, null, null, null, null, null, null, true),
-        new Move("Silent Step Slash", "[A", "M", 27, -7, 5, 5, 33),
-        new Move("Step Stone Divide", "[B", "M", 16, -16, -2, -2, 42),
-        new Move("Step Stone Divide", "[b", "M", 26, -2, "KND", "KND", 62),
-        new Move("Silent Step Kick", "[K", "M", 27, -6, 6, 6, 18)    
-      ],
-      [
-        new Move("Mist", "4|6B+K", null, null, null, null, null, null, null, true),
-        new Move("Mist", "$|^B+K", null, null, null, null, null, null, null, true),
-        new Move("Full Divide", "]A", "H", 32, -9, "KND", "KND", 28),
-        new Move("Wind Stitch", "]B", "H", 9, -10, 0, "STN", 10),
-        new Move("Wind Stitch", "]BB", "HH", 9, -10, 0, "STN", 20),
-        new Move("Wind Stitch", "]BBB", "HHH", 9, -10, 0, "STN", 30),
-        new Move("Wind Grab", "]BB+K", "HM", 9, -14, -1, "AT", 30),
-        new Move("Wind Grab", "]BB+K", "HM", 9, null, null, "STN", 48), // on CH
-        new Move("Wind Torture", "]BB+K4", "HM", 9, null, null, "KND", 35),
-        new Move("Water Parting Thrust", "]K", "L", 18, -20, -12, -12, 16),
-        new Move("Water Parting Thrust", "]KB", "LH", 18, -15, -6, -6, 44),
-        new Move("Divide", "]A+B", "M", 18, -3, "STN", "STN", 38),
-        new Move("Wind Purify", "]B+K", "M", 18, -14, -1, "KND", 30),
-        new Move("Wind Divide", "]B+K4", "M", 18, null, null, "KND", 56),
-        new Move("Wind Purify", "]b+k", "M", 48, 15, "KND", "KND", 60),
-        new Move("Wind Divide", "]b+k4", "M", 48, 15, "KND", "KND", 70),
-        new Move("Lion's Clutch", "]A+G", "H", 16, null, "KND", "KND", 45),
-        new Move("Korefuji", "]B+G", "H", 16, null, "KND", "KND", 50),
-        new Move("Mist Step", "]66|44", null, null, null, null, null, null),
-        new Move("Mist ~ Jump", "]7|8|9", null, null, null, null, null, null),
-        new Move("Mist ~ Duck", "]1|2|3", null, null, null, null, null, null)    
-      ]
+      new Move("Silent Step", "236", null, null, null, null, null, null, null, true),
+      new Move("Silent Step Slash", "[A", "M", 27, -7, 5, 5, 33),
+      new Move("Step Stone Divide", "[B", "M", 16, -16, -2, -2, 42),
+      new Move("Step Stone Divide", "[b", "M", 26, -2, "KND", "KND", 62),
+      new Move("Silent Step Kick", "[K", "M", 27, -6, 6, 6, 18)    
+    ],
+    // Mist
+    [
+      new Move("Mist", "4|6B+K", null, null, null, null, null, null, null, true),
+      new Move("Mist", "$|^B+K", null, null, null, null, null, null, null, true),
+      new Move("Full Divide", "]A", "H", 32, -9, "KND", "KND", 28),
+      new Move("Wind Stitch", "]B", "H", 9, -10, 0, "STN", 10),
+      new Move("Wind Stitch", "]BB", "HH", 9, -10, 0, "STN", 20),
+      new Move("Wind Stitch", "]BBB", "HHH", 9, -10, 0, "STN", 30),
+      new Move("Wind Grab", "]BB+K", "HM", 9, -14, -1, "AT", 30),
+      new Move("Wind Grab", "]BB+K", "HM", 9, null, null, "STN", 48), // on CH
+      new Move("Wind Torture", "]BB+K4", "HM", 9, null, null, "KND", 35),
+      new Move("Water Parting Thrust", "]K", "L", 18, -20, -12, -12, 16),
+      new Move("Water Parting Thrust", "]KB", "LH", 18, -15, -6, -6, 44),
+      new Move("Divide", "]A+B", "M", 18, -3, "STN", "STN", 38),
+      new Move("Wind Purify", "]B+K", "M", 18, -14, -1, "KND", 30),
+      new Move("Wind Divide", "]B+K4", "M", 18, null, null, "KND", 56),
+      new Move("Wind Purify", "]b+k", "M", 48, 15, "KND", "KND", 60),
+      new Move("Wind Divide", "]b+k4", "M", 48, 15, "KND", "KND", 70),
+      new Move("Lion's Clutch", "]A+G", "H", 16, null, "KND", "KND", 45),
+      new Move("Korefuji", "]B+G", "H", 16, null, "KND", "KND", 50),
+      new Move("Mist Step", "]66|44", null, null, null, null, null, null),
+      new Move("Mist ~ Jump", "]7|8|9", null, null, null, null, null, null),
+      new Move("Mist ~ Duck", "]1|2|3", null, null, null, null, null, null)    
     ]
   ]
 
@@ -246,38 +246,38 @@ export class MoveService{
     [
       new Move("Sea of Madness", "A+G", "H", 17, null, "KND", "KND", 50)
     ],
-    // Stances
+    // ************ Stances *************
+    // Angel Step
     [
-      [
-        new Move("Silent Step", "236", null, null, null, null, null, null, null, true),
-        new Move("Silent Step Slash", "[A", "M", 27, -7, 5, 5, 33),
-        new Move("Step Stone Divide", "[B", "M", 16, -16, -2, -2, 42),
-        new Move("Step Stone Divide", "[b", "M", 26, -2, "KND", "KND", 62),
-        new Move("Silent Step Kick", "[K", "M", 27, -6, 6, 6, 18)    
-      ],
-      [
-        new Move("Mist", "4|6B+K", null, null, null, null, null, null, null, true),
-        new Move("Mist", "$|^B+K", null, null, null, null, null, null, null, true),
-        new Move("Full Divide", "]A", "H", 32, -9, "KND", "KND", 28),
-        new Move("Wind Stitch", "]B", "H", 9, -10, 0, "STN", 10),
-        new Move("Wind Stitch", "]BB", "HH", 9, -10, 0, "STN", 20),
-        new Move("Wind Stitch", "]BBB", "HHH", 9, -10, 0, "STN", 30),
-        new Move("Wind Grab", "]BB+K", "HM", 9, -14, -1, "AT", 30),
-        new Move("Wind Grab", "]BB+K", "HM", 9, null, null, "STN", 48), // on CH
-        new Move("Wind Torture", "]BB+K4", "HM", 9, null, null, "KND", 35),
-        new Move("Water Parting Thrust", "]K", "L", 18, -20, -12, -12, 16),
-        new Move("Water Parting Thrust", "]KB", "LH", 18, -15, -6, -6, 44),
-        new Move("Divide", "]A+B", "M", 18, -3, "STN", "STN", 38),
-        new Move("Wind Purify", "]B+K", "M", 18, -14, -1, "KND", 30),
-        new Move("Wind Divide", "]B+K4", "M", 18, null, null, "KND", 56),
-        new Move("Wind Purify", "]b+k", "M", 48, 15, "KND", "KND", 60),
-        new Move("Wind Divide", "]b+k4", "M", 48, 15, "KND", "KND", 70),
-        new Move("Lion's Clutch", "]A+G", "H", 16, null, "KND", "KND", 45),
-        new Move("Korefuji", "]B+G", "H", 16, null, "KND", "KND", 50),
-        new Move("Mist Step", "]66|44", null, null, null, null, null, null),
-        new Move("Mist ~ Jump", "]7|8|9", null, null, null, null, null, null),
-        new Move("Mist ~ Duck", "]1|2|3", null, null, null, null, null, null)    
-      ]
+      new Move("Silent Step", "236", null, null, null, null, null, null, null, true),
+      new Move("Silent Step Slash", "[A", "M", 27, -7, 5, 5, 33),
+      new Move("Step Stone Divide", "[B", "M", 16, -16, -2, -2, 42),
+      new Move("Step Stone Divide", "[b", "M", 26, -2, "KND", "KND", 62),
+      new Move("Silent Step Kick", "[K", "M", 27, -6, 6, 6, 18)    
+    ],
+    // Angel Side Step
+    [
+      new Move("Mist", "4|6B+K", null, null, null, null, null, null, null, true),
+      new Move("Mist", "$|^B+K", null, null, null, null, null, null, null, true),
+      new Move("Full Divide", "]A", "H", 32, -9, "KND", "KND", 28),
+      new Move("Wind Stitch", "]B", "H", 9, -10, 0, "STN", 10),
+      new Move("Wind Stitch", "]BB", "HH", 9, -10, 0, "STN", 20),
+      new Move("Wind Stitch", "]BBB", "HHH", 9, -10, 0, "STN", 30),
+      new Move("Wind Grab", "]BB+K", "HM", 9, -14, -1, "AT", 30),
+      new Move("Wind Grab", "]BB+K", "HM", 9, null, null, "STN", 48), // on CH
+      new Move("Wind Torture", "]BB+K4", "HM", 9, null, null, "KND", 35),
+      new Move("Water Parting Thrust", "]K", "L", 18, -20, -12, -12, 16),
+      new Move("Water Parting Thrust", "]KB", "LH", 18, -15, -6, -6, 44),
+      new Move("Divide", "]A+B", "M", 18, -3, "STN", "STN", 38),
+      new Move("Wind Purify", "]B+K", "M", 18, -14, -1, "KND", 30),
+      new Move("Wind Divide", "]B+K4", "M", 18, null, null, "KND", 56),
+      new Move("Wind Purify", "]b+k", "M", 48, 15, "KND", "KND", 60),
+      new Move("Wind Divide", "]b+k4", "M", 48, 15, "KND", "KND", 70),
+      new Move("Lion's Clutch", "]A+G", "H", 16, null, "KND", "KND", 45),
+      new Move("Korefuji", "]B+G", "H", 16, null, "KND", "KND", 50),
+      new Move("Mist Step", "]66|44", null, null, null, null, null, null),
+      new Move("Mist ~ Jump", "]7|8|9", null, null, null, null, null, null),
+      new Move("Mist ~ Duck", "]1|2|3", null, null, null, null, null, null)    
     ]
   ]
 
@@ -294,7 +294,7 @@ export class MoveService{
       new Move("Heavy Mandritti", "4A", "H", null, null, null, null, null),
       new Move("Rising Wyvern", "46A", "H", null, null, null, null, null, null, false, true),
       new Move("Low Tondo Roveral", "CA", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Rising Tondo", "W", "H", null, null, null, null, null),
+      new Move("Rising Tondo", "WA", "H", null, null, null, null, null),
       new Move("Scarlet Talon", "JA", "M", null, null, null, null, null),
       new Move("Turning Attack au Fer", "TA", "H", null, null, null, null, null),
       new Move("Low Turn Attack au Fer", "T2A", "S", null, null, null, null, null, null, false, false, true)
@@ -308,7 +308,7 @@ export class MoveService{
       new Move("Single Montante", "x4", "M", null, null, null, null, null),
       new Move("Triple Botta in Tempo", "6BBB", "HHM", null, null, null, null, null),
       new Move("Triple Botta in Tempo(just)", "6BBB", "HHM", null, null, null, null, null),
-      new Move("Triple Botta in Tempo ~ Aerial Shift", "6B4", "H", null, null, null, null, null, null, true, false, false, true),
+      new Move("Triple Botta in Tempo ~ Aerial Shift", "6B4", "H", null, null, null, null, null, "vs. low attacks", true, false, false, true),
       new Move("Triple Botta in Tempo ~ Preparation", "6Bb", "HH", null, null, null, null, null, "Dodges high attacks", true),
       new Move("Raptor Rush", "3B", "M", null, null, null, null, null, null),
       new Move("Raptor Rush ~ Preparation", "3b", "M", null, null, null, null, null, "Dodges high attacks", true),
@@ -321,11 +321,11 @@ export class MoveService{
       new Move("Affondo Fendante(fast)", "236B", "M", null, null, null, null, null, null, false, true),
       new Move("Nouveau Soleil", "214B", "H", null, null, null, null, null, null, false, true),
       new Move("Nouveau Soleil(fast)", "214B", "H", null, null, null, null, null, null, false, true),
-      new Move("Deadly Dirge", "46B", "M", null, null, null, null, null),
+      new Move("Deadly Dirge", "46B", "M", null, null, null, null, null, null, null, true),
       new Move("Crouching Montante", "CB", "M", null, null, null, null, null, null, false, false, true),
       new Move("Advance Slicer", "C3B", "M", null, null, null, null, null, null, false, true),
       new Move("Rising Threat", "WBB", "MH", null, null, null, null, null),
-      new Move("Rising Threat ~ Areial Shift", "WBB4", "MH", null, null, null, null, null, null, false, false, false, true),
+      new Move("Rising Threat ~ Aerial Shift", "WBB4", "MH", null, null, null, null, null, "vs. low attacks", true, false, false, true),
       new Move("Sky Agente", "JB", "M", null, null, null, null, null),
       new Move("Turning Montante", "TB", "M", null, null, null, null, null),
       new Move("Low Turn Montante", "T2B", "M", null, null, null, null, null, null, false, false, true)
@@ -343,7 +343,7 @@ export class MoveService{
       new Move("High Toe Kick", "WK", "H", null, null, null, null, null),
       new Move("Chaos Moon", "JK", "M", null, null, null, null, null),
       new Move("Turning Venom High Kick", "TK", "H", null, null, null, null, null),
-      new Move("Turning Sweep Kick", "T2K", "L", null, null, null, null, null)
+      new Move("Turning Sweep Kick", "T2K", "L", null, null, null, null, null, null, false, null, true)
     ],
     // Dual Button Attacks
     [
@@ -355,13 +355,13 @@ export class MoveService{
       new Move("Cantarella Needle (Advance)", "6B+K", "M", null, null, null, null, null),
       new Move("Cantarella Needle (Left)", "6B+K8", "M", null, null, null, null, null),
       new Move("Cantarella Needle (Right)", "6B+K2", "M", null, null, null, null, null),
-      new Move("Spiral Envelopment", "B+K", null, null, null, null, null, null, "Dodges high, middle attacks/Increases evasion window by holding buttons"),
-      new Move("Circular Envelopment", "2B+K", null, null, null, null, null, null, "Dodges middle attacks/Increase evasion window by holding buttons"),
+      new Move("Spiral Envelopment", "B+K", null, null, null, null, null, null, "Dodges high, middle attacks/Increases evasion window by holding buttons", true),
+      new Move("Circular Envelopment", "2B+K", null, null, null, null, null, null, "Dodges middle attacks/Increase evasion window by holding buttons", true),
       new Move("Sly Riposte", "B", "M", null, null, null, null, null, "After successfully form dodging"),
       new Move("Sly Riposte ~ Aerial Shift", "B4", "M", null, null, null, null, null, "After successfully form dodging", true, false, false, true),
-      new Move("Spiral Envelopment", "TB+K", null, null, null, null, null, null, "Dodges high, middle attacks/Increases evasion window by holding buttons"),
-      new Move("Circular Envelopment", "T2B+K", null, null, null, null, null, null, "Dodges middle attacks/Increase evasion window by holding buttons"),
-      new Move("Dummy", "K+G", null, null, null, null, null, null)
+      new Move("Spiral Envelopment", "TB+K", null, null, null, null, null, null, "Dodges high, middle attacks/Increases evasion window by holding buttons", true),
+      new Move("Circular Envelopment", "T2B+K", null, null, null, null, null, null, "Dodges middle attacks/Increase evasion window by holding buttons", true)
+      //new Move("Dummy", "K+G", null, null, null, null, null, null)
     ],
     // 8-Way Run Moves
     [
@@ -376,13 +376,13 @@ export class MoveService{
       new Move("Broken Thrust ~ Preparation", "^b", "M", null, null, null, null, null, "Dodges high attacks", true),
       new Move("Death Guise", "#|(B", "L", null, null, null, null, null),
       new Move("Valiant Falcon", "@|*BB", "MM", null, null, null, null, null),
-      new Move("Aiming Shaft", "!|$|u", "", null, null, null, null, null),
+      new Move("Aiming Shaft", "!|$|uB", "L", null, null, null, null, null),
       new Move("Venom Side Kick", "#|^|(K", "H", null, null, null, null, null),
       new Move("Venom Roundhouse", "@|*K", "H", null, null, null, null, null),
       new Move("Dark Moon", "!|$|uK", "M", null, null, null, null, null, "Into Back turned on hit"),
       new Move("Wyvern's Tail", "#|^|(A+B", "M", null, null, null, null, null), // G cancel
       new Move("Bloody Funeral", "!|$|uA+B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
-      new Move("Bloody Funeral ~ Preparation", "!|$|uA+BG", null, null, null, null, null, null, "Dodges high attacks", true),
+      new Move("Bloody Funeral ~ Preparation", "!|$|uz+xG", null, null, null, null, null, null, "Dodges high attacks", true),
       new Move("Dread Coffin", "#|^|(B+K", "M", null, null, null, null, null),
       new Move("Dread Coffin ~ Preparation", "#|^|(b+k", "M", null, null, null, null, null, "Dodges high attacks", true),
       new Move("Sliding", "RK", "L", null, null, null, null, null)
@@ -396,57 +396,52 @@ export class MoveService{
       new Move("Pure Sacrifice", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Thousand Hornets", "A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true)
     ],
-    // Stances
+    // ************ Stances *************
+    // Preparation
     [
-      // Preparation
-      [
-        new Move("Preparation", "#B", null, null, null, null, null, null, "Dodges high attacks", true),
-        new Move("Ebony Slash", "[AA", "MM", null, null, null, null, null),
-        new Move("Ebony Combo", "[AB", "MH", null, null, null, null, null),
-        new Move("Ebony Combo ~ Preparation", "[Ab", "MH", null, null, null, null, null, "Dodges high attacks", true),
-        new Move("Lunging Press", "[6A", "H", null, null, null, null, null),
-        new Move("Underworld Call", "[BBB", "HHM", null, null, null, null, null),
-        new Move("Underworld Call(just)", "[BBB", "HHM", null, null, null, null, null),
-        new Move("Underworld Call ~ Preparation", "[Bb", "HH", null, null, null, null, null, "Dodges high attacks", true),
-        new Move("Rapid Head Hunter", "[BK", "H", null, null, null, null, null), // Level might be wrong!
-        new Move("Twin Impalement", "[BBA", "HH", null, null, null, null, null, null, false, false, true), // Level might be wrong!
-        new Move("Dread Intrigue", "[6B", "", null, null, null, null, null), // Level Might be wrong
-        new Move("Lunatic Rouge", "[KKvB", "HMH", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-        new Move("Lunatic Rouge(just)", "[KKvB", "HMH", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-        new Move("Pirouette Kick", "[6K", "M", null, null, null, null, null),
-        new Move("Cantarella Needle (Retreat)", "[B+K", "M", null, null, null, null, null),
-        new Move("Royal Poison: Fatal Dose", "[A+B+K", "M", null, null, null, null, null, null, false, false, false, false, false, true, true, true),
-        new Move("Venomous Sting", "[B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-        new Move("Preparation ~ Preparation", "[6", null, null, null, null, null, null, "Dodges high attacks", true),
-        new Move("Preparation ~ Aerial Shift", "[4", null, null, null, null, null, null, "vs. low attacks", true),
-        new Move("Preparation ~ Shadow Evade", "[2", null, null, null, null, null, null, "Can be held/Dodges high attacks", true)
-      ],
-
-      // Aerial Shift
-      [
-        new Move("Aerial Shift", "[4", null, null, null, null, null, null, "vs. low attacks", true, false, false, true),
-        new Move("Heavy Mandritti", "]AB", "MM", null, null, null, null, null),
-        new Move("Bite of the Deadly Adder", "]B", "M", null, null, null, null, null),
-        new Move("Dark Stinger", "]K", "L", null, null, null, null, null),
-        new Move("Dark Stinger Crescendo(just)", "]KvK", "LL", null, null, null, null, null),
-        new Move("Aerial shift ~ Preparation", "]6", null, null, null, null, null, null, "Dodges high attacks", true)
-      ],
-
-      // Shadow Evade
-      [
-        new Move("Shadow Evade", "[2", null, null, null, null, null, null, "Can be held/Dodges high attacks", true),
-        new Move("Bloody Assault", "{A", "M", null, null, null, null, null),
-        new Move("Bloody Terror", "{B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-        new Move("Mandrake Heel", "{K", "L", null, null, null, null, null)
-      ],
-
-      // Quick Parade
-      [
-        new Move("Quick Parade", "4B+K", null, null, null, null, null, null, "vs. middle attacks", true, false, false, true),
-        new Move("Quick Parade ~ Preparation", "4b+k", null, null, null, null, null, null, "vs. middle attacks/Dodges high attacks", true, false, false, true),
-        new Move("Haunted Talon", "}A", "L", null, null, null, null, null),
-        new Move("Dreaded Rampage", "}BB", "MMMMMMMM", null, null, null, null, null)
-      ]
+      new Move("Preparation", "#B", null, null, null, null, null, null, "Dodges high attacks", true),
+      new Move("Ebony Slash", "[AA", "MM", null, null, null, null, null),
+      new Move("Ebony Combo", "[AB", "MH", null, null, null, null, null),
+      new Move("Ebony Combo ~ Preparation", "[Ab", "MH", null, null, null, null, null, "Dodges high attacks", true),
+      new Move("Lunging Press", "[6A", "H", null, null, null, null, null),
+      new Move("Underworld Call", "[BBB", "HHM", null, null, null, null, null),
+      new Move("Underworld Call(just)", "[BBB", "HHM", null, null, null, null, null),
+      new Move("Underworld Call ~ Preparation", "[Bb", "HH", null, null, null, null, null, "Dodges high attacks", true),
+      new Move("Rapid Head Hunter", "[BK", "H", null, null, null, null, null), // Level might be wrong!
+      new Move("Twin Impalement", "[BBA", "HH", null, null, null, null, null, null, false, false, true), // Level might be wrong!
+      new Move("Dread Intrigue", "[6B", "", null, null, null, null, null), // Level Might be wrong
+      new Move("Lunatic Rouge", "[KKvB", "HMH", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
+      new Move("Lunatic Rouge(just)", "[KKvB", "HMH", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
+      new Move("Pirouette Kick", "[6K", "M", null, null, null, null, null),
+      new Move("Cantarella Needle (Retreat)", "[B+K", "M", null, null, null, null, null),
+      new Move("Royal Poison: Fatal Dose", "[A+B+K", "M", null, null, null, null, null, null, false, false, false, false, false, true, true, true),
+      new Move("Venomous Sting", "[B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Preparation ~ Preparation", "[6", null, null, null, null, null, null, "Dodges high attacks", true),
+      new Move("Preparation ~ Aerial Shift", "[4", null, null, null, null, null, null, "vs. low attacks", true, false, false, true),
+      new Move("Preparation ~ Shadow Evade", "[2", null, null, null, null, null, null, "Can be held/Dodges high attacks", true)
+    ],
+    // Aerial Shift
+    [
+      new Move("Aerial Shift", "[4", null, null, null, null, null, null, "vs. low attacks", true, false, false, true),
+      new Move("Heavy Mandritti", "]AB", "MM", null, null, null, null, null),
+      new Move("Bite of the Deadly Adder", "]B", "M", null, null, null, null, null),
+      new Move("Dark Stinger", "]K", "L", null, null, null, null, null),
+      new Move("Dark Stinger Crescendo(just)", "]KvK", "LL", null, null, null, null, null),
+      new Move("Aerial shift ~ Preparation", "]6", null, null, null, null, null, null, "Dodges high attacks", true)
+    ],
+    // Shadow Evade
+    [
+      new Move("Shadow Evade", "[2", null, null, null, null, null, null, "Can be held/Dodges high attacks", true),
+      new Move("Bloody Assault", "{A", "M", null, null, null, null, null),
+      new Move("Bloody Terror", "{B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
+      new Move("Mandrake Heel", "{K", "L", null, null, null, null, null)
+    ],
+    // Quick Parade
+    [
+      new Move("Quick Parade", "4B+K", null, null, null, null, null, null, "vs. middle attacks", false, false, false, true),
+      new Move("Quick Parade ~ Preparation", "4b+k", null, null, null, null, null, null, "vs. middle attacks/Dodges high attacks", true, false, false, true),
+      new Move("Haunted Talon", "}A", "L", null, null, null, null, null),
+      new Move("Dreaded Rampage", "}BB", "MMMMMMMM", null, null, null, null, null)
     ]
   ]
 }

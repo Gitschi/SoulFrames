@@ -26,7 +26,7 @@
       <!-- Attributes Menu -->
       <ion-list>
         <button menuClose ion-item (click)="menuSwitch('attributes')">
-          Filter by Attributes:  
+          Set required properties  
           <ion-icon *ngIf="!this.dropDownShow.attributes" class="filterMenuIcon" name="arrow-dropdown"></ion-icon>
           <ion-icon *ngIf="this.dropDownShow.attributes" class="filterMenuIcon" name="arrow-dropup"></ion-icon>
         </button>
@@ -70,6 +70,99 @@
           </ion-item>     
         </div>
       </ion-list>
+      
+      <!-- Impact Menu -->
+      <ion-list>
+          <button menuClose ion-item (click)="menuSwitch('impact')">
+            Impact
+            <ion-icon *ngIf="!this.dropDownShow.impact" class="filterMenuIcon" name="arrow-dropdown"></ion-icon>
+            <ion-icon *ngIf="this.dropDownShow.impact" class="filterMenuIcon" name="arrow-dropup"></ion-icon>
+          </button>
+  
+          <div *ngIf="this.dropDownShow.impact">
+            <ion-item>
+              <ion-label>Above</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.hitPositive"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+              <ion-label>Below</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.hitNegative"></ion-checkbox>
+            </ion-item>     
+          </div>
+        </ion-list>  
+  
+      <!-- Guard Menu -->
+      <ion-list>
+        <button menuClose ion-item (click)="menuSwitch('guard')">
+          Guard
+          <ion-icon *ngIf="!this.dropDownShow.guard" class="filterMenuIcon" name="arrow-dropdown"></ion-icon>
+          <ion-icon *ngIf="this.dropDownShow.guard" class="filterMenuIcon" name="arrow-dropup"></ion-icon>
+        </button>
+
+        <div *ngIf="this.dropDownShow.guard">
+          <ion-item>
+            <ion-label>Positive</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.guardPositive"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label>Negative</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.guardNegative"></ion-checkbox>
+          </ion-item>     
+            <ion-item>
+            <ion-label>Neutral</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.guardNeutral"></ion-checkbox>
+          </ion-item>        
+        </div>
+      </ion-list>  
+
+      <!-- Hit Menu -->
+      <ion-list>
+        <button menuClose ion-item (click)="menuSwitch('hit')">
+          Hit
+          <ion-icon *ngIf="!this.dropDownShow.hit" class="filterMenuIcon" name="arrow-dropdown"></ion-icon>
+          <ion-icon *ngIf="this.dropDownShow.hit" class="filterMenuIcon" name="arrow-dropup"></ion-icon>
+        </button>
+
+        <div *ngIf="this.dropDownShow.hit">
+          <ion-item>
+            <ion-label>Positive</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.hitPositive"></ion-checkbox>
+          </ion-item>
+          <ion-item>
+            <ion-label>Negative</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.hitNegative"></ion-checkbox>
+          </ion-item>     
+            <ion-item>
+            <ion-label>Neutral</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.hitNeutral"></ion-checkbox>
+          </ion-item>        
+        </div>
+      </ion-list>  
+
+      <!-- CounterHit Menu -->
+      <ion-list>
+          <button menuClose ion-item (click)="menuSwitch('counterHit')">
+            Counter Hit
+            <ion-icon *ngIf="!this.dropDownShow.counterHit" class="filterMenuIcon" name="arrow-dropdown"></ion-icon>
+            <ion-icon *ngIf="this.dropDownShow.counterHit" class="filterMenuIcon" name="arrow-dropup"></ion-icon>
+          </button>
+  
+          <div *ngIf="this.dropDownShow.counterHit">
+            <ion-item>
+              <ion-label>Positive</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.counterHitPositive"></ion-checkbox>
+            </ion-item>
+            <ion-item>
+              <ion-label>Negative</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.counterHitNegative"></ion-checkbox>
+            </ion-item>     
+              <ion-item>
+              <ion-label>Neutral</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.counterHitNeutral"></ion-checkbox>
+            </ion-item>        
+          </div>
+        </ion-list>  
+  
     </ion-content>
 </ion-menu>  
 

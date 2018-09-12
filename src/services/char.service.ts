@@ -12,6 +12,7 @@ export class CharService{
 
   // Array of objects for all characters
   private chars: Char[] = [
+    // having two characters of the same moveService will bug out the image loader
     new Char("Mitsurugi", "assets/imgs/Silhouettes/MitsuSilhouette.png", this.moveService.Mitsurugi, this.stanceService.Mitsurugi),
     new Char("Sophitia", "assets/imgs/Silhouettes/SophitiaSilhouette.png", this.moveService.Sophitia, this.stanceService.Sophitia),
     new Char("Groh", "assets/imgs/Silhouettes/MitsuSilhouette.png", this.moveService.Sophitia),
@@ -32,7 +33,8 @@ export class CharService{
     new Char("Talim", "assets/imgs/Silhouettes/NightmareSilhouette.png", this.moveService.Sophitia),
     new Char("Azwel", "assets/imgs/Silhouettes/NightmareSilhouette.png", this.moveService.Sophitia),
     new Char("Cervantes", "assets/imgs/Silhouettes/NightmareSilhouette.png", this.moveService.Sophitia),
-    new Char("Raphael", "assets/imgs/Silhouettes/NightmareSilhouette.png", this.moveService.Raphael, this.stanceService.Raphael)
+    new Char("Raphael", "assets/imgs/Silhouettes/NightmareSilhouette.png", this.moveService.Raphael, this.stanceService.Raphael),
+    new Char("Tira", "assets/imgs/Silhouettes/NightmareSilhouette.png", this.moveService.Raphael, this.stanceService.Raphael)
   ];
 
   private selectedChar;

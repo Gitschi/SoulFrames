@@ -179,18 +179,9 @@ ion-col div{
     display: inline-flex;
 }
 
-.negVal{
-    color: #ff5b5b;
-}
-
-.posVal{
-    color: #53fc8b;
-}
-
-.specVal{
-    color: #f2ef63;
-}
-
-.neutVal{
+#noResultText{
     color: white;
+    text-align: center;
+    font-weight: 800;
+    font-size: 50px;
 }

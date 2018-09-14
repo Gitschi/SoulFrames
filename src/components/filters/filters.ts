@@ -18,8 +18,8 @@ export class FiltersComponent {
     counterHit: false
   }
 
-  // Prepares values to pass on to frame-sheet page
-  filterSelection = {
+  // Attribute values to pass on
+  attributeSelection = {
     intoStance: false,
     intoCrouch: false,
     breakAttack: false,
@@ -28,10 +28,11 @@ export class FiltersComponent {
     reversalEdge: false,
     soulCharge: false,
     lethalHit: false,
-    throw: false,
+    throw: false
+  }
 
-    //impact
-
+  // Boolean values regarding numbers to pass on
+  numBoolSelection = {
     guardPositive: true,
     guardNegative: true,
     guardNeutral: true,
@@ -76,15 +77,16 @@ export class FiltersComponent {
 
   // Resets filters
   reset(){
-    this.frameSheetPage.reset();
+    // Reset filters to default value
+    Object.keys(this.attributeSelection).forEach(v => this.attributeSelection[v] = false);
+    Object.keys(this.numBoolSelection).forEach(v => this.numBoolSelection[v] = true);
     
-    // Make it so that certain filters reset to true!
-    Object.keys(this.filterSelection).forEach(v => this.filterSelection[v] = false)
+    this.frameSheetPage.reset();
   }
 
   // Applies filters
   apply(){
     this.frameSheetPage.setCategoryView(this.viewMode);
-    this.frameSheetPage.applyAttributeFilter(this.filterSelection);
+    this.frameSheetPage.applyAttributeFilter(this.attributeSelection, this.numBoolSelection);
   }
  }

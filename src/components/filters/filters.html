@@ -34,39 +34,39 @@
         <div *ngIf="this.dropDownShow.attributes">
           <ion-item>
             <ion-label>Into Stance</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.intoStance"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.intoStance"></ion-checkbox>
           </ion-item>   
           <ion-item>
             <ion-label>Into Crouch</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.intoCrouch"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.intoCrouch"></ion-checkbox>
           </ion-item>     
           <ion-item>
             <ion-label>Break Attack</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.breakAttack"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.breakAttack"></ion-checkbox>
           </ion-item>     
           <ion-item>
             <ion-label>Guard Impact</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.guardImpact"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.guardImpact"></ion-checkbox>
           </ion-item>     
           <ion-item>
             <ion-label>Unblockable Art</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.unblockableArt"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.unblockableArt"></ion-checkbox>
           </ion-item>  
           <ion-item>
             <ion-label>Reversal Edge</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.reversalEdge"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.reversalEdge"></ion-checkbox>
           </ion-item>     
           <ion-item>
             <ion-label>Soul Charge</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.soulCharge"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.soulCharge"></ion-checkbox>
           </ion-item>     
           <ion-item>
             <ion-label>Lethal Hit</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.lethalHit"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.lethalHit"></ion-checkbox>
           </ion-item>     
           <ion-item>
             <ion-label>Throw</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.throw"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.throw"></ion-checkbox>
           </ion-item>     
         </div>
       </ion-list>
@@ -82,11 +82,11 @@
           <div *ngIf="this.dropDownShow.impact">
             <ion-item>
               <ion-label>Above</ion-label>
-              <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.hitPositive"></ion-checkbox>
+              <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.hitPositive"></ion-checkbox>
             </ion-item>
             <ion-item>
               <ion-label>Below</ion-label>
-              <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.hitNegative"></ion-checkbox>
+              <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.hitNegative"></ion-checkbox>
             </ion-item>     
           </div>
         </ion-list>  
@@ -102,15 +102,15 @@
         <div *ngIf="this.dropDownShow.guard">
           <ion-item>
             <ion-label>Positive</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.guardPositive"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.guardPositive"></ion-checkbox>
           </ion-item>
           <ion-item>
             <ion-label>Negative</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.guardNegative"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.guardNegative"></ion-checkbox>
           </ion-item>     
             <ion-item>
             <ion-label>Neutral</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.guardNeutral"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.guardNeutral"></ion-checkbox>
           </ion-item>        
         </div>
       </ion-list>  
@@ -126,15 +126,15 @@
         <div *ngIf="this.dropDownShow.hit">
           <ion-item>
             <ion-label>Positive</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.hitPositive"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.hitPositive"></ion-checkbox>
           </ion-item>
           <ion-item>
             <ion-label>Negative</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.hitNegative"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.hitNegative"></ion-checkbox>
           </ion-item>     
             <ion-item>
             <ion-label>Neutral</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.hitNeutral"></ion-checkbox>
+            <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.hitNeutral"></ion-checkbox>
           </ion-item>        
         </div>
       </ion-list>  
@@ -150,15 +150,15 @@
           <div *ngIf="this.dropDownShow.counterHit">
             <ion-item>
               <ion-label>Positive</ion-label>
-              <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.counterHitPositive"></ion-checkbox>
+              <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.counterHitPositive"></ion-checkbox>
             </ion-item>
             <ion-item>
               <ion-label>Negative</ion-label>
-              <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.counterHitNegative"></ion-checkbox>
+              <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.counterHitNegative"></ion-checkbox>
             </ion-item>     
               <ion-item>
               <ion-label>Neutral</ion-label>
-              <ion-checkbox color="dark" [(ngModel)]="this.filterSelection.counterHitNeutral"></ion-checkbox>
+              <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.counterHitNeutral"></ion-checkbox>
             </ion-item>        
           </div>
         </ion-list>  

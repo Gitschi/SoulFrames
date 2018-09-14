@@ -35,7 +35,8 @@ export class FrameSheetPage {
   }
 
   // Imports moveList and makes a copy of it
-  moveList = this.charService.getMoveList();
+  // Need to use parse because the objects would just be references otherwise
+  moveList = JSON.parse(JSON.stringify(this.charService.getMoveList()));
 
   // Sets categories for headers
   categoryList: string[] = [
@@ -51,12 +52,7 @@ export class FrameSheetPage {
 
   // Resets moveList to original
   reset(){
-    this.moveList = this.charService.getMoveList();
-  }
-
-  ionViewDidLoad() {
-    // Changes colors for numerical values
-    //this.stringManipulationService.changeNumberColoration();
+    this.moveList = JSON.parse(JSON.stringify(this.charService.getMoveList()));
   }
 
   // Goes to navigation page when pressing question mark icon
@@ -109,7 +105,7 @@ export class FrameSheetPage {
     }
   }
 
-  // Loops movelist to check if its empty
+  // Loops movelist to check if it's empty
   checkMoveAmount(){
     let isEmpty: boolean = true;
 
@@ -122,13 +118,13 @@ export class FrameSheetPage {
   }
 
   // Apply attribute filter from filters.ts
-  applyAttributeFilter(filterSelection: any){
+  applyAttributeFilter(attributeSelection: any, numBoolSelection: any){
     // Resets array before applying filter
     this.reset();
     let index = 0; // Index for iteration
-    for (let value in filterSelection) {
-      // Manipulates Array when true
-      if(filterSelection[value] === true){
+    for (let value in attributeSelection) {
+      // Manipulates Array when attribute true
+      if(attributeSelection[value] === true){
         switch(index){
           // intoStance
           case 0:
@@ -205,6 +201,46 @@ export class FrameSheetPage {
       }
       // Increments index for object iteration
       index ++;
+    }
+
+    // Handling of number boolean filters
+    for(let i = this.moveList.length -1; i >= 0; i--){
+      for(let j = this.moveList[i].length -1; j >= 0; j--){ 
+          
+        // Guard Null
+        // Only needed as long as there are gaps in the sheet
+        if(this.moveList[i][j].guard === null){
+          if(!numBoolSelection.guardPositive || !numBoolSelection.guardNegative || !numBoolSelection.guardNeutral){
+            this.moveList[i].splice(j, 1); 
+            continue;  
+          }
+        }
+
+        // Guard Positive
+        if(!numBoolSelection.guardPositive){
+          if (this.moveList[i][j].guard > 0) {
+            this.moveList[i].splice(j, 1); 
+            continue;
+          }  
+        }
+
+        // Guard Negative
+        if(!numBoolSelection.guardNegative){
+          if (this.moveList[i][j].guard < 0) {
+            this.moveList[i].splice(j, 1); 
+            continue;
+          }  
+        }
+
+        // Guard Neutral
+        if(!numBoolSelection.guardNeutral){
+          if (this.moveList[i][j].guard === 0) {
+            this.moveList[i].splice(j, 1); 
+            continue;
+          }  
+        }
+        
+      }  
     }
     this.checkMoveAmount();
   }  

@@ -50,8 +50,10 @@ export class CharService{
     return this.chars.slice();
   }
 
+  // Returns movelist
   public getMoveList(){
-    return this.selectedChar.moveList.slice();
+    let moveList = this.selectedChar.moveList.slice();
+    return moveList.slice();
   }
 
   // Uses info of clicked character to change variables and preload images

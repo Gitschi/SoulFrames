@@ -17,6 +17,7 @@ export class Move{
     public soulCharge?: boolean,
     public grab?: boolean,
     public breakAttack?: boolean,
-    public unblockableArt?: boolean
+    public unblockableArt?: boolean,
+    public guardCancelable?: boolean
   ){};
 }

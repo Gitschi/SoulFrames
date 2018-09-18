@@ -285,7 +285,7 @@ export class MoveService{
     // Reversal Edge and Gauge Attacks not implemented
     // Horizontal Moves
     [
-      new Move("Temple Bayonet", "AA", "HH", null, null, null, null, null), // G cancel
+      new Move("Temple Bayonet", "AA", "HH", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
       new Move("Quick Needle", "AB", "HL", null, null, null, null, null),
       new Move("Vicious Lullaby", "6AA", "HH", null, null, null, null, null),
       new Move("Violent Blood", "3A", "M", null, null, null, null, null, null, false, true),
@@ -301,7 +301,7 @@ export class MoveService{
     ],
     // Vertical Moves
     [
-      new Move("Rapid Arrogance", "BBBB", "MMHM", null, null, null, null, null, "3rd hit can be delayed"), // G cancel
+      new Move("Rapid Arrogance", "BBBB", "MMHM", null, null, null, null, null, "3rd hit can be delayed", false, false, false, false, false, false, false, false, false, true),
       new Move("Rapid Arrogance (just)", "BBBB", "MMHM", null, null, null, null, null),
       new Move("Phasing Moon", "BBK", "MMM", null, null, null, null, null),
       new Move("Grave Needle", "x2B", "LL", null, null, null, null, null),
@@ -332,7 +332,7 @@ export class MoveService{
     ],
     // Kick Moves 
     [
-      new Move("Venom High Kick", "K", "H", null, null, null, null, null), // G cancel
+      new Move("Venom High Kick", "K", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
       new Move("Venom Toe Kick", "6K", "M", null, null, null, null, null),
       new Move("Venom Kick", "3K", "M", null, null, null, null, null),
       new Move("Harm Kick", "2K", "L", null, null, null, null, null, null, false, false, true),

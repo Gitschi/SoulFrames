@@ -29,6 +29,12 @@ ion-header ion-icon.back-button-icon.icon {
     line-height: 2.2;
 }
 
+.filterNumTitle{
+    float: left;
+    font-weight: 700 !important;
+    margin: 7px 0 0 55px !important;
+}
+
 .filterTopButton{
     float: right;
 }
@@ -37,6 +43,10 @@ ion-header ion-icon.back-button-icon.icon {
     color: white;
     text-align: center;
     font-weight: 800;
+}
+
+.dummyFilter{
+    background-color: #FFE2E2AA;
 }
 
 .navBarIcon{
@@ -184,4 +194,14 @@ ion-col div{
     text-align: center;
     font-weight: 800;
     font-size: 50px;
+}
+
+#copyright{
+    color: white;
+    font-size: 10px;
+    margin: 0;
+}
+
+.divCenter{
+    text-align: center;
 }

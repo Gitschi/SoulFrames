@@ -80,14 +80,33 @@
           </button>
   
           <div *ngIf="this.dropDownShow.impact">
-            <ion-item>
-              <ion-label>Above</ion-label>
-              <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.hitPositive"></ion-checkbox>
-            </ion-item>
-            <ion-item>
-              <ion-label>Below</ion-label>
-              <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.hitNegative"></ion-checkbox>
-            </ion-item>     
+            <!-- For Impact Min -->
+            <ion-item> <!-- Top Part -->
+              <ion-label>Min Threshold</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.impactMin"></ion-checkbox>    
+            </ion-item>    
+            <!-- Bottom Part -->
+            <ion-item *ngIf="this.attributeSelection.impactMin"> 
+              <div>
+                <p class="filterNumTitle"><span [innerText]="this.numValSelection.impactMin"></span> Frames</p>
+                <button ion-button class="filterTopButton" (click)="incrementNumVal('impactMin')">Plus</button>
+                <button ion-button color="danger" class="filterTopButton" (click)="decrementNumVal('impactMin')">Minus</button>            
+              </div>
+            </ion-item>    
+
+            <!-- For Impact Max -->
+            <ion-item> <!-- Top Part -->
+              <ion-label>Max Threshold</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.impactMax"></ion-checkbox>
+            </ion-item>    
+            <!-- Bottom Part -->
+            <ion-item *ngIf="this.attributeSelection.impactMax">
+              <div>
+                <p class="filterNumTitle"><span [innerText]="this.numValSelection.impactMax"></span> Frames</p>
+                <button ion-button class="filterTopButton" (click)="incrementNumVal('impactMax')">Plus</button>
+                <button ion-button color="danger" class="filterTopButton" (click)="decrementNumVal('impactMax')">Minus</button>            
+              </div>
+            </ion-item>    
           </div>
         </ion-list>  
   
@@ -100,18 +119,62 @@
         </button>
 
         <div *ngIf="this.dropDownShow.guard">
-          <ion-item>
-            <ion-label>Positive</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.guardPositive"></ion-checkbox>
-          </ion-item>
-          <ion-item>
-            <ion-label>Negative</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.guardNegative"></ion-checkbox>
-          </ion-item>     
+          <ng-template #guardPositive>
             <ion-item>
+              <ion-label>Positive</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.guardPositive"></ion-checkbox>
+            </ion-item>
+          </ng-template>
+
+          <!-- Dummy for guardPositive -->
+          <ion-item *ngIf="this.numValSelection.guardMax > 0 && this.attributeSelection.guardMax; else guardPositive" class="dummyFilter">
+            <ion-label>Positive</ion-label>
+            <ion-checkbox color="dark" disabled checked></ion-checkbox>
+          </ion-item>
+
+          <ng-template #guardNegative>
+            <ion-item>
+              <ion-label>Negative</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.guardNegative"></ion-checkbox>
+            </ion-item>           
+          </ng-template>
+
+          <!-- Dummy for guardNegative -->
+          <ion-item *ngIf="this.numValSelection.guardMin < 0 && this.attributeSelection.guardMin; else guardNegative" class="dummyFilter">
+            <ion-label>Negative</ion-label>
+            <ion-checkbox color="dark" disabled checked></ion-checkbox>
+          </ion-item>
+  
+          <ion-item>
             <ion-label>Neutral</ion-label>
             <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.guardNeutral"></ion-checkbox>
-          </ion-item>        
+          </ion-item>   
+
+          <ion-item> <!-- Top Part -->
+            <ion-label>Min Threshold</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.guardMin"></ion-checkbox>    
+          </ion-item>    
+          <!-- Bottom Part -->
+          <ion-item *ngIf="this.attributeSelection.guardMin"> 
+            <div>
+              <p class="filterNumTitle"><span [innerText]="this.numValSelection.guardMin"></span> Frames</p>
+              <button ion-button class="filterTopButton" (click)="incrementNumVal('guardMin')">Plus</button>
+              <button ion-button color="danger" class="filterTopButton" (click)="decrementNumVal('guardMin')">Minus</button>            
+            </div>
+          </ion-item>    
+
+          <ion-item> <!-- Top Part -->
+            <ion-label>Max Threshold</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.guardMax"></ion-checkbox>
+          </ion-item>    
+          <!-- Bottom Part -->
+          <ion-item *ngIf="this.attributeSelection.guardMax">
+            <div>
+              <p class="filterNumTitle"><span [innerText]="this.numValSelection.guardMax"></span> Frames</p>
+              <button ion-button class="filterTopButton" (click)="incrementNumVal('guardMax')">Plus</button>
+              <button ion-button color="danger" class="filterTopButton" (click)="decrementNumVal('guardMax')">Minus</button>            
+            </div>
+          </ion-item>       
         </div>
       </ion-list>  
 
@@ -125,17 +188,66 @@
 
         <div *ngIf="this.dropDownShow.hit">
           <ion-item>
-            <ion-label>Positive</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.hitPositive"></ion-checkbox>
+            <ion-label>Special</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.hitSpecial"></ion-checkbox>
           </ion-item>
-          <ion-item>
-            <ion-label>Negative</ion-label>
-            <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.hitNegative"></ion-checkbox>
-          </ion-item>     
+
+          <ng-template #hitPositive>
             <ion-item>
+              <ion-label>Positive</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.hitPositive"></ion-checkbox>
+            </ion-item>  
+          </ng-template>
+
+          <!-- Dummy for hitPositive -->
+          <ion-item *ngIf="this.numValSelection.hitMax > 0 && this.attributeSelection.hitMax; else hitPositive" class="dummyFilter">
+            <ion-label>Positive</ion-label>
+            <ion-checkbox color="dark" disabled checked></ion-checkbox>
+          </ion-item>
+
+          <ng-template #hitNegative>
+            <ion-item>
+              <ion-label>Negative</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.hitNegative"></ion-checkbox>
+            </ion-item>    
+          </ng-template>
+          
+          <!-- Dummy for hitNegative -->
+          <ion-item *ngIf="this.numValSelection.hitMin < 0 && this.attributeSelection.hitMin; else hitNegative" class="dummyFilter">
+            <ion-label>Negative</ion-label>
+            <ion-checkbox color="dark" disabled checked></ion-checkbox>
+          </ion-item>
+
+          <ion-item>
             <ion-label>Neutral</ion-label>
             <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.hitNeutral"></ion-checkbox>
-          </ion-item>        
+          </ion-item>  
+
+          <ion-item> <!-- Top Part -->
+            <ion-label>Min Threshold</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.hitMin"></ion-checkbox>    
+          </ion-item>    
+          <!-- Bottom Part -->
+          <ion-item *ngIf="this.attributeSelection.hitMin"> 
+            <div>
+              <p class="filterNumTitle"><span [innerText]="this.numValSelection.hitMin"></span> Frames</p>
+              <button ion-button class="filterTopButton" (click)="incrementNumVal('hitMin')">Plus</button>
+              <button ion-button color="danger" class="filterTopButton" (click)="decrementNumVal('hitMin')">Minus</button>            
+            </div>
+          </ion-item>    
+
+          <ion-item> <!-- Top Part -->
+            <ion-label>Max Threshold</ion-label>
+            <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.hitMax"></ion-checkbox>
+          </ion-item>    
+          <!-- Bottom Part -->
+          <ion-item *ngIf="this.attributeSelection.hitMax">
+            <div>
+              <p class="filterNumTitle"><span [innerText]="this.numValSelection.hitMax"></span> Frames</p>
+              <button ion-button class="filterTopButton" (click)="incrementNumVal('hitMax')">Plus</button>
+              <button ion-button color="danger" class="filterTopButton" (click)="decrementNumVal('hitMax')">Minus</button>            
+            </div>
+          </ion-item>             
         </div>
       </ion-list>  
 
@@ -149,17 +261,66 @@
   
           <div *ngIf="this.dropDownShow.counterHit">
             <ion-item>
-              <ion-label>Positive</ion-label>
-              <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.counterHitPositive"></ion-checkbox>
-            </ion-item>
-            <ion-item>
-              <ion-label>Negative</ion-label>
-              <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.counterHitNegative"></ion-checkbox>
-            </ion-item>     
+              <ion-label>Special</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.counterHitSpecial"></ion-checkbox>
+            </ion-item>   
+
+            <ng-template #counterHitPositive>
               <ion-item>
+                <ion-label>Positive</ion-label>
+                <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.counterHitPositive"></ion-checkbox>
+              </ion-item>  
+            </ng-template>
+
+            <!-- Dummy for hitPositive -->
+            <ion-item *ngIf="this.numValSelection.counterHitMax > 0 && this.attributeSelection.counterHitMax; else counterHitPositive" class="dummyFilter">
+              <ion-label>Positive</ion-label>
+              <ion-checkbox color="dark" disabled checked></ion-checkbox>
+            </ion-item>
+            
+            <ng-template #counterHitNegative>
+              <ion-item>
+                <ion-label>Negative</ion-label>
+                <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.counterHitNegative"></ion-checkbox>
+              </ion-item>       
+            </ng-template>
+
+            <!-- Dummy for hitNegative -->
+            <ion-item *ngIf="this.numValSelection.counterHitMin < 0 && this.attributeSelection.counterHitMin; else counterHitNegative" class="dummyFilter">
+              <ion-label>Negative</ion-label>
+              <ion-checkbox color="dark" disabled checked></ion-checkbox>
+            </ion-item>
+
+            <ion-item>
               <ion-label>Neutral</ion-label>
               <ion-checkbox color="dark" [(ngModel)]="this.numBoolSelection.counterHitNeutral"></ion-checkbox>
-            </ion-item>        
+            </ion-item>   
+
+            <ion-item> <!-- Top Part -->
+              <ion-label>Min Threshold</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.counterHitMin"></ion-checkbox>    
+            </ion-item>    
+            <!-- Bottom Part -->
+            <ion-item *ngIf="this.attributeSelection.counterHitMin"> 
+              <div>
+                <p class="filterNumTitle"><span [innerText]="this.numValSelection.counterHitMin"></span> Frames</p>
+                <button ion-button class="filterTopButton" (click)="incrementNumVal('counterHitMin')">Plus</button>
+                <button ion-button color="danger" class="filterTopButton" (click)="decrementNumVal('counterHitMin')">Minus</button>            
+              </div>
+            </ion-item>    
+  
+            <ion-item> <!-- Top Part -->
+              <ion-label>Max Threshold</ion-label>
+              <ion-checkbox color="dark" [(ngModel)]="this.attributeSelection.counterHitMax"></ion-checkbox>
+            </ion-item>    
+            <!-- Bottom Part -->
+            <ion-item *ngIf="this.attributeSelection.counterHitMax">
+              <div>
+                <p class="filterNumTitle"><span [innerText]="this.numValSelection.counterHitMax"></span> Frames</p>
+                <button ion-button class="filterTopButton" (click)="incrementNumVal('counterHitMax')">Plus</button>
+                <button ion-button color="danger" class="filterTopButton" (click)="decrementNumVal('counterHitMax')">Minus</button>            
+              </div>
+            </ion-item>               
           </div>
         </ion-list>  
   

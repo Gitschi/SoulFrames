@@ -88,13 +88,14 @@
 						<div class="colInnerDiv">
 							<img *ngIf="move.intoStance" [src]="this.attributes.SS" class="attributeImage">
 							<img *ngIf="move.lethalHit" [src]="this.attributes.LH" class="attributeImage">
-							<img *ngIf="move.intoCrouch" [src]="this.attributes.C" class="attributeImage">
+							<img *ngIf="move.intoCrouch" [src]="this.attributes.FC" class="attributeImage">
 							<img *ngIf="move.guardImpact" [src]="this.attributes.GI" class="attributeImage">
 							<img *ngIf="move.reversalEdge" [src]="this.attributes.RE" class="attributeImage">
 							<img *ngIf="move.soulCharge" [src]="this.attributes.SC" class="attributeImage">
 							<img *ngIf="move.grab" [src]="this.attributes.TH" class="attributeImage">
 							<img *ngIf="move.breakAttack" [src]="this.attributes.BA" class="attributeImage">
 							<img *ngIf="move.unblockableArt" [src]="this.attributes.UA" class="attributeImage">
+							<img *ngIf="move.guardCancelable" [src]="this.attributes.GC" class="attributeImage">
 						</div>
 					</ion-col>			
 					<ion-col class="sheetColumn wideCol">
@@ -107,7 +108,9 @@
 		<ng-container *ngIf="this.moveListIsEmpty">
 			<p id="noResultText">
 				No matching results.<br>
-				Try applying less filters.
+				Try applying less filters.<br><br>
+				When using threshold filters,<br>
+				don't set Min above Max.
 			</p>
 		</ng-container>
   </ion-scroll>

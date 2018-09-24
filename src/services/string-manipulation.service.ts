@@ -1,6 +1,5 @@
 export class StringManipulationService{
   charStances = null;
-  nonStanceCategories: number = 6;
 
   // Loops through move-list and exchanges alphanumeric notations and levels for image-paths
   preloadCommandImages(moveList: any[]) {
@@ -121,9 +120,12 @@ export class StringManipulationService{
       case "x": //Slide B
         return "assets/imgs/input/Sb.png";
 
-      case "c": //Slide C
+      case "c": //Slide K
         return "assets/imgs/input/Sk.png";
       
+      case "n": //Slide G
+        return "assets/imgs/input/Sg.png";
+
       //Multi Button
       case "M": // A~B Horizontal ~ Vertical
         return "assets/imgs/input/M.png";
@@ -158,6 +160,9 @@ export class StringManipulationService{
       
       case "v": // During Hit
         return "assets/imgs/input/v.png";
+
+      case "S": // During Soul Charge
+        return "assets/imgs/input/SoulCharged.png";
 
       // Throws
       case "Z": // Left Side throw
@@ -205,6 +210,9 @@ export class StringManipulationService{
 
       case "S": // Special Low
         return "assets/imgs/levels/SpecLow.png";
+
+      case "m": // Special Low
+        return "assets/imgs/levels/SpecMid.png";
 
       default: // Null
         return null;

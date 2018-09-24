@@ -2,6 +2,14 @@ import { Move } from "../models/move.model";
 
 export class MoveService{
   Mitsurugi = [
+    // Reversal Edge Attacks
+    [
+      new Move("RE Attack", "AA", "HH", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true)
+    ],
+    // Gauge Attacks
+    [
+      new Move("Gauge Attacks", "AA", "HH", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true)
+    ],
     // Horizontal Moves
     [
       new Move("Twin Splinters", "A", "H", 13, -8, 2, 2, 12),
@@ -142,6 +150,14 @@ export class MoveService{
   ]
 
   Sophitia = [
+    // Reversal Edge Attacks
+    [
+      new Move("RE Attack", "AA", "HH", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true)
+    ],
+    // Gauge Attacks
+    [
+      new Move("Gauge Attacks", "AA", "HH", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true)
+    ],
     // Horizontal Moves
     [
       new Move("Twin Splinters", "A", "H", 13, -8, 2, 2, 12),
@@ -282,7 +298,43 @@ export class MoveService{
   ]
 
   Raphael = [
-    // Reversal Edge and Gauge Attacks not implemented
+    // Reversal Edge Attacks
+    [
+      new Move("Venomous Sting", "B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Venomous Sting", "b+g", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Aerial Shift", "B+G4", "M", null, null, null, null, null, "vs. low attacks/ Shifts to clash upon hit", true, false, false, true, true),
+      new Move("Venomous Sting (Cancel) ~ Aerial Shift", "x+n4", null, null, null, null, null, null, "vs. low attacks", true, false, false, true),
+      new Move("Fatal Sting", "B+GB", "MH", null, null, null, null, null, "1st hit shifts to clash upon hit", false, false, false, false, true),
+      new Move("Fatal Sting ~ Preparation", "B+Gb", "MH", null, null, null, null, null, "1st hit shifts to clash upon hit / Dodges high attacks", true, false, false, false, true),
+      new Move("Venomous Sting", "[B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Venomous Sting", "[b+g", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Venomous Sting ~ Aerial Shift", "[B+G", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", true, false, false, false, true, false, false, true),
+      new Move("Venomous Sting (Cancel) ~ Aerial Shift", "[x+n4", null, null, null, null, null, null, "Shifts to clash upon hit or guard", true, false, false, false, true, false, false, true),
+      new Move("Fatal Sting", "[B+GB", "MH", null, null, null, null, null, "1st hit shifts to clash upon hit", false, false, false, false, true),
+      new Move("Fatal Sting ~ Preparation", "[B+Gb", "MH", null, null, null, null, null, "1st hit shifts to clash upon hit / Dodges high attacks", true, false, false, false, true),
+      new Move("Toxic Talon", "A", "H", null, null, null, null, null, null, false, true), // Post RE
+      new Move("Fatal Skewer", "B", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true), // Post RE
+      new Move("Bella Donna Spin", "K", "MH", null, null, null, null, null, null, false, true) // Post RE
+    ],
+    // Gauge Attacks
+    [
+      new Move("Royal Poison", "A+B+G", "M", null, null, null, null, null, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Royal Poison: Fatal Dose", "[A+B+G", "M", null, null, null, null, null, null, false, false, false, false, false, false, true, true, false, false, true),
+      new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Viper Hiss", "S6AB", "HM", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
+      new Move("Viper Hiss ~ Preparation", "S6Ab", "HM", null, null, null, null, null, "Dodges high attacks", true, false, false, false, false, true, false, true),
+      new Move("Renegade Thrust", "S4AB", "HM", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
+      new Move("Renegade Thrust ~ Preparation", "S4Ab", "HM", null, null, null, null, null, "Dodges high attacks", true, false, false, false, false, true, false, true),
+      new Move("Death Throes", "S6BBBB", "HHMM", null, null, null, null, null, null, false, false, false, false, false, true, true),
+      new Move("Vicious Viper", "S4BBB", "HHM", null, null, null, null, null, null, false, false, false, false, false, true), 
+      new Move("Web Weaver", "S4KB", "LL", null, null, null, null, null, null, false, false, false, false, false, true),
+      new Move("Le Vol d'lcare", "S2A+BB", "MMH", null, null, null, null, null, null, false, false, false, false, false, true),
+      new Move("Scarlet Roar", "SJAB", "MM", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
+      new Move("Scarlet Roar ~ Preparation", "SJAb", "MM", null, null, null, null, null, "Dodges high attacks", true, false, false, false, false, true, false, true),
+      new Move("Thousand Hornets", "SA+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
+      new Move("Rampage of the Queen Bee", "S[BBA+B", "HHMMMMMMMMM", null, null, null, null, null, null, false, false, true, false, false, true),
+      new Move("Folie a Deux", "S[6KK", "MH", null, null, null, null, null, null, false, false, false, false, false, true)
+    ],
     // Horizontal Moves
     [
       new Move("Temple Bayonet", "AA", "HH", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
@@ -394,7 +446,7 @@ export class MoveService{
       new Move("A Lesson in Massacre", "ZA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
       new Move("Undertaker", "XA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
       new Move("Pure Sacrifice", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Thousand Hornets", "A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true)
+      new Move("Thousand Hornets", "A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true) // While Charged
     ],
     // ************ Stances *************
     // Preparation

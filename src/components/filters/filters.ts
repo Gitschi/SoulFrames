@@ -29,6 +29,7 @@ export class FiltersComponent {
     soulCharge: false,
     lethalHit: false,
     throw: false,
+    soulGauge: false,
 
     impactMin: false,
     impactMax: false,

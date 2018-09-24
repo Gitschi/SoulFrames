@@ -13,7 +13,7 @@ import { CharService } from '../../services/char.service';
 
 export class FrameSheetPage {
   // Sets how many arrays the object has before stances
-  nonStanceCategories: number = 6;
+  nonStanceCategories: number = 8;
 
   // Category view mode
   categoryView: boolean = true;
@@ -32,7 +32,8 @@ export class FrameSheetPage {
     TH: "assets/imgs/attributes/TH.png",
     UA: "assets/imgs/attributes/UA.png",
     FC: "assets/imgs/attributes/FC.png",
-    GC: "assets/imgs/attributes/GC.png"
+    GC: "assets/imgs/attributes/GC.png",
+    SG: "assets/imgs/attributes/SG.png"
   }
 
   // Imports moveList and makes a copy of it
@@ -41,7 +42,7 @@ export class FrameSheetPage {
 
   // Sets categories for headers
   categoryList: string[] = [
-    "Horizontal Attacks", "Vertical Attacks", "Kicks", "Dual Button Attacks", "8-Way Run Moves", "Throws"
+    "Reversal Edge Attacks", "Gauge Attacks", "Horizontal Attacks", "Vertical Attacks", "Kicks", "Dual Button Attacks", "8-Way Run Moves", "Throws"
   ];
 
   constructor(
@@ -196,6 +197,14 @@ export class FrameSheetPage {
             for(let i = 0; i < this.moveList.length; i++){
               this.moveList[i] = this.moveList[i].filter(
                 move => move.grab);  
+            }      
+            break;
+
+          // soulGauge
+          case 9:
+            for(let i = 0; i < this.moveList.length; i++){
+              this.moveList[i] = this.moveList[i].filter(
+                move => move.soulGauge);  
             }      
             break;
         }

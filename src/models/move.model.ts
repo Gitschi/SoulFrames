@@ -18,6 +18,7 @@ export class Move{
     public grab?: boolean,
     public breakAttack?: boolean,
     public unblockableArt?: boolean,
-    public guardCancelable?: boolean
+    public guardCancelable?: boolean,
+    public soulGauge?: boolean
   ){};
 }

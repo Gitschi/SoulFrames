@@ -161,8 +161,26 @@ export class StringManipulationService{
       case "v": // During Hit
         return "assets/imgs/input/v.png";
 
+      case "o": // On Hit or Guard
+        return "assets/imgs/input/hitOrGuard.png";
+
       case "S": // During Soul Charge
         return "assets/imgs/input/SoulCharged.png";
+
+      case "I": // After Successful Guard Impact
+        return "assets/imgs/input/GI.png";
+
+      case "r": // After Reversal Edge Hits
+        return "assets/imgs/input/RE.png";
+
+      case "F": // Fast input
+        return "assets/imgs/input/fast.png";
+
+      case "j": // Just input
+        return "assets/imgs/input/just.png";
+
+      case "w": // When being hit (revenge)
+        return "assets/imgs/input/revenge.png";
 
       // Throws
       case "Z": // Left Side throw
@@ -193,6 +211,12 @@ export class StringManipulationService{
 
       case "}": // Stance 4
         return this.charStances[3].imagePath;
+      
+      case "☺": // Stance 5
+        return this.charStances[4].imagePath;
+
+      case "☻": // Stance 6
+        return this.charStances[5].imagePath;
     }
   }
 
@@ -211,7 +235,7 @@ export class StringManipulationService{
       case "S": // Special Low
         return "assets/imgs/levels/SpecLow.png";
 
-      case "m": // Special Low
+      case "m": // Special Mid
         return "assets/imgs/levels/SpecMid.png";
 
       default: // Null

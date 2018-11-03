@@ -8,6 +8,12 @@ export class StanceService{
     new Stance("Comedy of Errors", "assets/imgs/input/MitsuMist.png")
   ]
 
+  Cervantes = [
+    new Stance("Dread Charge", "assets/imgs/input/SophitiaAngelStep.png"),
+    new Stance("Dread Storm", "assets/imgs/input/SophitiaAngelStep.png"),
+    new Stance("Geo Da Ray", "assets/imgs/input/SophitiaAngelStep.png")
+  ]  
+
   Groh = [
     new Stance("Avenger", "assets/imgs/input/SophitiaAngelStep.png")
   ]  
@@ -57,6 +63,10 @@ export class StanceService{
     new Stance("Quick Parade", "assets/imgs/input/MitsuSilent.png")
   ]
 
+  SeongMina = [
+    new Stance("Lingering Step", "assets/imgs/input/SophitiaAngelStep.png")
+  ]
+
   Siegfried = [
     new Stance("Base Hold", "assets/imgs/input/SophitiaAngelStep.png"),
     new Stance("Reverse Side Hold", "assets/imgs/input/SophitiaAngelSideStep.png"),
@@ -67,6 +77,33 @@ export class StanceService{
   Sophitia = [
     new Stance("Angel Step", "assets/imgs/input/SophitiaAngelStep.png"),
     new Stance("Twin Angel Step", "assets/imgs/input/SophitiaAngelSideStep.png")
+  ]
+
+  Taki = [
+    new Stance("Possession", "assets/imgs/input/SophitiaAngelStep.png"),
+    new Stance("Wind Roll", "assets/imgs/input/SophitiaAngelSideStep.png"),
+    new Stance("Distorted Breeze", "assets/imgs/input/SophitiaAngelSideStep.png"),
+    new Stance("Stalker", "assets/imgs/input/SophitiaAngelSideStep.png")
+  ]
+
+  Talim = [
+    new Stance("Wind Charmer", "assets/imgs/input/SophitiaAngelStep.png"),
+    new Stance("Wind Sault", "assets/imgs/input/SophitiaAngelSideStep.png"),
+    new Stance("Wind Fury", "assets/imgs/input/SophitiaAngelSideStep.png")
+  ]
+
+  Tira = [
+    new Stance("Updraft", "assets/imgs/input/SophitiaAngelStep.png"),
+    new Stance("Jolly", "assets/imgs/input/SophitiaAngelSideStep.png"),
+    new Stance("Gloomy", "assets/imgs/input/SophitiaAngelSideStep.png"),
+    new Stance("Gestopft Madness", "assets/imgs/input/SophitiaAngelSideStep.png")
+  ]
+
+  Voldo = [
+    new Stance("Mantis Crawl", "assets/imgs/input/SophitiaAngelStep.png"),
+    new Stance("Caliostro Rush", "assets/imgs/input/SophitiaAngelSideStep.png"),
+    new Stance("Blind Caliostro Rush", "assets/imgs/input/MitsuMist.png"),
+    new Stance("Death Roll", "assets/imgs/input/MitsuSilent.png")
   ]
 
   Yoshimitsu = [

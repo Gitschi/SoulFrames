@@ -182,6 +182,27 @@ export class StringManipulationService{
       case "w": // When being hit (revenge)
         return "assets/imgs/input/revenge.png";
 
+      case "D": // Versus Downed
+        return "assets/imgs/input/vsDowned.png";
+
+      case "Q": // Versus Crouching
+        return "assets/imgs/input/vsCrouching.png";
+
+      case "M": // Versus Mid-air
+        return "assets/imgs/input/vsMidair.png";
+
+      case "e": // 8-Way Run
+        return "assets/imgs/input/eightWayRun.png";
+
+      case "d": // While Down
+        return "assets/imgs/input/WhileDown.png";
+
+      case "E": // Close Hit
+        return "assets/imgs/input/closeHit.png";
+
+      case "U": // During Motion
+        return "assets/imgs/input/duringMotion.png";
+
       // Throws
       case "Z": // Left Side throw
         return "assets/imgs/input/left.png";
@@ -217,6 +238,10 @@ export class StringManipulationService{
 
       case "☻": // Stance 6
         return this.charStances[5].imagePath;
+
+      case "♥": // Stance 7
+        return this.charStances[6].imagePath;
+
     }
   }
 

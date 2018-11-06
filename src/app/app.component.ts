@@ -5,7 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { NotationsPage } from '../pages/notations/notations';
-import { HowtousePage } from '../pages/howtouse/howtouse';
+//import { HowtousePage } from '../pages/howtouse/howtouse';
 import { SupportPage } from '../pages/support/support';
 
 @Component({
@@ -25,8 +25,8 @@ export class MyApp {
     this.pages = [
       { title: 'Home', component: HomePage },
       { title: 'Notations', component: NotationsPage},
-      { title: 'How to use Frame Data', component: HowtousePage},
-      { title: 'Want to Support our Work?', component: SupportPage}
+      //{ title: 'How to use Frame Data', component: HowtousePage},
+      { title: 'About Soul Frames', component: SupportPage}
     ];
 
   }

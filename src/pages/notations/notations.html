@@ -51,65 +51,22 @@
         <div class="headerDiv headerDivPurple">
             <h2 class="headersText">Command Notations</h2>
         </div>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/6.png"></ion-col>
-            <ion-col><p>White arrows indicate which direction to <strong>press</strong>.</p></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/I6.png"></ion-col>
-            <ion-col><p>Black arrows indicate which direction to <strong>press twice</strong>.</p></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/A.png"></ion-col>
-            <ion-col><p><strong>Horizontal</strong> Attack.</p></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/B.png"></ion-col>
-            <ion-col><p><strong>Vertical</strong> Attack.</p></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/K.png"></ion-col>
-            <ion-col><p><strong>Kick</strong> Attack Move.</p></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/G.png"></ion-col>
-            <ion-col><p><strong>Guard</strong> Move.</p></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/Ia.png"></ion-col>
-            <ion-col><p>Black letters will indicate which attack button to <strong>hold down</strong>.</p></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/M.png"></ion-col>
-            <ion-col><p>When multiple attack buttons are shown together like this, the <strong>small one should be pressed briefly</strong> before <strong>pressing the large one</strong>.</p></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/_notation.png"></ion-col>
-            <ion-col><p>The asterisk stands for <strong>OR</strong>.</p></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/+notation.png"></ion-col>
-            <ion-col><p>The plus will indicate when you have to press multiple inputs <strong>together</strong>.</p></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/H.png"></ion-col>
-            <ion-col><p>The move behaves differently on <strong>counter hit</strong>.</p></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/C.png"></ion-col>
-            <ion-col><p>The move is performed during <strong>full crouch</strong>.</p></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/T.png"></ion-col>
-            <ion-col><p>The move is performed while being <strong>back turned</strong>.</p></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/W.png"></ion-col>
-            <ion-col><p>The move is performed <strong>while rising</strong> from a crouch.</p></ion-col>
-        </ion-row>
-        <ion-row>
-            <ion-col class="leftCol"><img class="notationImage horizontalAlign" src="assets/imgs/input/R.png"></ion-col>
-            <ion-col><p>The move is performed while <strong>running</strong>.</p></ion-col>
+
+        <ion-row *ngFor="let notation of inputNotations">
+            <ion-col class="leftCol"><img class="notationImage horizontalAlign" [src]="notation.imageLink"></ion-col>
+            <ion-col><p [innerHTML]="notation.text"></p></ion-col>
         </ion-row>
   </div>
+
+    <div class="shadow contentContainer contentGap">
+        <div class="headerDiv headerDivRed">
+            <h2 class="headersText">Property Notations</h2>
+        </div>
+
+        <ion-row *ngFor="let notation of propertyNotations">
+            <ion-col class="leftCol"><img class="notationImage horizontalAlign" [src]="notation.imageLink"></ion-col>
+            <ion-col><p [innerHTML]="notation.text"></p></ion-col>
+        </ion-row>
+    </div>
+
 </ion-content>

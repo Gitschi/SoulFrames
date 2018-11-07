@@ -13,8 +13,8 @@
 
   <ion-grid>
     <ion-row align-items-center>
-      <ion-col *ngFor="let char of this.chars">
-        <div class="charContainer shadow" (click)="toFrameSheet(char.name)">
+      <ion-col *ngFor="let char of this.chars; let i = index">
+        <div class="charContainer shadow" (click)="toFrameSheet(char.name, i)" [class.selectedDiv]="pressedButton === i">
             <p class="charHeader">{{ char.name }}</p>
             <img class="cardImage" [src]="char.imagePath">        
         </div>

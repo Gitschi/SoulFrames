@@ -12,16 +12,26 @@ import { FrameSheetPage } from '../frame-sheet/frame-sheet';
 
 export class HomePage {
   chars = this.charService.getChars();
+  pressedButton: number;
 
   constructor(
     public navCtrl: NavController,
     private charService: CharService,
     private loadingController: LoadingController
-  ) {}
+  ) {
+    this.pressedButton = null;
+  }
   
-  toFrameSheet(selection) {
+  ionViewWillEnter(){
+    this.pressedButton = null;
+  }
+
+  toFrameSheet(selection, index) {
+    this.pressedButton = index;
     this.showLoader();
     this.navCtrl.push(FrameSheetPage);
+
+    // Try to split this process and put on other page
     this.charService.charSelect(selection);
   }
 

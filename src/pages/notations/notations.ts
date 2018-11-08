@@ -27,7 +27,7 @@ export class NotationsPage {
     {imageLink: "assets/imgs/input/J.png", text: "The move is performed while <strong>jumping</strong>."},
     {imageLink: "assets/imgs/input/v.png", text: "Press next input <strong>during hit</strong> or activates <strong>on hit</strong>."},
     {imageLink: "assets/imgs/input/hitOrGuard.png", text: "Press next input <strong>during guard or hit</strong> or activates <strong>on guard or hit</strong>."},
-    {imageLink: "assets/imgs/input/soulCharged.png", text: "Move can only be executed while in <strong>Soul Charge</strong> mode."},
+    {imageLink: "assets/imgs/input/SoulCharged.png", text: "Move can only be executed while in <strong>Soul Charge</strong> mode."},
     {imageLink: "assets/imgs/input/GI.png", text: "Activates on successful <strong>Guard Impact</strong>."},
     {imageLink: "assets/imgs/input/RE.png", text: "Perform input after <strong>Reversal Edge Clash</strong>."},
     {imageLink: "assets/imgs/input/fast.png", text: "Input needs to be executed <strong>fast</strong>."},

@@ -24,102 +24,145 @@ export class MoveService{
   Astaroth = [
     // Reversal Edge Attacks
     [
-      new Move("Woebringer", "B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Woebringer", "b+g", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
-      new Move("Ax of Woe", "rA", "H", null, null, null, null, null, null, false, true),
-      new Move("Rending Torment", "rB", "M", null, null, null, null, null, "Shifts to attack throw upon hit/Shifts to clash upon guard", false, true, false, false, false, false, true, true),
-      new Move("Eviscerate", "rK", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true)
+      new Move("Woebringer", "B+G", "M", 50, -12, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Woebringer", "b+g", "M", 70, 50, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Ax of Woe", "rA", "H", null, -6, "KND", "KND", 54, null, false, true),
+      new Move("Rending Torment", "rB", "M", null, "KND", "KND", 63, null, "Shifts to attack throw upon hit/Shifts to clash upon guard", false, true, false, false, false, false, true, true),
+      new Move("Eviscerate", "rK", "M", null, 14, 14, 14, 36, null, false, true, false, false, false, false, false, true)
     ],
     // Gauge Attacks
     [
-      new Move("Final Anguish", "A+B+K", "H", null, null, null, null, null, null, false, false, false, false, false, false, true, false, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
-      new Move("Bringer of Ruin", "S1AA", "LL", null, null, null, null, null, "Revenge attack/1st hit can be held", false, false, false, false, false, true),
-      new Move("Ruinous Discus Breaker", "S1AB", "LM", null, null, null, null, null, "Revenge attack/1st hit can be held", false, false, false, false, false, true, false, true),
-      new Move("Decimation Charge", "S4AA", "HH", null, null, null, null, null, "Revenge attack/Can be delayed/2nd hit shifts to attack throw upon hit", false, false, false, false, false, true, true),
-      new Move("Cerberus Surge", "S236A", "MMMMMMMMM", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Unstoppable Great Divide", "SBB", "MM", null, null, null, null, null, null, false, false, false, false, false, true, false, false, false, true),
-      new Move("Savage Great Divine", "SBb", "MM", null, null, null, null, null, null, false, false, false, false, false, true, false, false, false, true),
-      new Move("Apocalypse Pound", "SxKA+G", "MMM", null, null, null, null, null, null, false, false, false, false, false, true, true),
-      new Move("Apocalypse Drop", "SxK4A+GA+G", "MMM", null, null, null, null, null, null, false, false, false, false, false, true, true),
-      new Move("Ruin Slam", "S6B", "M", null, null, null, null, null, "Revenge attack/Can be held", false, false, false, false, false, true),
-      new Move("Blood Tide Rush", "S6BA", "MMMMMMMMMM", null, null, null, null, null, "Revenge attack", false, false, false, false, false, true),
-      new Move("Cyclopean Swipe", "S6BB", "MM", null, null, null, null, null, "Revenge attack", false, false, false, false, false, true, false, true),
-      new Move("Ruinous Gorefang", "S4BB", "MM", null, null, null, null, null, "1st hit can be held", false, false, false, false, false, true, false, true),
-      new Move("Annihilation Gorefang", "S4Bb", "MM", null, null, null, null, null, null, false, false, false, false, false, true, false, false, true),
-      new Move("Victorious Charge", "S4KA", "MH", null, null, null, null, null, "Revenge attack/1st hit can be held/2nd hit can be delayed", false, false, false, false, false, true),
-      new Move("Ruthless Assault", "S4Ka", "MM", null, null, null, null, null, "Revenge attack", false, false, false, false, false, true),
-      new Move("Malicious Torment", "S4B+K", "LLL", null, null, null, null, null, "Revenge attack", false, false, true, false, false, true),
-      new Move("Apocalypse Cannon", "S@|*B", "M", null, null, null, null, null, null, false, true, false, false, false, true, false, true),
-      new Move("Apocalypse Rush", "S#|^|(KK", "MM", null, null, null, null, null, "Revenge attack/1st hit can be held", false, false, false, false, false, true),
-      new Move("Vicious Fury", "S#|^|(A+G", "H", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, true, true),
-      new Move("Cursed Altar", "S!|$|uA+G", "H", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, true, true),
-      new Move("Apocalypse Pound", "SQ2A+G", "M", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
-      new Move("Apocalypse Drop", "SQ1A+GA+G", "M", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
-      new Move("Apocalypse Destroyer", "S236A+GA+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
-      new Move("Ride of the Wicked", "S214A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
-      new Move("Wicked Twister of Carnage", "S214A+G2|8A", "H", null, null, null, null, null, null, false, false, false, false, false, true, true)
+      new Move("Final Anguish", "A+B+K", "H", 24, "KND", "KND", "KND", 85, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Soul Charge", "4A+B+G", "m", 6, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Bringer of Ruin", "S1AA", "LL", 36, null, "KND", "KND", 65, "Revenge attack/1st hit can be held", false, false, false, false, false, true),
+      new Move("Ruinous Discus Breaker", "S1AB", "LM", 36, null, "KND", "KND", 70, "Revenge attack/1st hit can be held", false, false, false, false, false, true, false, true),
+      new Move("Decimation Charge", "S4AA", "HH", 14, 4, 14, 14, 26, "Revenge attack/Can be delayed/2nd hit shifts to attack throw upon hit", false, false, false, false, false, true, true),
+      new Move("Cerberus Surge", "S236A", "MMMMMMMMM", 20, 8, "KND", "KND", 68, null, false, false, false, false, false, true),
+
+      new Move("Unstoppable Great Divide", "SBB", "MM", 20, null, "LNC", "LNC", 44, null, false, false, false, false, false, true, false, false, false, true),
+      new Move("Savage Great Divine", "SBb", "MM", 20, null, "LNC", "LNC", 57, null, false, false, false, false, false, true, false, false, false, true),
+
+      new Move("Apocalypse Pound", "SxKA+G", "MMM", 20, null, "KND", "KND", 88, null, false, false, false, false, false, true, true),
+      new Move("Apocalypse Drop", "SxK4A+GA+G", "MMM", 20, null, "KND", "KND", 93, null, false, false, false, false, false, true, true),
+
+      new Move("Ruin Slam", "S6B", "M", 20, -8, 2, "KND", 24, "Revenge attack/Can be held", false, false, false, false, false, true),
+      new Move("Blood Tide Rush", "S6BA", "MMMMMMMMMM", 20, 8, "KND", "KND", 90, "Revenge attack", false, false, false, false, false, true),
+      new Move("Cyclopean Swipe", "S6BB", "MM", 40, 8, "KND", "KND", 52, "Revenge attack", false, false, false, false, false, true, false, true),
+
+      new Move("Ruinous Gorefang", "S4BB", "MM", 16, null, "KND", "KND", 56, "1st hit can be held", false, false, false, false, false, true, false, true),
+      new Move("Annihilation Gorefang", "S4Bb", "MM", 16, null, "KND", "KND", 61, null, false, false, false, false, false, true, false, false, true),
+
+      new Move("Victorious Charge", "S4KA", "MH", 18, null, "KND", "KND", 53, "Revenge attack/1st hit can be held/2nd hit can be delayed", false, false, false, false, false, true),
+      new Move("Ruthless Assault", "S4Ka", "MM", 18, null, null, "KND", 59, "Revenge attack", false, false, false, false, false, true),
+
+      new Move("Malicious Torment", "S4B+K", "LLL", 40, null, "KND", "KND", 27, "Revenge attack", false, false, true, false, false, true),
+      new Move("Apocalypse Cannon", "S@|*B", "M", 30, null, "LNC", "LNC", 49, null, false, true, false, false, false, true, false, true),
+      new Move("Apocalypse Rush", "S#|^|(KK", "MM", 18, null, "KND", "KND", 51, "Revenge attack/1st hit can be held", false, false, false, false, false, true),
+
+      new Move("Vicious Fury", "S#|^|(A+G", "H", 46, null, "KND", "KND", 55, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, true, true),
+      new Move("Cursed Altar", "S!|$|uA+G", "H", 46, null, "KND", "KND", 78, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, true, true),
+      
+      new Move("Apocalypse Pound", "SQ2A+G", "M", 14, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, true, true),
+      new Move("Apocalypse Drop", "SQ1A+GA+G", "M", 14, null, "KND", "KND", 80, "Breakable", false, false, false, false, false, true, true),
+
+      new Move("Apocalypse Destroyer", "S236A+GA+G", "H", 18, null, "KND", "KND", 85, "Breakable", false, false, false, false, false, true, true),
+      new Move("Ride of the Wicked", "S214A+G", "H", 18, null, "LNC", "LNC", 45, "Breakable", false, false, false, false, false, true, true),
+      new Move("Wicked Twister of Carnage", "S214A+G2|8A", "H", 18, null, "KND", "KND", 68, null, false, false, false, false, false, true, true)
     ],
     // Horizontal Moves
     [
-      new Move("Annihilation", "AA", "HH", null, null, null, null, null, "Can be delayed", false, false, false, false, false, false, true, false, false, true),
-      new Move("Annihilation(counter)", "HAA", "HH", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true, false, false, true),
-      new Move("Destruction", "AB", "HM", null, null, null, null, null, "Can be delayed"),
-      new Move("Hades Control", "6A", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Hades Control(counter)", "H6A", "H", null, null, null, null, null, "Shits to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Ax Blow", "3A", "M", null, null, null, null, null),
-      new Move("Hades Break", "2A", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Discus", "1A", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Double Discus", "1aA", "LL", null, null, null, null, null, null, false, false, true),
-      new Move("Discus Breaker", "1aB", "LM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Decimation", "4AA", "HH", null, null, null, null, null, "Can be delayed/Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Decimation", "4Aa", "HH", null, null, null, null, null, null, false, false, false, false, false, false, true, true),
-      new Move("Grip Shot to Ax Volcano", "4AB", "HM", null, null, null, null, null, "Can be delayed"),
-      new Move("Poseidon Tide", "214A", "M", null, null, null, null, null, "Shifts to attack throw upon hit/Can move using D-pad", false, false, false, false, false, false, true),
-      new Move("Poseidon Tide Rush", "214AAAAAA", "MMMMMM", null, null, null, null, null, "Can move using D-pad"),
-      new Move("Hades Break", "CA", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Reverse Spiral Ax", "WA", "H", null, null, null, null, null),
-      new Move("Great Annihilation", "JA", "H", null, null, null, null, null),
+      new Move("Annihilation", "A", "H", 20, -4, 2, 6, null, null, false, false, false, false, false, false, true, false, false, true),
+      new Move("Annihilation", "AA", "HH", 20, -8, 2, 2, 38, "Can be delayed", false, false, false, false, false, false, true, false, false, true),
+      new Move("Annihilation(counter)", "HAA", "HH", 20, -4, 2, 6, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true, false, false, true),
+      new Move("Destruction", "AB", "HM", 20, -12, 0, 0, 40, "Can be delayed"),
+
+      new Move("Hades Control", "6A", "H", 18, -6, 4, 14, 18, null, false, false, false, false, false, false, true),
+      new Move("Hades Control(counter)", "H6A", "H", 18, -6, 4, 18, null, "Shits to attack throw upon hit", false, false, false, false, false, false, true),
+
+      new Move("Ax Blow", "3A", "M", 20, -12, 0, "KND", 24),
+      new Move("Hades Break", "2A", "L", 20, -14, -4, -4, 18, null, false, false, true),
+
+      new Move("Discus", "1A", "L", 36, -14, -6, "KND", 26, null, false, false, true),
+      new Move("Discus(hold)", "1a", "L", 56, -16, "KND", "KND", 32, null, false, false, true),
+      new Move("Double Discus", "1aA", "LL", 56, -24, "KND", "KND", 59, null, false, false, true),
+      new Move("Discus Breaker", "1aB", "LM", 56, 8, "KND", "KND", 64, null, false, false, false, false, false, false, false, true),
+
+      new Move("Decimation", "4A", "H", 14, -12, 0, 0, 10, "Can be delayed/Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Decimation", "4AA", "HH", 14, 4, 14, 14, 24, "Can be delayed/Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Decimation", "4Aa", "HH", 14, 8, 14, 14, 34, null, false, false, false, false, false, false, true, true),
+
+      new Move("Grip Shot to Ax Volcano", "4AB", "HM", 14, -6, "LNC", "LNC", 40, "Can be delayed"),
+
+      new Move("Poseidon Tide", "214A", "M", 34, -14, "KND", "KND", 90, "Shifts to attack throw upon hit/Can move using D-pad", false, false, false, false, false, false, true),
+      new Move("Poseidon Tide Rush", "214AA", "MM", 34, -22, null, null, 38, "Can move using D-pad"),
+      new Move("Poseidon Tide Rush", "214AAA", "MMM", 34, -22, null, null, 46, "Can move using D-pad"),
+      new Move("Poseidon Tide Rush", "214AAAA", "MMMM", 34, -22, null, null, 54, "Can move using D-pad"),
+      new Move("Poseidon Tide Rush", "214AAAAA", "MMMMM", 34, -22, null, null, 62, "Can move using D-pad"),
+      new Move("Poseidon Tide Rush", "214AAAAAA", "MMMMMM", 34, -16, -4, -4, 70, "Can move using D-pad"),
+
+      new Move("Hades Break", "CA", "L", 20, -14, -4, -4, 18, null, false, false, true),
+      new Move("Reverse Spiral Ax", "WA", "H", 26, -2, "KND", "KND", 52),
+
+      // Possibly different according to direction
+      new Move("Great Annihilation", "JA", "H", 26, -14, "KND", "KND", null),
+
       new Move("Reverse Ax Split", "TA", "H", null, null, null, null, null),
       new Move("Lower Hades Split", "T2A", "S", null, null, null, null, null, null, false, false, true)
     ],
     // Vertical Moves
     [
-      new Move("Great Divide", "BB", "MM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Great Divide", "Bb", "MM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Command Kicks", "xKK", "MMM", null, null, null, null, null, "2nd hit can be delayed"),
-      new Move("Castigate", "xKA+G", "MMM", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Bluster", "xK4A+G", "MMM", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Ax Offering", "x6B", "MM", null, null, null, null, null, "2nd hit can be delayed", false, false, false, false, false, false, true),
-      new Move("Ax Offering(counter)", "Hx6B", "MM", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Ax Side Divide", "Bx6", "MM", null, null, null, null, null),
-      new Move("Ax Side Cannon", "6B", "M", null, null, null, null, null),
-      new Move("Swipe", "6bB", "MM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Ax Volcano", "3B", "M", null, null, null, null, null),
-      new Move("Ax Volcano", "3b", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
-      new Move("Hades", "2B", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Ax Grave", "1B", "L", null, null, null, null, null, "Can be held", false, false, true),
-      new Move("Bear Fang", "4B", "M", null, null, null, null, null),
-      new Move("Bear Fang", "4b", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Gorefang", "4bB", "MM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Gorefang", "4bb", "MM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Dark Split", "CB", "M", null, null, null, null, null, null, false, false, true),
+      new Move("Great Divide", "B", "M", 20, -8, 2, 8, 20, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Great Divide", "BB", "MM", 20, -2, 12, 12, 40, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Great Divide", "Bb", "MM", 20, 6, "LNC", "LNC", 52, null, false, false, false, false, false, false, false, true),
+
+      new Move("Command Kicks", "xK", "MM", 20, -12, -2, -2, 26, "2nd hit can be delayed"),
+      new Move("Command Kicks", "xKK", "MMM", 20, -2, 14, 14, 53, "2nd hit can be delayed"),
+      new Move("Castigate", "xKA+G", "MMM", 20, null, "KND", "KND", 66, null, false, false, false, false, false, false, true),
+      new Move("Bluster", "xK4A+G", "MMM", 20, null, "KND", "KND", 66, null, false, false, false, false, false, false, true),
+
+      new Move("Ax Offering", "x6", "M", 18, -18, -2, 4, 28, null),
+      new Move("Ax Offering", "x6B", "MM", 18, -4, 4, 14, 39, "2nd hit can be delayed", false, false, false, false, false, false, true),
+      new Move("Ax Offering(counter)", "Hx6B", "MM", 18, -4, 4, 14, 39, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+
+      new Move("Ax Side Divide", "Bx6", "MM", 20, 2, 10, 10, 36),
+      new Move("Ax Side Cannon", "6B", "M", 20, -8, 2, "KND", 22),
+
+      new Move("Swipe", "6b", "M", 40, 2, "KND", "KND", 26, null, false, false, false, false, false, false, false, true),
+      new Move("Swipe", "6bB", "MM", 40, 8, "KND", "KND", 53, null, false, false, false, false, false, false, false, true),
+
+      new Move("Ax Volcano", "3B", "M", 24, -12, "LNC", "LNC", 32),
+      new Move("Ax Volcano", "3b", "M", 64, "LNC", "LNC", "LNC", 52, null, false, false, false, false, false, false, false, false, true),
+
+      new Move("Hades", "2B", "M", 20, -10, 6, 6, 24, null, false, false, true),
+      new Move("Ax Grave", "1B", "L", 24, -18, "KND", "KND", 24, "Can be held", false, false, true),
+
+      new Move("Bear Fang", "4B", "M", 16, -8, 6, 6, 20),
+      new Move("Bear Fang", "4b", "M", 42, 6, "KND", "KND", 30, null, false, false, false, false, false, false, false, true),
+      new Move("Gorefang", "4bB", "MM", 42, 0, 6, 6, 52, null, false, false, false, false, false, false, false, true),
+      new Move("Gorefang", "4bb", "MM", 42, 10, "KND", "KND", 57, null, false, false, false, false, false, false, false, true),
+
+      new Move("Dark Split", "CB", "M", 20, -10, 6, 6, 24, null, false, false, true),
       new Move("Hades Rising", "WB", "M", null, null, null, null, null),
       new Move("Hades Rising", "Wb", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
       new Move("Greater divide", "JB", "M", null, null, null, null, null),
       new Move("Reverse Dark Split", "TB", "M", null, null, null, null, null),
-      new Move("Lower Dark Split", "T2B", "M", null, null, null, null, null, null, false, false, true)
+      new Move("Lower Dark Split", "T2B", "M", 22, null, null, null, 22, null, false, false, true)
     ],
     // Kicks
     [
-      new Move("Moloch's Vise", "K", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Moloch's Vise", "k", "H", null, null, null, null, null, "Shifts to attack throw upon hit", false, true, false, false, false, false, true),
-      new Move("Hades Knee", "6K", "M", null, null, null, null, null),
-      new Move("Moloch's Revenge", "3K", "MM", null, null, null, null, null),
-      new Move("Bull Low Kick", "2K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Reverse Tamer", "1KA", "LH", null, null, null, null, null),
-      new Move("Dark Tamer", "4KA", "MH", null, null, null, null, null, "1st hit can be held/2nd hit can be delayed"),
-      new Move("Dark Coercion", "4Ka", "MM", null, null, null, null, null),
+      new Move("Moloch's Vise", "K", "H", 14, -8, 4, 4, 14, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Moloch's Vise", "k", "H", 28, 0, "KND", "KND", 78, "Shifts to attack throw upon hit", false, true, false, false, false, false, true),
+      new Move("Hades Knee", "6K", "M", 18, -12, 4, "KND", 16),
+      new Move("Moloch's Revenge", "3K", "MM", 16, -8, 4, 4, 24),
+      new Move("Bull Low Kick", "2K", "L", 16, -14, -4, -4, 14, null, false, false, true),
+
+      new Move("Reverse Tamer", "1K", "L", 26, -18, 0, "KND", 26),
+      new Move("Reverse Tamer", "1KA", "LH", 26, 0, "KND", "KND", 68),
+
+      new Move("Dark Tamer", "4K", "M", 18, -12, -2, -2, 19, "1st hit can be held"),
+      new Move("Dark Tamer", "4KA", "MH", 18, -1, "KND", "KND", null, "1st hit can be held/2nd hit can be delayed"),
+      new Move("Dark Coercion", "4Ka", "MM", 18, -8, 6, "KND", 55),
+
       new Move("Bull Kick", "CK", "L", null, null, null, null, null, null, false, false, true),
       new Move("Bull Rage", "C3K", "M", null, null, null, null, null),
       new Move("Rising Torment", "WKA", "MH", null, null, null, null, null),
@@ -130,85 +173,114 @@ export class MoveService{
     ],
     // Simultaneous Press Moves
     [
-      new Move("Eternal Damnation", "A+B", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Minotaur Crush", "6A+B", "M", null, null, null, null, null, null, false, true),
-      new Move("Titan Ax", "2A+B", "M", null, null, null, null, null),
-      new Move("Breath of Hades", "4A+B", "M", null, null, null, null, null),
-      new Move("Breath of Hades", "4a+b", "M", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true, false, true),
-      new Move("Flip Titan Ax", "8A+B", "M", null, null, null, null, null),
-      new Move("Guard Crusher", "B+K", "H", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Body Splash", "6B+K", "M", null, null, null, null, null),
-      new Move("Body Splash", "6b+k", "M", null, null, null, null, null, "Revenge attack"),
-      new Move("Hades Crush", "2B+K", "M", null, null, null, null, null),
-      new Move("Hymn to Destruction", "2B+KA+G", "M", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Hymn to Annihilation", "2B+K4A+G", "M", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Ax Lower Cannon", "4B+K", "LLL", null, null, null, null, null, null, false, false, true),
-      new Move("Ax Lower Cannon", "4B+KEB", "LLL", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Flying Divide", "9B+K", "M", null, null, null, null, null),
-      new Move("Flying Divide", "9b+k", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Demented Moon", "236B+K", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true, true),
-      new Move("Side Divide", "TB+K", "M", null, null, null, null, null)
+      new Move("Eternal Damnation", "A+B", "M", 38, 6, "KND", "KND", 40, null, false, true, false, false, false, false, false, true),
+      new Move("Minotaur Crush", "6A+B", "M", 18, -18, 0, 8, 22, null, false, true),
+      new Move("Titan Ax", "2A+B", "M", 28, -20, "KND", "KND", 52),
+      new Move("Titan Ax(Near)", "2A+B", "M", 28, -20, -8, -8, 32),
+
+      new Move("Breath of Hades", "4A+B", "M", 20, -18, "KND", "KND", 26),
+      new Move("Breath of Hades", "4a+b", "M", 20, "KND", "KND", "KND", 56, "Shifts to attack throw upon hit", false, false, false, false, false, false, true, false, true),
+
+      new Move("Flip Titan Ax", "8A+B", "M", 28, -20, "KND", "KND", 52),
+      new Move("Guard Crusher", "B+K", "H", 22, -4, 14, 14, 16, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Body Splash", "6B+K", "M", 18, -14, 8, 8, 26),
+      new Move("Body Splash", "6b+k", "M", 18, -12, 12, 12, 26, "Revenge attack"),
+      new Move("Hades Crush", "2B+K", "M", 36, -2, "KND", "KND", 36),
+      new Move("Hymn to Destruction", "2B+KA+G", "M", 36, -26, "KND", "KND", 58, null, false, false, false, false, false, false, true),
+      new Move("Hymn to Annihilation", "2B+K4A+G", "M", 36, -26, "KND", "KND", 58, null, false, false, false, false, false, false, true),
+      new Move("Ax Lower Cannon", "4B+K", "LLL", 40, 0, "KND", "KND", 24, null, false, false, true),
+      new Move("Ax Lower Cannon", "4B+KEB", "LLL", 40, 0, "LNC", "LNC", 44, null, false, false, false, false, false, false, true),
+      new Move("Flying Divide", "9B+K", "M", null, 0, "KND", "KND", 42),
+      new Move("Flying Divide", "9b+k", "M", null, 14, "KND", "KND", 52, null, false, false, false, false, false, false, false, true),
+      new Move("Demented Moon", "236B+K", "M", 84, "LNC", "LNC", "LNC", 120, null, false, false, false, false, false, false, false, false, true, true),
+      new Move("Side Divide", "TB+K", "M", 14, 0, 10, "STN", 28)
     ],
     // 8-Way Run Moves
     [
-      new Move("Tornado Spike", "#|^|(A+B", "MM", null, null, null, null, null),
-      new Move("Tornado Spike", "#|^|(Ab", "MM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
-      new Move("Poseidon Crest", "@|*AA", "MM", null, null, null, null, null),
-      new Move("Hades Divide", "!|$|uA", "M", null, null, null, null, null),
-      new Move("Hades Divide", "!|$|ua", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Ax Crash", "#|^|(B", "H", null, null, null, null, null, null, false, true),
-      new Move("Hades Cannon", "@|*B", "M", null, null, null, null, null, null, false, true),
-      new Move("Azazel Tackle", "!|uBK", "MM", null, null, null, null, null, "2nd hit can be delayed"),
-      new Move("Canyon Creation", "$B", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Canyon Creation", "$b", "M", null, null, null, null, null, null, false, false, true, false, false, false, false, false, true, true),
-      new Move("Bull Rush", "#|^|(K", "M", null, null, null, null, null),
-      new Move("Bone Grinder", "#|^|(kK", "MM", null, null, null, null, null, null, false, true),
-      new Move("Stamp of Hades", "@|*K", "M", null, null, null, null, null),
-      new Move("Stamp of Hades", "@|*k", "m", null, null, null, null, null, "Becomes a low attack when at distance", false, false, false, false, false, false, false, true),
-      new Move("Lower Command Kick", "!|$|uK", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Atlas Punishment", "#|^|(A+B", "M", null, null, null, null, null),
-      new Move("Titan Ax", "@A+B", "M", null, null, null, null, null),
-      new Move("Flip Titan Ax", "*A+B", "M", null, null, null, null, null),
+      new Move("Tornado Spike", "#|^|(A", "M", 24, -18, -4, "KND", 28),
+      new Move("Tornado Spike", "#|^|(AB", "MM", 24, -4, "KND", "KND", 58),
+      new Move("Tornado Spike", "#|^|(Ab", "MM", 24, "KND", "KND", "KND", 103, null, false, false, false, false, false, false, false, false, true),
+
+      new Move("Poseidon Crest", "@|*A", "M", 18, -10, 0, 0, 16),
+      new Move("Poseidon Crest", "@|*AA", "MM", 18, -12, 2, 2, 36),
+
+      new Move("Hades Divide", "!|$|uA", "M", 26, -12, 6, "KND", 22),
+      new Move("Hades Divide", "!|$|ua", "M", 44, 8, "KND", "KND", 36, null, false, false, false, false, false, false, false, true),
+
+      new Move("Ax Crash", "#|^|(B", "H", 16, -14, 0, "KND", 32, null, false, true),
+      new Move("Hades Cannon", "@|*B", "M", 30, -10, "KND", "KND", 55, null, false, true),
+
+      new Move("Azazel Tackle", "!|uB", "M", 30, -16, "KND", "KND", 32),
+      new Move("Azazel Tackle", "!|uBK", "MM", 30, -4, "KND", "KND", 51, "2nd hit can be delayed"),
+
+      new Move("Canyon Creation", "$B", "M", 28, -6, "KND", "KND", 38, null, false, false, true),
+      new Move("Canyon Creation", "$b", "M", 60, "KND", "KND", "KND", 65, null, false, false, true, false, false, false, false, false, true, true),
+
+      new Move("Bull Rush", "#|^|(K", "M", 18, -6, 12, "KND", 26),
+      new Move("Bone Grinder", "#|^|(k", "M", 48, -4, "KND", "KND", null, null, false, true),
+      new Move("Bone Grinder", "#|^|(kK", "MM", 48, -10, "KND", "KND", 70, null, false, true),
+      
+      new Move("Stamp of Hades", "@|*K", "M", 34, -6, "KND", "KND", 20),
+      new Move("Stamp of Hades", "@|*k", "m", 58, 8, "KND", "KND", 30, "Becomes a low attack when at distance", false, false, false, false, false, false, false, true),
+
+      new Move("Lower Command Kick", "!|$|uK", "M", 32, -2, "KND", "KND", 26, null, false, false, true),
+      new Move("Atlas Punishment", "#|^|(A+B", "M", 44, -8, "KND", "KND", 42),
+
+      new Move("Titan Ax", "@A+B", "M", 28, -20, "KND", "KND", 52),
+      new Move("Titan Ax(Near)", "@A+B", "M", 28, -20, -8, -8, 32),
+      new Move("Flip Titan Ax", "*A+B", "M", 28, -20, "KND", "KND", 52),
+
       new Move("Vicious Madness", "#|^|(A+G", "H", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
       new Move("Underworld Pull", "Q#|^|(A+G2", "M", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
       new Move("Cursed Earth", "!|$|uA+G", "H", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
       new Move("Cursed Flesh", "!|$|uA+Gbj", "H", null, null, null, null, null, "2nd hit can be held", false, false, false, false, false, false, true),
       new Move("Uproot", "Q!|$|uA+G2", "M", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
-      new Move("Sliding", "RK", "L", null, null, null, null, null)
+      new Move("Sliding", "RK", "L", null, null, "KND", "KND", 26)
     ],
     // Throws
     [
-      new Move("Hades Destroyer", "A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Colossus", "6A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Festival of Havoc", "4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Beat Down", "ZA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("On Silent Wings", "XA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Death Crush", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Maelstrom Divide", "Q8A+G", "M", null, null, null, null, null, "Not breakable", false, false, false, false, false, false, true),
-      new Move("Bludgeoning Crush", "Q2A+G", "M", null, null, null, null, null, "Breakable", false, false, false, false, false, false, false, true),
-      new Move("Apocalypse Pound", "SQ2A+G", "M", null, null, null, null, null, "Breakable", false, false, false, false, false, true, false, true),
-      new Move("Drop of Lava", "Q1A+G", "M", null, null, null, null, null, "Breakable", false, false, false, false, false, false, false, true),
-      new Move("Apocalypse Drop", "S1A+GA+G", "M", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
-      new Move("Wrath of the Accursed", "MA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Wrath of the Damned", "M4A+G", "H", null, null, null, null, null, null, false, true, false, false, false, false, true),
-      new Move("Titan Bomb", "236A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Titan Bomb(fast)", "236A+GF", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Apocalypse Destroyer", "S236A+GA+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
-      new Move("Flight of the Wicked", "214A+G", "H", null, null, null, null, null, "Breakable/Can be held/Unable to break when held", false, false, false, false, false, false, true),
-      new Move("Flight of the Wicked(fast)", "214A+Gj", "H", null, null, null, null, "Breakable/Can be held/Unable to break when held", null, false, false, false, false, false, false, true),
-      new Move("Wicked Twister", "214A+G2|8A", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
+      new Move("Hades Destroyer", "A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
+      new Move("Colossus", "6A+G", "H", 18, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, false, true),
+      new Move("Festival of Havoc", "4A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
+      new Move("Beat Down", "ZA+G", "H", 18, null, "KND", "KND", 67, null, false, false, false, false, false, false, true),
+      new Move("On Silent Wings", "XA+G", "H", 18, null, "KND", "KND", 65, null, false, false, false, false, false, false, true),
+      new Move("Death Crush", "VA+G", "H", 18, null, "KND", "KND", 75, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+
+      new Move("Maelstrom Divide", "Q8A+G", "M", 28, null, "KND", "KND", 55, "Not breakable", false, false, false, false, false, false, true),
+      new Move("Bludgeoning Crush", "Q2A+G", "M", 14, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, false, true),
+      new Move("Apocalypse Pound", "SQ2A+G", "M", null, null, "KND", "KND", null, "Breakable", false, false, false, false, false, true, false, true),
+      new Move("Drop of Lava", "Q1A+G", "M", 14, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, false, true),
+      new Move("Apocalypse Drop", "S1A+GA+G", "M", null, null, "KND", "KND", null, "Breakable", false, false, false, false, false, true, true),
+      
+      new Move("Wrath of the Accursed", "MA+G", "H", 18, null, "KND", "KND", 29, null, false, false, false, false, false, false, true),
+      new Move("Wrath of the Damned", "M4A+G", "H", 18, null, "KND", "KND", 29, null, false, true, false, false, false, false, true),
+      new Move("Titan Bomb", "236A+G", "H", 18, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, false, true),
+      new Move("Titan Bomb(fast)", "236A+GF", "H", 18, null, "KND", "KND", 65, "Breakable", false, false, false, false, false, false, true),
+      new Move("Titan Bomb(hold)", "236a+g", "H", 45, null, "KND", "KND", 65, "Breakable", false, false, false, false, false, false, true),
+      new Move("Apocalypse Destroyer", "S236A+GA+G", "H", null, null, "KND", "KND", null, "Breakable", false, false, false, false, false, true, true),
+      
+      new Move("Flight of the Wicked", "214A+G", "H", 18, null, "LNC", "LNC", 35, "Breakable/Can be held/Unable to break when held", false, false, false, false, false, false, true),
+      new Move("Flight of the Wicked(fast)", "214A+Gj", "H", 18, null, "LNC", "LNC", 40, "Breakable/Can be held/Unable to break when held", false, false, false, false, false, false, true),
+      new Move("Flight of the Wicked(hold)", "214a+g", "H", 40, null, "LNC", "LNC", 40, "Breakable/Can be held/Unable to break when held", false, false, false, false, false, false, true),
+
+      new Move("Wicked Twister", "214A+G2|8A", "H", 18, null, "KND", "KND", 52, null, false, false, false, false, false, false, true),
       new Move("Ride of the Wicked", "S214A+G", "H", null, null, null, null, null, "Breakable/Can be held/Unable to break when held", false, false, false, false, false, true, true),
       new Move("Wicked Twister of Carnage", "S214A+G2|8A", "H", null, null, null, null, null, null, false, false, false, false, false, true, true),
-      new Move("Obsidian Drop", "28A+G", null, null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Obsidian Drop(fast)", "28A+GF", null, null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Brutal Grasp", "3A+G", null, null, null, null, null, null, "Not breakable", false, false, false, false, false, false, true),
-      new Move("Vicious Madness", "#|^|(A+G", "", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
-      new Move("Vicious Fury", "S#|^|(A+G", "H", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, true, true),
-      new Move("Underworld Pull", "Q#|^|(A+G2", "M", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
-      new Move("Cursed Earth", "!|$|uA+G", "H", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
-      new Move("Cursed Flesh", "!|$|uA+Gbj", "H", null, null, null, null, null, "2nd hit can be held", false, false, false, false, false, false, true),
-      new Move("Cursed Altar", "S!|$|uA+G", "H", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, true, true),
-      new Move("Uproot", "Q!|$|uA+G2", "M", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true)
+      
+      new Move("Obsidian Drop", "28A+G", null, 18, null, "KND", "KND", 55, null, false, false, false, false, false, false, true),
+      new Move("Obsidian Drop(fast)", "28A+GF", null, 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
+
+      new Move("Brutal Grasp", "3A+G", null, null, null, 10, 10, 10, "Not breakable", false, false, false, false, false, false, true),
+
+      new Move("Vicious Madness", "#|^|(A+G", "H", 46, null, "KND", "KND", 40, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
+      new Move("Vicious Fury", "S#|^|(A+G", "H", null, null, "KND", "KND", null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, true, true),
+      new Move("Underworld Pull", "Q#|^|(A+G2", "M", 45, "KND", "KND", null, 45, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
+      new Move("Cursed Earth", "!|$|uA+G", "H", 46, null, "KND", "KND", 60, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
+      new Move("Cursed Earth", "!|$|uA+GB", "H", 46, null, "KND", "KND", 71, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
+
+      new Move("Cursed Flesh", "!|$|uA+Gbj", "H", null, null, "KND", "KND", null, "2nd hit can be held", false, false, false, false, false, false, true),
+      new Move("Cursed Altar", "S!|$|uA+G", "H", null, "KND", "KND", null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, true, true),
+      new Move("Uproot", "Q!|$|uA+G2", "M", 45, null, "KND", "KND", 40, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true)
     ]
   ]
 

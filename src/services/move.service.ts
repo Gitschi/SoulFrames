@@ -1229,8 +1229,8 @@ export class MoveService{
   Kilik = [
     // Reversal Edge Attacks
     [
-      new Move("Third Eye", "B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Third Eye", "b+g", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Third Eye", "B+G", "M", 16, -4, null, null, 35, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Third Eye", "b+g", "M", null, null, null, null, 45, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
       new Move("Nine Ring Bo", "rA", "H", null, null, null, null, null, null, false, true),
       new Move("Crystal Fang", "rB", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
       new Move("Corrupted Crystal Fang", "SrB", "MMMM", null, null, null, null, null, null, false, true, false, false, false, true, false, true),
@@ -1238,160 +1238,225 @@ export class MoveService{
     ],
     // Gauge Attacks
     [
-      new Move("Ling-Shen Su Phoenix Loop", "A+B+K", "M", null, null, null, null, null, null, false, false, false, false, false, false, true, false, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
-      new Move("Forbidden Moonset", "SA+B+K", "H", null, null, null, null, null, null, false, false, false, false, false, true, true, false, true),
-      new Move("Roc Wing", "S3AB", "MM", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Headsman's Ax", "S4BBBK", "MMMM", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Withered Lotus", "S#|^|(AAA", "MHH", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Black Tortoise Embers", "S@|*AAA", "MLL", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Heavy Bo", "S#|^|(B", "M", null, null, null, null, null, "Shifts to attack throw upon close-range hit", false, false, false, false, false, true, true),
-      new Move("Vermillion Bird Descends", "S#|^|(A+B", "MHM", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
-      new Move("White Tiger Mark", "S#|^|(B+K", "MMM", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Festival of the Damned", "SA+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
-      new Move("Festival of the Dead", "S4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
-      new Move("Corrupted Crystal Fang", "SrB", "MMMM", null, null, null, null, null, null, false, true, false, false, false, true, false, true)
+      new Move("Ling-Shen Su Phoenix Loop", "A+B+K", "M", 16, -8, null, null, 79, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Soul Charge", "4A+B+G", "m", null, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Forbidden Moonset", "SA+B+K", "H", 11, null, null, null, 107, null, false, false, false, false, false, true, true, false, true),
+
+      new Move("Roc Wing", "S3A", "M", 24, -8, 2, 2, 19, null, false, false, false, false, false, true),
+      new Move("Roc Wing", "S3AB", "MM", 24, -16, "KND", "KND", 52, null, false, false, false, false, false, true),
+
+      new Move("Headsman's Ax", "S4B", "M", 26, -6, 4, 4, 13, null, false, false, false, false, false, true),
+      new Move("Headsman's Ax", "S4BB", "MM", 26, -6, 4, 4, 26, null, false, false, false, false, false, true),
+      new Move("Headsman's Ax", "S4BBB", "MMM", 26, -6, 4, 4, 39, null, false, false, false, false, false, true),
+      new Move("Headsman's Ax", "S4BBBK", "MMMM", 26, -18, "KND", "KND", 61, null, false, false, false, false, false, true),
+
+      new Move("Withered Lotus", "S#|^|(A", "M", 28, -8, 10, 10, 22, null, false, false, false, false, false, true),
+      new Move("Withered Lotus", "S#|^|(AA", "MH", 28, -10, 0, 0, 33, null, false, false, false, false, false, true),
+      new Move("Withered Lotus", "S#|^|(AAA", "MHH", 28, -8, "KND", "KND", 55, null, false, false, false, false, false, true),
+
+      new Move("Black Tortoise Embers", "S@|*A", "M", 22, -8, 0, 6, 18, null, false, false, false, false, false, true),
+      new Move("Black Tortoise Embers", "S@|*AA", "ML", 22, -20, "KND", "KND", 35, null, false, false, false, false, false, true),
+      new Move("Black Tortoise Embers", "S@|*AAA", "MLL", 22, -20, "KND", "KND", 64, null, false, false, false, false, false, true),
+
+      new Move("Heavy Bo", "S#|^|(B", "M", 16, -10, "KND", "KND", 49, "Shifts to attack throw upon close-range hit", false, false, false, false, false, true, true),
+      new Move("Vermillion Bird Descends", "S#|^|(A+B", "MHM", 30, 8, "KND", "KND", 50, null, false, false, false, false, false, true, false, true),
+      new Move("White Tiger Mark", "S#|^|(B+K", "MMM", 20, 0, 12, 12, 43, null, false, false, false, false, false, true),
+      new Move("Festival of the Damned", "SA+G", "H", 18, null, null, null, 40, "Breakable", false, false, false, false, false, true, true),
+      new Move("Festival of the Dead", "S4A+G", "H", 18, null, null, null, 65, "Breakable", false, false, false, false, false, true, true),
     ],
     // Horizontal Moves
     [
-      new Move("Raging Phoenix Combo", "AAA", "HHH", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
-      new Move("Cutting Wind", "AB", "HH", null, null, null, null, null),
-      new Move("Crushing Bo", "6AA", "HHH", null, null, null, null, null),
-      new Move("Gale Force", "6AB", "HHM", null, null, null, null, null),
-      new Move("Mid Sweep", "3A", "M", null, null, null, null, null),
-      new Move("Bo Slice", "2A", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Blinding Fan", "2zB", "SMMM", null, null, null, null, null),
-      new Move("Trick Bo", "1A", "L", null, null, null, null, null, "Breakable/Shifts to attack throw upon close-range hit", null, false, false, false, false, false, true),
-      new Move("Dirty Bo", "1z", "L", null, null, null, null, null, "Breakable/Shifts to attack throw upon close-range hit", null, false, false, false, false, false, true),
-      new Move("Inner Peace", "4A", "L", null, null, null, null, null, null, false, true, true),
-      new Move("Lower Bo Slice", "CA", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Blinding Fan", "CzB", "SMMM", null, null, null, null, null),
-      new Move("Ling Sheng Slash", "WA", "M", null, null, null, null, null),
-      new Move("Scattering Bo", "JA", "M", null, null, null, null, null),
-      new Move("Reverse Bo Tap", "TA", "H", null, null, null, null, null),
-      new Move("Reverse Lower Bo Slice", "T2A", "S", null, null, null, null, null, null, false, false, true)
+      new Move("Raging Phoenix Combo", "A", "H", 12, -4, 0, 0, 10, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Raging Phoenix Combo", "AA", "HH", 12, -6, -2, -2, 20, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Raging Phoenix Combo", "AAA", "HHH", 12, -8, "KND", "KND", 40, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Cutting Wind", "AB", "HH", 12, -2, "KND", "KND", 30),
+
+      new Move("Crushing Bo", "6A", "HH", 16, -6, 4, 4, 16),
+      new Move("Crushing Bo", "6AA", "HHH", 16, 0, "KND", "KND", 40),
+      new Move("Gale Force", "6AB", "HHM", 16, -16, "LNC", "LNC", 38),
+
+      new Move("Mid Sweep", "3A", "M", 24, -8, 2, 2, 18),
+      new Move("Bo Slice", "2A", "S", 12, -6, 6, 6, 12, null, false, false, true),
+      new Move("Blinding Fan", "2zB", "SMMM", 12, -16, -6, -6, 53),
+
+      new Move("Trick Bo", "1A", "L", 24, -16, "KND", "KND", 37, "Breakable/Shifts to attack throw upon close-range hit", null, false, false, false, false, false, true),
+      new Move("Dirty Bo", "1z", "L", 24, -16, "KND", "KND", 46, "Breakable/Shifts to attack throw upon close-range hit", null, false, false, false, false, false, true),
+
+      new Move("Inner Peace", "4A", "L", 22, -12, -4, -4, 14, null, false, true, true),
+
+      new Move("Lower Bo Slice", "CA", "S", 12, -6, 6, 6, 12, null, false, false, true),
+      new Move("Blinding Fan", "CzB", "SMMM", 12, -16, -6, -6, 54),
+      new Move("Ling Sheng Slash", "WA", "M", 18, -10, 4, 4, 24),
+      new Move("Scattering Bo", "JA", "M", 28, -8, 2, 2, 25),
+      new Move("Reverse Bo Tap", "TA", "H", 20, -2, 8, 8, 16),
+      new Move("Reverse Lower Bo Slice", "T2A", "S", 20, -6, 4, 4, 19, null, false, false, true)
     ],
     // Vertical Moves
     [
-      new Move("Heatwave", "BBB", "MMM", null, null, null, null, null, null, false, false, true, false, false, false, false, true),
-      new Move("Fang Thrust", "x6", "M", null, null, null, null, null, null, false, true),
-      new Move("Phoenix Feint", "x4", "M", null, null, null, null, null),
-      new Move("Kite's Prey", "6BA", "MH", null, null, null, null, null, "Can be delayed", false, false, true),
-      new Move("Twin Bo Upper", "6BB", "MM", null, null, null, null, null, "Can be delayed", false, true),
-      new Move("Dragon Tree Bo", "3B", "M", null, null, null, null, null, null, false, true),
-      new Move("Rushing Waterfall", "2BB", "MM", null, null, null, null, null),
-      new Move("Phoenix Claw", "1B", "L", null, null, null, null, null),
-      new Move("Weaver", "4BB", "HM", null, null, null, null, null, "Shifts to clash upon hit", false, true, false, false, true),
-      new Move("Weaver", "4Bb", "HM", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
-      new Move("Rushing Waterfall", "CBB", "MM", null, null, null, null, null),
-      new Move("Stream Thrust", "C3B", "M", null, null, null, null, null),
-      new Move("River Thrust", "C1B", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Reverse Bo Thrust", "WB", "M", null, null, null, null, null),
-      new Move("Great Waterfall", "JB", "M", null, null, null, null, null),
-      new Move("Reverse Waterfall", "TB", "M", null, null, null, null, null),
-      new Move("Reverse Waterfall", "T2B", "M", null, null, null, null, null, null, false, false, true)
+      new Move("Heatwave", "B", "M", 14, -8, 2, 2, 16, null, false, false, true, false, false, false, false, true),
+      new Move("Heatwave", "BB", "MM", 14, -6, 4, 4, 32, null, false, false, true, false, false, false, false, true),
+      new Move("Heatwave", "BBB", "MMM", 14, 2, "KND", "KND", 62, null, false, false, true, false, false, false, false, true),
+
+      new Move("Fang Thrust", "x6", "M", 20, -14, 0, 0, 16, null, false, true),
+      new Move("Phoenix Feint", "x4", "M", 26, -14, 6, 14, 23),
+
+      new Move("Kite's Prey", "6BA", "MH", 16, -4, "KND", "KND", 46, "Can be delayed", false, false, true),
+      new Move("Twin Bo Upper", "6BB", "MM", 16, -12, "KND", "KND", 40, "Can be delayed", false, true),
+
+      new Move("Dragon Tree Bo", "3B", "M", 19, -11, "LNC", "LNC", 26, null, false, true),
+
+      new Move("Rushing Waterfall", "2B", "M", 22, -8, 2, 2, 23),
+      new Move("Rushing Waterfall", "2BB", "MM", 22, -2, 6, 6, 47),
+
+      new Move("Phoenix Claw", "1B", "L", 18, -16, 0, 0, 18),
+
+      new Move("Weaver", "4BB", "HM", 14, -4, null, null, 45, "Shifts to clash upon hit", false, true, false, false, true),
+      new Move("Weaver", "4Bb", "HM", 14, null, null, null, 57, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+
+      new Move("Rushing Waterfall", "CB", "M", 22, -4, 4, 4, 23),
+      new Move("Rushing Waterfall", "CBB", "MM", 22, -2, 6, 6, 47),
+      new Move("Stream Thrust", "C3B", "M", 16, -10, 2, 2, 21),
+      new Move("River Thrust", "C1B", "L", 28, -8, -2, -2, 16, null, false, false, true),
+
+      new Move("Reverse Bo Thrust", "WB", "M", 18, -12, "LNC", "LNC", 20),
+      new Move("Great Waterfall", "JB", "M", 38, -6, "KND", "KND", 33),
+
+      new Move("Reverse Waterfall", "TB", "M", 24, -6, 4, 4, 20),
+      new Move("Reverse Waterfall", "T2B", "M", 24, -8, 2, 2, 22, null, false, false, true)
     ],
     // Kick Moves 
     [
-      new Move("Sheng Front Kick", "K", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Sheng Illusion Kick", "cB", "HL", null, null, null, null, null),
-      new Move("Yin Rising", "6K", "MM", null, null, null, null, null),
-      new Move("Sheng Side Kick", "3K", "M", null, null, null, null, null),
-      new Move("Sheng Su Low Kick", "2K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Sheng Su Thrust", "1KB", "LM", null, null, null, null, null),
-      new Move("Sheng Lung Kick Combo", "4KB", "MH", null, null, null, null, null),
-      new Move("Master Kicks", "4KK", "MM", null, null, null, null, null),
-      new Move("Sheng Su Low Kick", "CK", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Sunrise Kick", "WK", "MH", null, null, null, null, null),
-      new Move("Phoenix Splits", "JK", "H", null, null, null, null, null),
-      new Move("Incense Burner", "TK", "M", null, null, null, null, null, "GI vs. high, mid(except kicks, thrusting attacks)", false, false, false, true),
-      new Move("Reverse Sheng Su Low Kick", "T2K", "L", null, null, null, null, null, null, false, false, true)
+      new Move("Sheng Front Kick", "K", "H", 12, -8, 0, 0, 12, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Sheng Illusion Kick", "cB", "HL", 22, -12, 2, 2, 30), // Different if high guarded ?
+      new Move("Yin Rising", "6K", "MM", 24, -8, "STN", "STN", 24),
+      new Move("Sheng Side Kick", "3K", "M", 14, -10, -2, -2, 14),
+      new Move("Sheng Su Low Kick", "2K", "L", 16, -14, -4, -4, 12, null, false, false, true),
+      new Move("Sheng Su Thrust", "1KB", "LM", 22, -16, 0, "KND", 46),
+
+      new Move("Sheng Lung Kick Combo", "4K", "M", 18, -12, 0, "STN", 14),
+      new Move("Sheng Lung Kick Combo", "4KB", "MH", 18, -10, "KND", "KND", 37),
+      new Move("Master Kicks", "4KK", "MM", 18, 0, 12, 12, 40),
+
+      new Move("Sheng Su Low Kick", "CK", "L", 16, -14, -4, -4, 12, null, false, false, true),
+      new Move("Sunrise Kick", "WK", "MH", 12, -12, "KND", "KND", 21),
+      new Move("Phoenix Splits", "JK", "H", 20, -4, 4, 4, 18),
+      new Move("Incense Burner", "TK", "M", 13, -15, "LNC", "LNC", 28, "GI vs. high, mid(except kicks, thrusting attacks)", false, false, false, true),
+      new Move("Reverse Sheng Su Low Kick", "T2K", "L", 18, -14, -4, -4, 17, null, false, false, true)
     ],
     // Simultaneous Press Moves
     [
-      new Move("Phoenix Rage Thrust", "A+B", "M", null, null, null, null, null, "Dodges high, mid vertical", false, true, false, false, false, false, false, true),
-      new Move("Phoenix Rage Thrust", "a+b", "M", null, null, null, null, null, "Dodges high, mid vertical", false, true, false, false, false, false, false, false, true),
+      new Move("Phoenix Rage Thrust", "A+B", "M", 34, 2, "KND", "KND", 50, "Dodges high, mid vertical", false, true, false, false, false, false, false, true),
+      new Move("Phoenix Rage Thrust", "a+b", "M", 70, null, "KND", "KND", 50, "Dodges high, mid vertical", false, true, false, false, false, false, false, false, true),
       new Move("Star Stealer", "A+B|a+bI", null, null, null, null, null, null),
-      new Move("Bo Smack Down", "6A+B", "HHHHHH", null, null, null, null, null),
-      new Move("Wave Divide", "2A+B", "L", null, null, null, null, null),
-      new Move("Phoenix Plume", "4A+B", "LL", null, null, null, null, null),
-      new Move("Phoenix Cross", "8A+B", "MM", null, null, null, null, null),
-      new Move("Absolute Truth", "B+K", "M", null, null, null, null, null),
-      new Move("Absolute Truth ~ Momentum", "B+K6", "M", null, null, null, null, null, "GI vs. horizontal (except kicks)", true, false, false, true),
-      new Move("Absolute Truth", "b+k", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Absolute Truth ~ Monument", "b+k6", "M", null, null, null, null, null, "GI vs. horizontal (except kicks)", true, false, false, true, false, false, false, true),
-      new Move("Biting Phoenix", "6B+K", "MMMMM", null, null, null, null, null),
-      new Move("Lower Bo Smackdown", "6x+c2", "LLLL", null, null, null, null, null),
-      new Move("Playful Phoenix", "2B+K", "L", null, null, null, null, null),
+      new Move("Bo Smack Down", "6A+B", "HHHHHH", 20, -12, "LNC", "LNC", 48),
+      new Move("Wave Divide", "2A+B", "L", 32, -16, "KND", "KND", 33),
+      new Move("Phoenix Plume", "4A+B", "LL", 44, -2, "KND", "KND", 40),
+      new Move("Phoenix Cross", "8A+B", "MM", 20, -6, 4, 4, 40),
+      new Move("Absolute Truth", "B+K", "M", 22, -4, 6, "STN", 26),
+      new Move("Absolute Truth", "b+k", "M", 44, 6, "STN", "STN", 23, null, false, false, false, false, false, false, false, true),
+      new Move("Absolute Truth ~ Momentum", "B+K6", "M", 22, null, null, "STN", 26, "GI vs. horizontal (except kicks)", true, false, false, true),
+      new Move("Absolute Truth ~ Monument", "b+k6", "M", 44, null, "STN", "STN", 23, "GI vs. horizontal (except kicks)", true, false, false, true, false, false, false, true),
+      new Move("Biting Phoenix", "6B+K", "MMMMM", 24, -12, "STN", "STN", 52),
+      new Move("Lower Bo Smackdown", "6x+c2", "LLLL", 26, -16, -6, -6, 40),
+      new Move("Playful Phoenix", "2B+K", "L", 24, -14, 0, 0, 24),
       new Move("Playful Phoenix", "2b+k", null, null, null, null, null, null, "Returns to downed position"),
-      new Move("Dragon Seal", "4B+KBB", "MMMMMM", null, null, null, null, null),
-      new Move("Asura Clairvoyance", "TB+KBK", "MMM", null, null, null, null, null, "Time precisely for increased damage")
+
+      new Move("Dragon Seal", "4B+K", "MMMM", 26, -14, -2, -2, 46),
+      new Move("Dragon Seal", "4B+KB", "MMM", 26, -17, "KND", "KND", 42),
+      new Move("Dragon Seal", "4B+KBB", "MMMMMM", 26, -14, "KND", "KND", 65),
+
+      new Move("Asura Clairvoyance", "TB+K", "M", 24, -21, -11, -11, 15, "Time precisely for increased damage"),
+      new Move("Asura Clairvoyance", "TB+KB", "MM", 24, -23, -7, -7, 26, "Time precisely for increased damage"),
+      new Move("Asura Clairvoyance", "TB+KBK", "MMM", 24, -26, "KND", "KND", 64, "Time precisely for increased damage")
     ],
     // 8-Way Run Moves
     [
-      new Move("Pursuing Strike", "#|^|(A", "M", null, null, null, null, null),
-      new Move("Wind Divide", "@|*AA", "ML", null, null, null, null, null, null, false, false, true),
-      new Move("Mountain Carve", "@|*AB", "MM", null, null, null, null, null),
-      new Move("Dragon Glide Bo", "!|$|uAA", "HL", null, null, null, null, null),
-      new Move("Heavy Bo", "#|^|(B", "M", null, null, null, null, null),
-      new Move("Heavy Bo ~ Monument", "#|^|(B6", "M", null, null, null, null, null, "GI vs. horizontal (except kicks)", true, false, false, true),
-      new Move("Raven Slaughter", "@|*B", "M", null, null, null, null, null),
-      new Move("Raven Slaughter", "@|*b", "M", null, null, null, null, null, null, false, true),
-      new Move("Phoenix Thrust", "!|$|uB", "M", null, null, null, null, null),
-      new Move("Stream Thrust", "!|$|ux2", "L", null, null, null, null, null),
-      new Move("Rising Phoenix", "#|^|(KKB", "MMMM", null, null, null, null, null),
-      new Move("Hawk Claw", "@|*KB", "HL", null, null, null, null, null),
-      new Move("Phosphorous Fang", "@|*cB", "L", null, null, null, null, null),
-      new Move("Conquering Spirit", "!|$|uK", "M", null, null, null, null, null),
-      new Move("Conquering Spirit", "!|$|uKvBj", "M", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Yin and Yang", "!|$|uA+B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true, true),
-      new Move("Phoenix Lunge", "!|$|uB+K", "L", null, null, null, null, null),
-      new Move("Sliding", "RK", "L", null, null, null, null, null)
+      new Move("Pursuing Strike", "#|^|(A", "M", 28, -8, 10, 10, 20),
+
+      new Move("Wind Divide", "@|*A", "M", 22, -8, 0, 6, 16, null, false, false, true),
+      new Move("Wind Divide", "@|*AA", "ML", 22, -20, "KND", "KND", 32, null, false, false, true),
+      new Move("Mountain Carve", "@|*AB", "MM", 22, -12, "KND", "KND", 45),
+
+      new Move("Dragon Glide Bo", "!|$|uA", "H", 26, -18, 2, 2, 16),
+      new Move("Dragon Glide Bo", "!|$|uAA", "HL", 26, -8, "KND", "KND", 36),
+
+      new Move("Heavy Bo", "#|^|(B", "M", 16, -8, 2, "STN", 18),
+      new Move("Heavy Bo ~ Monument", "#|^|(B6", "M", 16, null, null, null, 28, "GI vs. horizontal (except kicks)", true, false, false, true),
+
+      new Move("Raven Slaughter", "@|*B", "M", 20, -14, "LNC", "LNC", 28),
+      new Move("Raven Slaughter", "@|*b", "M", 40, null, "LNC", null, 30, null, false, true),
+
+      new Move("Phoenix Thrust", "!|$|uB", "M", 26, -18, "KND", "KND", 40),
+      new Move("Stream Thrust", "!|$|ux2", "L", 28, -18, -6, -6, 20),
+
+      new Move("Rising Phoenix", "#|^|(K", "MM", 22, -10, 0, 0, 24),
+      new Move("Rising Phoenix", "#|^|(KK", "MMM", 22, -12, 0, 0, 40),
+      new Move("Rising Phoenix", "#|^|(KKB", "MMMM", 22, -10, "LNC", "LNC", 71),
+
+      new Move("Hawk Claw", "@|*KB", "HL", 22, -4, 6, 6, 26),
+      new Move("Hawk Claw", "@|*KB", "HL", 22, -8, 4, 4, 46),
+      new Move("Phosphorous Fang", "@|*cB", "L", 20, -4, "KND", "KND", null),
+
+      new Move("Conquering Spirit", "!|$|uK", "M", 30, -4, "KND", "KND", 20),
+      new Move("Conquering Spirit", "!|$|uKvBj", "M", 30, null, null, "STN", 50, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+
+      new Move("Yin and Yang", "!|$|uA+B", "M", 65, null, "KND", "KND", 55, null, false, false, false, false, false, false, false, false, true, true),
+      new Move("Phoenix Lunge", "!|$|uB+K", "L", 34, -12, "KND", "KND", 35),
+      new Move("Sliding", "RK", "L", 20, -22, "KND", "KND", 28)
     ],
     // Throws
     [
-      new Move("Light Breeze", "A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Heaven Dance", "4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Cutting Sadness", "ZA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Summer Gale", "XA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Phoenix Pounce", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Festival of the Damned", "SA+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
-      new Move("Festival of the Dead", "S4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true)
+      new Move("Light Breeze", "A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
+      new Move("Heaven Dance", "4A+G", "H", 18, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, true),
+      new Move("Cutting Sadness", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Summer Gale", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Phoenix Pounce", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      new Move("Festival of the Damned", "SA+G", "H", 18, null, "LNC", "LNC", 40, "Breakable", false, false, false, false, false, true, true),
+      new Move("Festival of the Dead", "S4A+G", "H", 18, null, "KND", "KND", 65, "Breakable", false, false, false, false, false, true, true)
     ],
     // ************ Stances *************
     // Monument
     [
       new Move("Monument", "236", null, null, null, null, null, null, "GI vs. horizontal attacks (except kicks)", true, false, false, true),
-      new Move("Geyser Kick", "[ABK", "MLM", null, null, null, null, null, null, false, true),
-      new Move("Back Parry", "[A4", "M", null, null, null, null, null, "GI vs vertical attacks (except kicks)", true, false, false, true),
-      new Move("Advancing Bo", "[B", "M", null, null, null, null, null),
-      new Move("Scythe", "[K", "HH", null, null, null, null, null),
-      new Move("Heaven Monument", "[A+B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
+
+      new Move("Geyser Kick", "[A", "M", 18, -14, "STN", "STN", 18, null, false, true),
+      new Move("Back Parry", "[A4", "M", 18, null, "LNC", "LNC", 18, "GI vs vertical attacks (except kicks)", true, false, false, true),
+      new Move("Geyser Kick", "[AB", "ML", 18, -12, -4, -4, 36, null, false, true),
+      new Move("Geyser Kick", "[ABK", "MLM", 18, -16, "KND", "KND", 51, null, false, true),
+
+      new Move("Advancing Bo", "[B", "M", 26, -8, "STN", "STN", 37),
+      new Move("Scythe", "[K", "HH", 25, 2, "KND", "KND", 35),
+      new Move("Heaven Monument", "[A+B", "M", 64, null, "KND", "KND", 75, null, false, false, false, false, false, false, false, false, true),
       new Move("Heaven Monument ~ Move Forward", "[z+x6", "", null, null, null, null, null),
       new Move("Heaven Monument ~ Move Forward", "[z+x^", "", null, null, null, null, null, "Against the wall", true),
       new Move("Heaven Monument ~ Move Backward", "[z+x4", "", null, null, null, null, null),
       new Move("Heaven Monument ~ Move Backward", "[z+x$", "", null, null, null, null, null, "Against the wall", true),
-      new Move("Heaven Momentum Fall", "[z+xK", "L", null, null, null, null, null),
-      new Move("Asura Dance", "[B+KBK", "MMM", null, null, null, null, null, "Time precisely for increased damage"),
+
+      new Move("Heaven Momentum Fall", "[z+xK", "L", 90, -2, "KND", "KND", 30),
+
+      new Move("Asura Dance", "[B+K", "M", 26, -24, -4, -4, 15, "Time precisely for increased damage"),
+      new Move("Asura Dance", "[B+KB", "MM", 26, -20, -4, -4, 25, "Time precisely for increased damage"),
+      new Move("Asura Dance", "[B+KBK", "MMM", 26, -20, "KND", "KND", 61, "Time precisely for increased damage"),
+
       new Move("Left Pulse", "[8", null, null, null, null, null, null),
       new Move("Right Pulse", "[2", null, null, null, null, null, null)
     ],
     // Back Parry
     [
       new Move("Back Parry", "214", null, null, null, null, null, null, "GI vs. vertical (except kicks)", true, false, false, true),
-      new Move("Parry Sweeper", "]A", "L", null, null, null, null, null, null, false, true),
-      new Move("Parry Bolt", "]B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Parry Kick", "]K", "H", null, null, null, null, null)
+      new Move("Parry Sweeper", "]A", "L", 26, -13, 1, 1, 22, null, false, true),
+      new Move("Parry Bolt", "]B", "M", 34, 12, "STN", "STN", 37, null, false, false, false, false, false, false, false, true),
+      new Move("Parry Kick", "]K", "H", 22, 2, "STN", "STN", 24)
     ],
     // While Down
     [
-      new Move("Heaven Monument", "{A+B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
+      new Move("Heaven Monument", "{A+B", "M", 66, null, "KND", "KND", 75, null, false, false, false, false, false, false, false, false, true),
       new Move("Heaven Monument ~ Move Forward", "{z+x6", "", null, null, null, null, null),
       new Move("Heaven Monument ~ Move Forward", "{z+x^", "", null, null, null, null, null, "Against the wall", true),
       new Move("Heaven Monument ~ Move Backward", "{z+x4", "", null, null, null, null, null),
       new Move("Heaven Monument ~ Move Backward", "{z+x$", "", null, null, null, null, null, "Against the wall", true),
-      new Move("Heaven Momentum Fall", "{z+xK", "L", null, null, null, null, null),
-      new Move("Rising Flare", "{2A+B", "L", null, null, null, null, null)
+      new Move("Heaven Momentum Fall", "{z+xK", "L", 92, -2, "KND", "KND", 30),
+      new Move("Rising Flare", "{2A+B", "L", 38, -30, "KND", "KND", 30)
     ]
   ]
 

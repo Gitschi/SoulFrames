@@ -780,11 +780,12 @@ export class MoveService{
     ],
     // Gauge Attacks
     [
-      new Move("Chevalier Mal Fet", "A+B+K", "M", null, null, null, null, null, null, false, false, false, false, false, false, true, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Chevalier Mal Fet", "A+B+K", "M", 16, -16, "KND", "KND", null, null, false, false, false, false, false, false, true, false, false, true),
+      new Move("Soul Charge", "4A+B+G", "m", 6, 3, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true), // +4 on block?
+     
       new Move("Questing Fang ~ Steed of the Night", "S6AA6", "HM", null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Guilt Seeker", "S1AK", "Lm", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, true, true),
-      new Move("Calamitous Judgment", "S3BB", "MMMM", null, null, null, null, null),
+      new Move("Guilt Seeker", "S1AK", "Lm", 26, -22, "KND", "KND", null, "Shifts to attack throw upon hit", false, false, false, false, false, true, true),
+      new Move("Calamitous Judgment", "S3BB", "MMMM", 18, -8, "KND", "KND", null),
       new Move("Curse of Morgan ~ Steed of the Night", "S1BB6", "LM", null, null, null, null, null, null, true, false, false, false, false, true),
       new Move("Benevolence Step ~ Steed of the Night", "S4B6", "M", null, null, null, null, null, null, true, true, false, false, false, true),
       new Move("Wasteland", "S2A+B", "L", null, null, null, null, null, null, false, false, true, false, false, true, false, true),
@@ -792,108 +793,142 @@ export class MoveService{
       new Move("Morgan's Deception ~ Steed of the Night", "S4B+K6", "M", null, null, null, null, null, null, true, false, false, false, false, true),
       new Move("Steed of the Night", "S[6", null, null, null, null, null, null, null, true, false, false, false, false, true),
       new Move("Cover of Darkness", "S[4", null, null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Demon King Slayer", "S[6A", "", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
-      new Move("Calamity's Collapse", "S[6B", "", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Destructive Order", "S[6K", "", null, null, null, null, null, null, false, false, false, false, false, true)
+      new Move("Demon King Slayer", "S[6A", "HH", 33, 4, "KND", "KND", null, null, false, false, false, false, false, true, false, true),
+      new Move("Calamity's Collapse", "S[6B", "MMM", 38, -8, "KND", "KND", null, null, false, false, false, false, false, true),
+      new Move("Destructive Order", "S[6K", "M", 31, -2, "KND", "KND", null, null, false, false, false, false, false, true)
     ],
     // Horizontal Moves
     [
-      new Move("Knight's Oath", "AAA", "HHH", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Question Fang", "6AA", "HM", null, null, null, null, null),
-      new Move("Questing Fang ~ Avenger", "6A6", "H", null, null, null, null, null, null, true),
-      new Move("Cutting Truth", "3A", "M", null, null, null, null, null),
-      new Move("Gallant Slash", "2A", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Saint Mia", "1A", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Sir Tristan's Charity", "4A", "M", null, null, null, null, null),
-      new Move("Sir Tristan's Charity ~ Avenger", "4A6", "M", null, null, null, null, null, null, true),
-      new Move("Kneeling Slash", "CA", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Ascending Slash", "WA", "M", null, null, null, null, null),
-      new Move("Ascending Slash ~ Avenger", "WA6", "M", null, null, null, null, null, null, true),
-      new Move("Vaulting Slash", "JA", "H", null, null, null, null, null),
-      new Move("Penitent Slash", "TA", "H", null, null, null, null, null),
-      new Move("Atoning Slash", "T2A", "S", null, null, null, null, null, null, false, false, true)
+      new Move("Knight's Oath", "A", "H", 12, -6, 4, 4, 10, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Knight's Oath", "AA", "HH", 12, -8, 4, 4, 22, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Knight's Oath", "AAA", "HHH", 12, -6, 6, 6, 38, null, false, false, false, false, false, false, false, false, false, true),
+      
+      new Move("Question Fang", "6A", "H", 16, -8, 0, 4, 16),
+      new Move("Question Fang", "6AA", "HM", 16, -8, "KND", "KND", 38),
+      new Move("Questing Fang ~ Avenger", "6A6", "H", 16, -4, 4, 8, 16, null, true),
+
+      new Move("Cutting Truth", "3A", "M", 16, -10, 0, 6, 15),
+      new Move("Gallant Slash", "2A", "S", 12, -6, 6, 6, 10, null, false, false, true),
+      new Move("Saint Mia", "1A", "L", 26, -16, 4, 4, 20, null, false, false, true),
+
+      new Move("Sir Tristan's Charity", "4A", "M", 30, -4, 4, 4, 35),
+      new Move("Sir Tristan's Charity ~ Avenger", "4A6", "M", 30, 3, 11, 11, 35, null, true),
+
+      new Move("Kneeling Slash", "CA", "S", 12, -6, 6, 6, 10, null, false, false, true),
+
+      new Move("Ascending Slash", "WA", "M", 18, -12, 4, 4, 22),
+      new Move("Ascending Slash ~ Avenger", "WA6", "M", 18, -8, 8, 8, 22, null, true),
+
+      new Move("Vaulting Slash", "JA", "H", 24, -6, "KND", "KND", 26),
+      new Move("Penitent Slash", "TA", "H", 14, -8, 2, 2, 12),
+      new Move("Atoning Slash", "T2A", "S", 14, -6, 6, 6, 12, null, false, false, true)
     ],
     // Vertical Moves
     [
-      new Move("Knight's Accolade", "BBB", "MMM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Darting Raven", "6BB", "MM", null, null, null, null, null),
-      new Move("Darting Raven ~ Avenger", "6BB6", "MM", null, null, null, null, null, null, true),
-      new Move("Steel Judgment", "3B", "M", null, null, null, null, null),
-      new Move("Gallant Strike", "2B", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Curse of Morgan", "1BB", "LM", null, null, null, null, null),
-      new Move("Benevolence Step", "4B", "M", null, null, null, null, null, null, false, true),
-      new Move("Kneeling Strike", "CB", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Ascending Thrust", "WB", "M", null, null, null, null, null),
-      new Move("Ascending Thrust ~ Avenger", "WB6", "M", null, null, null, null, null, null, true),
-      new Move("Vaulting Strike", "JB", "M", null, null, null, null, null),
-      new Move("Penitent Strike", "TB", "M", null, null, null, null, null),
-      new Move("Atoning Strike", "T2B", "M", null, null, null, null, null, null, false, false, true)
+      new Move("Knight's Accolade", "B", "M", 14, -8, 2, 2, 14, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Knight's Accolade", "BB", "MM", 14, -6, 4, 4, 28, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Knight's Accolade", "BBB", "MMM", 14, -4, "KND", "KND", 48, null, false, false, false, false, false, false, false, false, false, true),
+     
+      new Move("Darting Raven", "6B", "M", 16, -10, 3, 3, 12),
+      new Move("Darting Raven", "6BB", "MM", 16, -10, 2, 2, 24),
+      new Move("Darting Raven ~ Avenger", "6BB6", "MM", 16, -5, 7, 7, 24, null, true),
+
+      new Move("Steel Judgment", "3B", "M", 18, -16, "LNC", "LNC", 24),
+      new Move("Gallant Strike", "2B", "M", 14, -10, 2, 2, 14, null, false, false, true),
+
+      new Move("Curse of Morgan", "1B", "L", 22, -16, "LNC", "LNC", 24),
+      new Move("Curse of Morgan", "1BB", "LM", 22, -14, -3, -3, 14),
+
+      new Move("Benevolence Step", "4B", "M", 22, -7, 4, "STN", 18, null, false, true),
+      new Move("Kneeling Strike", "CB", "M", 14, -10, 2, 2, 14, null, false, false, true),
+      new Move("Ascending Thrust", "WB", "M", 14, -12, 0, 0, null),
+      new Move("Ascending Thrust ~ Avenger", "WB6", "M", 14, -4, 8, 8, null, null, true),
+      new Move("Vaulting Strike", "JB", "M", 30, -8, "KND", "KND", 28),
+      new Move("Penitent Strike", "TB", "M", 16, -8, 2, 2, 16),
+      new Move("Atoning Strike", "T2B", "M", 18, -10, 2, 2, 18, null, false, false, true)
     ],
     // Kick Moves 
     [
-      new Move("Noble Courage", "K", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Lofty Faith", "6K", "H", null, null, null, null, null),
-      new Move("Rising Courage", "3K", "M", null, null, null, null, null),
-      new Move("Vigilant Courage", "2K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Chivalrous Courage", "1K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Valiant Strike", "4K", "M", null, null, null, null, null),
-      new Move("Kneeling Swipe", "CK", "L", null, null, null, null, null, null , false, false, true),
-      new Move("Ascending Knee", "WK", "M", null, null, null, null, null),
-      new Move("Vaulting Drive", "JK", "M", null, null, null, null, null),
-      new Move("Penitent Blow", "TK", "H", null, null, null, null, null),
-      new Move("Atoning Swipe", "T2K", "L", null, null, null, null, null, null, false, false, true)
+      // Damage missing from here =======================================================================================
+
+      new Move("Noble Courage", "K", "H", 12, -8, 0, 0, null, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Lofty Faith", "6K", "H", 16, -10, 4, 4, null),
+      new Move("Rising Courage", "3K", "M", 14, -4, 6, 10, null),
+      new Move("Vigilant Courage", "2K", "L", 16, -14, -4, -4, null, null, false, false, true),
+      new Move("Chivalrous Courage", "1K", "L", 24, -14, 0, "KND", null, null, false, false, true),
+      new Move("Valiant Strike", "4K", "M", 22, -10, "KND", "KND", null),
+
+      new Move("Kneeling Swipe", "CK", "L", 16, -14, -4, -4, null, null , false, false, true),
+      new Move("Ascending Knee", "WK", "M", 12, -8, 6, 6, null),
+      new Move("Vaulting Drive", "JK", "M", 22, -10, 4, 4, null),
+      new Move("Penitent Blow", "TK", "H", 14, -8, 2, 2, null),
+      new Move("Atoning Swipe", "T2K", "L", 18, -14, -4, -4, null, null, false, false, true)
     ],
     // Simultaneous Press Moves
     [
-      new Move("Scarlet Sleeve", "A+B", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Scarlet Sleeve ~ Avenger", "A+B6", "M", null, null, null, null, null, null, true, true, false, false, false, false, false, true),
-      new Move("Broceliande's Splendor", "6A+B", "MM", null, null, null, null, null, null, false, true),
-      new Move("Broceliande's Splendor ~ Avenger", "6A+B6", "MM", null, null, null, null, null, null, true, true),
-      new Move("Dolorous Stroke", "2A+B", "L", null, null, null, null, null, null, false, false, true, false, false, false, false, true),
-      new Move("War of Benwick", "4A+B", "M", null, null, null, null, null),
-      new Move("Sir Gareth's Zest", "8A+B", "MM", null, null, null, null, null),
-      new Move("Sir Gareth's Zest ~ Avenger", "8A+B6", "MM", null, null, null, null, null, null, true),
-      new Move("Battle of Bedegraine ~ Avenger", "6B+K", "MM", null, null, null, null, null, null, true),
-      new Move("Gallatin Eclipse", "2B+K", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true, true),
-      new Move("Morgan's Deception", "4B+K", "M", null, null, null, null, null),
-      new Move("Daredevil", "8B+K", "M", null, null, null, null, null),
-      new Move("Merlin's Counsel", "TB+K", "M", null, null, null, null, null)
+      new Move("Scarlet Sleeve", "A+B", "M", 38, 4, "KND", "KND", null, null, false, true, false, false, false, false, false, true),
+      new Move("Scarlet Sleeve ~ Avenger", "A+B6", "M", 38, 9, "KND", "KND", null, null, true, true, false, false, false, false, false, true),
+
+      new Move("Broceliande's Splendor", "6A+B", "MM", 24, -14, "KND", "STN", null, null, false, true),
+      new Move("Broceliande's Splendor ~ Avenger", "6A+B6", "MM", 24, -6, "KND", "STN", null, null, true, true),
+
+      new Move("Dolorous Stroke", "2A+B", "L", 46, 4, "KND", "KND", null, null, false, false, true, false, false, false, false, true),
+      new Move("War of Benwick", "4A+B", "M", 34, -8, "LNC", "LNC", null),
+
+      new Move("Sir Gareth's Zest", "8A+B", "MM", 24, -24, "LNC", "LNC", null),
+      new Move("Sir Gareth's Zest ~ Avenger", "8A+B6", "MM", 24, -22, "LNC", "LNC", null, null, true),
+
+      new Move("Battle of Bedegraine ~ Avenger", "6B+K", "MM", 26, -8, "LNC", "LNC", null, null, true),
+      new Move("Gallatin Eclipse", "2B+K", "M", 60, null, "KND", "KND", null, null, false, false, false, false, false, false, false, false, true, true),
+      new Move("Morgan's Deception", "4B+K", "M", 26, -6, 0, 0, null),
+      new Move("Daredevil", "8B+K", "M", 36, -6, "KND", "KND", null),
+      new Move("Merlin's Counsel", "TB+K", "M", 18, -12, "STN", "STN", null)
     ],
     // 8-Way Run Moves
     [
-      new Move("Sir Lancelot's Fervor", "#|^|(AA", "HM", null, null, null, null, null),
-      new Move("Bertilak the Headless", "@|*A", "H", null, null, null, null, null, "Can be held"),
-      new Move("Morgause's Mischief", "!|$|uA", "H", null, null, null, null, null, "GI vs. high, mid verical(exept kicks)", false, true, false, true),
-      new Move("Sir Gawain's Charge", "#|^|(BB", "MM", null, null, null, null, null),
-      new Move("Sable Grief", "@|*B", "M", null, null, null, null, null, null, false, true),
-      new Move("Troubadour's Elegy", "@|*xA", "H", null, null, null, null, null),
-      new Move("King Pellinore's Delight", "!|$|uB", "M", null, null, null, null, null),
-      new Move("Intrepid Adventure", "#|^(K", "M", null, null, null, null, null),
-      new Move("Chivalrous Courage", "@|*K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Faith's Reprisal", "!|$|uK", "M", null, null, null, null, null, null, false, true),
-      new Move("Sir Tristan's Triumph", "@|*|#|^|(A+B", "MM", null, null, null, null, null),
-      new Move("Sir Garlon's Wile", "#|^|(B+K", "MM", null, null, null, null, null),
-      new Move("Sir Garlon's Wile ~ Avenger", "#|^|(B+K6", "MM", null, null, null, null, null, null, true),
-      new Move("Sir Percival's Gratitude", "@|*|!|$|uB+K", "MH", null, null, null, null, null),
-      new Move("Dauntless Slide", "RK", "L", null, null, null, null, null)
+      new Move("Sir Lancelot's Fervor", "#|^|(A", "H", 18, -8, 0, 0, null),
+      new Move("Sir Lancelot's Fervor", "#|^|(AA", "HM", 18, -14, "KND", "KND", null),
+
+      new Move("Bertilak the Headless", "@|*A", "H", 22, -2, "KND", "KND", null, "Can be held"),
+      new Move("Morgause's Mischief", "!|$|uA", "H", 34, -4, 4, "STN", null, "GI vs. high, mid verical(exept kicks)", false, true, false, true),
+
+      new Move("Sir Gawain's Charge", "#|^|(B", "M", 22, -10, -2, -2, null),
+      new Move("Sir Gawain's Charge", "#|^|(BB", "MM", 22, -10, "KND", "KND", null),
+
+      new Move("Sable Grief", "@|*B", "M", 22, -16, "LNC", "LNC", null, null, false, true),
+      new Move("Troubadour's Elegy", "@|*xA", "H", 17, -6, 6, 6, null),
+      new Move("King Pellinore's Delight", "!|$|uB", "M", 28, 2, "KND", "KND", null),
+      new Move("Intrepid Adventure", "#|^(K", "M", 24, -12, "LNC", "LNC", null),
+      new Move("Chivalrous Courage", "@|*K", "L", 24, -14, 0, 0, null, null, false, false, true),
+      new Move("Faith's Reprisal", "!|$|uK", "M", 28, -14, "STN", "STN", null, null, false, true),
+      new Move("Sir Tristan's Triumph", "@|*|#|^|(A+B", "MM", 22, -16, "KND", "KND", null),
+
+      new Move("Sir Garlon's Wile", "#|^|(B+K", "MM", 18, -14, 0, 0, null),
+      new Move("Sir Garlon's Wile ~ Avenger", "#|^|(B+K6", "MM", 18, -5, 9, 9, null, null, true),
+
+      new Move("Sir Percival's Gratitude", "@|*|!|$|uB+K", "MH", 18, -14, "KND", "KND", null),
+      new Move("Dauntless Slide", "RK", "L", 18, -5, "KND", "KND", null)
     ],
     // Throws
     [
-      new Move("Gamlann's Lament", "A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Lohengrin's Courage", "4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Nimue's Embrace", "ZA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Sire Balin's Sword", "XA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Astolat's Echo", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true)
+      new Move("Gamlann's Lament", "A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Lohengrin's Courage", "4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Nimue's Embrace", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Sire Balin's Sword", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Astolat's Echo", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true)
     ],
     // ************ Stances *************
     // Avenger
     [
       new Move("Avenger", "B+K", null, null, null, null, null, null, null, true),
-      new Move("Endless Quest", "[A", "LLLL", null, null, null, null, null, "Can be held", false, true),
-      new Move("Nameless Blade", "[BB", "MMMM", null, null, null, null, null, "Can be delayed"),
-      new Move("Corbenic's Veil", "[K", "L", null, null, null, null, null),
-      new Move("Arondight's Roar", "[A+B", "M", null, null, null, null, null, "Shifts to attack throw upon hit"),
-      new Move("Sir Galahad's Bravery", "[A+B", "MM", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
+      new Move("Endless Quest", "[A", "LLLL", 24, -20, "KND", "KND", null, "Can be held", false, true),
+
+      new Move("Nameless Blade", "[B", "MM", 12, -12, 3, 3, null, "Can be delayed"),
+      new Move("Nameless Blade", "[BB", "MMMM", 12, -6, 6, 6, null, "Can be delayed"),
+
+      new Move("Corbenic's Veil", "[K", "L", 16, -11, 3, 3, null),
+      new Move("Arondight's Roar", "[A+B", "M", 20, -16, "KND", "KND", null, "Shifts to attack throw upon hit"),
+      new Move("Sir Galahad's Bravery", "[B+K", "MM", 28, 8, "KND", "KND", null, null, false, true, false, false, false, false, false, true),
       new Move("Avenger ~ Side Step", "[2|8", null, null, null, null, null, null, null, true)
     ]
   ]

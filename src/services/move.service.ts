@@ -459,7 +459,7 @@ export class MoveService{
   Cervantes = [
     // Reversal Edge Attacks
     [
-      new Move("Shipwrecker", "B+B", "M", 46, -8, null, null, 40, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Shipwrecker", "B+G", "M", 46, -8, null, null, 40, "Shifts to clash upon hit", false, false, false, false, true),
       new Move("Shipwrecker", "b+g", "M", 66, null, null, null, 50, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
       new Move("Accursed Corsair", "rAA", "HHH", null, null, null, null, null, null, false, true),
       new Move("Damned Culverin", "rAB", "HHHH", null, null, null, null, null, "Gun technique", false, true, false, false, false, false, false, true),
@@ -471,7 +471,7 @@ export class MoveService{
     // Gauge Attacks
     [
       new Move("Casa de Leviathan", "A+B+K", "M", 16, -18, "KND", "KND", 80, "Gun technique", false, false, false, false, false, false, true, false, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", null, 0, 10, 10, 0, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Soul Charge", "4A+B+G", "m", 6, 0, 10, 10, 0, null, false, false, false, false, false, false, false, true, false, false, true),
       new Move("Deep Sea Storm Flare", "SBBBB", "MMMM", 33, 9, "KND", "KND", 36, null, false, false, false, false, false, true, false, true),
       new Move("Head Snap Kick ~ Infernal Flare", "Sxk", "M", 26, -22, "KND", "KND", 30, null, true, false, false, false, false, true),
       new Move("Deep Sea Cannon Flare", "S3BB", "MM", 35, 6, "KND", "KND", 39, null, false, false, false, false, false, true, false, true),
@@ -503,8 +503,8 @@ export class MoveService{
       new Move("Bridgette Cannonball", "AA", "HH", 12, -6, 6, 6, 14, null, false, false, false, false, false, false, false, false, false, true),
       new Move("Bridgette Cannonball", "AAA", "HHMH", 12, -12, "KND", "KND", 35, null, false, false, false, false, false, false, false, false, false, true),
       
-      new Move("Pirate's Cross", "zB", "HM", -18, -4, -4, 40, null),
-      new Move("Storm Signal", "z6", "HM", -8, 6, 6, 30, null),
+      new Move("Pirate's Cross", "zB", "HM", 14, -18, -4, -4, 40),
+      new Move("Storm Signal", "z6", "HM", 18, -8, 6, 6, 30),
 
       new Move("Half-Mast Wave", "6A", "H", 16, -10, 0, 0, 16),
       new Move("Half-Mast Wave", "6AA", "HH", 16, -6, "KND", "KND", 26),

@@ -7,7 +7,7 @@ import { StringManipulationService } from "./string-manipulation.service";
 @Injectable()
 
 export class CharService{
-  // Will hold an array of initialized chars
+  // Will hold an array of initialized characters
   private initializedChars: string[] = []; 
 
   // Array of objects for all characters

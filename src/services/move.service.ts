@@ -1123,187 +1123,256 @@ export class MoveService{
   Ivy = [
     // Reversal Edge Attacks
     [
-      new Move("Existence", "B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Existence", "b+g", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
-      new Move("Darkside", "B+G6", "M", null, null, null, null, null, null, false, false, false, false, true),
-      new Move("Screeching Spirit", "rA", "H", null, null, null, null, null, null, false, true),
-      new Move("Screeching Spirit ~ Serpent's Embrace", "ra", "H", null, null, null, null, null, null, true, true),
-      new Move("Fires of Insanity", "rBBBBBBBB", "MMMMMMMM", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Queen of Blades", "rK", "M", null, null, null, null, null, null, false, true)
+      new Move("Existence", "B+G", "M", 46, -8, null, null, 35, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Existence", "b+g", "M", 66, null, null, null, 45, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Darkside", "B+G6", "M", 52, -7, 4, 4, 20, null, false, false, false, false, true),
+      new Move("Screeching Spirit", "rA", "H", null, null, null, null, 15, null, false, true),
+      new Move("Screeching Spirit ~ Serpent's Embrace", "ra", "H", null, null, null, null, 15, null, true, true),
+      new Move("Fires of Insanity", "rBBBBBBBB", "MMMMMMMM", null, null, null, null, null, "DMG 10 - 48 depending on hits", false, true, false, false, false, false, false, true),
+      new Move("Queen of Blades", "rK", "M", null, null, null, null, 16, null, false, true)
     ],
     // Gauge Attacks
     [
-      new Move("Guilty Throne", "A+B+K", "MMMMMMMM", null, null, null, null, null, "GI vs. high, mid & low", false, false, false, true, false, false, true, false, false, false, true),
-      new Move("Guilty Throne", "[A+B+K", "MMMMMMMM", null, null, null, null, null, null, false, false, false, false,false, false, true, false, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
-      new Move("Deadly Cataclysm", "S6AA", "HMH", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
-      new Move("Deadly Firestorm", "S4A", "HH", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
-      new Move("Death Glance", "S6BB", "MM", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, true, true, true),
-      new Move("Unseen Connection", "S^KK", "MM", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Unseen Connection ~ Serpent's Embrace", "S^Kk", "MM", null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Decaying Land", "S@|*A+BB", "MMMMMM", null, null, null, null, null, "GI vs. mid horizontal", false, false, false, true, false, true),
-      new Move("Deadly Screaming Mandrake", "S[AA", "HMH", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
-      new Move("Mourning Spirit", "S[6AA", "HH", null, null, null, null, null, "Shifts to follow-up attack upon hit", false, false, false, false, false, true, false, false, true)
+      new Move("Guilty Throne", "A+B+K", "MMMMMMMM", 34, -20, "KND", "KND", 80, "GI vs. high, mid & low", false, false, false, true, false, false, true, false, false, false, true),
+      new Move("Guilty Throne", "[A+B+K", "MMMMMMMM", 34, -20, "KND", "KND", 80, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Soul Charge", "4A+B+G", "m", 6, 3, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Deadly Cataclysm", "S6AA", "HMH", 16, 4, "KND", "KND", 38, null, false, false, false, false, false, true, false, true),
+
+      new Move("Deadly Firestorm", "S4A", "HH", 20, 8, 10, 10, 23, null, false, false, false, false, false, true, false, true),
+      new Move("Deadly Firestorm ~ Serpent's Embrace", "S4a", "HH", 20, 2, 8, 8, 23, null, true, false, false, false, false, true, false, true),
+
+      new Move("Death Glance", "S6BB", "MM", 18, 1, "KND", "KND", 68, "Shifts to attack throw upon hit", false, false, false, false, false, true, true, true),
+      new Move("Unseen Connection", "S^KK", "MM", 16, -2, 6, 6, 47, null, false, false, false, false, false, true),
+      new Move("Unseen Connection ~ Serpent's Embrace", "S^Kk", "MM", 16, 0, 8, 8, 47, null, true, false, false, false, false, true),
+      new Move("Decaying Land", "S@|*A+BB", "MMMMMM", 26, 0, "KND", "KND", 78, "GI vs. mid horizontal", false, false, false, true, false, true),
+      new Move("Deadly Screaming Mandrake", "S[AA", "HMH", 18, 4, "KND", "KND", 36, null, false, false, false, false, false, true, false, true),
+      new Move("Mourning Spirit", "S[6AA", "HH", 20, null, "KND", "KND", 64, "Shifts to follow-up attack upon hit", false, false, false, false, false, true, false, false, true)
     ],
     // Horizontal Moves
     [
-      new Move("Biting Raven", "AA", "HH", null, null, null, null, null, null, false, true, false, false, false, false, false, false, false, true),
-      new Move("Governance", "AK", "HM", null, null, null, null, null),
-      new Move("Cataclysm", "6AA", "HMH", null, null, null, null, null),
-      new Move("Dashing Wind", "6AK", "HH", null, null, null, null, null),
-      new Move("Tempting Tezhas", "6a", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Tempting Tezhas(counter)", "H6a", "H", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Raven Gash", "3A", "M", null, null, null, null, null),
-      new Move("Dancing Tezhas", "3a", "M", null, null, null, null, null),
-      new Move("Ancient Worshipper", "2A", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Ancient Wheel", "1AA", "LL", null, null, null, null, null, null, false, false, true),
-      new Move("Dancing Insanity", "4A", "HH", null, null, null, null, null),
-      new Move("Dancing Insanity ~ Serpent's Embrace", "4a", "HH", null, null, null, null, null, null, true),
-      new Move("Serpent's Venom", "214A", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true, true),
-      new Move("Ancient Worshipper", "CA", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Menace Slice", "WA", "H", null, null, null, null, null),
-      new Move("Deceitful Raven", "Wa", "H", null, null, null, null, null),
-      new Move("Rising Raven", "JA", "M", null, null, null, null, null),
-      new Move("Scars of Memory", "TA", "H", null, null, null, null, null),
-      new Move("Screams of Paranoia", "T2AB", "LM", null, null, null, null, null, "GI vs. low", false, false, false, true)
+      new Move("Biting Raven", "A", "H", 12, -8, -2, 2, 8, null, false, true, false, false, false, false, false, false, false, true),
+      new Move("Biting Raven", "AA", "HH", 12, -12, 2, 2, 26, null, false, true, false, false, false, false, false, false, false, true),
+      new Move("Governance", "AK", "HM", 12, -8, 6, 6, 28),
+
+      new Move("Cataclysm", "6A", "HM", 16, -16, -12, -2, 12),
+      new Move("Cataclysm", "6AA", "HMH", 16, -4, 6, 6, 44),
+      new Move("Dashing Wind", "6AK", "HH", 16, 2, 6, 6, 30),
+
+      new Move("Tempting Tezhas", "6a", "H", 20, -16, -4, "KND", 18, null, false, false, false, false, false, false, true),
+      new Move("Tempting Tezhas(counter)", "H6a", "H", 20, -16, "KND", "KND", 41, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      
+      new Move("Raven Gash", "3A", "M", 18, -6, 12, 12, 18),
+      new Move("Dancing Tezhas", "3a", "M", 22, -12, 0, 0, 16),
+
+      new Move("Ancient Worshipper", "2A", "S", 16, -10, -2, -2, 10, null, false, false, true),
+
+      new Move("Ancient Wheel", "1A", "L", 26, -18, -4, -4, 12, null, false, false, true),
+      new Move("Ancient Wheel", "1AA", "LL", 26, -14, -2, -2, 27, null, false, false, true),
+
+      new Move("Dancing Insanity", "4A", "HH", 20, 0, 8, 8, 20),
+      new Move("Dancing Insanity ~ Serpent's Embrace", "4a", "HH", 20, -4, 4, 4, 20, null, true),
+
+      new Move("Serpent's Venom", "214A", "H", 54, null, "KND", "KND", 100, null, false, false, false, false, false, false, false, false, true, true),
+      new Move("Ancient Worshipper", "CA", "S", 16, -10, -2, -2, 10, null, false, false, true),
+      new Move("Menace Slice", "WA", "H", 20, -4, 8, "KND", 30),
+      new Move("Deceitful Raven", "Wa", "H", 22, -16, -2, -2, 14),
+      new Move("Rising Raven", "JA", "M", 28, -12, -4, -4, 22, "Damage differs slightly according to jump direction"),
+      new Move("Scars of Memory", "TA", "H", 12, -8, "KND", "KND", 19),
+
+      new Move("Screams of Paranoia", "T2A", "L", 22, -14, -6, 4, 8, "GI vs. low", false, false, false, true),
+      new Move("Screams of Paranoia", "T2AB", "LM", 22, -14, "KND", "KND", 32, "GI vs. low", false, false, false, true)
     ],
     // Vertical Moves
     [
-      new Move("Ode to Undine", "BBB", "MMM", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true, false, false, false, false, true),
-      new Move("Ode to Undine", "BBb", "MMM", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
-      new Move("Poisoned Destiny", "b", "MM", null, null, null, null, null),
-      new Move("Raven's Egg", "xA", "H", null, null, null, null, null),
-      new Move("Eclipse Raven", "xa", "HM", null, null, null, null, null),
-      new Move("Darkside", "x6", "M", null, null, null, null, null),
-      new Move("Warning Mood", "6BA", "MH", null, null, null, null, null),
-      new Move("Warning Mood ~ Serpent's Embrace", "6Ba", "MH", null, null, null, null, null, null, true),
-      new Move("Warning Immortal", "6BB", "MM", null, null, null, null, null),
-      new Move("Ivy Lick", "6x8", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Ivy Lick", "M6x8", "H", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Silhouette", "6x8K", "HL", null, null, null, null, null),
-      new Move("Ivy Lash", "6b", "M", null, null, null, null, null),
-      new Move("Biting Ivy Inner", "6b2|8", "MM", null, null, null, null, null),
-      new Move("Aqua Clipper", "3B", "M", null, null, null, null, null, null, false, true),
+      new Move("Ode to Undine", "B", "M", 16, -10, -4, -4, 12, "Shifts to clash upon hit", false, false, false, false, true, false, false, false, false, true),
+      new Move("Poisoned Destiny", "b", "MM", 16, -20, -10, -10, 30),
+      new Move("Ode to Undine", "BB", "MM", 16, -10, -4, -4, 28, "Shifts to clash upon hit", false, false, false, false, true, false, false, false, false, true),
+      new Move("Ode to Undine", "BBB", "MMM", 16, -8, null, null, 28, "Shifts to clash upon hit", false, false, false, false, true, false, false, false, false, true),
+      new Move("Ode to Undine", "BBb", "MMM", 16, null, null, null, 35, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      
+      new Move("Raven's Egg", "xA", "H", 18, -8, "KND", "KND", 30),
+      new Move("Eclipse Raven", "xa", "HM", 22, -10, 6, 6, 24),
 
-      new Move("Dominance", "2B", "M", null, null, null, null, null),
-      new Move("Poison Leaf", "1B", "L", null, null, null, null, null),
-      new Move("Poison Ivy", "1b", "Lmm", null, null, null, null, null),
-      new Move("Rushing Raven", "4B", "H", null, null, null, null, null),
-      new Move("Dashing Wings", "4x8", "HHHHHmmmM", null, null, null, null, null),
-      new Move("Venom Lash", "214B", "MM", null, null, null, null, null),
-      new Move("Venom Lash ~ Serpent's Embrace", "214b", "MM", null, null, null, null, null, null, true),
-      new Move("Aqua Worshipper", "CB", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Ivy Masquerade", "C3B", "L", null, null, null, null, null, null, false, true, true),
-      new Move("Masquerade ~ Spiral Lust", "C3b", "L", null, null, null, null, null, null, true, true),
-      new Move("Pride", "C1B", "M", null, null, null, null, null),
-      new Move("Cagemaster", "WBB", "MHH", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Akasha's Cage", "JBBB", "MMHH", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Reverse Immortal", "TB", "M", null, null, null, null, null),
-      new Move("Deep Immortal", "T2B", "M", null, null, null, null, null, null, false, false, true)
+      new Move("Darkside", "x6", "M", 20, -8, 4, 4, 20),
+
+      new Move("Warning Mood", "6B", "M", 18, -8, 0, 0, 14),
+      new Move("Warning Mood", "6BA", "MH", 18, -4, 0, 0, 40),
+      new Move("Warning Mood ~ Serpent's Embrace", "6Ba", "MH", 18, 4, 8, 8, 40, null, true),
+      new Move("Warning Immortal", "6BB", "MM", 18, -8, 6, 6, 34),
+
+      new Move("Ivy Lick", "6x8", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
+      new Move("Ivy Lick", "M6x8", "H", 12, null, "KND", "KND", 41, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Silhouette", "6x8K", "HL", 12, -14, 2, 2, 36),
+
+      new Move("Ivy Lash", "6b", "M", 24, -16, -2, -2, 14),
+      new Move("Biting Ivy Inner", "6b2|8", "MM", 24, -20, -6, -6, 26),
+
+      new Move("Aqua Clipper", "3B", "M", 20, -16, "KND", "KND", 22, null, false, true),
+      new Move("Dominance", "2B", "M", 20, -6, 2, 2, 23),
+      new Move("Poison Leaf", "1B", "L", 28, -6, 2, 2, 18),
+      new Move("Poison Ivy", "1b", "Lmm", 28, -2, "KND", "KND", 30),
+
+      new Move("Rushing Raven", "4B", "H", 22, -14, -6, -6, 18),
+      new Move("Dashing Wings", "4x8", "HHHHHmmmM", 20, 2, "KND", "KND", 45),
+
+      new Move("Venom Lash", "214B", "MM", 20, -16, -10, -10, 31),
+      new Move("Venom Lash ~ Serpent's Embrace", "214b", "MM", 20, -14, 0, 0, 31, null, true),
+
+      new Move("Aqua Worshipper", "CB", "M", 18, -10, 0, 0, 16, null, false, false, true),
+      new Move("Ivy Masquerade", "C3B", "L", 18, -20, 6, "KND", 18, null, false, true, true),
+      new Move("Masquerade ~ Spiral Lust", "C3b", "L", null, null, null, null, 18, null, true, true),
+      new Move("Pride", "C1B", "M", 18, -12, "KND", "KND", 26),
+
+      new Move("Cagemaster", "WB", "MH", 20, -14, "KND", "KND", 16, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Cagemaster", "WBB", "MHH", 20, -12, -6, -6, 27, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      
+      new Move("Akasha's Cage", "JB", "MM", 42, -10, "KND", "KND", 28, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Akasha's Cage", "JBB", "MMH", 42, -16, "KND", "KND", 44, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Akasha's Cage", "JBBB", "MMHH", 42, -12, -6, -6, 55, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      
+      new Move("Reverse Immortal", "TB", "M", 18, -6, 4, 4, 16),
+      new Move("Deep Immortal", "T2B", "M", 18, -8, 2, 2, 18, null, false, false, true)
     ],
     // Kick Moves 
     [
-      new Move("Night Swallow", "K", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Starving Spirit", "6KB", "MH", null, null, null, null, null, "Becomes a middle attack when at distance/Returns to crouching on G cancel", false, false, false, false, false, false, false, false, false, true),
-      new Move("Blade Sharpener", "6Kb", "MH", null, null, null, null, null, "Becomes a middle attack when at distance/Returns to crouching on G cancel", false, false, false, false, false, false, false, false, true, true),
-      new Move("Rage Kick", "3K", "M", null, null, null, null, null),
-      new Move("Rage Kick", "3k", "M", null, null, null, null, null, null, false, true),
-      new Move("Charmer Silhouette", "2K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Queen's Pleasure", "1K", "L", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Ivy Sweep", "D1K", "LL", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Evil Sparrow", "4K", "M", null, null, null, null, null),
-      new Move("Charmer Silhouette", "CK", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Nail Cross", "C3K", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Rising Cross", "WK", "M", null, null, null, null, null),
-      new Move("Rising Mind Shatter", "JK", "M", null, null, null, null, null),
-      new Move("Reverse Night Swallow", "TK", "H", null, null, null, null, null),
-      new Move("Deep Silhouette", "T2K", "L", null, null, null, null, null, null, false, false, true)
+      new Move("Night Swallow", "K", "H", 12, -8, 0, 0, 12, null, false, false, false, false, false, false, false, false, false, true),
+
+      new Move("Starving Spirit", "6K", "M", 16, 12, -8, 2, 2, "Becomes a middle attack when at distance/Returns to crouching on G cancel", false, false, false, false, false, false, false, false, false, true),
+      new Move("Starving Spirit", "6KB", "MH", 16, 4, "KND", "KND", 38, "Becomes a middle attack when at distance/Returns to crouching on G cancel", false, false, false, false, false, false, false, false, false, true),
+      new Move("Blade Sharpener", "6Kb", "MH", 16, null, "KND", "KND", 42, "Becomes a middle attack when at distance/Returns to crouching on G cancel", false, false, false, false, false, false, false, false, true, true),
+      
+      new Move("Rage Kick", "3K", "M", 14, -6, 4, 4, 16),
+      new Move("Rage Kick", "3k", "M", 34, 2, "KND", "KND", 27, null, false, true),
+
+      new Move("Charmer Silhouette", "2K", "L", 16, -14, -4, -4, 12, null, false, false, true),
+      new Move("Queen's Pleasure", "1K", "L", 16, -16, -2, "KND", 10, null, false, false, false, false, false, false, true),
+      new Move("Ivy Sweep", "D1K", "LL", 16, null, "KND", "KND", 25, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Evil Sparrow", "4K", "M", 18, -6, 8, 8, 22),
+
+      new Move("Charmer Silhouette", "CK", "L", 16, -14, -4, -4, 12, null, false, false, true),
+      new Move("Nail Cross", "C3K", "M", 18, -12, -4, -4, 14, null, false, false, true),
+      new Move("Rising Cross", "WK", "M", 12, -8, 4, 4, 14),
+      new Move("Rising Mind Shatter", "JK", "M", 26, -6, "KND", "KND", 22),
+      new Move("Reverse Night Swallow", "TK", "H", 14, -6, 4, 4, 14),
+      new Move("Deep Silhouette", "T2K", "L", 18, -14, -4, -4, 18, null, false, false, true)
     ],
     // Simultaneous Press Moves
     [
-      new Move("Revelation", "A+B", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("God Whisper", "6A+BA", "MSM", null, null, null, null, null),
+      new Move("Revelation", "A+B", "M", 44, 10, "KND", "KND", 30, null, false, true, false, false, false, false, false, true),
+
+      new Move("God Whisper", "6A+B", "M", 22, -16, 0, 0, 12),
+      new Move("God Whisper", "6A+BA", "MSM", 22, -6, 4, 4, 33),
+
       new Move("Suppressed Exile ~ Spiral Lust", "3A+B", null, null, null, null, null, null, null, true),
-      new Move("Metal Fencer", "2A+BB", "MM", null, null, null, null, null),
-      new Move("Razor's Bite", "1A+B", "L", null, null, null, null, null),
-      new Move("Spiral Punishment", "4A+BB", "MMMMMMM", null, null, null, null, null, "GI vs. mid horizontal(except kicks)", false, false, false, true),
-      new Move("Creeping Ivy", "8A+BB", "MM", null, null, null, null, null),
-      new Move("Hailstorm", "8A+Bb", "MMMM", null, null, null, null, null),
-      new Move("Banshee", "B+K", "M", null, null, null, null, null, "Returns to facing away", false, true),
-      new Move("Embrace of Guilt", "6B+K", "M", null, null, null, null, null, "Shifts to attack throw upon close-range hit", false, false, false, false, false, false, true),
-      new Move("Embrace of Guilt", "6b+k", "M", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Fear's Void", "2|3B+K", "M", null, null, null, null, null, "Returns to crouching on G cancel", false, true, false, false, false, false, false, false, false, true),
-      new Move("Heel Explosion", "4B+K", "M", null, null, null, null, null, "Returns to crouching on G cancel", false, false, false, false, false, false, false, false, true, true),
-      new Move("Stinging Souls", "8|9B+K", "MM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Fear's Void", "C2|3B+K", "M", null, null, null, null, null, "Returns to crouching on G cancel", false, true, false, false, false, false, false, false, false, true),
-      new Move("Asylum", "WB+K", "MM", null, null, null, null, null, "GI vs. high, mid & low", false, false, false, true),
-      new Move("Viper Tail", "TB+K", "m", null, null, null, null, null, "Returns to facing away")
+
+      new Move("Metal Fencer", "2A+B", "M", 34, -18, "KND", "KND", 22),
+      new Move("Metal Fencer", "2A+BB", "MM", 34, -22, "KND", "KND", 40),
+      new Move("Razor's Bite", "1A+B", "L", 30, -12, "KND", "KND", 20),
+
+      new Move("Spiral Punishment", "4A+B", "MMM", 28, -6, 4, 4, 18, "GI vs. mid horizontal(except kicks)", false, false, false, true),
+      new Move("Spiral Punishment", "4A+BB", "MMMMMMM", 28, -24, "KND", "KND", 50, "GI vs. mid horizontal(except kicks)", false, false, false, true),
+      
+      new Move("Creeping Ivy", "8A+B", "M", 22, -34, "KND", "KND", 20),
+      new Move("Creeping Ivy", "8A+BB", "MM", 22, -24, "KND", "KND", 35),
+      new Move("Hailstorm", "8A+Bb", "MMMM", 22, -20, "KND", "KND", 47),
+
+      new Move("Banshee", "B+K", "M", 26, -6, "KND", "KND", 24, "Returns to facing away", false, true),
+
+      new Move("Embrace of Guilt", "6B+K", "M", 28, -4, 4, 4, 37, "Shifts to attack throw upon close-range hit", false, false, false, false, false, false, true),
+      new Move("Embrace of Guilt", "6b+k", "M", 28, -4, 10, 10, 37, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      
+      new Move("Fear's Void", "2|3B+K", "M", 30, -8, "KND", "KND", 30, "Returns to crouching on G cancel", false, true, false, false, false, false, false, false, false, true),
+      new Move("Heel Explosion", "4B+K", "M", 74, null, "KND", "KND", 80, "Returns to crouching on G cancel", false, false, false, false, false, false, false, false, true, true),
+      new Move("Stinging Souls", "8|9B+K", "MM", 28, 4, "KND", "KND", 26, null, false, false, false, false, false, false, false, true),
+      new Move("Fear's Void", "C2|3B+K", "M", 30, -8, "KND", "KND", 30, "Returns to crouching on G cancel", false, true, false, false, false, false, false, false, false, true),
+      new Move("Asylum", "WB+K", "MM", 20, -18, -10, -10, 42, "GI vs. high, mid & low", false, false, false, true),
+      new Move("Viper Tail", "TB+K", "m", 26, -4, "KND", "KND", 24, "Returns to facing away")
     ],
     // 8-Way Run Moves
     [
-      new Move("Damned Mark", "#|^|(A", "M", null, null, null, null, null),
-      new Move("Sparking Blade", "#|^|(a", "MM", null, null, null, null, null, null, false, true),
-      new Move("Wolf Lash", "*A", "H", null, null, null, null, null, null, false, true),
+      new Move("Damned Mark", "#|^|(A", "M", 20, -8, 2, 2, 24),
+      new Move("Sparking Blade", "#|^|(a", "MM", 20, -12, -4, -4, 44, null, false, true),
+      new Move("Wolf Lash", "*A", "H", 26, -12, 0, 0, 18, null, false, true),
       new Move("Wolf Sign", "@A", "H", null, null, null, null, null, null, false, true),
-      new Move("Cursed Soul", "!|$|uA", "M", null, null, null, null, null),
-      new Move("Insanity Light", "!|$|ua", "M", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Insanity Feast", "!|$|ua6", "M", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Elder Gnome", "#|^|(BB", "MM", null, null, null, null, null),
-      new Move("Nocturnal Sylph", "@|*BA", "MH", null, null, null, null, null, "Returns to facing away"),
-      new Move("Drowning Madness ~ Serpent's Embrace", "@|*b", "M", null, null, null, null, null, null, true),
-      new Move("Cursed Heavens", "!|$|uB", "M", null, null, null, null, null, null, false, true),
-      new Move("Wondergale", "^K", "M", null, null, null, null, null),
-      new Move("Wondergale ~ Serpent's Embrace", "^k", "M", null, null, null, null, null, null, true),
-      new Move("Mind Shatter", "#|(K", "H", null, null, null, null, null),
-      new Move("Royal Huntress", "@|*K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Diving Raven", "!|$|uK", "M", null, null, null, null, null, "Returns to downed position"),
-      new Move("Freeze Gaze", "#|^|(A+B", "MM", null, null, null, null, null),
-      new Move("Arid Land", "@|*A+B", "MM", null, null, null, null, null, "GI vs. mid horizontal", false, false, false, true),
-      new Move("Crucifixion", "!|$|uA+B", "M", null, null, null, null, null),
-      new Move("Crucifixion", "!|$|ua+b", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
-      new Move("Raging Gnome", "#|^|(B+K", "MMM", null, null, null, null, null),
-      new Move("Exile ~ Serpent's Embrace", "!|$|uB+K", "M", null, null, null, null, null, null, true),
-      new Move("Sliding", "RK", "L", null, null, null, null, null)
+
+      new Move("Cursed Soul", "!|$|uA", "M", 24, -8, 2, 2, 24),
+      new Move("Insanity Light", "!|$|ua", "M", 28, -24, 8, 8, 34, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Insanity Feast", "!|$|ua6", "M", 28, -24, "KND", "KND", 44, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+
+      new Move("Elder Gnome", "#|^|(B", "M", 16, -12, 4, "KND", 18),
+      new Move("Elder Gnome", "#|^|(BB", "MM", 16, -12, 14, 14, 41),
+
+      new Move("Nocturnal Sylph", "@|*B", "M", 16, -12, 2, 2, 20, "Returns to facing away"),
+      new Move("Nocturnal Sylph", "@|*BA", "MH", 16, 4, "KND", "KND", 40, "Returns to facing away"),
+      new Move("Drowning Madness ~ Serpent's Embrace", "@|*b", "M", 16, -4, "KND", "KND", 23, null, true),
+
+      new Move("Cursed Heavens", "!|$|uB", "M", 18, -12, "KND", "KND", 22, null, false, true),
+
+      new Move("Wondergale", "^K", "M", 16, -4, 4, 4, 18),
+      new Move("Wondergale ~ Serpent's Embrace", "^k", "M", 16, -6, 2, 2, 18, null, true),
+
+      new Move("Mind Shatter", "#|(K", "H", 16, -6, "KND", "KND", 24),
+      new Move("Royal Huntress", "@|*K", "L", 24, -18, "KND", "KND", 18, null, false, false, true),
+      new Move("Diving Raven", "!|$|uK", "M", 28, -18, "KND", "KND", 26, "Returns to downed position"),
+
+      new Move("Freeze Gaze", "#|^|(A+B", "MM", 18, -8, 4, 4, 35),
+      new Move("Arid Land", "@|*A+B", "MM", 26, -10, "KND", "KND", 40, "GI vs. mid horizontal", false, false, false, true),
+      
+      new Move("Crucifixion", "!|$|uA+B", "M", null, -6, "KND", "KND", 42),
+      new Move("Crucifixion", "!|$|ua+b", "M", null, null, "KND", "KND", 70, null, false, false, false, false, false, false, false, false, true),
+
+      new Move("Raging Gnome", "#|^|(B+K", "MMM", 34, -4, "KND", "KND", 37),
+      new Move("Exile ~ Serpent's Embrace", "!|$|uB+K", "M", 40, null, null, null, 20, null, true),
+      new Move("Sliding", "RK", "L", 20, -22, "KND", "KND", 26)
     ],
     // Throws
     [
-      new Move("Dominion Throw", "A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Primal Dominance", "4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Heartless Guide", "ZA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Sunset Cradle", "XA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Sweet Dominance", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Vile Condemnation", "2|3A+G", "L", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Vile Condemnation", "C2|3A+G", "L", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Summon Suffering", "376231A+G", "H", null, null, null, null, null, "Not breakable", false, false, false, false, false, false, true),
-      new Move("Summon Suffering(fast)", "376231A+GF", "H", null, null, null, null, null, "Not breakable", false, false, false, false, false, false, true),
-      new Move("Calamity Symphony", "3746916A+G", "H", null, null, null, null, null, "Brakable", false, false, false, false, false, false, true),
-      new Move("Calamity Symphony(fast)", "3746916A+GF", "H", null, null, null, null, null, "Brakable", false, false, false, false, false, false, true)
+      new Move("Dominion Throw", "A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
+      new Move("Primal Dominance", "4A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
+      new Move("Heartless Guide", "ZA+G", "H", 18, null, "KND", "KND", 55, null, false, false, false, false, false, false, true),
+      new Move("Sunset Cradle", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Sweet Dominance", "VA+G", "H", 18, null, "KND", "KND", 70, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      
+      new Move("Vile Condemnation", "2|3A+G", "L", 28, -14, "KND", "KND", 45, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Vile Condemnation", "C2|3A+G", "L", 28, -14, "KND", "KND", 45, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      
+      new Move("Summon Suffering", "376231A+G", "H", 20, null, "KND", "KND", 60, "Not breakable", false, false, false, false, false, false, true),
+      new Move("Summon Suffering(fast)", "376231A+GF", "H", 20, null, "KND", "KND", 65, "Not breakable", false, false, false, false, false, false, true),
+      
+      new Move("Calamity Symphony", "3746916A+G", "H", 16, null, "KND", "KND", 80, "Brakable", false, false, false, false, false, false, true),
+      new Move("Calamity Symphony(fast)", "3746916A+GF", "H", 16, null, "KND", "KND", 90, "Brakable", false, false, false, false, false, false, true)
     ],
     // ************ Stances *************
     // Serpent's Embrace
     [
       new Move("Serpent's Embrace", "4a", null, null, null, null, null, null, null, true),
-      new Move("Violent Spirits", "[AA", "HMH", null, null, null, null, null),
-      new Move("Wind Embrace", "[6AA", "HH", null, null, null, null, null, "Shifts to follow-up attack upon hit"),
-      new Move("Lamenting Tail", "[4A", "L", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Mistress' Justice", "[BBB", "MMM", null, null, null, null, null),
-      new Move("Howling Spirits", "[BBBBBj", "MMMMM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Ivy Sting", "[6B", "M", null, null, null, null, null, "Shifts to follow-up attack upon hit"),
-      new Move("Landing Embrace", "[4B", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Charging Serpent", "[K", "M", null, null, null, null, null),
-      new Move("Charging Serpent ~ Serpent's Embrace", "[k", "M", null, null, null, null, null, null, true),
-      new Move("Stinging Souls", "[B+K|6B+K|4B+K", "MM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Redemption", "[8B+K", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Redemption", "M[8B+K", "H", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Blind Obsession", "[8B+KK", "HL", null, null, null, null, null),
-      new Move("Released Souls", "[A+B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
-      new Move("Guilty Throne", "[A+B+K", "MMMMMMMM", null, null, null, null, null, null, false, false, false, false, false, false, true, false, false, false, true)
+
+      new Move("Violent Spirits", "[AA", "HMH", 18, -4, 6, 6, 40),
+      new Move("Wind Embrace", "[6AA", "HH", 20, 8, "KND", "KND", 58, "Shifts to follow-up attack upon hit"),
+      new Move("Lamenting Tail", "[4A", "L", 24, -26, "KND", "KND", 51, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      
+      new Move("Mistress' Justice", "[BBB", "MMM", 22, -16, "KND", "KND", 36),
+      new Move("Howling Spirits", "[BBBBBj", "MMMMM", 22, 12, "KND", "KND", 68, null, false, false, false, false, false, false, false, true),
+      
+      new Move("Ivy Sting", "[6B", "M", 14, -12, "KND", "KND", 24, "Shifts to follow-up attack upon hit"),
+      new Move("Landing Embrace", "[4B", "M", 38, 12, "KND", "KND", 33, null, false, true, false, false, false, false, false, true), // Might be completely wrong
+      
+      new Move("Charging Serpent", "[K", "M", 16, -8, 2, "KND", 18),
+      new Move("Charging Serpent ~ Serpent's Embrace", "[k", "M", 16, 0, 8, "KND", 18, null, true),
+      new Move("Stinging Souls", "[B+K|6B+K|4B+K", "MM", 49, 4, "KND", "KND", 41, null, false, false, false, false, false, false, false, true),
+      
+      new Move("Redemption", "[8B+K", "H", 12, -20, -10, -10, 20, null, false, false, false, false, false, false, true),
+      new Move("Redemption", "M[8B+K", "H", 12, null, "KND", "KND", 51, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      
+      new Move("Blind Obsession", "[8B+KK", "HL", 12, -14, 2, 2, 36),
+      new Move("Released Souls", "[A+B", "M", 74, null, "KND", "KND", 60, null, false, false, false, false, false, false, false, false, true),
+      new Move("Guilty Throne", "[A+B+K", "MMMMMMMM", 34, -20, "KND", "KND", 80, null, false, false, false, false, false, false, true, false, false, false, true),
     ],
     // Spiral Lust
     [
-      new Move("Spiral Lust", "3A+B", "M", null, null, null, null, null, null, true, false, false, false, false, false, false, false, true),
-      new Move("Exile", "]B", "M", null, null, null, null, null),
-      new Move("Exile(delay)", "]B", "M", null, null, null, null, null),
+      new Move("Spiral Lust", "3A+B", "M", null, null, "KND", "KND", 56, null, true, false, false, false, false, false, false, false, true),
+      new Move("Exile", "]B", "M", null, -12, "KND", "KND", 30),
+      new Move("Exile(delay)", "]B", "M", null, 2, "KND", "KND", 30),
       new Move("Spiral Lust ~ Serpent's Embrace", "]G", null, null, null, null, null, null, null, true)
     ]
   ]

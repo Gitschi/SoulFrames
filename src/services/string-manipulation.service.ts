@@ -4,7 +4,7 @@ export class StringManipulationService{
   // Loops through move-list and exchanges alphanumeric notations and levels for image-paths
   preloadCommandImages(moveList: any[]) {
 
-    // Loop through all categories except for stances
+    // Loop through all categories
     for(let i = 0; i < moveList.length; i++){
 
       // Loop through single move

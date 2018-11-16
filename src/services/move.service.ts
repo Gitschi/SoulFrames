@@ -690,128 +690,179 @@ export class MoveService{
   Geralt = [
     // Reversal Edge Attacks
     [
-      new Move("Parry", "B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Parry", "b+g", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
-      new Move("School of the Wolf", "rAA", "HHH", null, null, null, null, null, "Powers up when opponent is soul charged", false, true),
-      new Move("Butcher of Blaviken", "rB", "M", null, null, null, null, null, "Shifts to attack throw upon hit/Shifts to clash upon guard", false, true, false, false, false, false, true, true),
-      new Move("Flood of Anger", "rK", "M", null, null, null, null, null, null, false, true)
+      new Move("Parry", "B+G", "M", 44, -4, null, null, 35, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Parry", "b+g", "M", null, null, null, null, 45, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+
+      new Move("School of the Wolf", "rA", "H", null, null, null, null, 19, "Powers up when opponent is soul charged", false, true),
+      new Move("School of the Wolf", "rAA", "HHH", null, null, null, null, 45, "Powers up when opponent is soul charged", false, true),
+
+      new Move("Butcher of Blaviken", "rB", "M", null, null, null, null, 56, "Shifts to attack throw upon hit/Shifts to clash upon guard", false, true, false, false, false, false, true, true),
+      new Move("Flood of Anger", "rK", "M", null, null, null, null, 25, null, false, true)
     ],
     // Gauge Attacks
     [
-      new Move("Hunt of the White Wolf", "A+B+K", "M", null, null, null, null, null, null, false, false, false, false, false, false, true, false, false, false, true),
-      new Move("Impaling Hilt ~ Igni Burn", "6Bb", "MHHm", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, false, false, true),
-      new Move("Quen Strike", "6A+B", "M", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, false, false, true),
-      new Move("Quen Expel", "6A+BUA", "M", null, null, null, null, null),
-      new Move("Quen Charge", "6A+BUB", "M", null, null, null, null, null,"Powers up when opponent is soul charged", false, true, false, false, false, false, false, true),
+      new Move("Hunt of the White Wolf", "A+B+K", "M", 16, null, null, null, 80, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Impaling Hilt ~ Igni Burn", "6Bb", "MHHm", 18, -6, "STN", "STN", 52, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, false, false, true),
+      
+      new Move("Quen Strike", "6A+B", "M", 43, null, "STN", "STN", 20, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, false, false, true),
+      new Move("Quen Expel", "6A+BUA", "M", null, null, "KND", "KND", 30),
+      new Move("Quen Charge", "6A+BUB", "M", null, null, null, "STN", 44,"Powers up when opponent is soul charged", false, true, false, false, false, false, false, true),
       new Move("Glyph of the Quen ~ Fleet Footwork", "6A+B2|8B+K", null, null, null, null, null, null, null, true),
-      new Move("Igni Burn", "2A+B", "HH", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, false, false, true),
-      new Move("Igni Burn", "2a+b", "HHm", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, false, false, true),
-      new Move("Yrden Glyph", "4A+B", null, null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charged/GI vs. high, mid & low", true, false, false, true, false, false, false, false, false, false, true),
-      new Move("Aard Push", "8A+B", "m", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, false, false, true),
-      new Move("Igni Armor Melter", "#|^|(A+B", "M", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, true, true, true),
-      new Move("Igni Burn", "@|*A+B", "HH", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, false, false, true),
-      new Move("Igni Burn", "@|*a+b", "HHm", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, false, false, true),
-      new Move("Yrden Glyph", "!|$|uA+B", null, null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charged", true, false, false, true, false, false, false, false, false, false, true),
-      new Move("Vaulting Aard Hammer", "A+G|4A+GA+G", "H", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charged", false, true, false, false, false, false, true, false, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
-      new Move("Wolven Storm", "SAAAA", "HHMH", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Ursine Rage", "S6ABB", "HMM", null, null, null, null, null, "Powers up when opponent is soul charged", false, true, false, false, false, true),
-      new Move("Tawny Owl Upsurge", "3AAAAA", "MMHMMM", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Blizzard Frenzy", "#|^|(AAA", "HHM", null, null, null, null, null, null, false, false, false, false, false, true)
+      
+      new Move("Igni Burn", "2|@|*A+B", "HH", 18, -12, 4, 4, 22, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, false, false, true),
+      new Move("Igni Burn", "2|@|*a+b", "HHm", 18, -6, "KND", "KND", 46, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, false, false, true),
+      new Move("Yrden Glyph", "4|!|$|uA+B", null, null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charged/GI vs. high, mid & low", true, false, false, true, false, false, false, false, false, false, true),
+      new Move("Aard Push", "8A+B", "m", 10, -10, 4, 4, 20, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, false, false, true),
+      new Move("Igni Armor Melter", "#|^|(A+B", "M", 60, null, "STN", "STN", 45, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, true, true, true),
+      new Move("Vaulting Aard Hammer", "A+G|4A+GA+G", "H", 18, null, "KND", "KND", 70, "Consumes soul gauge/No gauge cost when soul charged", false, true, false, false, false, false, true, false, false, false, true),
+      
+      new Move("Soul Charge", "4A+B+G", "m", 6, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Wolven Storm", "SAAAA", "HHMH", null, null, "KND", "KND", 58, null, false, false, false, false, false, true),
+      new Move("Ursine Rage", "S6ABB", "HMM", null, -16, "KND", "ND", 65, "Powers up when opponent is soul charged", false, true, false, false, false, true),
+
+      new Move("Tawny Owl Upsurge", "3A", "M", null, null, null, null, 15, null, false, false, false, false, false, true),
+      new Move("Tawny Owl Upsurge", "3AA", "MM", null, -20, -10, -10, 25, null, false, false, false, false, false, true),
+      new Move("Tawny Owl Upsurge", "3AAA", "MMHMMM", null, -12, 2, 2, 43, null, false, false, false, false, false, true),
+      new Move("Tawny Owl Upsurge", "3AAAAA", "MMHMMM", null, -16, "KND", "KND", null, null, false, false, false, false, false, true),
+      
+      new Move("Blizzard Frenzy", "#|^|(AAA", "HHM", null, 4, "KND", "KND", 56, null, false, false, false, false, false, true)
     ],
     // Horizontal Moves
     [
-      new Move("Steel Whirlwind", "AAA", "HHM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Svalblod Strike", "6AA", "HM", null, null, null, null, null),
-      new Move("Berserker Crush", "6AB", "HM", null, null, null, null, null),
-      new Move("Bonhart Blitz", "3A", "M", null, null, null, null, null),
-      new Move("Shank Slash", "2A", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Sweeping Aard Thrust", "1AA", "Lm", null, null, null, null, null),
-      new Move("Kingsweeper", "1AB", "LM", null, null, null, null, null, null, false, true),
-      new Move("Adrenaline Onslaught", "4AHAj", "MMM", null, null, null, null, null, "Powers up when opponent is soul charged"),
-      new Move("Gnomish Knee-Slash", "CA", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Feline Lacerate", "WA", "M", null, null, null, null, null),
-      new Move("Griffin Swipe", "JA", "H", null, null, null, null, null),
-      new Move("Turnaround Smite", "TA", "H", null, null, null, null, null),
-      new Move("Turnaround Shincracker", "T2A", "S", null, null, null, null, null, null, false, false, true)
+      new Move("Steel Whirlwind", "A", "H", 12, -8, -4, -4, 10, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Steel Whirlwind", "AA", "HH", 12, -10, 2, 2, 24, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Steel Whirlwind", "AAA", "HHM", 12, -8, 8, 8, 62, null, false, false, false, false, false, false, false, false, false, true),
+      
+      new Move("Svalblod Strike", "6A", "H", 14, -10, -4, 0, 14),
+      new Move("Svalblod Strike", "6AA", "HM", 14, -6, "KND", "KND", 36),
+      new Move("Berserker Crush", "6AB", "HM", 14, -6, 2, 2, 34),
+
+      new Move("Bonhart Blitz", "3A", "M", 16, -10, -2, -2, 14),
+      new Move("Shank Slash", "2A", "S", 12, -6, 4, 4, 10, null, false, false, true),
+
+      new Move("Sweeping Aard Thrust", "1A", "L", 26, -20, -10, -4, 18),
+      new Move("Sweeping Aard Thrust", "1AA", "Lm", 26, -10, 4, 4, 39),
+      new Move("Kingsweeper", "1AB", "LM", 26, -22, "KND", "KND", 41, null, false, true),
+
+      new Move("Adrenaline Onslaught", "4A", "M", 22, -16, -6, null, 20, "Powers up when opponent is soul charged"),
+      new Move("Adrenaline Onslaught", "4AH", "MM", 22, null, null, null, 26, "Powers up when opponent is soul charged"),
+      new Move("Adrenaline Onslaught", "4AHAj", "MMM", 22, null, null, null, 41, "Powers up when opponent is soul charged"),
+
+      new Move("Gnomish Knee-Slash", "CA", "S", 12, -6, 4, 4, 10, null, false, false, true),
+      new Move("Feline Lacerate", "WA", "M", 18, -10, 2, 2, 20),
+      new Move("Griffin Swipe", "JA", "H", 22, -4, 6, 6, 18, "Damage differs slightly according to jump direction"),
+      new Move("Turnaround Smite", "TA", "H", null, null, null, null, 14),
+      new Move("Turnaround Shincracker", "T2A", "S", null, null, null, null, 14, null, false, false, true)
     ],
     // Vertical Moves
     [
-      new Move("Wolf Bite", "BBB", "MMM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Impaling Hilt ~ Igni Burn", "6BB", "MHH", null, null, null, null, null),
-      new Move("Skelliger Uppercut", "3B", "M", null, null, null, null, null),
-      new Move("Sunderstep", "2B", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Crippling Strike", "1B", "L", null, null, null, null, null),
-      new Move("Backhand Eviscerate", "4B", "M", null, null, null, null, null, "Powers up when opponent is soul charged/Can be held", false, true),
-      new Move("Dwarven Dismember", "CB", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Panther Shred", "WB", "MM", null, null, null, null, null),
-      new Move("Wyvern Dive", "JB", "M", null, null, null, null, null),
-      new Move("Turnaround Crush", "TB", "M", null, null, null, null, null),
-      new Move("Turnaround Crippler", "T2B", "M", null, null, null, null, null, null, false, false, true)
+      new Move("Wolf Bite", "B", "M", 14, -10, 0, 0, 12, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Wolf Bite", "BB", "MM", 14, -8, 2, 2, 28, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Wolf Bite", "BBB", "MMM", 14, -10, 6, 6, 48, null, false, false, false, false, false, false, false, false, false, true),
+      
+      new Move("Impaling Hilt", "6B", "M", 18, -14, 0, 0, 16),
+      new Move("Impaling Hilt ~ Igni Burn", "6BB", "MHH", 18, -12, 4, 4, 34),
+
+      new Move("Skelliger Uppercut", "3B", "M", 20, -14, "LNC", "LNC", 28),
+      new Move("Sunderstep", "2B", "M", 14, -8, 2, 2, 14, null, false, false, true),
+      new Move("Crippling Strike", "1B", "L", 26, -14, "KND", "KND", 22),
+
+      new Move("Backhand Eviscerate", "4B", "M", 22, -12, "KND", "KND", 22, "Powers up when opponent is soul charged", false, true),
+      new Move("Backhand Eviscerate(hold)", "4b", "M", 44, -6, "SLNC", "SLNC", 30, "Powers up when opponent is soul charged/Can be held", false, true),
+
+      new Move("Dwarven Dismember", "CB", "M", 14, -8, 2, 2, 14, null, false, false, true),
+      new Move("Panther Shred", "WB", "MM", 12, -8, 2, 2, 22),
+
+      new Move("Wyvern Dive(backward)", "7JB", "M", 36, -8, 2, 2, 26),
+      new Move("Wyvern Dive(neutral)", "8JB", "M", 36, -8, "KND", "KND", 28),
+      new Move("Wyvern Dive(forward)", "9JB", "M", 36, -8, "KND", "KND", 30),
+
+      new Move("Turnaround Crush", "TB", "M", null, null, null, null, 18),
+      new Move("Turnaround Crippler", "T2B", "M", null, null, null, null, 20, null, false, false, true)
     ],
     // Kicks
     [
-      new Move("Septum Deviator", "K", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Splintered Sternum", "6K", "M", null, null, null, null, null, "Can be held"),
-      new Move("Kidney Crunch", "3K", "M", null, null, null, null, null),
-      new Move("Crouching Destabilizer", "2K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Dijkstra Legbreaker", "1K", "L", null, null, null, null, null),
-      new Move("The Law of Surprise", "4K", "M", null, null, null, null, null),
-      new Move("The Law of Surprise ~ Quen Strike", "4KK", "MM", null, null, null, null, null),
-      new Move("The Law of Surprise ~ Quen Expel", "4KKUA", "MM", null, null, null, null, null),
-      new Move("The Law of Surprise ~ Quen Charge", "4KKUB", "MM", null, null, null, null, null),
-      new Move("The Law of Surprise ~ Glyph of Quen ~ Fleet Footwork", "4KK2|8B+K", "M", null, null, null, null, null),
-      new Move("Mahakam Sidewinder", "CK", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Manticore Rend", "WK", "M", null, null, null, null, null),
-      new Move("Forktail Pounce", "JK", "M", null, null, null, null, null),
-      new Move("Turnaround Cranium Kick", "TK", "H", null, null, null, null, null),
-      new Move("Turnaround Ankle Stomp", "T2K", "L", null, null, null, null, null, null, false, false, true)
+      new Move("Septum Deviator", "K", "H", 12, -8, 0, 0, 12, null, false, false, false, false, false, false, false, false, false, true),
+
+      new Move("Splintered Sternum", "6K", "M", 16, -10, 2, "KND", 18),
+      new Move("Splintered Sternum", "6k", "M", 34, 2, "KND", "KND", 28),
+
+      new Move("Kidney Crunch", "3K", "M", 14, -8, 2, 2, 16),
+      new Move("Crouching Destabilizer", "2K", "L", 16, -14, -4, -4, 12, null, false, false, true),
+      new Move("Dijkstra Legbreaker", "1K", "L", 18, -14, -2, 4, 18),
+
+      new Move("The Law of Surprise", "4K", "M", 24, -14, 6, "STN", 20),
+      new Move("The Law of Surprise ~ Quen Strike", "4KK", "MM", 24, -4, 10, "KND", 36),
+      new Move("The Law of Surprise ~ Quen Expel", "4KKUA", "MM", 24, -12, "KND", "KND", 44),
+      new Move("The Law of Surprise ~ Quen Charge", "4KKUB", "MM", 24, 6, "STN", "STN", 64),
+      new Move("The Law of Surprise ~ Glyph of Quen ~ Fleet Footwork", "4KK2|8B+K", "M", 24, null, null, null, 20),
+
+      new Move("Mahakam Sidewinder", "CK", "L", 16, -14, -4, -4, 12, null, false, false, true),
+      new Move("Manticore Rend", "WK", "M", 14, -8, 2, 2, 18),
+      new Move("Forktail Pounce", "JK", "M", 22, -8, 4, 4, 18, "Damage differs slightly according to jump direction"),
+      new Move("Turnaround Cranium Kick", "TK", "H", null, null, null, null, 16),
+      new Move("Turnaround Ankle Stomp", "T2K", "L", null, null, null, null, 18, null, false, false, true)
     ],
     // Simultaneous Press Moves
     [
-      new Move("Thunderbolt Overdose", "A+B", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Rolling Charge", "B+K", "M", null, null, null, null, null),
+      new Move("Thunderbolt Overdose", "A+B", "M", 36, 4, "KND", "KND", 36, null, false, true, false, false, false, false, false, true),
+      new Move("Rolling Charge", "B+K", "M", 44, -8, "KND", "KND", 36),
       new Move("Rolling Charge ~ Fleet Footwork", "B+K2|2B+K", null, null, null, null, null, null, null, true),
-      new Move("Swallow Surge", "6B+KB", "MM", null, null, null, null, null, "Powers up when opponent is soul charged"),
+
+      new Move("Swallow Surge", "6B+K", "M", 20, -16, "LNC", "LNC", 14, "Powers up when opponent is soul charged"),
+      new Move("Swallow Surge", "6B+KB", "MM", 20, -14, "KND", "KND", 27, "Powers up when opponent is soul charged"),
+
       new Move("Fleet Footwork", "2|8B+K", null, null, null, null, null, null, null, true),
-      new Move("Precision Aard Pummel", "TB+KB", "Mm", null, null, null, null, null)
+
+      new Move("Precision Aard Pummel", "TB+K", "M", 18, -12, "STN", "STN", 30),
+      new Move("Precision Aard Pummel", "TB+KB", "Mm", 18, -10, "KND", "KND", 51)
     ],
     // 8-Way Run Moves
     [
-      new Move("Cleaving Pirouette", "#|^|(AA", "HH", null, null, null, null, null),
-      new Move("Cleaving Pirouette ~ Quen Strike", "#|^|(AB", "HN", null, null, null, null, null),
-      new Move("Cleaving Pirouette ~ Quen Expel", "#|^|(ABUA", "HN", null, null, null, null, null),
-      new Move("Cleaving Pirouette ~ Quen Charge", "#|^|(ABUB", "HM", null, null, null, null, null, "Powers up when opponent is soul charged", false, true, false, false, false, false, false, true),
-      new Move("Cleaving Pirouette ~ Glypth of Quen ~ Fleet Footwork", "#|^|(AB2|8B+K", "H", null, null, null, null, null, null, true),
-      new Move("Toussant Two-Step", "#|^|(AK", "HL", null, null, null, null, null, "2nd hit can be held"),
-      new Move("Sword Deflection", "@|*A", "M", null, null, null, null, null, "GI vs. mid horizontal(except kicks)", false, true, false, true),
-      new Move("Deadly Retribution", "!|$|uA", "H", null, null, null, null, null, "Shifts to attack throw upon close-range hit/Powers up when opponent is soul charged", false, false, false, false, false, false, true),
-      new Move("Gyrating Slash", "^BA", "MH", null, null, null, null, null, "Powers up when opponent is soul charged", false, true),
-      new Move("Alzur's Double-Cross", "^BB", "MM", null, null, null, null, null),
-      new Move("Fiery Dancer", "#|(B", "MM", null, null, null, null, null),
-      new Move("Circle of Power", "@|*B", "M", null, null, null, null, null),
-      new Move("Swift Silver", "!|$|uBB", "MM", null, null, null, null, null, "Powers up when opponent is soul charged"),
-      new Move("Sir Ravix Roundhouse", "#|^|(K", "M", null, null, null, null, null),
-      new Move("Dijkstra Legbreaker", "@|*K", "L", null, null, null, null, null),
-      new Move("The Law of Surprise", "!|$|uK", "M", null, null, null, null, null),
-      new Move("The Law of Surprise ~ Quen Strike", "!|$|uKK", "MM", null, null, null, null, null),
-      new Move("The Law of Surprise ~ Quen Expel", "!|$|uKKUA", "MM", null, null, null, null, null),
-      new Move("The Law of Surprise ~ Quen Charge", "!|$|uKKUB", "MM", null, null, null, null, null, "Powers up when opponent is soul charged", false, true, false, false, false, false, false, true),
-      new Move("The Law of Surprise ~ Glyph of Quen ~ Fleet Footwork", "!|$|uKK2|8B+K", "M", null, null, null, null, null, null, true),
-      new Move("Whirling Manticore", "#|^|(B+K", "MM", null, null, null, null, null),
+      new Move("Cleaving Pirouette", "#|^|(A", "H", 18, -10, 0, 0, 14),
+      new Move("Cleaving Pirouette", "#|^|(AA", "HH", 18, -6, 2, 2, 30),
+      new Move("Cleaving Pirouette ~ Quen Strike", "#|^|(AB", "HN", 18, -4, 10, "KND", 34),
+      new Move("Cleaving Pirouette ~ Quen Expel", "#|^|(ABUA", "HN", 18, -12, "KND", "KND", 44),
+      new Move("Cleaving Pirouette ~ Quen Charge", "#|^|(ABUB", "HM", 18, 6, "KND", "KND", 58, "Powers up when opponent is soul charged", false, true, false, false, false, false, false, true),
+      new Move("Cleaving Pirouette ~ Glypth of Quen ~ Fleet Footwork", "#|^|(AB2|8B+K", "H", 18, null, null, null, 14, null, true),
+      new Move("Toussant Two-Step", "#|^|(AK", "HL", 18, -10, 4, 4, 34, "2nd hit can be held"),
+      
+      new Move("Sword Deflection", "@|*A", "M", 32, -14, 0, 0, 18, "GI vs. mid horizontal(except kicks)", false, true, false, true),
+      new Move("Deadly Retribution", "!|$|uA", "H", 26, -12, "KND", "KND", 60, "Shifts to attack throw upon close-range hit/Powers up when opponent is soul charged", false, false, false, false, false, false, true),
+
+      new Move("Gyrating Slash", "^B", "M", 30, -16, -4, -4, 18, "Powers up when opponent is soul charged", false, true),
+      new Move("Gyrating Slash", "^BA", "MH", 30, -6, 4, 4, 34, "Powers up when opponent is soul charged", false, true),
+      new Move("Alzur's Double-Cross", "^BB", "MM", 30, -12, "KND", "KND", 44),
+
+      new Move("Fiery Dancer", "#|(B", "MM", 18, -14, "STN", "STN", 36),
+      new Move("Circle of Power", "@|*B", "M", 42, -2, "KND", "KND", 36),
+
+      new Move("Swift Silver", "!|$|uB", "M", 26, -18, -8, -8, 14, "Powers up when opponent is soul charged"),
+      new Move("Swift Silver", "!|$|uBB", "MM", 26, -16, "KND", "KND", 32, "Powers up when opponent is soul charged"),
+
+      new Move("Sir Ravix Roundhouse", "#|^|(K", "M", 18, -6, 4, 4, 16),
+      new Move("Dijkstra Legbreaker", "@|*K", "L", 18, -14, -2, 4, 18),
+
+      new Move("The Law of Surprise", "!|$|uK", "M", 24, null, null, null, 20),
+      new Move("The Law of Surprise ~ Quen Strike", "!|$|uKK", "MM", 24, null, "STN", "KND", 36),
+      new Move("The Law of Surprise ~ Quen Expel", "!|$|uKKUA", "MM", 24, null, "KND", "KND", 44),
+      new Move("The Law of Surprise ~ Quen Charge", "!|$|uKKUB", "MM", 24, null, null, "STN", 64, "Powers up when opponent is soul charged", false, true, false, false, false, false, false, true),
+      new Move("The Law of Surprise ~ Glyph of Quen ~ Fleet Footwork", "!|$|uKK2|8B+K", "M", 24, null, null, null, 20, null, true),
+      
+      new Move("Whirling Manticore", "#|^|(B+K", "MM", 28, -8, "LNC", "LNC", 53),
       new Move("Fleet Footwork", "@|*B+K", null, null, null, null, null, null, null, true),
-      new Move("Rolling Charge", "!|$|uB+K", "M", null, null, null, null, null),
+      new Move("Rolling Charge", "!|$|uB+K", "M", 44, -8, "KND", "KND", 36),
       new Move("Rolling Charge ~ Fleet Footwork", "!|$|uB+K2|8B+K", null, null, null, null, null, null, null, true),
-      new Move("Viper in the Grass", "RK", "L", null, null, null, null, null)
+      new Move("Viper in the Grass", "RK", "L", null, -22, "KND", "KND", 26)
     ],
     // Throws
     [
-      new Move("Monster Slayer", "A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Geralt's Fury", "4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Temerian Devil", "ZA+G", "H", null, null, null, null, null, "", false, false, false, false, false, false, true),
-      new Move("Adrenaline Rush", "XA+G", "H", null, null, null, null, null, "", false, false, false, false, false, false, true),
-      new Move("Mutant's Wrath", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Vaulting Aard Hammer", "A+G|4A+GA+G", "H", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charged", false, true, false, false, false, false, true, false, false, false, true),
+      new Move("Monster Slayer", "A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
+      new Move("Geralt's Fury", "4A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
+      new Move("Temerian Devil", "ZA+G", "H", 18, null, "KND", "KND", 65, null, false, false, false, false, false, false, true),
+      new Move("Adrenaline Rush", "XA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
+      new Move("Mutant's Wrath", "VA+G", "H", 18, null, "KND", "KND", 70, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      new Move("Vaulting Aard Hammer", "A+G|4A+GA+G", "H", 18, null, "KND", "KND", 70, "Consumes soul gauge/No gauge cost when soul charged", false, true, false, false, false, false, true, false, false, false, true),
     ]
   ]
 
@@ -4606,126 +4657,178 @@ export class MoveService{
       new Move("Ereshkigal's Embrace", "b+g", "MM", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, false, true, false, true),
       new Move("Namtar's Execution Spike", "rAo", "HH", null, null, null, null, null, null, false, true),
       new Move("Ugallu's Threat", "rB", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Ugallu's Ingress", "rBoB", "Mm", null, null, null, null, null, "If opponent is cursed"), // only if opponent is cursed
+
+      new Move("Ugallu's Ingress(Lv. 1)", "rBoB", "Mm", null, null, null, null, null, "If opponent is cursed"), // only if opponent is cursed
+      new Move("Ugallu's Ingress(Lv. 2)", "rBoB", "Mm", null, null, null, null, null, "If opponent is cursed"), // only if opponent is cursed
+      new Move("Ugallu's Ingress(Lv. 3)", "rBoB", "Mm", null, null, null, null, null, "If opponent is cursed"), // only if opponent is cursed
+
       new Move("Feral Hound Uridimmu", "rK", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true)
     ],
     // Gauge Attacks
     [
-      new Move("The Voice from the Abyss", "M", "M", null, null, null, null, null, "Curses opponent on hit or guard/GI vs. high, mid & low", false, false, false, true, false, false, false, true, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
-      new Move("Ode to Humbaba", "S3AKB", "MHM", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Ceremonial Sacrifice", "S1AB", "LHM", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Void Nova", "SA+B", "mmmmmm", null, null, null, null, null, null, false, true, false, false, false, true, false, true),
-      new Move("Temple of Eternity", "S2A+B", "M", null, null, null, null, null, "Curses opponent upon hit/Shifts to attack throw upon hit", false, false, false, false, false, true, true, true),
-      new Move("Ishtar's Return", "@|*BBvB", "MMH", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Fatal Gravity", "SA+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true)
+      new Move("The Voice from the Abyss", "M", "M", 34, 4, "KND", "KND", null, "Curses opponent on hit or guard/GI vs. high, mid & low", false, false, false, true, false, false, false, true, false, false, true),
+      new Move("Soul Charge", "4A+B+G", "m", null, 8, 8, 0, null, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Ode to Humbaba", "S3AKB", "MHM", 16, -12, -1, -1, null, null, false, false, false, false, false, true),
+      new Move("Ceremonial Sacrifice", "S1AB", "LHM", 18, -2, 4, 4, null, null, false, false, false, false, false, true),
+      new Move("Void Nova", "SA+B", "mmmmmm", 36, 6, "STN", "STN", null, null, false, true, false, false, false, true, false, true),
+      new Move("Temple of Eternity", "S2A+B", "M", 30, 2, "KND", "KND", null, "Curses opponent upon hit/Shifts to attack throw upon hit", false, false, false, false, false, true, true, true),
+      new Move("Ishtar's Return", "@|*BBvB", "MMH", 22, -14, "LNC", "LNC", null, null, false, false, false, false, false, true),
+      new Move("Fatal Gravity", "SA+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, true, true)
     ],
     // Horizontal Moves
     [
-      new Move("Rending Blade of Shamash", "AAA", "HHH", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Bashum's Whisper", "z6", "M", null, null, null, null, null),
-      new Move("Damnation of Ereshkigal", "6AA", "HH", null, null, null, null, null),
-      new Move("Ereshkigal's Snare", "6AB", "HM", null, null, null, null, null, null, false, true),
-      new Move("Hook of Namtar", "3AB", "MM", null, null, null, null, null, "2nd hit can be held"),
-      new Move("Humbaba's Flame", "3AK", "MH", null, null, null, null, null),
-      new Move("Mutter of Bashm", "2A", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Bite of the Kulullu", "1A", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Ilabrat's Sapara", "4Ao", "HM", null, null, null, null, null),
+      new Move("Rending Blade of Shamash", "A", "H", 12, -8, 0, 0, 10, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Rending Blade of Shamash", "AA", "HH", 12, -6, 2, 2, 20, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Rending Blade of Shamash", "AAA", "HHH", 12, -8, 10, 10, 45, null, false, false, false, false, false, false, false, false, false, true),
+      
+      new Move("Bashum's Whisper", "z6", "M", 14, -4, 0, 6, 10),
+
+      new Move("Damnation of Ereshkigal", "6A", "H", 18, -16, 4, "STN", 14),
+      new Move("Damnation of Ereshkigal", "6AA", "HH", 18, 6, "KND", "KND", 30),
+      new Move("Ereshkigal's Snare", "6AB", "HM", 18, -8, "STN", "STN", 30, null, false, true),
+
+      new Move("Hook of Namtar", "3A", "M", 16, -20, -4, "STN", 14),
+      new Move("Hook of Namtar", "3AB", "MM", 16, 16, "STN", "KND", 34),
+      new Move("Hook of Namtar(hold)", "3Ab", "MM", null, 0, "KND", "KND", 54),
+      new Move("Humbaba's Flame", "3AK", "MH", 16, -10, 6, 6, 26),
+
+      new Move("Mutter of Bashm", "2A", "S", 12, -6, 4, 4, 12, null, false, false, true),
+      new Move("Bite of the Kulullu", "1A", "L", 18, -14, -4, -4, 14, null, false, false, true),
+      new Move("Ilabrat's Sapara", "4Ao", "HM", 20, -2, 4, 4, 30),
+
       new Move("Mutter of Bashm", "CA", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Great Scythe of Shamash", "WA", "H", null, null, null, null, null),
-      new Move("Shamash the Just", "JA", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Sin's Glance", "TA", "H", null, null, null, null, null),
-      new Move("Sin's Glare", "T2A", "S", null, null, null, null, null, null, false, false, true)
+      new Move("Great Scythe of Shamash", "WA", "H", 18, -8, 4, 4, 26),
+      new Move("Shamash the Just", "JA", "L", 38, -10, 0, 0, 28, null, false, false, true),
+      new Move("Sin's Glance", "TA", "H", 18, -8, 10, 10, 30),
+      new Move("Sin's Glare", "T2A", "S", 16, -6, 4, 4, 12, null, false, false, true)
     ],
     // Vertical Moves
     [
-      new Move("Mighty Hammer of Ea", "BBB", "MMM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Nergal's Anguish", "xA", "H", null, null, null, null, null),
-      new Move("Adoration of Gilgamesh", "xK", "MM", null, null, null, null, null),
-      new Move("Adoration of Gilgamesh(fast)", "xKF", "MM", null, null, null, null, null),
-      new Move("Nergal's Talon", "6BB", "MS", null, null, null, null, null, null, false, true),
-      new Move("Nergal's Mockery", "6BK", "MM", null, null, null, null, null),
-      new Move("Paean to Ishtar", "3B", "M", null, null, null, null, null),
-      new Move("Ea the Grand Ruler", "2B", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Asushunamir's Spear", "1B", "L", null, null, null, null, null),
-      new Move("Lilitu's Ingress", "1BoB", "Lm", null, null, null, null, null, "If opponent is cursed"),
-      new Move("Sacred Rite of Ishtar", "4B", "M", null, null, null, null, null),
-      new Move("Sacred Rite of Ishtar", "4BHBj", "MMH", null, null, null, null, null),
-      new Move("Belit-Sheri's Cleaver", "46B", "M", null, null, null, null, null),
-      new Move("Belit-Sheri's Cleaver(fast)", "46BF", "M", null, null, null, null, null),
-      new Move("Belit-Sheri's Ingress", "46BoB", "Mm", null, null, null, null, null, "If opponent is cursed"),
+      new Move("Mighty Hammer of Ea", "B", "M", 16, -8, 0, 0, 14, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Mighty Hammer of Ea", "BB", "MM", 16, -8, -2, -2, 28, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Mighty Hammer of Ea", "BBB", "MMM", 16, -8, "KND", "KND", 58, null, false, false, false, false, false, false, false, false, false, true),
+      
+      new Move("Nergal's Anguish", "xA", "H", 21, -14, 0, 0, 24),
+      new Move("Adoration of Gilgamesh", "xK", "MM", 14, -14, 0, 0, null),
+      new Move("Adoration of Gilgamesh(fast)", "xKF", "MM", 14, -14, 6, 6, null),
+
+      new Move("Nergal's Talon", "6B", "M", 20, -16, -4, -4, null, null, false, true),
+      new Move("Nergal's Talon", "6BB", "MS", 20, -6, 4, 4, null, null, false, true),
+      new Move("Nergal's Mockery", "6BK", "MM", 20, -16, 10, null, null),
+
+      new Move("Paean to Ishtar", "3B", "M", 20, -14, "LNC", null, null),
+      new Move("Ea the Grand Ruler", "2B", "M", 16, -8, 2, null, null, null, false, false, true),
+
+      new Move("Asushunamir's Spear", "1B", "L", 16, -20, -4, "KND", null),
+      new Move("Lilitu's Ingress(Lv. 1)", "1BoB", "Lm", 16, -10, 6, null, null, "If opponent is cursed"),
+      new Move("Lilitu's Ingress(Lv. 2)", "1BoB", "Lm", 16, 0, 16, null, null, "If opponent is cursed"),
+      new Move("Lilitu's Ingress(Lv. 3)", "1BoB", "Lm", 16, 10, 26, null, null, "If opponent is cursed"),
+
+      new Move("Sacred Rite of Ishtar", "4B", "M", 16, -8, 0, "KND", null),
+      new Move("Sacred Rite of Ishtar(just)", "4BHBj", "MMH", 16, null, null, "LNC", null),
+      new Move("Belit-Sheri's Cleaver", "46B", "M", 16, -16, "KND", "KND", null),
+      new Move("Belit-Sheri's Cleaver(fast)", "46BF", "M", 16, -16, "KND", "KND", null),
+      new Move("Belit-Sheri's Ingress(Lv. 1)", "46BoB", "Mm", 16, -4, "KND", null, null, "If opponent is cursed"),
+      new Move("Belit-Sheri's Ingress(Lv. 2)", "46BoB", "Mm", 16, 6, "KND", null, null, "If opponent is cursed"),
+      new Move("Belit-Sheri's Ingress(Lv. 3)", "46BoB", "Mm", 16, 16, "KND", null, null, "If opponent is cursed"),
+
       new Move("Ea the Grand Ruler", "CB", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Ode to Mamnenaum", "WB", "M", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Anu the Radiant", "JB", "M", null, null, null, null, null),
-      new Move("Nergal's Grapple", "TBB", "MS", null, null, null, null, null),
-      new Move("Ea's Glare", "T2B", "M", null, null, null, null, null, null, false, false, true)
+      
+      new Move("Ode to Mamnenaum", "WB", "M", 20, -12, "KND", null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Anu the Radiant", "JB", "M", 28, -8, 4, null, null),
+      new Move("Nergal's Grapple", "TBB", "MS", 24, -8, "KND", null, null),
+      new Move("Ea's Glare", "T2B", "M", 18, -8, 2, null, null, null, false, false, true)
     ],
     // Kicks
     [
-      new Move("Will of Gilgamesh", "KK", "HL", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Triumph of Gilgamesh", "k6", "H", null, null, null, null, null),
-      new Move("Hound of Tiamat", "6K", "H", null, null, null, null, null, "Curses opponent upon hit", false, true),
-      new Move("Command of Tiamat", "3K", "M", null, null, null, null, null, "Curses opponent upon hit"),
-      new Move("Shamhat's Allure", "2K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Enkidu's Frenzy", "1K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Lament for Enkidu", "4K", "M", null, null, null, null, null, null, false, true),
+      new Move("Will of Gilgamesh", "K", "H", 12, -10, -2, null, null, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Will of Gilgamesh", "KK", "HL", 12, -16, 0, null, null, null, false, false, false, false, false, false, false, false, false, true),
+      
+      new Move("Triumph of Gilgamesh", "k6", "H", 16, -12, "KND", null, null),
+      new Move("Hound of Tiamat", "6K", "H", 12, -12, 4, "KND", null, "Curses opponent upon hit", false, true),
+      new Move("Command of Tiamat", "3K", "M", 14, -8, 4, null, null, "Curses opponent upon hit"),
+      new Move("Shamhat's Allure", "2K", "L", 16, -14, -2, null, null, null, false, false, true),
+      new Move("Enkidu's Frenzy", "1K", "L", 26, -16, -4, "KND", null, null, false, false, true),
+      new Move("Lament for Enkidu", "4K", "M", 14, -16, 0, null, null, null, false, true),
+
       new Move("Shamhat's Allure", "CK", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Devotion to Ninsun", "C3K", "H", null, null, null, null, null),
-      new Move("Enlil's Enmity", "WKB", "MM", null, null, null, null, null),
-      new Move("Enkidu the Valiant", "JK", "H", null, null, null, null, null),
-      new Move("Enkidu's Glance", "TK", "M", null, null, null, null, null, "Returns to facing away"),
-      new Move("Shamhat's Glare", "T2K", "L", null, null, null, null, null, null, false, false, true)
+      new Move("Devotion to Ninsun", "C3K", "H", 14, -2, 12, null, null),
+
+      new Move("Enlil's Enmity", "WK", "M", 12, -10, 0, null, null),
+      new Move("Enlil's Enmity", "WKB", "MM", 12, -14, 0, null, null),
+
+      new Move("Enkidu the Valiant", "JK", "H", 22, -10, "KND", null, null),
+      new Move("Enkidu's Glance", "TK", "M", 18, -8, "KND", "KND", null, "Returns to facing away"),
+      new Move("Shamhat's Glare", "T2K", "L", 20, -20, "KND", "KND", null, null, false, false, true)
     ],
     // Simultaneous Press Moves
     [
       new Move("Anshar's Halberd", "A+B", "H", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Marduk's Thunder", "6A+BB", "MMM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Marduk's Thunder", "6A+Bb", "MMM", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, true),
-      new Move("Anu's Justice", "2A+B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Tiamat's Frenzy", "4A+B", "MMM", null, null, null, null, null),
-      new Move("Offering to Kishar", "8A+B", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Offering to Kishar", "8A+B", "H", null, null, null, null, null, "Against midair opponent/Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      
+      new Move("Marduk's Thunder", "6A+B", "MM", 18, -16, 4, 4, null, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Marduk's Thunder", "6A+BB", "MMM", 18, -8, "KND", "KND", null, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Marduk's Thunder", "6A+Bb", "MMM", 18, 4, "KND", "KND", null, null, false, false, false, false, false, false, false, true, false, true),
+      
+      new Move("Anu's Justice", "2A+B", "M", 30, 2, "KND", "KND", null, null, false, false, false, false, false, false, false, true),
+      new Move("Tiamat's Frenzy", "4A+B", "MMM", 28, -14, 2, 2, null),
+
+      new Move("Offering to Kishar", "8A+B", "H", 28, null, null, null, null, null, false, false, false, false, false, false, true),
+      new Move("Offering to Kishar", "M8A+B", "H", 28, null, "STN", "STN", null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      
+      new Move("Tiamat's Quaking Blow", "B+K", "M", 16, 12, "KND", "KND", null, "Curses oppponent upon hit or guard/Power increases according to K timing", false, false, false, false, false, false, false, true, false, true),
       new Move("Tiamat's Quaking Blow", "B+KK", "M", null, null, null, null, null, "Curses oppponent upon hit or guard/Power increases according to K timing", false, false, false, false, false, false, false, true, false, true),
-      new Move("Curse of Nergal", "6B+KA", "MH", null, null, null, null, null),
-      new Move("Immortal Utnapishtim", "2B+K", "LM", null, null, null, null, null),
-      new Move("Confession to Lahamu", "4B+K", "MM", null, null, null, null, null),
-      new Move("Tiamat's Fury", "8B+K", "M", null, null, null, null, null),
-      new Move("Enlil's Admonition", "WB+K", "M", null, null, null, null, null),
-      new Move("Adad's Great Shears", "TB+K", "MM", null, null, null, null, null, "Can be held", false, false, false, false, false, false, false, true)
+      
+      new Move("Curse of Nergal", "6B+K", "M", 22, -8, 4, 4, null),
+      new Move("Curse of Nergal", "6B+KA", "MH", 22, -8, 12, "STN", null),
+      
+      new Move("Immortal Utnapishtim", "2B+K", "LM", 16, -4, 10, null, null),
+      new Move("Confession to Lahamu", "4B+K", "MM", 24, -17, "KND", "KND", null),
+      new Move("Tiamat's Fury", "8B+K", "M", 18, -22, "KND", "KND", null),
+      new Move("Enlil's Admonition", "WB+K", "M", 22, null, null, null, null),
+      new Move("Adad's Great Shears", "TB+K", "MM", 16, 4, "KND", "KND", null, "Can be held", false, false, false, false, false, false, false, true)
     ],
     // 8-Way Run Moves
     [
-      new Move("Judgment of Shamash", "#|^|(A", "MM", null, null, null, null, null, "Can be held"),
-      new Move("Talon of Zu", "@|*Ao", "LL", null, null, null, null, null),
-      new Move("Sickle of Sin", "!|$|uA", "M", null, null, null, null, null),
-      new Move("Ishtar's Mercy", "#|^|(B", "M", null, null, null, null, null, null, false, true),
-      new Move("Prayer to Ishtar", "@|*B", "M", null, null, null, null, null),
-      new Move("Lilitu's Needle", "!|uB", "", null, null, null, null, null, null, false, false, true),
-      new Move("Ea's Judgment", "$B", "", null, null, null, null, null),
-      new Move("Ea's Judgment", "$b", "", null, null, null, null, null, null, false, true),
-      new Move("Enkidu's Valor", "#|^|(K", "", null, null, null, null, null),
-      new Move("Enkidu's Bravery", "#|^|(cB", "", null, null, null, null, null),
-      new Move("The Ark of Utnapishtim", "@|*KK", "HH", null, null, null, null, null, null, false, false, true),
-      new Move("Enkidu's Karma", "!|$|uK", "H", null, null, null, null, null, "GI vs. low attacks", false, true, false, true),
-      new Move("Wrath of Tiamat", "#|^(A+B", "M", null, null, null, null, null),
-      new Move("Tiamat's Ingress", "#|^|(A+BoB", "Mm", null, null, null, null, null, "If opponent is cursed"),
-      new Move("Prayer to Belit-ili", "!|$|uA+B", "M", null, null, null, null, null, null, false, true),
-      new Move("Blessing for Lahamu", "#|^|(B+K", "M", null, null, null, null, null, null, false, true),
-      new Move("Tiamat's Rampage", "!|$|uB+K", "MMM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true, true),
-      new Move("Urshanabi's Crossing", "RK", "L", null, null, null, null, null)
+      new Move("Judgment of Shamash", "#|^|(A", "MM", 20, -14, 12, 12, null, "Can be held"),
+      new Move("Talon of Zu", "@|*Ao", "LL", 34, -8, 6, 6, null),
+      new Move("Sickle of Sin", "!|$|uA", "M", 26, -16, 0, 0, null),
+      new Move("Ishtar's Mercy", "#|^|(B", "M", 18, -8, 10, "KND", null, null, false, true),
+      new Move("Prayer to Ishtar", "@|*B", "M", 22, -16, "KND", "KND", null),
+      new Move("Lilitu's Needle", "!|uB", "L", 20, -20, "KND", "KND", null, null, false, false, true),
+
+      new Move("Ea's Judgment", "$B", "M", 28, -4, "KND", "KND", null),
+      new Move("Ea's Judgment", "$b", "M", null, 0, "KND", "KND", null, null, false, true),
+      
+      new Move("Enkidu's Valor", "#|^|(K", "H", 16, -8, 10, 10, null),
+      new Move("Enkidu's Bravery", "#|^|(cB", "HM", 16, -4, 4, 4, null),
+
+      new Move("The Ark of Utnapishtim", "@|*K", "H", 22, 0, 4, 4, null, null, false, false, true),
+      new Move("The Ark of Utnapishtim", "@|*KK", "HH", 22, -2, "KND", "KND", null, null, false, false, true),
+
+      new Move("Enkidu's Karma", "!|$|uK", "H", 24, -8, "KND", "KND", null, "GI vs. low attacks", false, true, false, true),
+
+      new Move("Wrath of Tiamat", "#|^(A+B", "M", 22, -24, "KND", "KND", null),
+      new Move("Tiamat's Ingress(Lv. 1)", "#|^|(A+BoB", "Mm", null, null, null, null, null, "If opponent is cursed"),
+      new Move("Tiamat's Ingress(Lv. 2)", "#|^|(A+BoB", "Mm", null, null, null, null, null, "If opponent is cursed"),
+      new Move("Tiamat's Ingress(Lv. 3)", "#|^|(A+BoB", "Mm", null, null, null, null, null, "If opponent is cursed"),
+
+      new Move("Prayer to Belit-ili", "!|$|uA+B", "M", 20, -12, "LNC", "LNC", null, null, false, true),
+      new Move("Blessing for Lahamu", "#|^|(B+K", "M", 28, -10, "LNC", "LNC", null, null, false, true),
+      new Move("Tiamat's Rampage", "!|$|uB+K", "MMM", 54, null, "KND", "KND", null, null, false, false, false, false, false, false, false, false, true, true),
+      new Move("Urshanabi's Crossing", "RK", "L", 20, -22, "KND", "KND", null)
     ],
     // Throws
     [
-      new Move("Ereshkigal the Ruthless", "A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Kingu the Sly Lord", "4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Apsu the Origin", "ZA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Ea of the Abyss", "XA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Marduk the Tempest", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Nergal's Bloodthirst", "6A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Judgement of Nergal", "6A+GA|2A", "M", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Roar of Nergal", "6A+GB", "M", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Uridimmu's Howl", "6A+GK", "M", null, null, null, null, null, "Curses opponent on hit", false, false, false, false, false, false, true),
-      new Move("Fatal Gravity", "SA+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true)
+      new Move("Ereshkigal the Ruthless", "A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Kingu the Sly Lord", "4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Apsu the Origin", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Ea of the Abyss", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Marduk the Tempest", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      new Move("Nergal's Bloodthirst", "6A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Judgement of Nergal", "6A+GA|2A", "M", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Roar of Nergal", "6A+GB", "M", 18, null, null, null, null, null, false, false, false, false, false, false, true),
+      new Move("Uridimmu's Howl", "6A+GK", "M", 18, null, null, null, null, "Curses opponent on hit", false, false, false, false, false, false, true),
+      new Move("Fatal Gravity", "SA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, true, true)
     ]
   ]
 }

@@ -183,8 +183,10 @@ export class MoveService{
 
       new Move("Flip Titan Ax", "8A+B", "M", 28, -20, "KND", "KND", 52),
       new Move("Guard Crusher", "B+K", "H", 22, -4, 14, 14, 16, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      
       new Move("Body Splash", "6B+K", "M", 18, -14, 8, 8, 26),
-      new Move("Body Splash", "6b+k", "M", 18, -12, 12, 12, 26, "Revenge attack"),
+      new Move("Body Splash", "6b+k", "M", 18, -12, 12, 12, 26, "Revenge attack", false, true),
+      
       new Move("Hades Crush", "2B+K", "M", 36, -2, "KND", "KND", 36),
       new Move("Hymn to Destruction", "2B+KA+G", "M", 36, -26, "KND", "KND", 58, null, false, false, false, false, false, false, true),
       new Move("Hymn to Annihilation", "2B+K4A+G", "M", 36, -26, "KND", "KND", 58, null, false, false, false, false, false, false, true),
@@ -519,7 +521,7 @@ export class MoveService{
       new Move("Deadly Torrent ~ Dread Charge", "1zBB", "LMM", 24, -4, "LNC", "LNC", 24, "Shifts to attack throw upon hit", true, false, false, false, false, false, true),
       
       new Move("Crush Keel", "4A", "H", 18, -6, -2, "STN", 15),
-      new Move("Crush Keel(hold)", "4a", "H", 32, 2, "STN", "STN", 15),
+      new Move("Crush Keel(hold)", "4a", "H", 32, -2, "STN", "STN", 15),
 
       new Move("Sever Soul", "CA", "S", 12, -6, 6, 6, 12,  null, false, false, true),
       new Move("Cursed Blow", "WA", "M", 18, -16, 16, 16, 18),
@@ -714,7 +716,7 @@ export class MoveService{
       new Move("Yrden Glyph", "4|!|$|uA+B", null, null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charged/GI vs. high, mid & low", true, false, false, true, false, false, false, false, false, false, true),
       new Move("Aard Push", "8A+B", "m", 10, -10, 4, 4, 20, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, false, false, true),
       new Move("Igni Armor Melter", "#|^|(A+B", "M", 60, null, "STN", "STN", 45, "Consumes soul gauge/No gauge cost when soul charged", false, false, false, false, false, false, false, false, true, true, true),
-      new Move("Vaulting Aard Hammer", "A+G|4A+GA+G", "H", 18, null, "KND", "KND", 70, "Consumes soul gauge/No gauge cost when soul charged", false, true, false, false, false, false, true, false, false, false, true),
+      new Move("Vaulting Aard Hammer", "A+G|4A+GA+B", "H", 18, null, "KND", "KND", 70, "Consumes soul gauge/No gauge cost when soul charged", false, true, false, false, false, false, true, false, false, false, true),
       
       new Move("Soul Charge", "4A+B+G", "m", 6, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
       new Move("Wolven Storm", "SAAAA", "HHMH", null, null, "KND", "KND", 58, null, false, false, false, false, false, true),
@@ -862,7 +864,7 @@ export class MoveService{
       new Move("Temerian Devil", "ZA+G", "H", 18, null, "KND", "KND", 65, null, false, false, false, false, false, false, true),
       new Move("Adrenaline Rush", "XA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
       new Move("Mutant's Wrath", "VA+G", "H", 18, null, "KND", "KND", 70, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Vaulting Aard Hammer", "A+G|4A+GA+G", "H", 18, null, "KND", "KND", 70, "Consumes soul gauge/No gauge cost when soul charged", false, true, false, false, false, false, true, false, false, false, true),
+      new Move("Vaulting Aard Hammer", "A+G|4A+GA+B", "H", 18, null, "KND", "KND", 70, "Consumes soul gauge/No gauge cost when soul charged", false, true, false, false, false, false, true, false, false, false, true),
     ]
   ]
 

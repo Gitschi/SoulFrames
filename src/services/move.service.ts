@@ -416,9 +416,9 @@ export class MoveService{
     ],
     // Throws
     [
-      new Move("Modify the Weak", "A+G", "H", null, null, null, null, null, "Switches to Almighty mode/Breakable", false, false, false, false, false, false, true),
-      new Move("Reformation", "4A+G", "H", null, null, null, null, null, "Switches to Almighty mode/Breakable", false, false, false, false, false, false, true),
-      new Move("Transmigration", "VA+G", "H", null, null, null, null, null, "Switches to Almighty mode/Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true)
+      new Move("Modify the Weak", "A+G", "H", 18, "N/A", "KND", "KND", "14,4,4,4,20(50)", "Switches to Almighty mode/Breakable", false, false, false, false, false, false, true),
+      new Move("Reformation", "4A+G", "H", 18, "N/A", "KND", "KND", "17,42(60)", "Switches to Almighty mode/Breakable", false, false, false, false, false, false, true),
+      new Move("Transmigration", "VA+G", "H", 18, "N/A", "KND", "KND", "3,7,7,7,47,4(80)", "Switches to Almighty mode/Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true)
     ],
     // ************ Stances *************
     // Beauty of Balance

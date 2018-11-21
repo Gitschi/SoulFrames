@@ -350,8 +350,7 @@ export class MoveService{
       new Move("Tears of Pain", "x4", "M", 16, "-12~13", 2, 2, "24", "TC[20-29] / Opp. FrC (hit) / Sword"),
       new Move("Usurp the Autocracy", "6B", "M", 14, -6, 0, 0, "16", "Time precisely for increased damage / Ax"),
       new Move("Usurp the Autocracy", "6BA", "MHHH", 14, -4, 8, 8, "16,10,10,20", "Time precisely for increased damage / Last 3 hits NC / Ax ~ Spear"),
-      new Move("Truculent World", "6BB", "MM", 14, 4, "KND", "KND", "16,25", "Opp. FrC (block) / Ax
-"),
+      new Move("Truculent World", "6BB", "MM", 14, 4, "KND", "KND", "16,25", "Opp. FrC (block) / Ax"),
       new Move("Eternal Conflict", "3B", "M", 20, -16, "LNC", "LNC", "24", "2nd hit can be held", false, true),
       new Move("Eternal Conflict", "3BB", "MM", 20, -10, "KND", "KND", "24,28(42)", "2nd hit can be held", false, true),
       new Move("Path to Glory", "2B", "M", 16, -14, 2, 2, "12", "Sword"),
@@ -394,7 +393,7 @@ export class MoveService{
       new Move("O, Fallen Scholar", "6B+K", "L", 22, -20, "KND", "KND", "20,3,3,3,28(60)", "While in Almighty mode/Resets weapon to unformed state"),
       new Move("Aufheben Sublimation", "B+K", "MHH", 24, -32, "LNC", "LNC", "24,12,17(53)", "While in spear mode/Resets weapon to unformed state/GI vs. mid & low", false, false, false, true),
       new Move("Aufheben Sublimation", "4B+K", "MHH", 24, -32, "LNC", "LNC", "24,12,17(53)", "While in Almighty mode/Resets weapon to unformed state/GI vs. mid & low", false, false, false, true),
-      new Move("Rebuttal", "TA+B", "M", 20, null, "STN", 'STN", "22", null, false, false, true, false, false, false, false, true)
+      new Move("Rebuttal", "TA+B", "M", 20, null, "STN", "STN", "22", null, false, false, true, false, false, false, false, true)
     ],
     // 8-Way Run Moves
     [
@@ -423,30 +422,31 @@ export class MoveService{
     // ************ Stances *************
     // Beauty of Balance
     [
-      new Move("Beauty of Balance", "K", null, null, null, null, null, null, null, true),
-      new Move("Beauty of Wonder", "2K|2K", null, null, null, null, null, null, null, true),
-      new Move("Beauty of Performance", "@|*K", null, null, null, null, null, null, "Dodges high, mid & low", true),
-      new Move("Beauty of Balance", "TK", null, null, null, null, null, null, null, true),
-      new Move("Beauty of Wonder", "T@|*K", null, null, null, null, null, null, null, true),
-      new Move("Salvation Doctrine", "[AAA", "HHH", null, null, null, null, null),
-      new Move("Ideological Insight", "[AAB", "HHM", null, null, null, null, null),
-      new Move("Salvation Doctrine ~ Beauty of Balance", "[AAK", "HH", null, null, null, null, null, null, true),
-      new Move("Salvation Doctrine ~ Tragedy of War", "[AA6K", "HH", null, null, null, null, null, null, true),
-      new Move("Salvation Doctrine ~ Comedy of Errors", "[AA4K", "HH", null, null, null, null, null, null, true),
-      new Move("Lower the Gavel", "[AB", "HMM", null, null, null, null, null),
-      new Move("Karmic Consequence", "[B", "M", null, null, null, null, null, null, false, true),
-      new Move("Raconteur", "[K", "H", null, null, null, null, null),
-      new Move("Beauty of Balance ~ Tragedy of War", "[6K", null, null, null, null, null, null, null, true),
-      new Move("Beauty of Balance ~ Comedy of Errors", "[4K", null, null, null, null, null, null, null, true)
+      new Move("Beauty of Balance", "K", null, null, null, null, null, null, "20F / Ax", true),
+      new Move("Beauty of Wonder", "2K|8K", null, null, null, null, null, null, "SS / TS", true),
+      new Move("Beauty of Performance", "@|*K", null, null, null, null, null, "SS / TS", "Dodges high, mid & low", true),
+      new Move("Beauty of Balance", "TK", null, null, null, null, null, null, "SS", true),
+      new Move("Beauty of Wonder", "T@|*K", null, null, null, null, null, null, "SS / TS", true),
+      new Move("Salvation Doctrine", "[AAA", "HHH", null, null, null, null, null, true),
+      new Move("Ideological Insight", "[AAB", "HHM", 12, null, "KND", "KND", "10,10,30", "Projectile / Sword ~ Spear", true),
+      new Move("Salvation Doctrine ~ Beauty of Balance", "[AAK", "HH", 12, -2, 8, 8, "10,10", "SS / NC / Sword", true),
+      new Move("Salvation Doctrine ~ Tragedy of War", "[AA6K", "HH", 12, null, null, null, "10,10", "SS / NC / Sword", true),
+      new Move("Salvation Doctrine ~ Comedy of Errors", "[AA4K", "HH", 12, null, null, null, "10,10", "SS / NC / Sword ~ Spear", true),
+      new Move("Lower the Gavel", "[AB", "HMM", 12, -18, 8, 8, "10,8,16(34)", "NC / LNC on last hit CH / Sword ~ Spear"),
+      new Move("Karmic Consequence", "[B", "M", 20, -8, "KND", "KND", "26", "LH (Guard Break) / TJ / Sword", false, true),
+      new Move("Raconteur", "[K", "H", 14, -6, 8, "STN", "14", "STN[22~27] / Sword"),
+      new Move("Beauty of Balance ~ Tragedy of War", "[6K", null, null, null, null, null, null, "SS / TC / Sword ~ Ax", true),
+      new Move("Beauty of Balance ~ Comedy of Errors", "[4K", null, null, null, null, null, null, "SS / Sword ~ Spear", true)
     ],
     // Tragedy of War
     [
-      new Move("Tragedy of War", "3|6|9K", null, null, null, null, null, null, null, true),
+      new Move("Tragedy of War", "3|6|9K", null, null, null, null, null, null, "SS / TC[2~] / 20F / Ax", true),
+      new Move("Tragedy of War", "T6K", null, null, null, null, null, null, "SS / TC[2~] / 20F / Ax", true),
       new Move("Tragedy of Performance", "#|^|(K", null, null, null, null, null, null, "Dodges high, mid & low", true),
       new Move("Tragedy of War", "T6K", null, null, null, null, null, null, null, true),
-      new Move("Scream of Defiance", "]A", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("War and Destruction", "]B", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Fall of the Wise", "]6K", "LL", null, null, null, null, null),
+      new Move("Scream of Defiance", "]A", "H", 22, 2, "KND", "KND", "40", "BA / TC[1-5] / Ax", false, false, false, false, false, false, false, true),
+      new Move("War and Destruction", "]B", "M", 28, 8, "LNC", "LNC", "38", "BA / LH (Impact Counter) / TC[1-7] / STN on ground hit / Ax", false, true, false, false, false, false, false, true),
+      new Move("Fall of the Wise", "]6K", "LL", 24, "-24~25", 0, 0, "14,16(30)", "NC / TC[1-48] / Ax"),
       new Move("Tragedy of War ~ Beauty of Balance", "]K", null, null, null, null, null, null, null, true),
       new Move("Tragedy of War ~ Beauty of Wonder", "]2|8k", null, null, null, null, null, null, null, true),
       new Move("Tragedy of War ~ Comedy of Errors", "]4K", null, null, null, null, null, null, null, true)
@@ -456,13 +456,14 @@ export class MoveService{
       new Move("Comedy of Errors", "1|4|uK", null, null, null, null, null, null, null, true),
       new Move("Comedy of Performance", "!|$|uK", null, null, null, null, null, null, "Dodges high, mid & low", true),
       new Move("Comedy of Errors", "T4K", null, null, null, null, null, null, null, true),
-      new Move("Premonition of Abraxas", "{AB", "HM", null, null, null, null, null),
-      new Move("Will to Dominate", "{BB", "MM", null, null, null, null, null),
-      new Move("Executioner's Gavel", "{x6", "M", null, null, null, null, null),
-      new Move("Advocate of Change", "{4K", "L", null, null, null, null, null),
-      new Move("Comedy of Errors ~ Beauty of Balance", "{K", null, null, null, null, null, null, null, true),
-      new Move("Comedy of Errors ~ Beauty of Wonder", "{2|8K", null, null, null, null, null, null, null, true),
-      new Move("Comedy of Errors ~ Tragedy of War", "{6K", null, null, null, null, null, null, null, true)
+      new Move("Premonition of Abraxas", "{A", "HM", 24, -8, 4, 4, "18"),
+      new Move("Premonition of Abraxas", "{AB", "HM", 24, -4, "KND", "KND", "18,24", "NCC / Spear ~ Sword"),
+      new Move("Will to Dominate", "{BB", "MM", 26, -12, 14, 14, "24", "Spear"),
+      new Move("Executioner's Gavel", "{x6", "M", 28, -10, "KND", "KND", "30", "Projectile / Spear"),
+      new Move("Advocate of Change", "{4K", "L", 28, -12, "KND", "KND", "24", "TC[10-?] / Spear"),
+      new Move("Comedy of Errors ~ Beauty of Balance", "{K", null, null, null, null, null, null, "SS / Spear ~ Sword", true),
+      new Move("Comedy of Errors ~ Beauty of Wonder", "{2|8K", null, null, null, null, null, null, "SS / TS / Spear ~ Sword", true),
+      new Move("Comedy of Errors ~ Tragedy of War", "{6K", null, null, null, null, null, null, "SS / TC / Spear ~ Ax", true)
     ]
   ]
 

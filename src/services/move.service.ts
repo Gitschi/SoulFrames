@@ -398,21 +398,21 @@ export class MoveService{
     ],
     // 8-Way Run Moves
     [
-      new Move("Plunder the Depths", "#|^|*A", "H", null, null, null, null, null),
-      new Move("Subliminal Persuasion", "@|*A", "H", null, null, null, null, null, null, false, true),
-      new Move("Subliminal Persuasion ~ Beauty of Balance", "@|*AK", "H", null, null, null, null, null, null, true, true),
-      new Move("Subliminal Persuasion ~ Tragedy of War", "@|*A6K", "H", null, null, null, null, null, null, true, true),
-      new Move("Subliminal Persuasion ~ Comedy of Errors", "@|*A4K", "H", null, null, null, null, null, null, true, true),
-      new Move("Justice for All", "!|$|uA", "H", null, null, null, null, null),
-      new Move("Trials of Conflict", "#|^|(B", "M", null, null, null, null, null),
-      new Move("Unequivocal Love", "@|*B", "M", null, null, null, null, null, null, false, true),
-      new Move("Unequivocal Love ~ Beauty of Balance", "@|*BK", "M", null, null, null, null, null, null, true, true),
-      new Move("Unequivocal Love ~ Tragedy of War", "@|*B6K", "M", null, null, null, null, null, null, true, true),
-      new Move("Unequivocal Love ~ Comedy of Errors", "@|*B4K", "M", null, null, null, null, null, null, true, true),
-      new Move("No More Naysayers", "!|$|uB", "M", null, null, null, null, null, null, false, true),
-      new Move("No More Naysayers", "!|$|ub", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("March of Humanity", "eA+B", "MMMMMM", null, null, null, null, null),
-      new Move("Philosophy Slide", "RK", "L", null, null, null, null, null)
+      new Move("Plunder the Depths", "#|^|*A", "H", 20, -1, -12, null, 26, "Projectile / Ax"),
+      new Move("Subliminal Persuasion", "@|*A", "H", 22, -12, 0, null, 18, "LH / (Sidestep Counter) / TC[4-31] / Sword", false, true),
+      new Move("Subliminal Persuasion ~ Beauty of Balance", "@|*AK", "H", null, 0, 10, null, 18, null, true, true),
+      new Move("Subliminal Persuasion ~ Tragedy of War", "@|*A6K", "H", null, null, null, null, 18, "LH (Sidestep Counter) / TC / SS / Sword ~ Ax", true, true),
+      new Move("Subliminal Persuasion ~ Comedy of Errors", "@|*A4K", "H", null, null, null, null, 18, "LH (Sidestep Counter) / TC / SS / Sword ~ Spear", true, true),
+      new Move("Justice for All", "!|$|uA", "H", 24, -2, "KND", "KND", "24", "TJ / Spear"),
+      new Move("Trials of Conflict", "#|^|(B", "M", 24, -4, "LNC", "LNC", "28", "Ax"),
+      new Move("Unequivocal Love", "@|*B", "M", 22, -4, "STN(+8)", "STN(+8)", null, "LH (Punish whiffed vertical) / Sword", false, true),
+      new Move("Unequivocal Love ~ Beauty of Balance", "@|*BK", "M", null, 12, "STN", "STN", null, "LH (Punish whiffed vertical) / SS / Sword", true, true),
+      new Move("Unequivocal Love ~ Tragedy of War", "@|*B6K", "M", null, null, "STN", "STN", null, "LH (Punish whiffed vertical) / SS / TC / Sword ~ Ax", true, true),
+      new Move("Unequivocal Love ~ Comedy of Errors", "@|*B4K", "M", null, null, "STN", "STN", null, "LH (Punish whiffed vertical) / SS / Sword ~ Spear", true, true),
+      new Move("No More Naysayers", "!|$|uB", "M", 28, -14, null, null, null, "LH (Long-range hit) / Projectile / Spear", false, true),
+      new Move("No More Naysayers", "!|$|ub", "M", null, null, "KND", "KND", null, "LH (Long-range hit) / BA / Projectile / Spear", false, true, false, false, false, false, false, true),
+      new Move("March of Humanity", "eA+B", "MMMMMM", 30, -10, 6, 6, null, "TJ[17?~] / LH (Hit after landing all 3 weapon arts) / Almighty"),
+      new Move("Philosophy Slide", "RK", "L", null, null, "KND", "KND", null, "TJ / TC")
     ],
     // Throws
     [

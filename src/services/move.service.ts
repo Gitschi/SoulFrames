@@ -379,22 +379,22 @@ export class MoveService{
     ],
     // Simultaneous Press Moves
     [
-      new Move("Harmonious Abandon", "A+B", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
+      new Move("Harmonious Abandon", "A+B", "M", 42, 4, "KND", "KND", "32", "BA / LH  (Impact Counter) / STN if only one sword hits / Opp. FrC (block) / G cancels / Sword", false, true, false, false, false, false, false, true),
       new Move("Harmonious Abandon", "A+B", "M", null, null, null, null, null, "While in sword mode", false, true, false, false, false, false, false, true), // While in sword mode
-      new Move("Rebellious Abandon", "A+B", "M", null, null, null, null, null, "While in axe mode", false, true, false, false, false, false, false, true), // While in axe mode
-      new Move("Fraternal Abandon", "A+B", "M", null, null, null, null, null, "While in spear mode/GI. vs high, mid & low", false, true, false, true, false, false, false, true), // While in spear mode
-      new Move("Lawless Abandon", "A+B", "M", null, null, null, null, null, "While in Almighty mode/GI vs. high, mid & low", false, true, false, true, false, false, false, true), // While in Almighty mode
-      new Move("Epistemological Punishment", "6A+B", "MMMM", null, null, null, null, null, "Switches to Almighty mode"),
-      new Move("Geometrical Precision", "2A+B", "L", null, null, null, null, null),
-      new Move("Power of Pathos", "4A+B", "M", null, null, null, null, null),
-      new Move("Encyclopeid Mind", "8A+B", "M", null, null, null, null, null),
-      new Move("Ophion's Omnipresence", "214A+B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true, true),
-      new Move("Pleroma Ascension", "B+K", "MM", null, null, null, null, null, "While in sword or Almighty mode/Resets weapon to unformed state"),
-      new Move("O, Fallen Scholar", "B+K", "L", null, null, null, null, null, "While in axe mode/Resets weapon to unformed state"),
-      new Move("O, Fallen Scholar", "6B+K", "L", null, null, null, null, null, "While in Almighty mode/Resets weapon to unformed state"),
-      new Move("Aufheben Sublimation", "B+K", "MHH", null, null, null, null, null, "While in spear mode/Resets weapon to unformed state/GI vs. mid & low", false, false, false, true),
-      new Move("Aufheben Sublimation", "4B+K", "MHH", null, null, null, null, null, "While in Almighty mode/Resets weapon to unformed state/GI vs. mid & low", false, false, false, true),
-      new Move("Rebuttal", "TA+B", "M", null, null, null, null, null, null, false, false, true, false, false, false, false, true)
+      new Move("Rebellious Abandon", "A+B", "M", 42, 4, "KND", "KND", "24", "While in axe mode", false, true, false, false, false, false, false, true), // While in axe mode
+      new Move("Fraternal Abandon", "A+B", "M", 42, 4, "KND", "KND", "24", "While in spear mode/GI. vs high, mid & low", false, true, false, true, false, false, false, true), // While in spear mode
+      new Move("Lawless Abandon", "A+B", "M", 42, 4, "KND", "KND", "40", "While in Almighty mode/GI vs. high, mid & low", false, true, false, true, false, false, false, true), // While in Almighty mode
+      new Move("Epistemological Punishment", "6A+B", "MMMM", 32, -6, "STN", "STN", "14,8,8,16(47)", "Switches to Almighty mode"),
+      new Move("Geometrical Precision", "2A+B", "L", 26, -12, 8, 8, 0),
+      new Move("Power of Pathos", "4A+B", "M", 20, -10, 6, 6, "15"),
+      new Move("Encyclopeid Mind", "8A+B", "M", 38, -23, "KND", "KND", "30"),
+      new Move("Ophion's Omnipresence", "214A+B", "M", null, "N/A", "SLNC", "SLNC", "45,15(60)", null, false, false, false, false, false, false, false, false, true, true),
+      new Move("Pleroma Ascension", "B+K", "MM", 18, -16, "SLNC", "SLNC", "18,22(40)", "While in sword or Almighty mode/Resets weapon to unformed state"),
+      new Move("O, Fallen Scholar", "B+K", "L", 22, -20, "KND", "KND", "20,3,3,3,28(60)", "While in axe mode/Resets weapon to unformed state"),
+      new Move("O, Fallen Scholar", "6B+K", "L", 22, -20, "KND", "KND", "20,3,3,3,28(60)", "While in Almighty mode/Resets weapon to unformed state"),
+      new Move("Aufheben Sublimation", "B+K", "MHH", 24, -32, "LNC", "LNC", "24,12,17(53)", "While in spear mode/Resets weapon to unformed state/GI vs. mid & low", false, false, false, true),
+      new Move("Aufheben Sublimation", "4B+K", "MHH", 24, -32, "LNC", "LNC", "24,12,17(53)", "While in Almighty mode/Resets weapon to unformed state/GI vs. mid & low", false, false, false, true),
+      new Move("Rebuttal", "TA+B", "M", 20, null, "STN", 'STN", "22", null, false, false, true, false, false, false, false, true)
     ],
     // 8-Way Run Moves
     [

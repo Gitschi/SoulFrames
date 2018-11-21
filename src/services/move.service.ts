@@ -3791,168 +3791,235 @@ export class MoveService{
   Tira = [
     // Reversal Edge Attacks
     [
-      new Move("Codebreaker", "B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Codebreaker", "b+g", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
-      new Move("Twisted Vibrato", "rAA", "HMMMMM", null, null, null, null, null, null, false, true),
-      new Move("Twisted Vibrato", "rAa", "HMMMMM", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Twisted Cadence", "{rAK", "HM", null, null, null, null, null, null, false, true),
-      new Move("Siren's Cadence", "S{rAKA", "HMM", null, null, null, null, null, null, false, true, false, false, false, true, false, true),
-      new Move("Relaxed Reaver", "]rB", "M", null, null, null, null, null, "Shifts to attack throw upon hit/Absorbs opponent's health", false, true, false, false, false, false, true, true),
-      new Move("Hardcore Assassination", "{rB", "M", null, null, null, null, null, "Shifts to attack throw upon hit", false, true, false, false, false, false, true, true),
-      new Move("Madness Trance", "rK", "MM", null, null, null, null, null, "May trigger personality change", false, true)
+      new Move("Codebreaker", "B+G", "M", null, null, null, null, 35, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Codebreaker", "b+g", "M", null, null, null, null, 45, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Twisted Vibrato", "rA", "H", null, null, null, null, null, null, false, true),
+      new Move("Twisted Vibrato", "rAA", "HMMMMM", null, null, null, null, 36, null, false, true),
+      new Move("Twisted Vibrato", "rAa", "HMMMMM", null, null, null, null, 41, null, false, true, false, false, false, false, false, true),
+      new Move("Twisted Cadence", "{rAK", "HM", null, null, null, null, 34, null, false, true),
+      new Move("Siren's Cadence", "S{rAKA", "HMM", null, null, null, null, 58, null, false, true, false, false, false, true, false, true),
+      new Move("Relaxed Reaver", "]rB", "M", null, null, null, null, 51, "Shifts to attack throw upon hit/Absorbs opponent's health", false, true, false, false, false, false, true, true),
+      new Move("Hardcore Assassination", "{rB", "M", null, null, null, null, 76, "Shifts to attack throw upon hit", false, true, false, false, false, false, true, true),
+      new Move("Madness Trance", "rK", "MM", null, null, null, null, 28, "May trigger personality change", false, true)
     ],
     // Gauge Attacks
     [
-      new Move("Bleak Concerto", "]A+B+K", "M", null, null, null, null, null, "May Trigger personality change", false, false, false, false, false, false, true, false, false, false, true),
-      new Move("Bleak Concerto: Finale", "{A+B+K", "M", null, null, null, null, null, null, false, false, false, false, false, false, true, false, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
-      new Move("Alkonost's Cadence", "S{AKA", "HMM", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
-      new Move("Snare Groove", "S]6ABB", "HLM", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
-      new Move("Minerva's Symphony", "S{6ABB", "HMM", null, null, null, null, null, "May trigger personality change", false, false, false, false, false, true, false, true),
-      new Move("Tuonela Quarrel", "S{3AA+B", "MMHHH", null, null, null, null, null, "May trigger personality change", false, false, false, false, false, true, false, true),
-      new Move("Two-Step Infernal Symphony", "S{BBBB", "MMMM", null, null, null, null, null, "May trigger personality change", false, false, false, false, false, true, false, true),
-      new Move("Symphonic Dissonance", "S{6BB", "MM", null, null, null, null, null, "May trigger personality change", false, true, false, false, false, true, false, true),
-      new Move("Peregrine Duet", "S{3BB", "MM", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Robin's Groove", "S{1BB", "LM", null, null, null, null, null, "May trigger personality change", false, false, false, false, false, true, false, true),
-      new Move("Scratch Glissando", "S]236K", "LL", null, null, null, null, null, "May trigger personality change", false, false, false, false, false, true),
-      new Move("Flageolette Vibrato", "S]#|^|(AAA", "MMMMMM", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Wild Beat Scherzo", "S]#|^|(BB", "MM", null, null, null, null, null, "May trigger personality change", false, true, false, false, false, true),
-      new Move("Hiisi Gigue Canon", "S{#|^|(A+B", "MMMMMM", null, null, null, null, null, "May trigger personality change", false, false, false, false, false, true, false, true),
-      new Move("Grim Reaper", "S]6A+G", "H", null, null, null, null, null, "Not breakable/May trigger personality change", false, false, false, false, false, true, true),
-      new Move("Siren's Cadence", "S]rAKA", "HMM", null, null, null, null, null, null, false, true, false, false, false, true, false, true)
+      new Move("Bleak Concerto", "]A+B+K", "M", 16, -16, "KND", "KND", 70, "May Trigger personality change", false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Bleak Concerto: Finale", "{A+B+K", "M", 16, -16, "KND", "KND", 90, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Soul Charge", "4A+B+G", "m", 6, null, null, null, 0, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Alkonost's Cadence", "S{AKA", "HMM", 12, 2, "KND", "KND", 50, null, false, false, false, false, false, true, false, true),
+      new Move("Snare Groove", "S]6ABB", "HLM", 18, 4, "LNC", "LNC", 56, null, false, false, false, false, false, true, false, true),
+      new Move("Minerva's Symphony", "S{6ABB", "HMM", 22, 4, "KND", "KND", 98, "May trigger personality change", false, false, false, false, false, true, false, true),
+      new Move("Tuonela Quarrel", "S{3AA+B", "MMHHH", 14, 6, "KND", "KND", 77, "May trigger personality change", false, false, false, false, false, true, false, true),
+      new Move("Two-Step Infernal Symphony", "S{BBBB", "MMMM", 14, 6, "KND", "KND", 78, "May trigger personality change", false, false, false, false, false, true, false, true),
+      new Move("Symphonic Dissonance", "S{6BB", "MM", 22, 2, "KND", "KND", 108, "May trigger personality change", false, true, false, false, false, true, false, true),
+      new Move("Peregrine Duet", "S{3BB", "MM", 18, -16, "LNC", "LNC", 54, null, false, false, false, false, false, true),
+      new Move("Robin's Groove", "S{1BB", "LM", 22, 8, "LNC", "LNC", 39, "May trigger personality change", false, false, false, false, false, true, false, true),
+      new Move("Scratch Glissando", "S]236K", "LL", 22, -10, "KND", "KND", 39, "May trigger personality change", false, false, false, false, false, true),
+      new Move("Flageolette Vibrato", "S]#|^|(AAA", "MMMMMM", 18, -2, "KND", "KND", 59, null, false, false, false, false, false, true),
+      new Move("Wild Beat Scherzo", "S]#|^|(BB", "MM", 22, -8, "LNC", "LNC", 30, "May trigger personality change", false, true, false, false, false, true),
+      new Move("Hiisi Gigue Canon", "S{#|^|(A+B", "MMMMMM", 18, 4, "LNC", "LNC", 68, "May trigger personality change", false, false, false, false, false, true, false, true),
+      new Move("Grim Reaper", "S]6A+G", "H", 18, null, "KND", "KND", 60, "Not breakable/May trigger personality change", false, false, false, false, false, true, true),
+      new Move("Siren's Cadence", "S]rAKA", "HMM", null, null, "KND", "KND", 58, null, false, true, false, false, false, true, false, true)
     ],
     // Horizontal Moves
     [
-      new Move("Harmonic Beat", "]AAA", "HHM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("False Harmony", "]a", "HMMM", null, null, null, null, null),
-      new Move("Harmonic Wing", "{AA", "HH", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Black Cadence", "{AK", "HM", null, null, null, null, null),
-      new Move("Snare Boulder Crush", "]6AA", "HM", null, null, null, null, null),
-      new Move("Snare Robin", "]6AB", "HL", null, null, null, null, null, null, false, false, true),
-      new Move("Minerva's Lament", "{6AB", "HM", null, null, null, null, null),
-      new Move("Ptarmigan Polka ~ Gestopft Madness", "]3ABB+K", "LM", null, null, null, null, null, "GI vs. high & mid(except kicks)/May trigger personality change", true, false, false, true),
-      new Move("Shriek Noise", "]3AA", "MMH", null, null, null, null, null),
-      new Move("Shriek Quarrel", "]3AA+B", "MMHHH", null, null, null, null, null, "May trigger personality change"),
-      new Move("Low Pitch Flap", "2A", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Low Swoop", "1A", "L", null, null, null, null, null),
-      new Move("Menuett Dance", "]4Ao", "HHH", null, null, null, null, null),
-      new Move("Noise Break", "{4A", "H", null, null, null, null, null),
-      new Move("Low Pitch Flap", "CA", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Snare Clap", "WA", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Flitting Feather", "JA", "M", null, null, null, null, null),
-      new Move("Retrograde Wing", "TA", "H", null, null, null, null, null),
-      new Move("Low Retro Flap", "T2A", "S", null, null, null, null, null, null, false, false, true)
+      new Move("Harmonic Beat", "]A", "H", 14, -6, 2, 2, 10, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Harmonic Beat", "]AA", "HH", 14, -2, 0, 0, 20, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Harmonic Beat", "]AAA", "HHM", 14, -14, 0, 0, 38, null, false, false, false, false, false, false, false, false, false, true),
+      
+      new Move("False Harmony", "]a", "HMMM", 14, -4, 4, 4, 38),
+      
+      new Move("Harmonic Wing", "{A", "H", 12, -7, 2, 2, 12, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Harmonic Wing", "{AA", "HH", 12, -6, 6, 6, 24, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Black Cadence", "{AK", "HM", 12, -6, 4, 4, 24),
+
+      new Move("Snare", "]6A", "H", 18, -12, -6, -6, 16),
+      new Move("Snare Boulder Crush", "]6AA", "HM", 18, -14, 6, 6, 36),
+      new Move("Snare Robin", "]6AB", "HL", 18, -12, 4, "KND", 36, null, false, false, true),
+
+      new Move("Minerva's Lament", "{6A", "H", 22, -6, 2, "STN", 22),
+      new Move("Minerva's Lament", "{6AB", "HM", 22, -4, "KND", "KND", 50),
+
+      new Move("Ptarmigan Polka", "]3A", "L", 18, -18, -10, 4, 10, "GI vs. high & mid(except kicks)/May trigger personality change"),
+      new Move("Ptarmigan Polka", "]3AB", "LM", 18, -22, -6, "KND", 24, "GI vs. high & mid(except kicks)/May trigger personality change"),
+      new Move("Ptarmigan Polka ~ Gestopft Madness", "]3ABB+K", "LM", 18, null, null, null, 24, "GI vs. high & mid(except kicks)/May trigger personality change", true, false, false, true),
+      
+      new Move("Shriek Noise", "]3A", "M", 14, -14, -4, 6, 12),
+      new Move("Shriek Noise", "]3AA", "MMH", 14, -12, "KND", "KND", 42),
+      new Move("Shriek Quarrel", "]3AA+B", "MMHHH", 14, -12, "KND", "KND", 64, "May trigger personality change"),
+
+      new Move("Low Pitch Flap", "2A", "S", 12, -6, 6, 6, 12, null, false, false, true),
+      new Move("Low Swoop", "1A", "L", 30, -14, 4, "KND", 22),
+      new Move("Menuett Dance", "]4Ao", "HHH", 18, -14, 12, 12, 19),
+      new Move("Noise Break", "{4A", "H", 20, -6, "LNC", "LNC", 24),
+      new Move("Low Pitch Flap", "CA", "S", 12, -6, 6, 6, 12, null, false, false, true),
+      new Move("Snare Clap", "WA", "M", 18, -12, 4, 4, 16, null, false, false, true),
+      new Move("Flitting Feather", "JA", "M", 21, -14, -4, -4, 20, "Damage differs slightly according to jump direction"),
+      new Move("Retrograde Wing", "TA", "H", 16, -4, 6, 6, 12),
+      new Move("Low Retro Flap", "T2A", "S", 16, -6, 4, 8, 12, null, false, false, true)
     ],
     // Vertical Moves
     [
-      new Move("Two-Step Stitch", "]BBB", "MMM", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true, false, false, false, false, true),
-      new Move("Two-Step Stitch", "]BBb", "MMM", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
-      new Move("Back Step Pizzicato", "]x4", "M", null, null, null, null, null),
-      new Move("Hi-Wind Albatross", "x8", "H", null, null, null, null, null, null, false, true),
-      new Move("Two-Step Lament", "{BBB", "MMM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Agrement Double Claw", "]6BB", "MM", null, null, null, null, null),
-      new Move("Shredding Beak", "]6BK", "MH", null, null, null, null, null),
-      new Move("Basilisk's Lament", "{6B", "M", null, null, null, null, null, null, false, true),
-      new Move("Beakbreak Toss", "]3B", "M", null, null, null, null, null),
-      new Move("Peregrine Rhythm", "{3B", "M", null, null, null, null, null),
-      new Move("Lowdown Neb", "2B", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Low Pitch Pointe", "]1B", "L", null, null, null, null, null),
-      new Move("Strayed Robin", "{1B", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Halcyon Major Sonata", "]4BAB", "MHLM", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Rondo a Capriccio", "]4BABv", "MHLM", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Halcyon Major Elegy", "]4BAK", "MHLL", null, null, null, null, null),
-      new Move("Halcyon Minor Sonata", "]4BBB", "MMM", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Rondo a Capriccio", "]4BBBv", "MMM", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Halcyon Minor Elegy", "]4BBK", "MML", null, null, null, null, null),
-      new Move("Oratorio Halcyon", "{4BBBj", "MMM", null, null, null, null, null, "May trigger personality change after 2nd hit"),
-      new Move("Lowdown Neb", "CB", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Up Bow Cantabile ~ Updraft", "WBK", "MmMMM", null, null, null, null, null, null, true),
-      new Move("Trill Up Bow Neb", "JB", "M", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Retrograde Beak", "TB", "M", null, null, null, null, null),
-      new Move("Low Retro Neb", "T2B", "M", null, null, null, null, null, null, false, false, true)
+      new Move("Two-Step Stitch", "]B", "M", 16, -8, 2, 2, 12, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Two-Step Stitch", "]BB", "MM", 16, -6, 4, 4, 26, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Two-Step Stitch", "]BBB", "MMM", 16, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true, false, false, false, false, true),
+      new Move("Two-Step Stitch", "]BBb", "MMM", 16, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      
+      new Move("Back Step Pizzicato", "]x4", "M", 18, -14, -4, -4, 15),
+      new Move("Hi-Wind Albatross", "x8", "H", 14, -8, 0, 0, 16, null, false, true),
+
+      new Move("Two-Step Lament", "{B", "M", 14, -8, 2, 2, 16, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Two-Step Lament", "{BB", "MM", 14, -6, 4, 4, 32, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Two-Step Lament", "{BBB", "MMM", 14, -8, 6, "KND", 60, null, false, false, false, false, false, false, false, false, false, true),
+     
+      new Move("Agrement Double Claw", "]6B", "M", 16, -12, 0, 4, 18),
+      new Move("Agrement Double Claw", "]6BB", "MM", 16, -2, "KND", "KND", 42),
+      new Move("Shredding Beak", "]6BK", "MH", 16, -12, "KND", "KND", 42),
+
+      new Move("Basilisk's Lament", "{6B", "M", 22, -4, 6, "KND", 28, null, false, true),
+      new Move("Beakbreak Toss", "]3B", "M", 18, -12, "LNC", "LNC", 22),
+      new Move("Peregrine Rhythm", "{3B", "M", 18, -14, "LNC", "LNC", null),
+
+      new Move("Lowdown Neb", "2B", "M", 14, -8, 2, 2, 18, null, false, false, true),
+      new Move("Low Pitch Pointe", "]1B", "L", 16, -16, -8, -8, 16),
+      new Move("Strayed Robin", "{1B", "L", 26, -14, 2, "KND", 20, null, false, false, true),
+
+      new Move("Halcyon Major Sonata", "]4B", "M", 20, -12, 0, 0, 12, null, false, false, false, false, false, false, true),
+      new Move("Halcyon Major Sonata", "]4BA", "MHL", 20, -12, 2, 2, 35, null, false, false, false, false, false, false, true),
+      new Move("Halcyon Major Sonata", "]4BAB", "MHLM", 20, -12, -1, -1, 74, null, false, false, false, false, false, false, true),
+      new Move("Rondo a Capriccio", "]4BABv", "MHLM", 20, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Halcyon Major Elegy", "]4BAK", "MHLL", 20, -16, "LNC", "LNC", 59),
+      new Move("Halcyon Minor Sonata", "]4BB", "MM", 20, -12, -4, -4, 26),
+      new Move("Halcyon Minor Sonata", "]4BBB", "MMM", 20, -14, -4, -4, 65, null, false, false, false, false, false, false, true),
+      new Move("Rondo a Capriccio", "]4BBBv", "MMM", 20, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Halcyon Minor Elegy", "]4BBK", "MML", 20, -16, "KND", "KND", 50),
+
+      new Move("Oratorio Halcyon", "{4B", "M", 20, -12, 2, 2, 14),
+      new Move("Oratorio Halcyon", "{4BB", "MM", 20, -14, "KND", "KND", 24, "May trigger personality change after 2nd hit"),
+      new Move("Oratorio Halcyon", "{4BBB", "MMM", 20, -18, "LNC", "LNC", 39, "May trigger personality change after 2nd hit"),
+      new Move("Oratorio Halcyon", "{4BBBj", "MMM", 20, null, null, null, null, "May trigger personality change after 2nd hit"),
+
+      new Move("Lowdown Neb", "CB", "M", 14, -8, 2, 2, 16, null, false, false, true),
+
+      new Move("Up Bow Cantabile", "WB", "M", 17, -16, "KND", "KND", 20, null, true),
+      new Move("Up Bow Cantabile ~ Updraft", "WBK", "MmMMM", 17, -52, "LNC", "LNC", 36, null, true),
+      new Move("Trill Up Bow Neb", "JB", "M", 36, -16, "LNC", "LNC", 60, "Shifts to attack throw upon hit/Damage differs slightly according to jump direction", false, false, false, false, false, false, true),
+      new Move("Retrograde Beak", "TB", "M", 18, -8, 4, 4, 16),
+      new Move("Low Retro Neb", "T2B", "M", 18, -8, 2, 2, 18, null, false, false, true)
     ],
     // Kicks
     [
-      new Move("High Note Kick", "K", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Cadence Back Kick", "6K", "H", null, null, null, null, null),
-      new Move("Fear Pecker", "3K", "M", null, null, null, null, null),
-      new Move("Low Pitch Claw", "2K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Ring Con Sordino", "]1K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Claw Kick", "]1K", "L", null, null, null, null, null),
-      new Move("Bremen Fortissimo", "4K", "H", null, null, null, null, null, "May trigger personality change"),
-      new Move("Scratch Scherzo", "]236K", "L", null, null, null, null, null),
-      new Move("Takt Claw", "{236K", "M", null, null, null, null, null),
-      new Move("Divisi Claw Wing", "{236cA", "MH", null, null, null, null, null),
-      new Move("Low Pitch Claw", "CK", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Swing Kick", "]WK", "M", null, null, null, null, null),
-      new Move("Chattering Cantabile ~ Updraft", "{WK", "mMMM", null, null, null, null, null, null, true),
-      new Move("Flickering Heelkick", "JK", "M", null, null, null, null, null),
-      new Move("Flickering Heelkick ~ Updraft", "HJK", "MMMM", null, null, null, null, null, null, true),
-      new Move("Retrograde Kick", "TK", "H", null, null, null, null, null),
-      new Move("Low Retro Claw", "T2K", "L", null, null, null, null, null, null, false, false, true)
+      new Move("High Note Kick", "K", "H", 12, -8, 0, 0, 12, null, false, false, false, false, false, false, false, false, false, true),
+
+      new Move("Cadence Back Kick(Jolly)", "]6K", "H", 16, -2, "KND", "KND", 18),
+      new Move("Cadence Back Kick(Gloomy)", "{6K", "H", 16, -2, "KND", "KND", 22),
+
+      new Move("Fear Pecker(Jolly)", "]3K", "M", 16, -8, -4, -4, 20),
+      new Move("Fear Pecker(Gloomy)", "{3K", "M", 16, -8, -4, -4, 24),
+
+      new Move("Low Pitch Claw", "2K", "L", 16, -14, -4, -4, 14, null, false, false, true),
+      new Move("Ring Con Sordino", "]1K", "L", 28, -16, "LNC", "LNC", 18, null, false, false, true),
+      new Move("Claw Kick", "]1K", "L", 22, -14, -2, -2, 18),
+      new Move("Bremen Fortissimo", "4K", "H", 12, -8, "STN", "STN", 15, "May trigger personality change"),
+      new Move("Scratch Scherzo", "]236K", "L", 28, -16, "KND", "KND", 22),
+      new Move("Takt Claw", "{236K", "M", 22, -8, 2, 2, 22),
+      new Move("Divisi Claw Wing", "{236cA", "MH", 22, -10, 2, 2, 28),
+      new Move("Low Pitch Claw", "CK", "L", 16, -14, -4, -4, 14, null, false, false, true),
+      new Move("Swing Kick", "]WK", "M", 12, -14, 8, 8, 20),
+      new Move("Chattering Cantabile ~ Updraft", "{WK", "mMMM", 24, -52, "LNC", "LNC", 31, null, true),
+      new Move("Flickering Heelkick", "JK", "M", 20, -12, "LNC", "LNC", 16),
+      new Move("Flickering Heelkick ~ Updraft", "HJK", "MMMM", 20, null, null, null, 38, null, true),
+      new Move("Retrograde Kick", "TK", "H", 14, -8, 2, 2, 16),
+      new Move("Low Retro Claw", "T2K", "L", 18, -14, -4, -4, 16, null, false, false, true)
     ],
     // Simultaneous Press Moves
     [
-      new Move("Chattering Thrust", "]A+B", "M", null, null, null, null, null, "GI vs. high & mid horizontal", false, true, false, true, false, false, false, true),
-      new Move("Cry of the Blue Jay", "{A+B", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Blazing Cadenza", "6A+B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true, true),
-      new Move("Tenuto Sweep", "]2A+B", "L", null, null, null, null, null, "GI vs. high & mid vertical(except kicks)", false, false, true, true),
-      new Move("Deadly Arietta", "{2A+B", "M", null, null, null, null, null),
-      new Move("Sidestep Arpeggio", "]4A+B", "M", null, null, null, null, null),
-      new Move("Scolding Starling", "{4A+B", "H", null, null, null, null, null),
+      new Move("Chattering Thrust", "]A+B", "M", 46, 6, 10, 10, 32, "GI vs. high & mid horizontal", false, true, false, true, false, false, false, true),
+      new Move("Cry of the Blue Jay", "{A+B", "M", 36, 2, "LNC", "LNC", 36, null, false, true, false, false, false, false, false, true),
+      new Move("Blazing Cadenza", "6A+B", "M", 64, null, "KND", "KND", 65, null, false, false, false, false, false, false, false, false, true, true),
+      new Move("Tenuto Sweep", "]2A+B", "L", 30, -14, "KND", "KND", 26, "GI vs. high & mid vertical(except kicks)", false, false, true, true),
+      new Move("Deadly Arietta", "{2A+B", "M", 28, -2, "KND", "KND", 24),
+      new Move("Sidestep Arpeggio", "]4A+B", "M", 22, -10, -2, -2, 10),
+      new Move("Scolding Starling", "{4A+B", "H", 22, 2, "KND", "KND", 32),
+
       new Move("Gestopft Madness", "B+KKK", null, null, null, null, null, null, "GI vs. high & mid(except kicks)/May trigger personality change", true, false, false, true),
+      new Move("Bremen Fortissimo", "B+KI", "H", 30, null, null, null, null, "May trigger personality change"),
       new Move("Streaks of Madness", "}A", "L", null, null, null, null, null, "Power increases with number of K", false, true),
       new Move("Elegy of Madness", "}B", "M", null, null, null, null, null, "Power increases with number of K", false, true),
-      new Move("Bremen Fortissimo", "B+KI", "H", null, null, null, null, null, "May trigger personality change"),
+      
       new Move("Einsatz Calcatrix", "2B+K", null, null, null, null, null, null, "Revenge attack/May trigger personality change when successful"),
-      new Move("Piercing Talon Strike", "4B+KB", "MM", null, null, null, null, null),
-      new Move("Piercing Talon Strike", "4B+Kb", "MM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
+      new Move("Einsatz Calcatrix", "2B+KI", null, null, null, null, 60, null, "Revenge attack/May trigger personality change when successful"),
+
+      new Move("Piercing Talon Strike", "4B+K", "M", 26, -8, "LNC", "LNC", 18),
+      new Move("Piercing Talon Strike", "4B+KB", "MM", 26, -2, "KND", "KND", 39),
+      new Move("Piercing Talon Strike", "4B+Kb", "MM", 26, 6, "KND", "KND", 50, null, false, false, false, false, false, false, false, true),
+      
+      new Move("Retro Noise", "]TB+K", "M", 18, -16, "LNC", "LNC", 16, "GI vs. high & mid(except kicks)/May trigger personality change", true, false, false, true),
+      new Move("Retro Noise", "]TB+KB", "MM", 18, -18, "KND", "LNC", 35, "GI vs. high & mid(except kicks)/May trigger personality change", true, false, false, true),
       new Move("Retro Noise ~ Gestopft Madness", "]TB+KBB+K", "MM", null, null, null, null, null, "GI vs. high & mid(except kicks)/May trigger personality change", true, false, false, true),
-      new Move("Retrograde Fortissimo", "{TBK", "M", null, null, null, null, null, "GI vs. mid(except kicks)/May trigger personality change")
+      new Move("Retrograde Fortissimo", "{TB+K", "M", 17, -6, "KND", "KND", 30, "GI vs. mid(except kicks)/May trigger personality change")
     ],
     // 8-Way Run Moves
     [
-      new Move("Flagoelette Fin", "]#|^|(AA", "MM", null, null, null, null, null),
-      new Move("Tarsus Toccata", "{#|^|(AK", "MM", null, null, null, null, null, null, false, false, true),
-      new Move("Deriding Thrush", "@|*A", "M", null, null, null, null, null),
-      new Move("Canary Waltz C Minor", "]!|$|uAA", "HL", null, null, null, null, null),
-      new Move("Canary Waltz E Major", "]!|$|uAB", "HM", null, null, null, null, null),
-      new Move("Chattering Pinion", "{!|$|uA", "M", null, null, null, null, null, null, false, true),
-      new Move("Wild Beat Neb", "]#|^|(B", "M", null, null, null, null, null, null, false, true),
-      new Move("Metsa Gigue Baroque", "{#|^|(B", "MMM", null, null, null, null, null, "May trigger personality change"),
-      new Move("Double Rhythm", "]@|*B", "MM", null, null, null, null, null),
-      new Move("Staccato Ravage", "{@|*B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Ibis Minuet", "]!|$|uBA", "MH", null, null, null, null, null, "Shifts to follow-up attack upon hit"),
-      new Move("Murderous Vibrato", "{!|$|uB", "mmm", null, null, null, null, null, null, false, false, true),
-      new Move("Murderous Vibrato", "{!|$|ub", "mmmmmm", null, null, null, null, null, null, false, false, true),
-      new Move("Parrot Scratch ~ Gestopft Madness", "]#|^|(KB+K", "MH", null, null, null, null, null, "GI vs. high & mid(except kicks)/May trigger personality change", true, false, false, true),
-      new Move("Hell's Barkarole", "{#|^|(K", "M", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Hell's Fermata", "{#|^|(KH", "M", null, null, null, null, null, "Shifts to attack throw upon counter hit or midair hit", false, false, false, false, false, false, true),
-      new Move("Rhythmic Hook", "@|*K", "M", null, null, null, null, null),
-      new Move("Parakeet Scratch", "!|$|uK", "MM", null, null, null, null, null),
-      new Move("Somersault Scratch", "{!|$|uK", "MM", null, null, null, null, null),
-      new Move("Groove Step", "]#|^|(A+B", "M", null, null, null, null, null, null, false, true),
-      new Move("Hiisi Gigue Baroque", "{#|^|(A+B", "MMMMM", null, null, null, null, null, "May trigger personality change"),
-      new Move("Polonaise Spin", "]!|$|uA+BAA", "MMMM", null, null, null, null, null, "Can move using D-Pad"),
-      new Move("Chattering Tear", "]RK", "L", null, null, null, null, null, "May trigger personality change"),
-      new Move("Glissando Claw", "{RK", "L", null, null, null, null, null)
+      new Move("Flagoelette Fin", "]#|^|(A", "M", 18, -20, -6, -6, 18),
+      new Move("Flagoelette Fin", "]#|^|(AA", "MM", 18, -20, "KND", "KND", 39),
+
+      new Move("Tarsus Toccata", "{#|^|(A", "M", 16, -12, 4, 4, 20, null, false, false, true),
+      new Move("Tarsus Toccata", "{#|^|(AK", "MM", 16, -6, "KND", "KND", 50, null, false, false, true),
+
+      new Move("Deriding Thrush(Jolly)", "]@|*A", "M", 22, -12, 12, 12, 20),
+      new Move("Deriding Thrush(Gloomy)", "{@|*A", "M", 22, -12, 14, 14, 24),
+
+      new Move("Canary Waltz C Minor", "]!|$|uA", "H", 18, -12, 0, 0, 14),
+      new Move("Canary Waltz C Minor", "]!|$|uAA", "HL", 18, -12, -4, -4, 34),
+      new Move("Canary Waltz E Major", "]!|$|uAB", "HM", 18, -2, 6, 6, 32),
+
+      new Move("Chattering Pinion", "{!|$|uA", "M", 30, -14, "KND", "KND", 37, null, false, true),
+      new Move("Wild Beat Neb", "]#|^|(B", "M", 22, -8, "LNC", "LNC", 20, null, false, true),
+      new Move("Metsa Gigue Baroque", "{#|^|(B", "MMM", 18, -8, "LNC", "LNC", 40, "May trigger personality change"),
+      new Move("Double Rhythm", "]@|*B", "MM", 20, -2, 10, 10, 20),
+      new Move("Staccato Ravage", "{@|*B", "M", 30, 2, "KND", "KND", 32, null, false, false, false, false, false, false, false, true),
+
+      new Move("Ibis Minuet", "]!|$|uB", "M", 20, -18, "LNC", "LNC", 20, "Shifts to follow-up attack upon hit"),
+      new Move("Ibis Minuet", "]!|$|uBA", "MH", 20, -14, "KND", "KND", 35, "Shifts to follow-up attack upon hit"),
+      new Move("Murderous Vibrato", "{!|$|uB", "mmm", 32, -8, 6, 6, 36, null, false, false, true),
+      new Move("Murderous Vibrato", "{!|$|ub", "mmmmmm", 40, -8, 6, 6, 72, null, false, false, true),
+      new Move("Parrot Scratch ~ Gestopft Madness", "]#|^|(KB+K", "MH", null, null, null, null, 26, "GI vs. high & mid(except kicks)/May trigger personality change", true, false, false, true),
+      new Move("Hell's Barkarole", "{#|^|(K", "M", 20, -12, "KND", "KND", 30, null, false, false, false, false, false, false, true),
+      new Move("Hell's Fermata", "{#|^|(KH", "M", 20, -12, "KND", "KND", 66, "Shifts to attack throw upon counter hit or midair hit", false, false, false, false, false, false, true),
+     
+      new Move("Rhythmic Hook(Jolly)", "]@|*K", "M", 18, -6, 8, 8, 16),
+      new Move("Rhythmic Hook(Gloomy)", "{@|*K", "M", 18, -6, 8, 8, 20),
+
+      new Move("Parakeet Scratch", "!|$|uK", "MM", 16, -8, 8, "KND", 22),
+      new Move("Somersault Scratch", "{!|$|uK", "MM", 21, -4, 9, "KND", 30),
+      new Move("Groove Step", "]#|^|(A+B", "M", 24, -12, "LNC", "LNC", 28, null, false, true),
+      new Move("Hiisi Gigue Baroque", "{#|^|(A+B", "MMMMM", 18, -14, "LNC", "LNC", 50, "May trigger personality change"),
+
+      new Move("Polonaise Spin", "]!|$|uA+B", "MM", 28, -18, -6, -6, 22, "Can move using D-Pad"),
+      new Move("Polonaise Spin", "]!|$|uA+BA", "MMM", 28, -18, -6, -6, 30, "Can move using D-Pad"),
+      new Move("Polonaise Spin", "]!|$|uA+BAA", "MMMM", 28, -18, -6, -6, 42, "Can move using D-Pad"),
+
+      new Move("Chattering Tear", "]RK", "L", 20, -22, "LNC", "LNC", 26, "May trigger personality change"),
+      new Move("Glissando Claw", "{RK", "L", 20, -22, "LNC", "LNC", 26)
     ],
     // Throws
     [
-      new Move("Death Spindle", "A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Poison Apple", "4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Sweet Lullaby", "ZA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Bloody Tale", "XA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Glass Slippers", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Grim Reaper", "S]6A+G", "H", null, null, null, null, null, "Not breakable/May trigger personality change", false, false, false, false, false, true, true)
+      new Move("Death Spindle", "A+G", "H", 18, null, null, null, 45, "Breakable/+5DMG in Gloomy", false, false, false, false, false, false, true),
+      new Move("Poison Apple", "4A+G", "H", 18, null, null, null, 50, "Breakable/+5DMG in Gloomy", false, false, false, false, false, false, true),
+      new Move("Sweet Lullaby", "ZA+G", "H", 18, null, null, null, 55, "+5DMG in Gloomy", false, false, false, false, false, false, true),
+      new Move("Bloody Tale", "XA+G", "H", 18, null, null, null, 60, "+5DMG in Gloomy", false, false, false, false, false, false, true),
+      new Move("Glass Slippers", "VA+G", "H", 18, null, null, null, 70, "Breakable only by Voldo & Astaroth/+5DMG in Gloomy", false, false, false, false, false, false, true),
+      new Move("Grim Reaper", "S]6A+G", "H", 18, null, null, null, 60, "Not breakable/May trigger personality change", false, false, false, false, false, true, true)
     ],
     // ************ Stances *************
     // Updraft
     [
       new Move("Updraft", "7|8|9B+K", null, null, null, null, null, null, null, true),
-      new Move("Diving Wing Flap", "[A", "M", null, null, null, null, null, "May trigger personality change"),
-      new Move("Diving Talon Thrust", "[B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Claw Dive", "[K", "M", null, null, null, null, null, "Becomes a low attack when at distance")
+      new Move("Diving Wing Flap", "[A", "M", null, -6, -2, -2, 26, "May trigger personality change"),
+      new Move("Diving Talon Thrust", "[B", "M", null, -2, "KND", "KND", 40, null, false, false, false, false, false, false, false, true),
+      new Move("Claw Dive", "[K", "M", null, -16, "KND", "KND", 24, "Becomes a low attack when at distance")
     ]
   ]
 

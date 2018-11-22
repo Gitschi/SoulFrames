@@ -3385,7 +3385,7 @@ export class MoveService{
       new Move("Demon Oppressor", "rA", "H", null, -8, null, null, 19, null, false, true),
       new Move("Demon Oppressor", "rAA", "HH", null, -18, null, null, 30, null, false, true),
       new Move("Demon Oppressor", "rAAA", "HHSS", null, -10, null, null, 53, null, false, true),
-      new Move("Demon Oppressor ~ Possession", "rAA4", "HH", -4, null, null, 30, null, null, true, true),
+      new Move("Demon Oppressor ~ Possession", "rAA4", "HH", null, -4, null, null, 30, null, true, true),
       new Move("Demon Oppressor ~ Wind Roll", "rAB+K", "H", null, null, 19, null, null, null, true, true),
       new Move("Demon Oppressor ~ Gunpowder Plot", "rAb+k", "HH", null, -12, "KND", "KND", 41, null, false, true),
       new Move("Blazing Flame", "rB", "MM", null, null, 10, 10, 24, "Shifts to clash upon guard", false, true, true, false, false, false, false, true),

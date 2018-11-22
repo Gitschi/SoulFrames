@@ -4386,27 +4386,33 @@ export class MoveService{
     ],
     // Kicks
     [
-      new Move("Yuen Kick", "K", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Heh Kick", "c6", "H", null, null, null, null, null),
-      new Move("Swallow's Blade", "6KA", "MH", null, null, null, null, null, null),
-      new Move("Swallow's Blade ~ Bea Her Hua", "6Ka", "MH", null, null, null, null, null, "GI vs. high, mid horizontal", true, false, false, true),
-      new Move("Chicken Kick", "3K", "M", null, null, null, null, null),
-      new Move("Woan Shyong Nibble", "2K", "L", null, null, null, null, null),
-      new Move("Circle Breaker", "1K", "L", null, null, null, null, null),
-      new Move("Circle Breaker Feint Divide", "1cAAB", "MMML", null, null, null, null, null),
-      new Move("Circle Breaker Feint Double Feng Yun", "1cAAK", "MMMM", null, null, null, null, null),
-      new Move("Shan Kick", "4K", "H", null, null, null, null, null),
-      new Move("Woan Shyong Nibble", "CK", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Rising Hou Ling Thorn", "C3KB", "MH", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Rising Shun Ling Thorn", "C3KB6", "MH", null, null, null, null, null),
-      new Move("Rising Hou Ling Thorn ~ Playful Xia Sheng", "C3KB2", "M", null, null, null, null, null, null, true),
-      new Move("Rising Hou Ling Thorn ~ Playful Xia Sheng", "C3Kx2", "M", null, null, null, null, null, null, true),
-      new Move("Advancing Tiger Thrust", "WKB", "M", null, null, null, null, null),
-      new Move("Advancing Tiger Thrust ~ Silent Xia Sheng", "Wk", "MMM", null, null, null, null, null, null, true),
-      new Move("Star Kick", "JKK", "MMM", null, null, null, null, null),
-      new Move("Star Kick ~ Playful Xia Sheng", "JKK2", "H", null, null, null, null, null, null, true),
-      new Move("Spinning Yuen Kick", "TK", "L", null, null, null, null, null),
-      new Move("Spinning Woan Shyong Nibble", "T2K", "L", null, null, null, null, null, null, false, false, true)
+      new Move("Yuen Kick", "K", "H", 12, -8, 2, 2, 14, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Heh Kick", "c6", "H", 14, -16, "KND", "KND", 24, "TC[1-6]"),
+      new Move("Swallow's Blade", "6K", "M", 16, -12, 4, 4, 14, null),
+      new Move("Swallow's Blade", "6KA", "MH", 16, -12, 4, 4, 32, "TJ[18-38]"),
+      new Move("Swallow's Blade ~ Bea Her Hua", "6Ka", "MH", 26, -12, 4, 4, 18, "GI vs. high, mid horizontal", true, false, false, true),//data inconsistent between 8WR and the sreadsheet
+      new Move("Chicken Kick", "3K", "M", 14, -8, 4, 4, 14, null),
+      new Move("Woan Shyong Nibble", "2K", "L", 16, -14, -4, -4, 20, null),
+      new Move("Circle Breaker", "1K", "L", 24, -16, 2, "LNC", null),
+      new Move("Circle Breaker Feint Divide", "1cA", "M", 28, -10, 0, 0, 18, "TC[14-40,1~]"),
+      new Move("Circle Breaker Feint Divide", "1cAA", "MMM", 28, -8, 4, 4, null), //inconsistent frame data again
+      new Move("Circle Breaker Feint Divide", "1cAAB", "MMML", 28, -18, "KND", "KND", null), //inconsistent frame data again
+      new Move("Circle Breaker Feint Double Feng Yun", "1cAAK", "MMMM", 28, -16, 0, 0, null),
+      new Move("Shan Kick", "4K", "H", 16, -2, 4, 4, 16, null),
+      new Move("Woan Shyong Nibble", "CK", "L", 16, -2, "KND", "KND", null, null, false, false, true),
+      new Move("Rising Hou Ling Thorn", "C3K", "M", 15, -19, 5, "LNC", 26, null),
+      new Move("Rising Hou Ling Thorn", "C3KB", "MH", 15, 10, "KND", "KND", 66, "TC[6-24]", false, true, false, false, false, false, false, true),
+      new Move("Rising Shun Ling Thorn", "C3KB6", "MHH", 15, -4, "KND", "KND", 96, null),
+      new Move("Rising Hou Ling Thorn ~ Playful Xia Sheng", "C3KB2", "H", 42, 10, "KND", "KND", 40, null, true),
+      new Move("Rising Hou Ling Thorn ~ Playful Xia Sheng", "C3Kx2", "MH", 16, null, null, null, null, null, true),
+      new Move("Advancing Tiger Thrust", "WK", "M", 12, -10, 0, 10, 16, "TC[1-4]"),
+      new Move("Advancing Tiger Thrust", "WKB", "MM", 12, -14, "STN", "STN", 41, null),
+      new Move("Advancing Tiger Thrust ~ Silent Xia Sheng", "Wk", "M", 12, null, null, null, null, null, true),
+      new Move("Star Kick", "JK", "MM", 18, -12, 4, 4, 24, "TJ[7~]"),
+      new Move("Star Kick", "JKK", "MMM", 18, 2, "STN", "STN", 42, "TJ[16-36]"),
+      new Move("Star Kick ~ Playful Xia Sheng", "JKK2", "H", null, null, null, null, null, null, true), //not listed anywhere
+      new Move("Spinning Yuen Kick", "TK", "H", 16, -4, 6, 6, 18, null),
+      new Move("Spinning Woan Shyong Nibble", "T2K", "L", 18, -14, -4, -4, 18, TC[13~], false, false, true)
     ],
     // Simultaneous Press Moves
     [

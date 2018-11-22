@@ -308,7 +308,7 @@ export class MoveService{
       new Move("Epistemophilia", "SBBB", "MMMMMM", null, null, "STN", null, 77, "Switches to Almighty mode", false, false, false, false, false, true, false, true),
       new Move("Vile Academia", "S6A+B", "MMMM", 32, 4, "STN", "STN", 51, "Switches to Almighty mode", false, false, false, false, false, true, false, true),
       new Move("Defiler's Choice", "S8A+B", "MMMM", 38, -10, "KND", "KND", 51, "BA / TA", false, false, false, false, false, true),
-      new Move("New World Revolution", "SeA+B", "MMMMMM", 30, "N/A", "SLNC", "SLNC", 44, "Switches to Almighty mode", false, true, false, false, false, true, false, true)
+      new Move("New World Revolution", "SeA+B", "MMMMMM", 30, null, "SLNC", "SLNC", 44, "Switches to Almighty mode", false, true, false, false, false, true, false, true)
     ],
     // Horizontal Moves
     [
@@ -330,7 +330,7 @@ export class MoveService{
       new Move("Heretic's Sweep ~ Beauty of Balance", "CAK", "SS", 14, null, null, null, 16, null, true),
       new Move("Heretic's Sweep ~ Tragedy of War", "CA6K", "SS", 14, null, null, null, 16, null, true),
       new Move("Heretic's Sweep ~ Comedy of Errors", "CA4K", "SS", 14, null, null, null, 16, null, true),
-      new Move("Impulse Pincer", "C3A", "HH", 18, 0, "KND", "KND", "KND", 40, "NC / Ax", true, null, null, null, null, null, null, null, null),
+      new Move("Impulse Pincer", "C3A", "HH", 18, 0, "KND", "KND", 40, "NC / Ax"), 
       new Move("Righteous Judgment", "C1A", "L", 16, -12, 0, 0, 18, "TC / ~FC / Spear", false, false, true),
       new Move("Double Cross Baptism", "WA", "M", 18, -10, 7, 7, 20, "TC"),
       new Move("Absolute Devotion", "9A", "L", 32, -16, 2, 2, 22, "TJ[13-28] / ~FC / Ax", false, false, true),
@@ -344,12 +344,12 @@ export class MoveService{
       new Move("Heart on Trial", "B", "M", 14, -10, -2, -2, 12, "Sword", false, false, false, false, false, false, false, false, false, true),
       new Move("Heart on Trial", "BA", "MH", 14, -2, "KND", "KND", 42, "Sword ~ Ax", false, false, false, false, false, false, false, false, false, true),
       new Move("Seven Sages' Aphorism", "BB", "MM", 14, -8, 0, 0, 24, "NC / Sword"),
-      new Move("Seven Sages' Aphorism", "BBB", "MMMMMM", 14, -6, "STN", "STN", 71, "First 2 and last 4 hits NC / TJ / Sword ~ Almighty", "Switches to Almighty mode"),
+      new Move("Seven Sages' Aphorism", "BBB", "MMMMMM", 14, -6, "STN", "STN", 71, "First 2 and last 4 hits NC / TJ / Sword ~ Almighty"),
       new Move("Seven Sages' Aphorism ~ Beauty of Balance", "BBK", "MM", 14, -12, null, null, 24, "SS / NC / Sword", true),
       new Move("Seven Sages' Aphorism ~ Tragedy of War", "BB6K", "MM", 14, null, null, null, 24, "SS / NC / TC / Sword ~ Ax", true),
       new Move("Seven Sages' Aphorism ~ Comedy of Errors", "BB4K", "MM", 14, null, null, null, 24, "SS / Sword ~ Spear", true),
       new Move("Adulation Blade", "x6", "H", 22, -4, 9, 9, 24, "TC[14-21] / Sword"),
-      new Move("Tears of Pain", "x4", "M", 16, "-12~13", 2, 2, 24, "TC[20-29] / Opp. FrC (hit) / Sword"),
+      new Move("Tears of Pain", "x4", "M", 16, -12, 2, 2, 24, "TC[20-29] / Opp. FrC (hit) / Sword"),
       new Move("Usurp the Autocracy", "6B", "M", 14, -6, 0, 0, 16, "Time precisely for increased damage / Ax"),
       new Move("Usurp the Autocracy", "6BA", "MHHH", 14, -4, 8, 8, 56, "Time precisely for increased damage / Last 3 hits NC / Ax ~ Spear"),
       new Move("Truculent World", "6BB", "MM", 14, 4, "KND", "KND", 41, "Opp. FrC (block) / Ax"),
@@ -363,7 +363,7 @@ export class MoveService{
       new Move("Save the Betrayed", "1B", "L", 18, -16, -4, -4, 16, "GI[L 11-24]/ SS on GI / TC[23-?] / Spear", true),
       new Move("Save the Betrayed", "1BB", "LH", 18, -8, 8, 8, 40, "GI vs. low", false, false, false, true),
       new Move("Instruct the Unwise", "4B", "M", 28, 4, 8, 8, 25, "GI vs. mid", false, true, false, true, false, false, false, true),
-      new Move("Nihilism", "CB", "M", 15, "-8~9", 5, 5, 22, null, false, false, true),
+      new Move("Nihilism", "CB", "M", 15, null, 5, 5, 22, null, false, false, true),
       new Move("Coup D'etat", "C3B", "MM", 16, -8, "LNC", "LNC", 22, "Ax"),
       new Move("Coup D'etat", "C3BB", "MM", 16, -8, "KND", "KND", 41),
       new Move("Talon Spear", "C1B", "M", 12, -14, "LNC", "LNC", 24, "Sword"),
@@ -389,7 +389,7 @@ export class MoveService{
       new Move("Geometrical Precision", "2A+B", "L", 26, -12, 8, 8, 0),
       new Move("Power of Pathos", "4A+B", "M", 20, -10, 6, 6, 15),
       new Move("Encyclopeid Mind", "8A+B", "M", 38, -23, "KND", "KND", 30),
-      new Move("Ophion's Omnipresence", "214A+B", "M", null, "N/A", "SLNC", "SLNC", 60, null, false, false, false, false, false, false, false, false, true, true),
+      new Move("Ophion's Omnipresence", "214A+B", "M", null, null, "SLNC", "SLNC", 60, null, false, false, false, false, false, false, false, false, true, true),
       new Move("Pleroma Ascension", "B+K", "MM", 18, -16, "SLNC", "SLNC", 40, "While in sword or Almighty mode/Resets weapon to unformed state"),
       new Move("O, Fallen Scholar", "B+K", "L", 22, -20, "KND", "KND", 60, "While in axe mode/Resets weapon to unformed state"),
       new Move("O, Fallen Scholar", "6B+K", "L", 22, -20, "KND", "KND", 60, "While in Almighty mode/Resets weapon to unformed state"),
@@ -417,9 +417,9 @@ export class MoveService{
     ],
     // Throws
     [
-      new Move("Modify the Weak", "A+G", "H", 18, "N/A", "KND", "KND", 50, "Switches to Almighty mode/Breakable", false, false, false, false, false, false, true),
-      new Move("Reformation", "4A+G", "H", 18, "N/A", "KND", "KND", 60, "Switches to Almighty mode/Breakable", false, false, false, false, false, false, true),
-      new Move("Transmigration", "VA+G", "H", 18, "N/A", "KND", "KND", 80, "Switches to Almighty mode/Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true)
+      new Move("Modify the Weak", "A+G", "H", 18, null, "KND", "KND", 50, "Switches to Almighty mode/Breakable", false, false, false, false, false, false, true),
+      new Move("Reformation", "4A+G", "H", 18, null, "KND", "KND", 60, "Switches to Almighty mode/Breakable", false, false, false, false, false, false, true),
+      new Move("Transmigration", "VA+G", "H", 18, null, "KND", "KND", 80, "Switches to Almighty mode/Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true)
     ],
     // ************ Stances *************
     // Beauty of Balance
@@ -429,7 +429,7 @@ export class MoveService{
       new Move("Beauty of Performance", "@|*K", null, null, null, null, null, "SS / TS", "Dodges high, mid & low", true),
       new Move("Beauty of Balance", "TK", null, null, null, null, null, null, "SS", true),
       new Move("Beauty of Wonder", "T@|*K", null, null, null, null, null, null, "SS / TS", true),
-      new Move("Salvation Doctrine", "[AAA", "HHH", null, null, null, null, null, true),
+      new Move("Salvation Doctrine", "[AAA", "HHH", null, null, null, null, null),
       new Move("Ideological Insight", "[AAB", "HHM", 12, null, "KND", "KND", 40, "Projectile / Sword ~ Spear", true),
       new Move("Salvation Doctrine ~ Beauty of Balance", "[AAK", "HH", 12, -2, 8, 8, 20, "SS / NC / Sword", true),
       new Move("Salvation Doctrine ~ Tragedy of War", "[AA6K", "HH", 12, null, null, null, 20, "SS / NC / Sword", true),
@@ -448,7 +448,7 @@ export class MoveService{
       new Move("Tragedy of War", "T6K", null, null, null, null, null, null, null, true),
       new Move("Scream of Defiance", "]A", "H", 22, 2, "KND", "KND", 40, "BA / TC[1-5] / Ax", false, false, false, false, false, false, false, true),
       new Move("War and Destruction", "]B", "M", 28, 8, "LNC", "LNC", 38, "BA / LH (Impact Counter) / TC[1-7] / STN on ground hit / Ax", false, true, false, false, false, false, false, true),
-      new Move("Fall of the Wise", "]6K", "LL", 24, "-24~25", 0, 0, 30, "NC / TC[1-48] / Ax"),
+      new Move("Fall of the Wise", "]6K", "LL", 24, -24, 0, 0, 30, "NC / TC[1-48] / Ax"),
       new Move("Tragedy of War ~ Beauty of Balance", "]K", null, null, null, null, null, null, null, true),
       new Move("Tragedy of War ~ Beauty of Wonder", "]2|8k", null, null, null, null, null, null, null, true),
       new Move("Tragedy of War ~ Comedy of Errors", "]4K", null, null, null, null, null, null, null, true)
@@ -3480,7 +3480,7 @@ export class MoveService{
       new Move("Lightning Scroll", "4BA", "MH", 12, -16, -10, -10, 20),
       new Move("Lightning Scroll ~ Possession", "4BA4", "MH", 12, 4, 10, 10, 20, null, true),
 
-      new Move("Seal of the Fire Dragon", "41236B", "M", 60, "N/A", "KND", "KND", 60, null, false, false, false, false, false, false, false, false, true, true),
+      new Move("Seal of the Fire Dragon", "41236B", "M", 60, null, "KND", "KND", 60, null, false, false, false, false, false, false, false, false, true, true),
       new Move("Free Shadow", "CB", "M", 16, -8, 2, 2, 14, null, false, false, true),
 
       new Move("Darkness Banishment", "WB", "M", 12, -14, 2, 2, 12),

@@ -3397,58 +3397,93 @@ export class MoveService{
     ],
     // Horizontal Moves
     [
-      new Move("Barbed Blades", "AAA", "HHSH", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Shadow Ripper", "AAB", "HHM", null, null, null, null, null, null, false, false, true),
-      new Move("Death Penalty", "AAK", "HHH", null, null, null, null, null),
-      new Move("Shadow Shrine", "z6", "MM", null, null, null, null, null, null, false, true),
-      new Move("Shadow Shrine", "z6j", "MM", null, null, null, null, null, null, false, true),
-      new Move("Shadow Shrine ~ Wind Roll", "z6B+K", "MM", null, null, null, null, null, null, true, true),
-      new Move("Shadow Shrine ~ Gunpowder Plot", "z6b+k", "MMH", null, null, null, null, null, null, false, true),
-      new Move("Shadow Shrine ~ Distorted Breeze", "z62|8B+K", "MM", null, null, null, null, null, null, true, true),
-      new Move("Lightning Scroll", "6AA", "HMM", null, null, null, null, null),
-      new Move("Lightning Scroll ~ Possession", "6A4", "H", null, null, null, null, null, null, true),
-      new Move("Burning Misery", "6ABBB", "HMMM", null, null, null, null, null),
-      new Move("Wind Scroll", "3A", "M", null, null, null, null, null),
-      new Move("Shadow Split", "2A", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Reaping Hook", "1A", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Divine Judgment", "4AK", "HMH", null, null, null, null, null),
-      new Move("Divine Judgment ~ Possession", "4A4", "H", null, null, null, null, null, null, true),
-      new Move("Divine Judgment ~ Possession", "4AK4", "HMH", null, null, null, null, null, null, true),
-      new Move("Shadow Split", "CA", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Earth Scroll", "C3AK", "LL", null, null, null, null, null, null, false, false, true),
-      new Move("Shadow Claw", "WAAA", "MHM", null, null, null, null, null),
-      new Move("Shadow Claw ~ Possession", "WAA4", "MH", null, null, null, null, null, null, true),
-      new Move("Falling Scroll", "JA", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Reverse Shadow", "TA", "H", null, null, null, null, null),
-      new Move("Reverse Shadow Split", "T2A", "S", null, null, null, null, null, null, false, false, true)
+      new Move("Barbed Blades", "A", "H", 10, -10, -2, -2, 8, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Barbed Blades", "AA", "HH", 10, -12, -4, -4, 16, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Barbed Blades", "AAA", "HHSH", 10, null, -2, "KND", 42, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Shadow Ripper", "AAB", "HHM", 10, -16, -4, -4, 34, null, false, false, true),
+      new Move("Death Penalty", "AAK", "HHH", 10, -2, 2, 2, 32),
+
+      new Move("Shadow Shrine", "z6", "MM", 16, -20, "KND", "KND", 24, null, false, true),
+      new Move("Shadow Shrine", "z6j", "MM", 10, -20, "KND", "KND", 32, null, false, true),
+      new Move("Shadow Shrine ~ Wind Roll", "z6B+K", "MM", 16, null, "KND", "KND", 24, null, true, true),
+      new Move("Shadow Shrine ~ Gunpowder Plot", "z6b+k", "MMH", 16, -12, null, null, 52, null, false, true),
+      new Move("Shadow Shrine ~ Distorted Breeze", "z62|8B+K", "MM", 16, null, null, null, 24, null, true, true),
+
+      new Move("Lightning Scroll", "6A", "H", 16, -14, -2, -2, 12),
+      new Move("Lightning Scroll ~ Possession", "6A4", "H", 16, -4, 8, 8, 12, null, true),
+      new Move("Lightning Scroll", "6AA", "HMM", 16, -8, "KND", "KND", 47),
+      new Move("Burning Misery", "6AB", "HM", 16, -12, -4, -4, 20),
+      new Move("Burning Misery", "6ABB", "HMM", 16, -12, -4, -4, 30),
+      new Move("Burning Misery", "6ABBB", "HMMM", 16, -10, 0, 0, 42),
+
+      new Move("Wind Scroll", "3A", "M", 20, -10, 6, 10, 24),
+      new Move("Shadow Split", "2A", "S", 12, -6, 6, 6, 10, null, false, false, true),
+      new Move("Reaping Hook", "1A", "L", 26, -22, 6, "KND", 28, null, false, false, true),
+
+      new Move("Divine Judgment", "4A", "H", 18, -10, -2, -2, 18),
+      new Move("Divine Judgment ~ Possession", "4A4", "H", 18, -2, 4, 4, 18, null, true),
+      new Move("Divine Judgment", "4AK", "HMH", 18, 2, "STN", "STN", 44),
+      new Move("Divine Judgment ~ Possession", "4AK4", "HMH", 18, -2, "STN", "STN", 44, null, true),
+
+      new Move("Shadow Split", "CA", "S", 12, -6, 6, 6, 10, null, false, false, true),
+
+      new Move("Earth Scroll", "C3A", "L", 22, -14, -4, -4, 16, null, false, false, true),
+      new Move("Earth Scroll", "C3AK", "LL", 22, -14, -4, -4, 32, null, false, false, true),
+
+      new Move("Shadow Claw", "WA", "M", 16, -2, 6, 6, 18),
+      new Move("Shadow Claw", "WAA", "MH", 16, -10, -2, -2, 26),
+      new Move("Shadow Claw ~ Possession", "WAA4", "MH", 16, -2, 6, 6, 26, null, true),
+      new Move("Shadow Claw", "WAAA", "MHM", 16, -18, "STN", "STN", 55),
+
+      new Move("Falling Scroll", "JA", "L", 36, -8, "LNC", "LNC", 22, null, false, false, true),
+      new Move("Reverse Shadow", "TA", "H", 12, -6, 4, 4, 12),
+      new Move("Reverse Shadow Split", "T2A", "S", 16, -6, 4, 4, 14, null, false, false, true)
     ],
     // Vertical Moves
     [
-      new Move("Shadow Banishment", "BAK", "MHH", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Shadow Banishment ~ Possession", "BA4", "MH", null, null, null, null, null, null, true),
-      new Move("Hidden Assassin", "BBB", "MMMM", null, null, null, null, null, null, false, false, true),
-      new Move("Hidden Assassin ~ Possession", "BB4", "MM", null, null, null, null, null, null, true),
-      new Move("Oppression", "BK", "MH", null, null, null, null, null, "Can be held"),
-      new Move("Explosive Talisman", "6BB", "MMM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Spread Wing", "3B", "M", null, null, null, null, null),
-      new Move("Spread Wing ~ Stalker", "3BB+K", "M", null, null, null, null, null, null, true),
-      new Move("Vacuum", "2B", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Dark Slicer", "2BA", "MH", null, null, null, null, null),
-      new Move("Dark Slicer ~ Mekki-Maru", "2xA", "H", null, null, null, null, null),
-      new Move("Dark Slicer Feint ~ Possession", "2xA4", "H", null, null, null, null, null, null, true),
-      new Move("Curse ~ Possession", "1B", "L", null, null, null, null, null, null, true),
-      new Move("Lightning Scroll", "4BA", "MH", null, null, null, null, null),
-      new Move("Lightning Scroll ~ Possession", "4BA4", "MH", null, null, null, null, null, null, true),
-      new Move("Seal of the Fire Dragon", "41236B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true, true),
-      new Move("Free Shadow", "CB", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Darkness Banishment", "WBB", "ML", null, null, null, null, null),
-      new Move("Darkness Banishment ~ Stalker", "WBB+K", "M", null, null, null, null, null, null, true),
-      new Move("Darkness Banishment", "JBB", "ML", null, null, null, null, null),
-      new Move("Darkness Banishment ~ Stalker", "JBB+K", "M", null, null, null, null, null, null, true),
-      new Move("Shadow Mekki-Maru", "TBA", "MH", null, null, null, null, null),
-      new Move("Shadow Mekki-Maru ~ Possession", "TBA4", "MH", null, null, null, null, null, null, true),
-      new Move("Darkness Shatter", "T2B", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Darkness Shatter ~ Possession", "T2B4", "M", null, null, null, null, null, null, true)
+      new Move("Shadow Banishment", "B", "M", 14, -8, -2, -2, 12, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Shadow Banishment", "BA", "MH", 14, -12, -4, -4, 22, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Shadow Banishment ~ Possession", "BA4", "MH", 14, -1, 7, 7, 22, null, true),
+      new Move("Shadow Banishment", "BAK", "MHH", 14, -2, 6, 6, 48, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Hidden Assassin", "BB", "MM", 14, -10, -4, -4, 24, null, false, false, true),
+      new Move("Hidden Assassin ~ Possession", "BB4", "MM", 14, -2, 6, 6, 24, null, true),
+      new Move("Hidden Assassin", "BBB", "MMMM", 14, -10, -4, -4, 48, null, false, false, true),
+      new Move("Oppression", "BK", "MH", 14, -2, 8, 8, 37),
+      new Move("Oppression(hold)", "Bk", "MH", 14, 6, "KND", "KND", 47),
+
+      new Move("Explosive Talisman", "6B", "M", 18, -10, 8, 8, 16, null, false, false, false, false, false, false, false, true),
+      new Move("Explosive Talisman", "6BB", "MMM", 18, 6, "LNC", "LNC", 50, null, false, false, false, false, false, false, false, true),
+
+      new Move("Spread Wing", "3B", "M", 16, -16, "LNC", "LNC", 22),
+      new Move("Spread Wing ~ Stalker", "3BB+K", "M", 16, null, "LNC", "LNC", 22, null, true),
+      new Move("Vacuum", "2B", "M", 16, -10, 0, 0, 16, null, false, false, true),
+      new Move("Dark Slicer", "2BA", "MH", 16, -12, -4, -4, 24),
+
+      new Move("Dark Slicer ~ Mekki-Maru", "2xA", "H", 6, -12, -4, -4, 10),
+      new Move("Dark Slicer Feint ~ Possession", "2xA4", "H", 6, -2, 6, 6, 10, null, true),
+
+      new Move("Curse ~ Possession", "1B", "L", 20, -10, 0, 4, 22, null, true),
+
+      new Move("Lightning Scroll", "4B", "M", 12, -16, -10, -10, 10),
+      new Move("Lightning Scroll", "4BA", "MH", 12, -16, -10, -10, 20),
+      new Move("Lightning Scroll ~ Possession", "4BA4", "MH", 12, 4, 10, 10, 20, null, true),
+
+      new Move("Seal of the Fire Dragon", "41236B", "M", 60, "N/A", "KND", "KND", 60, null, false, false, false, false, false, false, false, false, true, true),
+      new Move("Free Shadow", "CB", "M", 16, -8, 2, 2, 14, null, false, false, true),
+
+      new Move("Darkness Banishment", "WB", "M", 12, -14, 2, 2, 12),
+      new Move("Darkness Banishment", "WBB", "ML", 12, -18, -4, "STN", 32),
+      new Move("Darkness Banishment ~ Stalker", "WBB+K", "M", 12, null, null, null, 12, null, true),
+
+      new Move("Darkness Banishment", "JB", "ML", 38, -10, 6, 6, 12),
+      new Move("Darkness Banishment", "JBB", "ML", 38, -18, -4, "STN", 32),
+      new Move("Darkness Banishment ~ Stalker", "JBB+K", "M", 38, null, null, null, null, null, true),
+
+      new Move("Shadow Mekki-Maru", "TB", "M", 16, -8, 2, 2, 16),
+      new Move("Shadow Mekki-Maru", "TBA", "MH", 16, -12, 0, 0, 26),
+      new Move("Shadow Mekki-Maru ~ Possession", "TBA4", "MH", 16, -2, 6, 6, 26, null, true),
+      new Move("Darkness Shatter", "T2B", "M", 16, -8, 2, 2, 18, null, false, false, true),
+      new Move("Darkness Shatter ~ Possession", "T2B4", "M", 16, -5, 3, 3, 18, null, true)
     ],
     // Kicks
     [

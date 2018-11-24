@@ -4442,34 +4442,39 @@ export class MoveService{
     ],
     // 8-Way Run Moves
     [
-      new Move("Fragrant Dream", "#|^|(ABA", "HMM", null, null, null, null, null, "Returns to crouch when G cancelling 3rd hit", null, false, false, false, false, false, false, false, false, true),
-      new Move("Fragrant Dream ~ Silent Xia Sheng", "#|^|(ABa", "HM", null, null, null, null, null, null, true),
-      new Move("Fragrant Fantasy", "#|^|(ABB", "HML", null, null, null, null, null, "Returns to crouch when G cancelling 3rd hit", null, false, false, false, false, false, false, false, false, true),
-      new Move("Fragrant Fantasy ~ Silent Xia Sheng", "#|^|(ABb", "HM", null, null, null, null, null, null, true),
-      new Move("Storming Lian Hua", "@|*A", "M", null, null, null, null, null),
-      new Move("Lan Hua", "!|$|uA", "M", null, null, null, null, null),
-      new Move("Lan Hua", "!|$ua", "MH", null, null, null, null, null),
-      new Move("Playful Rhythm", "#|^|(BB", "MM", null, null, null, null, null),
-      new Move("Playful Rhythm", "#|^|(Bb", "MM", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Playful Rhythm ~ Laughin Bea Her Hua", "#|^|(B4", "M", null, null, null, null, null, "GI vs. high, mid vertical", true, false, false, true),
-      new Move("Playful Rhythm ~ Laughing Bea Her Hua", "#|^|(BB4", "MM", null, null, null, null, null, "GI vs. high, mid vertical", true, false, false, true),
-      new Move("Playful Rhythm ~ Silent Xia Sheng", "#|^|(b", "M", null, null, null, null, null, null, true),
-      new Move("Playful Slice", "@|*B", "MM", null, null, null, null, null),
-      new Move("Vengeful Lian Hua", "!|$|uB", "M", null, null, null, null, null),
-      new Move("Vengeful Lian Hua ~ Laughin Bea Her Hua", "!|$|uB4", "M", null, null, null, null, null, "GI vs. high, middle vertical", true, false, false, true),
-      new Move("Woan Shyong Swing", "#|^|(K", "M", null, null, null, null, null),
-      new Move("Mei Hua Kick", "@|*K", "M", null, null, null, null, null),
-      new Move("Mei Hua Kick ~ Playful Xia Sheng", "@|*K2", "M", null, null, null, null, null, null, true),
-      new Move("Lian Hua Kicks", "!|$|uKK", "LMM", null, null, null, null, null),
-      new Move("Lian Hua Sweeps", "!|$|uK2K", "LL", null, null, null, null, null),
-      new Move("San Jaan", "#|^|(A+B", "MMM", null, null, null, null, null),
-      new Move("San Jaan ~ Silent Xia Sheng", "#|^|(a+b", "MM", null, null, null, null, null, null, true),
-      new Move("Lian Hua Cannon", "@|*A+B", "M", null, null, null, null, null),
-      new Move("Reverse Shui Shian", "!|$|uA+B", "M", null, null, null, null, null, "Returns to downed when G cancelling", false, false, false, false, false, false, false, false, false, true),
-      new Move("Hou Lee Hua", "#|^|(B+K", "M", null, null, null, null, null),
-      new Move("Bea Her Hua", "@|*B+K", null, null, null, null, null, null, "GI vs. high, mid horizontal", true, false, false, true),
-      new Move("Retreating Bea Her Hua", "!|$|uB+K", null, null, null, null, null, null, "GI vs. high, mid horizontal", true, false, false, true),
-      new Move("Sliding", "RK", "L", null, null, null, null, null)
+      new Move("Fragrant Dream", "#|^|(A", "H", 16, -10, 0, 0, 18, "Returns to crouch when G cancelling 3rd hit", null, false, false, false, false, false, false, false, false, true),
+      new Move("Fragrant Dream", "#|^|(AB", "HM", 16, -8, 6, 6, 30, "Returns to crouch when G cancelling 3rd hit", null, false, false, false, false, false, false, false, false, true),
+      new Move("Fragrant Dream", "#|^|(ABA", "HMM", 16, -10, "LNC", "LNC", 62, "Returns to crouch when G cancelling 3rd hit", null, false, false, false, false, false, false, false, false, true),
+      new Move("Fragrant Dream ~ Silent Xia Sheng", "#|^|(ABa", "M", 38, -10, "LNC", "LNC", 32, null, true),  //hit-level  and impact speedis inconsistent between 8WR and the spreadsheet
+      new Move("Fragrant Fantasy", "#|^|(ABB", "HML", 40, -12, 4, "LNC", 28, "Returns to crouch when G cancelling 3rd hit", null, false, false, false, false, false, false, false, false, true),
+      new Move("Fragrant Fantasy ~ Silent Xia Sheng", "#|^|(ABb", "HML", 40, -12, 4, "LNC", 28, null, true),
+      new Move("Storming Lian Hua", "@|*A", "M", 22, -2, 8, 8, 20, "TC[3-8]"),
+      new Move("Lan Hua", "!|$|uA", "M", 24, -8, 0, "STN", 20, null),
+      new Move("Lan Hua", "!|$ua", "MH", 38, 2, 18, 18, null, "impact speed not certain"),
+      new Move("Playful Rhythm", "#|^|(B", "M", 20, -8, 4, "STN", 16, null),
+      new Move("Playful Rhythm", "#|^|(BB", "MM", 20, -14, 4, "STN", 40, null),
+      new Move("Playful Rhythm", "#|^|(Bb", "MM", 26, 6, "STN", 36, null, null, false, true, false, false, false, false, false, true),
+      new Move("Playful Rhythm ~ Laughin Bea Her Hua", "#|^|(B4", "M", 20, -8, 4, "STN", 16, "GI vs. high, mid vertical", true, false, false, true),
+      new Move("Playful Rhythm ~ Laughing Bea Her Hua", "#|^|(BB4", "MM", 20, -14, 4, "STN", 40, "GI vs. high, mid vertical", true, false, false, true),
+      new Move("Playful Rhythm ~ Silent Xia Sheng", "#|^|(b", "M", 20, null, null, null, null, null, true), //needs damage
+      new Move("Playful Slice", "@|*B", "MM", 20, -8, "STN", "STN", 28, null),
+      new Move("Vengeful Lian Hua", "!|$|uB", "M", 32, -20, "LNC", "LNC", 36, null),
+      new Move("Vengeful Lian Hua ~ Laughin Bea Her Hua", "!|$|uB4", "M", 32, -20, "LNC", "LNC", , "GI vs. high, middle vertical", true, false, false, true),
+      new Move("Woan Shyong Swing", "#|^|(K", "M", 12, -10, 2, 2, 18, null, null),
+      new Move("Mei Hua Kick", "@|*K", "M", 36, 2, "STN", "STN", 30, null),
+      new Move("Mei Hua Kick ~ Playful Xia Sheng", "@|*K2", "M", null, null, null, null, null, null, true), //no data available on this entry
+      new Move("Lian Hua Kicks", "!|$|uK", "L", 38, -10, "LNC", "LNC", 20, "TC[26~]"),
+      new Move("Lian Hua Kicks", "!|$|uKK", "LMM", 38, -6, 6, 6, 40, "TC[1-16] / TJ[16~]"),
+      new Move("Lian Hua Sweeps", "!|$|uK2K", "LL", 38, -16, "LNC", "LNC", 40, "TC[26~]"),
+      new Move("San Jaan", "#|^|(A+B", "MMM", 20, -12, "KND", "KND", 40),
+      new Move("San Jaan ~ Silent Xia Sheng", "#|^|(a+b", "MM", null, null, null, null, null, null, true), //no data available on this entry
+      new Move("Lian Hua Cannon", "@|*A+B", "M", 24, -16, "LNC", "LNC", "TC[8-20]"),
+      new Move("Reverse Shui Shian", "!|$|uA+B", "M", 28, -14, 2, "STN", 24, "Returns to downed when G cancelling", false, false, false, false, false, false, false, false, false, true),
+      new Move("Hou Lee Hua", "#|^|(B+K", "M", 18, -22, "LNC", "LNC", 40, "TC[4-11]"),
+      new Move("Bea Her Hua (close)", "@|*B+K", "l", 40, 4, "KND", "KND", null, "GI vs. high, mid horizontal", true, false, false, true),  //needs damage
+      new Move("Bea Her Hua (far)", "@|*B+K", "L", 44, -14, 18, 18, null, "GI vs. high, mid horizontal", true, false, false, true), //needs damage
+      new Move("Retreating Bea Her Hua", "!|$|uB+K", "M", 60, null, "KND", "KND", null, "GI vs. high, mid horizontal", true, false, false, true), //needs damage
+      new Move("Sliding", "RK", "L", 22, -22, "KND", "KND", 22, "TC[26-46] / TJ[6-26]")
     ],
     // Throws
     [

@@ -4475,15 +4475,16 @@ export class MoveService{
     [
       new Move("Yuen Chuei Shaur", "A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true), //just needs damage
       new Move("Long Ling Sheang", "4A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true), //needs damage
-      new Move("Tien E Sheang", "ZA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Yng Dyi Yann", "XA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Yuh Luen Shaur", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Shui Long Sheang", "Q2|3A+G", "M", null, null, null, null, null, "Breakable/Returns to downed", false, false, false, false, false, false, true), // Returns to downed
-      new Move("Lo Tsai Shaur ~ Reverse Chicken Kick", "Q1A+GB+K", "MM", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Lo Tsai Shaur ~ Reverse Chicken Kick(just)", "Q1A+GB+Kj", "MM", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Water Banquet", "214A+G", "HH", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Wind Chime", "]A+G|4A+G", "HH", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Twisting Lotus Flower", "S]A+G|4A+GB", "H", null, null, null, null, null, null, false, false, false, false, false, true, true)
+      new Move("Tien E Sheang", "ZA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),   //needs damage
+      new Move("Yng Dyi Yann", "XA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Yuh Luen Shaur", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      new Move("Shui Long Sheang", "Q2|3A+G", "M", 10, null, "KND", "KND", null, "Breakable/Returns to downed", false, false, false, false, false, false, true), // Returns to downed
+      new Move("Lo Tsai Shaur ~ Reverse Chicken Kick", "Q1A+G", "M", 10, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Lo Tsai Shaur ~ Reverse Chicken Kick", "Q1A+GB+K", "MM", 19, null, "KND, "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Lo Tsai Shaur ~ Reverse Chicken Kick(just)", "Q1A+GB+Kj", "MM", 19, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Water Banquet", "214A+G", "HH", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Wind Chime", "]A+G|4A+G", "HH", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Twisting Lotus Flower", "S]A+G|4A+GB", "H", 18, 18, "STN", "STN", null, null, false, false, false, false, false, true, true)
     ],
     // ************ Stances *************
     // Hou Lee

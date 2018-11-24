@@ -4473,8 +4473,8 @@ export class MoveService{
     ],
     // Throws
     [
-      new Move("Yuen Chuei Shaur", "A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Long Ling Sheang", "4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Yuen Chuei Shaur", "A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true), //just needs damage
+      new Move("Long Ling Sheang", "4A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true), //needs damage
       new Move("Tien E Sheang", "ZA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
       new Move("Yng Dyi Yann", "XA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
       new Move("Yuh Luen Shaur", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
@@ -4488,36 +4488,36 @@ export class MoveService{
     // ************ Stances *************
     // Hou Lee
     [
-      new Move("Hou Lee", "B+K", null, null, null, null, null, null, null, true, false, true),
-      new Move("Lower Great Wall Punishment", "[B", "M", null, null, null, null, null),
-      new Move("Lower Great Wall", "[b", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, true)
+      new Move("Hou Lee", "B+K", "M", , null, null, null, null, null, true, false, true),
+      new Move("Lower Great Wall Punishment", "[B", "M", 20, -6, "LNC", "LNC", 45, "TC[1-6]"),
+      new Move("Lower Great Wall", "[b", "M", 20, 8, "KND", "KND", 55, "TC[1-5]", false, false, false, false, false, false, false, true)
     ],
     // Silent Xia Sheng
     [
       new Move("Silent Xia Sheng", "b+k", null, null, null, null, null, null, null, true),
-      new Move("Splitting Mist", "]A", "H", null, null, null, null, null),
-      new Move("Waterfall", "]B", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Waterfall", "]b", "M", null, null, null, null, null, null, false, false, true, false, false, false, false, true),
-      new Move("Rising Cloud", "]K", "M", null, null, null, null, null, null, false, true),
-      new Move("Great Wall", "]A+B", "M", null, null, null, null, null, null, false, true),
-      new Move("Dawn Blade", "]z+x6", "H", null, null, null, null, null, null, false, true),
+      new Move("Splitting Mist", "]A", "H", 18, -2, 8, "STN", 26),  
+      new Move("Waterfall", "]B", "M", 28, -10, "KND", "KND", 35, null, false, false, true, false, false, false, false, false, false),
+      new Move("Waterfall", "]b", "M", 46, 12, "KND", "KND", 45, null, false, false, true, false, false, false, false, true), //conflicting data on impact speed between 8WR and the spreadsheet
+      new Move("Rising Cloud", "]K", "M", 13, -11, 7, 7, 16, "TC[1-8]", false, true),
+      new Move("Great Wall", "]A+B", "M", 10, -16, "KND", "KND", 38, null, false, true),
+      new Move("Dawn Blade", "]z+x6", "H", 10, -6, "KND", "KND", 38, null, false, true),
       new Move("Bea Her Hua", "]B+K", null, null, null, null, null, null, "GI vs. high, mid horizontal", true, false, false, true),
-      new Move("Wind Chime", "]A+G|4A+G", "HH", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Wind Chime", "]A+G|4A+G", "HH", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true), //needs damage
       new Move("Playful Xia Sheng", "S]2", null, null, null, null, null, null, "Can be shifted to follow-up during SXS/Can be held", true, false, false, false, false, true),
-      new Move("Summer Smile", "]K+G", "H", null, null, null, null, null),
-      new Move("Summer Blessing", "]6K+G", "MM", null, null, null, null, null),
-      new Move("Summer Delight", "]4K+G", "H", null, null, null, null, null)
+      new Move("Summer Smile", "]K+G", "H", 51, 0, 10, 10, 1),
+      new Move("Summer Blessing", "]6K+G", "MM", 25, 0, 10, 10, 1.1),
+      new Move("Summer Delight", "]4K+G", "H", 21, -10, -10, -10, 1)
     ],
     // Bea Her Hua
     [
       new Move("Bea Her Hua", "@|*B+K", null, null, null, null, null, null, "GI vs. high, mid horizontal", true, false, false, true),
-      new Move("Ma Chiueh", "{A", "", null, null, null, null, null),
-      new Move("Jade Break", "{B", "", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Feint Wheel Kick", "{K", "", null, null, null, null, null),
-      new Move("Feint Wheel Kick ~ Side Step", "{K2|8", "", null, null, null, null, null, null, true),
-      new Move("Hou Ling Thorn", "{A+B", "H", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Shun Ling Thorn", "{A+B6", "H", null, null, null, null, null, null, false, true),
-      new Move("Hou Ling Thorn ~ Playful Xia Sheng", "{A+B2", null, null, null, null, null, null, null, true),
+      new Move("Ma Chiueh", "{A", "H", 18, -10, "STN", "STN", 24),
+      new Move("Jade Break", "{B", "B", 16, -2, 10, 10, 25, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Feint Wheel Kick", "{K", "LM", 31, -9, "KND", "KND", 42, "TC[19~"),
+      new Move("Feint Wheel Kick ~ Side Step", "{K2|8", "LML", 31, -46, "LNC", "LNC", 64, null, true),
+      new Move("Hou Ling Thorn", "{A+B", "H", 42, 10, "KND", "KND", 40, null, false, true, false, false, false, false, false, true),
+      new Move("Shun Ling Thorn", "{A+B6", "H", 42, -4, "KND", "KND", 100, null, false, true),
+      new Move("Hou Ling Thorn ~ Playful Xia Sheng", "{A+B2", "H", 42, 10, "KND", "KND", 40, "TC[6-24, 1~]", true),
       new Move("Hou Ling Thorn ~ Playful Xia Sheng", "{z+x2", null, null, null, null, null, null, null, true)
     ]
   ]

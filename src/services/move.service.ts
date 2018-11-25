@@ -4294,7 +4294,7 @@ export class MoveService{
     // Gauge Attacks
     [
       new Move("Sublimating Blade", "A+B+K", "M", 16, -20, "LNC", "LNC", 15, null, false, false, false, false, false, false, true, false, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", 126, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Soul Charge", "4A+B+K", "m", 2, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true), //inconsistent between 8WR and the spreadsheet
       new Move("Dazzling Song", "SA", "H", 10, -10, 0, 0, 8, null, false, false, false, false, false, true),
       new Move("Dazzling Song", "SAB", "HM", 10, -24, "STN", "STN", 28, "TC[17-38]", false, false, false, false, false, true),
       new Move("Wind Blossom Song", "SAA", "HHM", 16, -10, 0, 0, 10, null, false, false, false, false, false, true),
@@ -4314,7 +4314,7 @@ export class MoveService{
       new Move("Shining Swallow ~ Silent Xia Sheng", "S6Kb", "MM", 19, -10, 6, 18, 20, "SS / GI[8-23]", true, false, false, true, false, true),
       new Move("Drunken Woan Shyong Swing", "S#|^|(K", "M", 12, -10, 2, 2, 18, null, false, false, false, false, false, true),
       new Move("Drunken Woan Shyong Swing", "S#|^|(KK", "ML", 12, -16, 2, "KND", null, null, false, false, false, false, false, true),
-      new Move("Woan Shyong Feint Divide", "S#|&|(KAAB", "MMMML", 21, -18, "LNC", "LNC", 68, "TC[28~]", false, false, true, false, false, true),
+      new Move("Woan Shyong Feint Divide", "S#|^|(KAAB", "MMMML", 21, -18, "LNC", "LNC", 68, "TC[28~]", false, false, true, false, false, true),
       new Move("Woan Shyong Feint Kick", "S#|^|(KAAK", "MMMMM", 31, -16, 0, 0, 24, "TJ[15-30]", false, false, false, false, false, true),
       new Move("Radiant Ring", "S#|^|(A+B", "MMM", 20, -12, "KND", "KND", 40, null, false, false, false, false, false, true),
       new Move("Radiant Ring", "S#|^|(A+BB", "MMMM", 20, 8, "KND", "KND", 90, null, false, false, false, false, false, true),
@@ -4333,7 +4333,7 @@ export class MoveService{
       new Move("Beautiful Melody", "AA", "HH", 10, -10, 0, 0, 18, null),
       new Move("Beautiful Melody", "AAA", "HHM", 10, -8, 4, "KND", 36, null, false, false, false, false, false, false, false, false, false, true),
       new Move("Beautiful Rhythm", "AAB", "HHM", 10, -14, 4, 4, 40, null),
-      new Move("Beautiful Rhythm ~ Laughing Bea Her Hua", "AAB4", "HHM", -14, -14, 4, 4, 40, "GI vs. high, mid vertical", true, false, false, true),
+      new Move("Beautiful Rhythm ~ Laughing Bea Her Hua", "AAB4", "HHM", 10, -14, 4, 4, 40, "GI vs. high, mid vertical", true, false, false, true), //impact speed inconsistent between 8WR and the spreadsheet
       new Move("Beautiful Rhythm ~ Silent Xia Sheng", "Aa", "HH", 10, null, null, null, null, null, true),
       new Move("Lian Hua Water Rhythm", "6A", "H", 14, -4, 4, 4, 18, null, false, false),
       new Move("Lian Hua Water Rhythm", "6AA", "HL", 14, -10, 4, 4, 36, null),
@@ -4347,7 +4347,7 @@ export class MoveService{
       new Move("Sweet Harmony", "4AA", "MH", 28, -6, 4, "STN", 34, "GI vs. high, mid horizontal", false, false, false, true),
       new Move("Sweet Harmony ~ Silent Xia Sheng", "4a", "M", 28, null, null, null, null, null, true, false, false, true),
       new Move("Chai Hua Slice", "C2A", "S", 12, -6, 6, 6, 10, null, false, false, true),
-      new Move("Mei Hua Twilight", "C3A", "LH", -10, 0, 0, 24, null),
+      new Move("Mei Hua Twilight", "C3A", "LH", 24, -10, 0, 0, 24, null),
       new Move("Mei Hua Twilight", "C3AA", "LHH", 24, -12, 4, 4, 42, null),
       new Move("Mei Hua Twilight ~ Bea Her Hua", "C3Aa", "LHH", 19, -12, 4, 4, 18, "GI vs. high, mid horizontal", true, false, false, true),
       new Move("Mei Hua Divide", "C3AB", "LHH", 29, -8, "STN", "STN", 26, null),
@@ -4518,7 +4518,7 @@ export class MoveService{
     [
       new Move("Bea Her Hua", "@|*B+K", null, null, null, null, null, null, "GI vs. high, mid horizontal", true, false, false, true),
       new Move("Ma Chiueh", "{A", "H", 18, -10, "STN", "STN", 24),
-      new Move("Jade Break", "{B", "B", 16, -2, 10, 10, 25, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Jade Break", "{B", "M", 16, -2, 10, 10, 25, "Shifts to clash upon hit", false, false, false, false, true),
       new Move("Feint Wheel Kick", "{K", "LM", 31, -9, "KND", "KND", 42, "TC[19~"),
       new Move("Feint Wheel Kick ~ Side Step", "{K2|8", "LML", 31, -46, "LNC", "LNC", 64, null, true),
       new Move("Hou Ling Thorn", "{A+B", "H", 42, 10, "KND", "KND", 40, null, false, true, false, false, false, false, false, true),

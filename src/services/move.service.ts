@@ -4302,7 +4302,7 @@ export class MoveService{
       new Move("Wind Blossom Song", "SAABB", "HHMMM", 16, -12, 4, 10, 55, null, false, false, false, false, false, true),
       new Move("Qing Quake Step", "SAABK", "HHMMm", 30, 4, "STN", "STN", 36, "Becomes a low attack when at a distance", false, false, false, false, false, true, false, true),
       new Move("Red Moon Chime", "S6A", "H", 14, -4, 4, 4, 18, null, false, false, false, false, false, true),
-      new Move("Red Moon Chime", "S6AK", "HLM", 14, -14, "LNC", "LNC", 38, TC[22-52], false, false, false, false, false, true),
+      new Move("Red Moon Chime", "S6AK", "HLM", 14, -14, "LNC", "LNC", 38, "TC[22-52]", false, false, false, false, false, true),
       new Move("Lian Hua Pagoda Sweeps", "S6AK2K", "HLL", 14, -6, 6, 6, 58, null, false, false, false, false, false, true),
       new Move("Shining Blossom", "S3A", "L", 22, -18, -2, 2, 14, "TC[11~]", false, false, true, false, false, true),
       new Move("Shining Blossom", "S3AA", "LM", 22, -4, "STN", "STN", 32, "TC[31~]", false, false, true, false, false, true),
@@ -4314,12 +4314,12 @@ export class MoveService{
       new Move("Shining Swallow ~ Silent Xia Sheng", "S6Kb", "MM", 19, -10, 6, 18, 20, "SS / GI[8-23]", true, false, false, true, false, true),
       new Move("Drunken Woan Shyong Swing", "S#|^|(K", "M", 12, -10, 2, 2, 18, null, false, false, false, false, false, true),
       new Move("Drunken Woan Shyong Swing", "S#|^|(KK", "ML", 12, -16, 2, "KND", null, null, false, false, false, false, false, true),
-      new Move("Woan Shyong Feint Divide", "S#|&|(KAAB", "MMMML", 21, -18, "LNC", "LNC", 68, "TC[28~], false, false, true, false, false, true),
+      new Move("Woan Shyong Feint Divide", "S#|&|(KAAB", "MMMML", 21, -18, "LNC", "LNC", 68, "TC[28~]", false, false, true, false, false, true),
       new Move("Woan Shyong Feint Kick", "S#|^|(KAAK", "MMMMM", 31, -16, 0, 0, 24, "TJ[15-30]", false, false, false, false, false, true),
       new Move("Radiant Ring", "S#|^|(A+B", "MMM", 20, -12, "KND", "KND", 40, null, false, false, false, false, false, true),
       new Move("Radiant Ring", "S#|^|(A+BB", "MMMM", 20, 8, "KND", "KND", 90, null, false, false, false, false, false, true),
       new Move("Scintillating Waterfall", "S#|^|(B+K", "MM", 18, -12, "LNC", "LNC", 40, "TC[3-10]", false, false, true, false, false, true),
-      new Move("Scintillating Waterfall", "S#|^|(B+KB", "MM", 18, -12, "STN", "STN", 70, TC[29~], false, false, true, false, false, true),
+      new Move("Scintillating Waterfall", "S#|^|(B+KB", "MM", 18, -12, "STN", "STN", 70, "TC[29~]", false, false, true, false, false, true),
       new Move("Scintillating Waterfall", "S#|^|(B+KxG", "M", null, null, null, null, null, null, true, false, false, false, false, true),
       new Move("Silent Xia Sheng", "Sb+k", null, null, null, null, null, null, "GI vs. high, mid(except kicks)", true, false, false, true, false, true),
       new Move("Heavenly Waterfall", "S]B", "M", 28, 12, "STN", "STN", 45, "GI[1-2]", false, false, true, false, false, true, false, true),
@@ -4342,7 +4342,7 @@ export class MoveService{
       new Move("Angry Shui Shian ~ Playful Xia Sheng", "3A2", "L", 22, -18, -2, 2, 14, null, true),
       new Move("Rhythm Halt", "2A", "S", 12, -6, 6, 6, 10, null, false, false, true),
       new Move("Yann Divide", "1A", "L", 28, -16, 4, 4, 22, null, false, true, true),
-      new Move("Yann Divide ~ facing away", "1zG", 28, -16, 4, 4, 22, null, null, false, false, true),
+      new Move("Yann Divide ~ facing away", "L", "1zG", 28, -16, 4, 4, 22, null, null, false, false, true),
       new Move("Sweet Harmony", "4A", "M", 28, -10, 4, 4, 20, null),
       new Move("Sweet Harmony", "4AA", "MH", 28, -6, 4, "STN", 34, "GI vs. high, mid horizontal", false, false, false, true),
       new Move("Sweet Harmony ~ Silent Xia Sheng", "4a", "M", 28, null, null, null, null, null, true, false, false, true),
@@ -4412,14 +4412,14 @@ export class MoveService{
       new Move("Star Kick", "JKK", "MMM", 18, 2, "STN", "STN", 42, "TJ[16-36]"),
       new Move("Star Kick ~ Playful Xia Sheng", "JKK2", "H", null, null, null, null, null, null, true), //not listed anywhere
       new Move("Spinning Yuen Kick", "TK", "H", 16, -4, 6, 6, 18, null),
-      new Move("Spinning Woan Shyong Nibble", "T2K", "L", 18, -14, -4, -4, 18, TC[13~], false, false, true)
+      new Move("Spinning Woan Shyong Nibble", "T2K", "L", 18, -14, -4, -4, 18, "TC[13~]", false, false, true)
     ],
     // Simultaneous Press Moves
     [
       new Move("Hou Ling Thorn", "A+B", "H", 42, 10, "KND", "KND", 40, "TC[6-24]", false, true, false, false, false, false, false, true),
       new Move("Shun Ling Thorn", "A+B6", "HHH", 42, -4, "KND", "KND", 110, null, false, true),
       new Move("Shun Ling Thorn ~ Playful Xia Sheng", "A+B2", "H", 42, 10, "KND", "KND", 40, null, true),
-      new Move("Shun Ling Thorn ~ Playful Xia Sheng", "z+x2", "H", 42, 10, "KND", "KND", 40, true),
+      new Move("Shun Ling Thorn ~ Playful Xia Sheng", "z+x2", "H", 42, 10, "KND", "KND", 40, null, true),
       new Move("Twin Mei Hua", "6A+B", "MM", 22, -10, "STN", "STN", 36, "GI vs. high, mid vertical", false, true, false, true),
       new Move("Fluttering Lan Se Ren", "2A+B", "M", 28, -12, "STN", "STN", 20, "GI vs. low", false, true, false, true),
       new Move("Muu Jiann Retreat", "4A+B", "MM", 26, -12, "STN", "STN", 38, "GI vs. high, mid horizontal", false, true, false, true),
@@ -4459,7 +4459,7 @@ export class MoveService{
       new Move("Playful Rhythm ~ Silent Xia Sheng", "#|^|(b", "M", 20, null, null, null, null, null, true), //needs damage
       new Move("Playful Slice", "@|*B", "MM", 20, -8, "STN", "STN", 28, null),
       new Move("Vengeful Lian Hua", "!|$|uB", "M", 32, -20, "LNC", "LNC", 36, null),
-      new Move("Vengeful Lian Hua ~ Laughin Bea Her Hua", "!|$|uB4", "M", 32, -20, "LNC", "LNC", , "GI vs. high, middle vertical", true, false, false, true),
+      new Move("Vengeful Lian Hua ~ Laughin Bea Her Hua", "!|$|uB4", "M", 32, -20, "LNC", "LNC", null, "GI vs. high, middle vertical", true, false, false, true), //needs damage
       new Move("Woan Shyong Swing", "#|^|(K", "M", 12, -10, 2, 2, 18, null, null),
       new Move("Mei Hua Kick", "@|*K", "M", 36, 2, "STN", "STN", 30, null),
       new Move("Mei Hua Kick ~ Playful Xia Sheng", "@|*K2", "M", null, null, null, null, null, null, true), //no data available on this entry
@@ -4485,7 +4485,7 @@ export class MoveService{
       new Move("Yuh Luen Shaur", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Shui Long Sheang", "Q2|3A+G", "M", 10, null, "KND", "KND", null, "Breakable/Returns to downed", false, false, false, false, false, false, true), // Returns to downed
       new Move("Lo Tsai Shaur ~ Reverse Chicken Kick", "Q1A+G", "M", 10, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Lo Tsai Shaur ~ Reverse Chicken Kick", "Q1A+GB+K", "MM", 19, null, "KND, "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Lo Tsai Shaur ~ Reverse Chicken Kick", "Q1A+GB+K", "MM", 19, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Lo Tsai Shaur ~ Reverse Chicken Kick(just)", "Q1A+GB+Kj", "MM", 19, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Water Banquet", "214A+G", "HH", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Wind Chime", "]A+G|4A+G", "HH", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
@@ -4494,7 +4494,7 @@ export class MoveService{
     // ************ Stances *************
     // Hou Lee
     [
-      new Move("Hou Lee", "B+K", "M", , null, null, null, null, null, true, false, true),
+      new Move("Hou Lee", "B+K", "M", null, null, null, null, null, null, true, false, true),
       new Move("Lower Great Wall Punishment", "[B", "M", 20, -6, "LNC", "LNC", 45, "TC[1-6]"),
       new Move("Lower Great Wall", "[b", "M", 20, 8, "KND", "KND", 55, "TC[1-5]", false, false, false, false, false, false, false, true)
     ],

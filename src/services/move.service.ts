@@ -4411,7 +4411,7 @@ export class MoveService{
       new Move("Jade Break", "b+g", "M", 66, null, null, null, 40, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
       new Move("Place Rhythm", "rA", "H", 36, -8, -7, -7, 20, null, false, true, true),
       new Move("Place Rhythm", "rAA", "HL", 36, -4, "LNC", "LNC", 42, "TC[20~]", false, true, true),
-      new Move("Jewel Song", "rAB", "HM", 32, -4, "LNC", "LNC", "TC[1-2] / to FC", null, false, true),
+      new Move("Jewel Song", "rAB", "HM", 32, -4, "LNC", "LNC", null, "TC[1-2] / to FC", false, true),
       new Move("Palace Rhythm ~ Facing away", "rAzG", "H", null, null, null, null, null, null, false, true, true),
       new Move("Auspicious Strike", "rB", "M", 34, 15, "KND", "KND", 36, null, false, true, false, false, false, false, false, true),
       new Move("Lin Yuen Kick", "rK", "M", 48, -6, 12, 12, 24, null, false, true),
@@ -4468,7 +4468,7 @@ export class MoveService{
       new Move("Angry Shui Shian ~ Playful Xia Sheng", "3A2", "L", 22, -18, -2, 2, 14, null, true),
       new Move("Rhythm Halt", "2A", "S", 12, -6, 6, 6, 10, null, false, false, true),
       new Move("Yann Divide", "1A", "L", 28, -16, 4, 4, 22, null, false, true, true),
-      new Move("Yann Divide ~ facing away", "L", "1zG", 28, -16, 4, 4, 22, null, null, false, false, true),
+      new Move("Yann Divide ~ facing away", "1zG", null, null, null, null, null, null, null, false, false, true),
       new Move("Sweet Harmony", "4A", "M", 28, -10, 4, 4, 20, null),
       new Move("Sweet Harmony", "4AA", "MH", 28, -6, 4, "STN", 34, "GI vs. high, mid horizontal", false, false, false, true),
       new Move("Sweet Harmony ~ Silent Xia Sheng", "4a", "M", 28, null, null, null, null, null, true, false, false, true),
@@ -4594,10 +4594,10 @@ export class MoveService{
       new Move("Lian Hua Sweeps", "!|$|uK2K", "LL", 38, -16, "LNC", "LNC", 40, "TC[26~]"),
       new Move("San Jaan", "#|^|(A+B", "MMM", 20, -12, "KND", "KND", 40),
       new Move("San Jaan ~ Silent Xia Sheng", "#|^|(a+b", "MM", null, null, null, null, null, null, true), //no data available on this entry
-      new Move("Lian Hua Cannon", "@|*A+B", "M", 24, -16, "LNC", "LNC", "TC[8-20]"),
+      new Move("Lian Hua Cannon", "@|*A+B", "M", 24, -16, "LNC", "LNC", null, "TC[8-20]"),
       new Move("Reverse Shui Shian", "!|$|uA+B", "M", 28, -14, 2, "STN", 24, "Returns to downed when G cancelling", false, false, false, false, false, false, false, false, false, true),
       new Move("Hou Lee Hua", "#|^|(B+K", "M", 18, -22, "LNC", "LNC", 40, "TC[4-11]"),
-      new Move("Bea Her Hua (close)", "@|*B+K", "l", 40, 4, "KND", "KND", null, "GI vs. high, mid horizontal", true, false, false, true),  //needs damage
+      new Move("Bea Her Hua (close)", "@|*B+K", "S", 40, 4, "KND", "KND", null, "GI vs. high, mid horizontal", true, false, false, true),  //needs damage
       new Move("Bea Her Hua (far)", "@|*B+K", "L", 44, -14, 18, 18, null, "GI vs. high, mid horizontal", true, false, false, true), //needs damage
       new Move("Retreating Bea Her Hua", "!|$|uB+K", "M", 60, null, "KND", "KND", null, "GI vs. high, mid horizontal", true, false, false, true), //needs damage
       new Move("Sliding", "RK", "L", 22, -22, "KND", "KND", 22, "TC[26-46] / TJ[6-26]")

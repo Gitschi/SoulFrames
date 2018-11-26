@@ -449,7 +449,6 @@ export class MoveService{
       new Move("Tragedy of War", "3|6|9K", null, null, null, null, null, null, "SS / TC[2~] / 20F / Ax", true),
       new Move("Tragedy of War", "T6K", null, null, null, null, null, null, "SS / TC[2~] / 20F / Ax", true),
       new Move("Tragedy of Performance", "#|^|(K", null, null, null, null, null, null, "Dodges high, mid & low", true),
-      new Move("Tragedy of War", "T6K", null, null, null, null, null, null, null, true),
       new Move("Scream of Defiance", "]A", "H", 22, 2, "KND", "KND", 40, "BA / TC[1-5] / Ax", false, false, false, false, false, false, false, true),
       new Move("War and Destruction", "]B", "M", 28, 8, "LNC", "LNC", 38, "BA / LH (Impact Counter) / TC[1-7] / STN on ground hit / Ax", false, true, false, false, false, false, false, true),
       new Move("Fall of the Wise", "]6K", "LL", 24, -24, 0, 0, 30, "NC / TC[1-48] / Ax"),
@@ -459,7 +458,7 @@ export class MoveService{
     ],
     // Comedy of Errors
     [
-      new Move("Comedy of Errors", "1|4|uK", null, null, null, null, null, null, null, true),
+      new Move("Comedy of Errors", "1|4|7K", null, null, null, null, null, null, null, true),
       new Move("Comedy of Performance", "!|$|uK", null, null, null, null, null, null, "Dodges high, mid & low", true),
       new Move("Comedy of Errors", "T4K", null, null, null, null, null, null, null, true),
       new Move("Premonition of Abraxas", "{A", "HM", 24, -8, 4, 4, 18),

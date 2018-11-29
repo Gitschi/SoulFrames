@@ -4754,39 +4754,46 @@ export class MoveService{
   Yoshimitsu = [
     // Reversal Edge Attacks
     [
-      new Move("Johari Thistle", "B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Johari Thistle", "b+g", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
-      new Move("Enma's Flame ~ Manji Dragonfly", "rA", "H", null, null, null, null, null, null, true, true),
-      new Move("Shurado War Fan ~ Manji Dragonfly", "rAA", "HH", null, null, null, null, null, null, true, true, false, false, false, true, false, true),
-      new Move("Famished Preta", "rB", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Road to Madness", "rK", "M", null, null, null, null, null, "Shifts to attack throw upon hit/Absorbs soul gauge", false, true, false, false, false, false, true)
+      new Move("Johari Thistle", "B+G", "M", 46, null, null, null, 30, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Johari Thistle", "b+g", "M", 66, null, null, null, 40, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Enma's Flame ~ Manji Dragonfly", "rA", "H", 36, -9, 1, 1, 24, null, true, true),
+      new Move("Shurado War Fan ~ Manji Dragonfly", "rAA", "HH", 36, 8, "STN", "STN", 44, "TJ[1~]", true, true, false, false, false, true, false, true),
+      new Move("Famished Preta", "rB", "M", 34, 14, "LNC", "LNC", 36, null, false, true, false, false, false, false, false, true),
+      new Move("Road to Madness", "rK", "M", 48, -16, "STN", "STN", 20, "Shifts to attack throw upon hit/Absorbs soul gauge", false, true, false, false, false, false, true)
     ],
     // Gauge Attacks
     [
-      new Move("Ghost Thief Funeral", "A+B+K", "M", null, null, null, null, null, "Shifts to attack throw upon hit/Absorbs soul gauge", false,false, false, false, false, false, true, true, false, false, true),
-      new Move("Banishing Kurikara", "AAA+B", "HHMM", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, true, false, false, true),
-      new Move("Swirling Blossom", "4zA+B", "HHHHHH", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, true, false, false, true),
-      new Move("Shoki Gehosen", "6BBA+B", "MHM", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, false, false, false, true),
-      new Move("Shoki Gehosen", "6BBBA+B", "MHHM", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, false, false, false, true),
-      new Move("Thundercloud Rider", "6cA+B", "HMM", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, false, false, false, true),
-      new Move("Scowling Moon God ~ Manji Dragonfly", "WAA+B", "MM", null, null, null, null, null, "Consumes soul gauge/No gauge cost when soul charge", true, false, false, false, false, false, false, false, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
-      new Move("Oni Killer", "S3AA", "MH", null, null, null, null, null, "Shifts to attack throw upon hit/Absorbs soul gauge", false, false, false, false, false, true, true),
-      new Move("Manji Tatsumi", "SA+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
-      new Move("Nimbus", "S4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
-      new Move("Mandala Shredder", "S{AB", "MMMM", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
-      new Move("Samsara Pandemonium", "S{BvBBB", "MMMMMM", null, null, null, null, null, "Shifts to attack throw upon hit/Absorbs soul gauge", false, false, false, false, false, true, true, false, true),
-      new Move("Rising Kite Rubia ~ Super Dragonfly", "S{KA", "LMMM", null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Super Dragonfly", "S{8B+K", null, null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Parachute Spinner", "S}A", "MM", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Transcendent Dragonfly", "S}B", "M", null, null, null, null, null, null, false, false, false, false, false, true, false, false, true),
-      new Move("Acrobatic Bliss", "S}K", "m", null, null, null, null, null, "When landing press K(just) to increase soul gauge", false, false, false, false, false, true),
-      new Move("Spinning Fall ~ Flea", "S}B+K", "M", null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Super Dragonfly ~ Manji Dragonfly", "S}8B+K", null, null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Daruma Drop ~ Indian Stance", "S}2B+K", "mM", null, null, null, null, null, "Becomes a low attack when at distance", true, false, false, false, false, true, false, true),
+      new Move("Ghost Thief Funeral", "A+B+K", "M", 8, 4, 9, 9, 36, "Shifts to attack throw upon hit/Absorbs soul gauge", false,false, false, false, false, false, true, true, false, false, true),
+      new Move("Soul Charge", "4A+B+G", "m", 6, 0, 8, 8, 0, "Freezes on F3", false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Banishing Kurikara", "AAA+B", "HMM", 14, 2, 8, 8, 33, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Swirling Blossom", "4zA+B", "HHHHHH", 18, 8, "KND", "KND", 26, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Shoki Gehosen", "6BBA+B", "MHM", 14, -8, "LNC", "LNC", 56, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, false, false, false, true),
+      new Move("Shoki Gehosen", "6BBBA+B", "MHHM", 14, -8, "LNC", "LNC", 64, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, false, false, false, true),
+      new Move("Thundercloud Rider", "6KA+B", "HMM", 16, -16, "KND", "KND", 80, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, false, false, false, true), //changed from 6cA+B
+      new Move("Scowling Moon God ~ Manji Dragonfly", "WAA+B", "MM", 16, -9, "KND", "KND", 30, "Consumes soul gauge/No gauge cost when soul charge", true, false, false, false, false, false, false, false, false, false, true),
+      new Move("Oni Killer", "S3A", "M", 14, 12, -6, -4, 6, "Shifts to attack throw upon hit/Absorbs soul gauge", null, null, null, null, null, null, null),
+      new Move("Oni Killer", "S3AA", "MH", 14, -4, 4, 4, 24, "Shifts to attack throw upon hit/Absorbs soul gauge/TC[5-8]", false, false, false, false, false, true, true),
+      new Move("Manji Tatsumi", "SA+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, true, true), //I couldn't find any data on this one
+      new Move("Nimbus", "S4A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
+      new Move("Mandala Shredder", "S{A", "MMM", 18, -12, "KND", "KND", 36, "TJ[1~]", false, false, false, false, false, true, false, true),
+      new Move("Mandala Shredder", "S{AB", "MMMM", 18, 2, "KND", "KND", 58, "TC[33-68]", false, false, false, false, false, true, false, true),
+      new Move("Samsara Pandemonium", "S{B", null, 30, 2, "STN", "STN", 26, "Shifts to attack throw upon hit/Absorbs soul gauge", null, null, null, null, null, null, null, null, null),
+      new Move("Samsara Pandemonium", "S{BvB", null, 30, -18, 26, 26, 42, "Shifts to attack throw upon hit/Absorbs soul gauge", null, null, null, null, null, null, null, null, null),
+      new Move("Samsara Pandemonium", "S{BvBB", null, 30, 0, "LNC", "LNC", 72, "Shifts to attack throw upon hit/Absorbs soul gauge", null, null, null, null, null, null, null, null, null),
+      new Move("Samsara Pandemonium", "S{BvBBB", "MMMMMM", 30, -6, 2, 2, 90, "Shifts to attack throw upon hit/Absorbs soul gauge", false, false, false, false, false, true, true, false, true),
+      new Move("Rising Kite Rubia", "S{K", "L", 20, -16, 8, 8, 26, "TJ[1-17]", null, null, null, null, null, null),
+      new Move("Rising Kite Rubia ~ Super Dragonfly", "S{KA", "LMMM", 20, 6, "KND", "KND", 56, "TJ[1~]", true, false, false, false, false, true),
+      new Move("Super Dragonfly", "S{8B+K", null, null, null, null, null, null, null, true, false, false, false, false, true), //no data available
+      new Move("Parachute Spinner", "S}A", "MM", 18, -8, "KND", "KND", 60, "TJ[1~]", false, false, false, false, false, true),
+      new Move("Transcendent Dragonfly", "S}B", "M", 21, 2, "STN", "STN", 30, "TC[22-32] / TJ[1-22]", false, false, false, false, false, true, false, false, true),
+      new Move("Acrobatic Bliss", "S}K", "m", 65, -100, "STN", "STN", 30, "When landing press K(just) to increase soul gauge", false, false, false, false, false, true),
+      new Move("Spinning Fall ~ Flea", "S}B+K", "M", 54, 0, "STN", "STN", 60, "TJ[1-60]", true, false, false, false, false, true),
+      new Move("Super Dragonfly ~ Manji Dragonfly", "S}8B+K", null, null, null, null, null, null, null, true, false, false, false, false, true), //no data available
+      new Move("Daruma Drop ~ Indian Stance", "S}2B+K", "mM",54, 25, "KND", "KND", 70, "TC[60-61] / TJ[3-60,1~]/Becomes a low attack when at distance", true, false, false, false, false, true, false, true),
       new Move("Paradise Death", "S}A+K", "M", null, null, null, null, null, "Costs health/Returns to downed position", false, false, false, false, false, true, false, false, true),
       new Move("Super Dragonfly ~ Move", "S}6|2|8|4", null, null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Shurado War Fan ~ Manji Dragonfly", "rAA", "HH", null, null, null, null, null, null, true, true, false, false, false, true, false, true)
+      new Move("Shurado War Fan", "rA", "H", 36, -9, 1, 1, 24, null, true, true, false, false, false, true, false, true), //data may be inacurate
+      new Move("Shurado War Fan ~ Manji Dragonfly", "rAA", "HH", 36, 8, "STN", "STN", 44, null, true, true, false, false, false, true, false, true)
     ],
     // Horizontal Moves
     [

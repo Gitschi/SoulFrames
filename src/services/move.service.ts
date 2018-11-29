@@ -1681,186 +1681,268 @@ export class MoveService{
   Maxi = [
     // Reversal Edge Attacks
     [
-      new Move("Snapping Leviathan", "B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Snapping Leviathan", "b+g", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
-      new Move("Crashing Wave", "rAA", "HL", null, null, null, null, null, null, false, true, true),
-      new Move("Crashing Wave ~ Behind Lower", "rA", "H", null, null, null, null, null, null, true, true),
-      new Move("Crashing Wave ~ Right Outer", "ra", "H", null, null, null, null, null, null, true, true),
-      new Move("Wave Breaker ~ Left Inner", "rB", "M", null, null, null, null, null, "Shifts to clash upon guard", true, true, false, false, false, false, false, true),
-      new Move("Incense Burner", "rK", "M", null, null, null, null, null, null, false, true)
+      new Move("Snapping Leviathan", "B+G", "M", 16, -4, 4, 4, 35, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Snapping Leviathan", "b+g", "M", 16, null, null, null, 45, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      
+      new Move("Crashing Wave ~ Behind Lower", "rA", "H", 36, -17, 2, 2, 18, null, true, true),
+      new Move("Crashing Wave ~ Right Outer", "ra", "H", 36, -17, 2, 2, 18, null, true, true),
+      new Move("Crashing Wave", "rAA", "HL", 36, -14, "LNC", "LNC", 38, null, false, true, true),
+      
+      new Move("Wave Breaker ~ Left Inner", "rB", "M", 34, 24, "LNC", "LNC", 24, "Shifts to clash upon guard", true, true, false, false, false, false, false, true),
+      new Move("Incense Burner", "rK", "M", 48, -6, "LNC", "LNC", 24, null, false, true)
     ],
     // Gauge Attacks
     [
-      new Move("Raging Dragon Zodiac", "A+B+K", "M", null, null, null, null, null, "Return to Right Outer with A+B+K(hold)", false, false, false, false, false, false, true, false, false, false, true),
-      new Move("Raging Dragon Zodiac: Reprisal", "☻A+B+K", "M", null, null, null, null, null, "Return to Right Outer with A+B+K(hold)", false, false, false, false, false, false, true, true, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Raging Dragon Zodiac", "A+B+K", "M", 16, null, "KND", "KND", 80, "Return to Right Outer with A+B+K(hold)", false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Raging Dragon Zodiac: Reprisal", "☻A+B+K", "M", 13, -2, -9, -9, 32, "Return to right outer with A+B+K (hold)", false, false, false, false, false, false, true, true, false, false, true),
+      new Move("Soul Charge", "4A+B+G", "m", 6, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
+
+      // completely missing a hidden string series ?
+
       new Move("Dragon's Roar ~ Left Inner", "S4A+B+K", "HMMM", null, null, null, null, null, null, true, false, false, false, false, true, false, true),
-      new Move("Setting Sun ~ Behind Lower", "S236A", "LLLLL", null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Hydra's Brand ~ Left Inner", "S6A+B", "M", null, null, null, null, null, null, true, false, false, false, false, true, false, true),
-      new Move("Crashing Waves ~ Behind Lower", "S[AA+B", "HH", null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Dragon's Shadow ~ Left Outer", "S[BBA+B", "MMM", null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Ocean Splitter ~ Right Outer", "S[A+B", "M", null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Lightning Dragon ~ Left Outer", "S]BA+B", "MM", null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Hydra's Cross ~ Left Inner", "S}AB", "MM", null, null, null, null, null, null, true, false, false, false, false, true, false, true),
-      new Move("Swooping Swallow", "S}A+B", "MM", null, null, null, null, null, null, false, false, true, false, false, true, false, true),
-      new Move("Hydra's Frenzy", "S☺KK", "LH", null, null, null, null, null, null, false, false, false, false, false, true, false, true)
+      new Move("Setting Sun ~ Behind Lower", "S236A", "LLLLL", 28, null, null, null, 32, null, true, false, false, false, false, true),
+      new Move("Hydra's Brand ~ Left Inner", "S6A+B", "M", 16, 10, "KND", "KND", 30, null, true, false, false, false, false, true, false, true),
+
+      new Move("Crashing Waves", "S[A", "H", 14, null, null, null, 14, null, false, false, false, false, false, true),
+      new Move("Crashing Waves ~ Behind Lower", "S[AA+B", "HH", 14, 3, "KND", "KND", 34, null, true, false, false, false, false, true),
+      
+      new Move("Dragon's Shadow", "S[B", "M", 18, null, null, null, 20, null, false, false, false, false, false, true),
+      new Move("Dragon's Shadow", "S[BB", "MM", 18, null, null, "STN", null, null, false, false, false, false, false, true),
+      new Move("Dragon's Shadow ~ Left Outer", "S[BBA+B", "MMM", 18, null, "LNC", "LNC", 70, null, true, false, false, false, false, true),
+
+      new Move("Ocean Splitter ~ Right Outer", "S[A+B", "M", 29, null, "STN", "STN", 34, null, true, false, false, false, false, true),
+
+      new Move("Lightning Dragon", "S]B", "M", 16, null, null, "STN", 16, null, false, false, false, false, false, true),
+      new Move("Lightning Dragon ~ Left Outer", "S]BA+B", "MM", 16, null, "LNC", "LNC", 40, null, true, false, false, false, false, true),
+
+      new Move("Hydra's Cross", "S}A", "M", 24, null, "STN", "STN", 25, null, true, false, false, false, false, true, false, true),
+      new Move("Hydra's Cross ~ Left Inner", "S}AB", "MM", 24, 10, "KND", "KND", 45, null, true, false, false, false, false, true, false, true),
+
+      new Move("Swooping Swallow", "S}A+B", "MM", 18, 0, "STN", "STN", 45, null, false, false, true, false, false, true, false, true),
+
+      new Move("Hydra's Frenzy", "S☺K", "L", 24, -22, -14, -14, 18, null, false, false, false, false, false, true),
+      new Move("Hydra's Frenzy", "S☺KK", "LH", 24, 6, "KND", "KND", 48, null, false, false, false, false, false, true, false, true)
     ],
     // Horizontal Moves
     [
-      new Move("Twin Snakes ~ Right Cross", "AA", "HH", null, null, null, null, null, null, true, false, false, false, false, false, false, false, false, true),
-      new Move("Lunging Snake ~ Right Outer", "6A", "H", null, null, null, null, null, null, true),
-      new Move("Lotus ~ Behind Lower", "3A", "M", null, null, null, null, null, null, true, true),
-      new Move("Tongue", "2A", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Scythe Fang ~ Left Outer", "1AB", "LM", null, null, null, null, null, null, true),
-      new Move("Serpent's Bane", "4AAAB", "HMMM", null, null, null, null, null),
-      new Move("Serpent's Bane ~ Behind Lower", "4A", "H", null, null, null, null, null, null, true),
-      new Move("Serpent's Bane ~ Right Outer", "4a", "H", null, null, null, null, null, null, true),
-      new Move("Serpent's Bane ~ Behind Lower", "4AAA", "HMM", null, null, null, null, null, null, true),
-      new Move("Nunchaku Slap to Steel Dragon ~ Left Outer", "4AB", "HH", null, null, null, null, null, null, true),
-      new Move("Nunchaku Slap to Steel Dragon ~ Left Inner", "4Ax4", "HMMMMMMMMMM", null, null, null, null, null, null, true, false, false, false, false, false, false, false, false, true),
-      new Move("Tongue", "CA", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Rope Dancer ~ Right Outer", "C3AAA", "LLL", null, null, null, null, null, null, true),
-      new Move("Water Cutter ~ Left Inner", "WA", "M", null, null, null, null, null, null, true),
-      new Move("Falling Snake Scythe ~ Right Cross", "JA", "L", null, null, null, null, null, null, true),
-      new Move("Reverse Snake", "TA", "H", null, null, null, null, null),
-      new Move("Reverse Tongue", "T2A", "S", null, null, null, null, null, null, false, false, true)
+      new Move("Twin Snakes", "A", "H", 12, -8, 2, 2, 10, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Twin Snakes ~ Right Cross", "AA", "HH", 12, -2, 12, 12, 22, null, true, false, false, false, false, false, false, false, false, true),
+      
+      new Move("Lunging Snake ~ Right Outer", "6A", "H", 16, -2, 6, 16, 18, null, true),
+      new Move("Lotus ~ Behind Lower", "3A", "M", 20, 4, 12, 12, 14, null, true, true),
+      new Move("Tongue", "2A", "S", 12, -6, 6, 6, 12, null, false, false, true),
+
+      new Move("Scythe Fang ~ Left Outer", "1A", "L", 28, -14, 0, 0, 20, null, true),
+      new Move("Scythe Fang ~ Left Outer", "1AB", "LM", 28, 4, "KND", "KND", 50, null, true),
+
+      new Move("Serpent's Bane ~ Behind Lower", "4A", "H", 24, -4, 6, 6, 18, null, true),
+      new Move("Serpent's Bane ~ Right Outer", "4a", "H", 24, -4, 6, 6, 18, null, true),
+      new Move("Serpent's Bane", "4AA", "HM", 24, -14, -4, -4, 34),
+      new Move("Nunchaku Slap to Steel Dragon ~ Left Outer", "4AB", "HH", 24, -13, "KND", "KND", 42, null, true),
+      new Move("Nunchaku Slap to Steel Dragon ~ Left Inner", "4Ax4", "HMMMMMMMMMM", 24, -8, "KND", "KND", null, null, true, false, false, false, false, false, false, false, false, true),
+      new Move("Serpent's Bane ~ Behind Lower", "4AAA", "HMM", 24, 8, 17, 17, 46, null, true),
+      new Move("Serpent's Bane", "4AAAB", "HMMM", 24, -16, "STN", "STN", 61),
+
+      new Move("Tongue", "CA", "S", 12, -6, 6, 6, 12, null, false, false, true),
+
+      new Move("Rope Dancer", "C3A", "L", 28, -4, 6, 6, 8, null, true),
+      new Move("Rope Dancer", "C3AA", "LL", 28, 0, 8, 8, 16, null, true),
+      new Move("Rope Dancer ~ Right Outer", "C3AAA", "LLL", 28, 0, 8, 8, 24, null, true),
+
+      new Move("Water Cutter ~ Left Inner", "WA", "M", 18, -4, 4, 4, 20, null, true),
+      new Move("Falling Snake Scythe ~ Right Cross", "JA", "L", 40, -4, 2, 2, 24, null, true),
+
+      new Move("Reverse Snake", "TA", "H", 14, -8, 2, 2, 14),
+      new Move("Reverse Tongue", "T2A", "S", 14, -6, 6, 6, 14, null, false, false, true)
     ],
     // Vertical Moves
     [
-      new Move("Snake Bite ~ Right Outer", "B", "M", null, null, null, null, null, null, true, false, false, false, false, false, false, false, false, true),
-      new Move("Dragon Backfist", "6BBB", "MMH", null, null, null, null, null),
-      new Move("Dragon Backfist ~ Right Outer", "6BB", "MM", null, null, null, null, null, null, true),
-      new Move("Illusion Serpent ~ Right Outer", "3B", "M", null, null, null, null, null, null, true),
-      new Move("Falling Fang", "2B", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Nunchaku Lick ~ Right Outer", "1B", "L", null, null, null, null, null, null, true),
-      new Move("Snake Kiss ~ Left Outer", "4B", "M", null, null, null, null, null, null, true),
-      new Move("Mantis Lunge ~ Left Inner", "236B", "MMM", null, null, null, null, null, null, true),
-      new Move("Crouching Inner Upper", "CB", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Rolling Biting Upper ~ Left Inner", "WB", "M", null, null, null, null, null, null, true),
-      new Move("Cobra Fangs ~ Left Outer", "JB", "M", null, null, null, null, null, null, true),
-      new Move("Reverse Snake Bite", "TB", "M", null, null, null, null, null),
-      new Move("Reverse Biting Upper", "T2B", "M", null, null, null, null, null, null, false, false, true)
+      new Move("Snake Bite ~ Right Outer", "B", "M", 16, 6, 14, 14, 10, null, true, false, false, false, false, false, false, false, false, true),
+      
+      new Move("Dragon Backfist", "6B", "M", 18, -16, -6, -6, 16),
+      new Move("Dragon Backfist ~ Right Outer", "6BB", "MM", 18, -4, 4, 4, 28, null, true),
+      new Move("Dragon Backfist", "6BBB", "MMH", 18, -28, "KND", "KND", 58),
+
+      new Move("Illusion Serpent ~ Right Outer", "3B", "M", 20, -19, "LNC", "LNC", 22, null, true),
+      new Move("Falling Fang", "2B", "M", 14, -8, 2, 2, 16, null, false, false, true),
+      new Move("Nunchaku Lick ~ Right Outer", "1B", "L", 16, -4, 4, 4, 20, null, true),
+      new Move("Snake Kiss ~ Left Outer", "4B", "M", 18, 8, 18, 18, 16, null, true),
+      new Move("Mantis Lunge ~ Left Inner", "236B", "MMM", 24, -4, 6, 6, 30, null, true),
+
+      new Move("Crouching Inner Upper", "CB", "M", 14, -8, 2, 2, 16, null, false, false, true),
+      new Move("Rolling Biting Upper ~ Left Inner", "WB", "M", 12, 0, 8, 8, 14, null, true),
+      new Move("Cobra Fangs ~ Left Outer", "JB", "M", 30, 2, "KND", "KND", 30, null, true),
+
+      new Move("Reverse Snake Bite", "TB", "M", 18, -8, 2, 2, 18),
+      new Move("Reverse Biting Upper", "T2B", "M", 16, -8, 2, 2, 20, null, false, false, true)
     ],
     // Kicks
     [
-      new Move("Fang Scratch", "K", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Left Roundhouse", "6K", "H", null, null, null, null, null),
-      new Move("Snap Kick", "3K", "M", null, null, null, null, null),
-      new Move("Quick Slice", "2K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Circling Dragon ~ Left Outer", "1KA", "LHM", null, null, null, null, null, null, true),
-      new Move("Illusion Kick ~ Right Outer", "1KB", "LM", null, null, null, null, null, null, true),
-      new Move("Illusion Low Kicks", "1KK", "LL", null, null, null, null, null, null, false, false, true),
-      new Move("Right Roundhouse", "4K", "H", null, null, null, null, null),
-      new Move("Hurricane", "236K", "MMMMMMM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Quick Slice", "CB", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Dragon Scream", "WKK", "MH", null, null, null, null, null),
-      new Move("Reverse Roundhouse", "JK", "M", null, null, null, null, null),
-      new Move("Reverse Fang Scratch", "TK", "H", null, null, null, null, null),
-      new Move("Reverse Illusion Kick", "T2K", "L", null, null, null, null, null, null, false, false, true)
+      new Move("Fang Scratch", "K", "H", 12, -6, 2, 2, 14, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Left Roundhouse", "6K", "H", 20, -8, "KND", "KND", 28),
+      new Move("Snap Kick", "3K", "M", 14, -6, 4, 4, 18),
+      new Move("Quick Slice", "2K", "L", 16, -14, -4, -4, 12, null, false, false, true),
+
+      new Move("Circling Dragon", "1K", "L", 20, -16, -4, -4, 16, null, true),
+      new Move("Circling Dragon ~ Left Outer", "1KA", "LHM", 20, 3, 13, 13, 52, null, true),
+      new Move("Illusion Kick ~ Right Outer", "1KB", "LM", 20, -12, "LNC", "LNC", 20, null, true),
+      new Move("Illusion Low Kicks", "1KK", "LL", 20, -12, 2, 2, 16, null, false, false, true),
+
+      new Move("Right Roundhouse", "4K", "H", 20, -8, "KND", "KND", 28),
+      new Move("Hurricane", "236K", "MMMMMMM", 26, -14, "STN", "STN", 54, null, false, false, false, false, false, false, false, false, false, true),
+
+      new Move("Quick Slice", "CB", "L", 16, -14, -4, -4, 12, null, false, false, true),
+
+      new Move("Dragon Scream", "WK", "M", 20, -12, "LNC", "LNC", 22),
+      new Move("Dragon Scream", "WKK", "MH", 20, 0, "LNC", "LNC", 52),
+
+      new Move("Reverse Roundhouse", "JK", "M", 42, -4, "LNC", "LNC", 26),
+
+      new Move("Reverse Fang Scratch", "TK", "H", 14, -8, 2, 2, 16),
+      new Move("Reverse Illusion Kick", "T2K", "L", 18, -14, -2, -2, 18, null, false, false, true)
     ],
     // Simultaneous Press Moves
     [
-      new Move("Vagabond", "A+B", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Dragon's Brand", "6A+B", "M", null, null, null, null, null),
-      new Move("Guillotine Dance", "2A+B", "LH", null, null, null, null, null, null, false, false, true),
-      new Move("Rage of Pleasure", "4A+B", "MM", null, null, null, null, null),
-      new Move("Rage of Pleasure", "4a+b", "MM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Falling Sky", "8A+B", "M", null, null, null, null, null),
-      new Move("Fury ~ Right Outer", "B+KBBBAj", "MMMMMMMMM", null, null, null, null, null, null, true),
-      new Move("Serpent's Pleasure", "6B+K", "MM", null, null, null, null, null, "Can be held"),
-      new Move("Serpent's Pleasure ~ Right Cross", "6x+cG", "M", null, null, null, null, null, null, true),
-      new Move("Tiger Slaughter", "2B+KB", "LL", null, null, null, null, null),
-      new Move("Twisted Loop", "4B+K", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true, true),
-      new Move("Dragon's Sky ~ Behind Lower", "C3A+B", "H", null, null, null, null, null, null, true),
-      new Move("Canyon Carve ~ Behind Lower", "WB+K", "M", null, null, null, null, null, null, true),
+      new Move("Vagabond", "A+B", "M", 36, 0, "KND", "KND", 30, null, false, true, false, false, false, false, false, true),
+      new Move("Dragon's Brand", "6A+B", "M", 16, -10, "STN", "STN", 35),
+      new Move("Guillotine Dance", "2A+B", "LH", 30, -15, "KND", "KND", 46, null, false, false, true),
+      new Move("Rage of Pleasure", "4A+B", "MM", 32, -16, "KND", "KND", 44),
+      new Move("Rage of Pleasure", "4a+b", "MM", 31, -16, "KND", "KND", 46, null, false, false, false, false, false, false, false, true),
+      new Move("Falling Sky", "8A+B", "M", 41, -9, "KND", "KND", 52),
+
+      new Move("Fury", "B+K", "MM", 20, -10, -2, -2, 6),
+      new Move("Fury", "B+KB", "MMMM", 20, -16, -6, -6, 14),
+      new Move("Fury", "B+KBB", "MMMMMM", 20, -20, -10, -10, 24),
+      new Move("Fury", "B+KBBB", "MMMMMMMM", 20, -18, 8, -8, 36),
+      new Move("Fury ~ Right Outer", "B+KBBBAj", "MMMMMMMMM", 20, -84, "KND", "KND", 58, null, true),
+
+      new Move("Serpent's Pleasure", "6B+K", "MM", 18, -14, "LNC", "LNC", 40, "Can be held"),
+      new Move("Serpent's Pleasure ~ Right Cross", "6x+cG", "M", 18, -49, -35, "STN", 18, null, true),
+      new Move("Tiger Slaughter", "2B+K", "LL", 22, -18, -8, "STN", 36),
+      new Move("Twisted Loop", "4B+K", "M", 64, -23, "KND", "KND", 60, null, false, false, false, false, false, false, false, false, true, true),
+
+      new Move("Dragon's Sky ~ Behind Lower", "C3A+B", "H", 16, -5, "KND", "KND", 30, null, true),
+      new Move("Canyon Carve ~ Behind Lower", "WB+K", "M", 26, null, null, null, null, null, true),
       new Move("Canyon Carve ~ Right Outer", "Wx+cG", null, null, null, null, null, null, null, true),
-      new Move("Reverse Blow", "TB+K", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, true)
+
+      new Move("Reverse Blow", "TB+K", "M", 16, 0, "STN", "STN", 40, null, false, false, false, false, false, false, false, true)
     ],
     // 8-Way Run Moves
     [
-      new Move("Striking Snake", "#|^|(A", "H", null, null, null, null, null),
-      new Move("Northern Lights ~ Left Inner", "@A", "M", null, null, null, null, null, null, true),
-      new Move("Northern Lights(Reverse)", "*A", "M", null, null, null, null, null),
-      new Move("Propeller Nunchaku ~ Right Outer", "!|$|uAB", "HMmm", null, null, null, null, null, null, true),
-      new Move("Steel Dragon ~ Left Outer", "^B", "H", null, null, null, null, null, null, true, true),
-      new Move("Branding Nunchaku ~ Left Inner", "^x4", "MMMMMMMMMM", null, null, null, null, null, null, true, false, false, false, false, false, false, false, false, true),
-      new Move("Return of Fear ~ Behind Lower", "#|(B", "M", null, null, null, null, null, null, true),
-      new Move("Cobra's Temple ~ Right Cross", "#|(xA", "H", null, null, null, null, null, null, true),
-      new Move("Mark of the Beast", "@|*B", "MMMM", null, null, null, null, null),
-      new Move("Reverse Snake Cross ~ Right Cross", "!|$|uB", "M", null, null, null, null, null, null, true, true),
-      new Move("Rolling Sobat", "#|^|(K", "H", null, null, null, null, null),
-      new Move("Dragon Star", "@|*KKKF", "LMH", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Falling Hydra", "!|$|uK", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Seismic Whale ~ Right Outer", "#|^|(A+B", "MM", null, null, null, null, null, null, true),
-      new Move("Seismic Whale ~ Behind Lower", "#|^|(a+b", "MM", null, null, null, null, null, null, true),
-      new Move("Fish in a Barrel ~ Left Outer", "#|^|(A+BB", "MM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Dragon Cannon", "#|^|(B+K", "M", null, null, null, null, null),
-      new Move("Sliding", "RK", "L", null, null, null, null, null)
+      new Move("Striking Snake", "#|^|(A", "H", 20, -6, 10, 10, 20),
+      new Move("Northern Lights ~ Left Inner", "@A", "M", 24, -9, 3, "STN", 20, null, true),
+      new Move("Northern Lights(Reverse)", "*A", "M", 24, -8, 4, "STN", 20),
+
+      new Move("Propeller Nunchaku", "!|$|uA", "H", 20, -14, -4, -4, 15),
+      new Move("Propeller Nunchaku ~ Right Outer", "!|$|uAB", "HMmm", 20, -22, -14, -14, 30, null, true),
+
+      new Move("Steel Dragon ~ Left Outer", "^B", "H", 18, -13, "KND", "KND", 42, null, true, true),
+      new Move("Branding Nunchaku ~ Left Inner", "^x4", "MMMMMMMMMM", 18, -8, "KND", "KND", 232, null, true, false, false, false, false, false, false, false, false, true),
+      new Move("Return of Fear ~ Behind Lower", "#|(B", "M", 28, -43, "LNC", "KND", 36, null, true),
+      new Move("Cobra's Temple ~ Right Cross", "#|(xA", "H", 11, 3, 9, 9, 24, null, true),
+      new Move("Mark of the Beast", "@|*B", "MMMM", 20, -14, "STN", "STN", 48),
+      new Move("Reverse Snake Cross ~ Right Cross", "!|$|uB", "M", 24, -8, 0, "STN", 26, null, true, true),
+      new Move("Rolling Sobat", "#|^|(K", "H", 26, -2, "KND", "KND", 24),
+
+      new Move("Dragon Star", "@|*K", "L", 32, -20, -10, "LNC", 18),
+      new Move("Dragon Star", "@|*KK", "LM", 32, -12, "LNC", "LNC", 34),
+      new Move("Dragon Star", "@|*KKKF", "LMH", 32, 6, "KND", "KND", null, null, false, false, false, false, false, false, false, true),
+
+      new Move("Falling Hydra", "!|$|uK", "M", 38, 2, "STN", "STN", 36, null, false, false, true),
+      new Move("Seismic Whale ~ Right Outer", "#|^|(A+B", "MM", 24, -9, -1, -1, 35, null, true),
+      new Move("Seismic Whale ~ Behind Lower", "#|^|(a+b", "MM", 24, -9, -1, -1, 35, null, true),
+
+      new Move("Fish in a Barrel", "#|^|(A+B", "M", 24, -28, -16, -16, 15, null, false, false, false, false, false, false, false, true),
+      new Move("Fish in a Barrel ~ Left Outer", "#|^|(A+BB", "MM", 24, -7, "LNC", "LNC", 45, null, false, false, false, false, false, false, false, true),
+      
+      new Move("Dragon Cannon", "#|^|(B+K", "M", 24, -12, "LNC", "LNC", 42),
+      new Move("Sliding", "RK", "L", 20, -22, "LNC", "LNC", 26)
     ],
     // Throws
     [
-      new Move("Falling Heaven Dragon", "A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Lynching", "4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Dragon Destroyer", "ZA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Leaving the Dragon Nest ~ Behind Lower", "XA+G", "H", null, null, null, null, null, null, true, false, false, false, false, false, true),
-      new Move("Parting the Waves", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true)
+      new Move("Falling Heaven Dragon", "A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
+      new Move("Lynching", "4A+G", "H", 18, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, true),
+      new Move("Dragon Destroyer", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Leaving the Dragon Nest ~ Behind Lower", "XA+G", "H", 18, null, "KND", "KND", null, null, true, false, false, false, false, false, true),
+      new Move("Parting the Waves", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true)
     ],
     // ************ Stances *************
     // Right Outer
     [
       new Move("Right Outer (Dubhe)", "6A", null, null, null, null, null, null, null, true),
-      new Move("Dragon Bite", "[AK", "HM", null, null, null, null, null),
-      new Move("Dragon Bite", "[Ak", "HM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Dragon Bite ~ Behind Lower", "[A", "H", null, null, null, null, null, null, true),
-      new Move("Dragon Wing Sobat", "[BBK", "MMH", null, null, null, null, null),
-      new Move("Dragon Wing Sobat ~ Right Cross", "[B", "M", null, null, null, null, null, null, true),
-      new Move("Dragon Wing Sobat ~ Right Cross", "[BB", "MM", null, null, null, null, null, null, true),
-      new Move("Star Gale", "[K", "H", null, null, null, null, null)
+
+      new Move("Dragon Bite ~ Behind Lower", "[A", "H", 14, null, null, null, 14, null, true),
+      new Move("Dragon Bite", "[AK", "HM", 14, 14, -12, 6, 6),
+      new Move("Dragon Bite", "[Ak", "HM", 14, 10, "LNC", "LNC", 46, null, false, false, false, false, false, false, false, true),
+
+      new Move("Dragon Wing Sobat ~ Right Cross", "[B", "M", 18, null, null, null, 20, null, true),
+      new Move("Dragon Wing Sobat ~ Right Cross", "[BB", "MM", 18, null, null, "STN", 36, null, true),
+      new Move("Dragon Wing Sobat", "[BBK", "MMH", 18, -2, "KND", "KND", 60),
+
+      new Move("Star Gale", "[K", "H", 24, 4, "KND", "KND", 40)
     ],
     // Left Outer
     [
       new Move("Left Outer (Merak)", "4B", null, null, null, null, null, null, null, true),
-      new Move("Bloody Cross", "]AK", "LM", null, null, null, null, null),
-      new Move("Wing Sobat", "]BK", "MH", null, null, null, null, null),
-      new Move("Wing Sobat ~ Right Cross", "]B", "M", null, null, null, null, null, null, true),
-      new Move("Skewering Hunt", "]K", "H", null, null, null, null, null, null, false, true)
+
+      new Move("Bloody Cross", "]A", "L", 32, -10, 4, 4, 18),
+      new Move("Bloody Cross", "]AK", "LM", 32, -10, 10, 10, 38),
+
+      new Move("Wing Sobat ~ Right Cross", "]B", "M", 16, null, null, "STN", null, null, true),
+      new Move("Wing Sobat", "]BK", "MH", 16, -2, "KND", "KND", 40),
+
+      new Move("Skewering Hunt", "]K", "H", 20, 4, "STN", "STN", 18, null, false, true)
     ],
     // Left Inner
     [
       new Move("Left Inner (Phecda)", "WB", null, null, null, null, null, null, null, true),
-      new Move("Purity Cross ~ Right Cross", "{A", "H", null, null, null, null, null, null, true),
-      new Move("Backfist Blow", "{B", "M", null, null, null, null, null),
-      new Move("Dragon Pounce", "{KK", "MM", null, null, null, null, null),
-      new Move("Dragon Pounce", "{Kk", "MM", null, null, null, null, null, null, false, true)
+
+      new Move("Purity Cross ~ Right Cross", "{A", "H", 18, null, null, null, null, null, true),
+      new Move("Backfist Blow", "{B", "M", 16, null, "KND", "KND", 40),
+
+      new Move("Dragon Pounce", "{K", "M", 30, null, "STN", "STN", 18),
+      new Move("Dragon Pounce", "{KK", "MM", 30, -6, "LNC", "LNC", 40),
+      new Move("Dragon Pounce", "{Kk", "MM", 30, 1, "LNC", "LNC", 40, null, false, true)
     ],
     // Right Cross
     [
       new Move("Right Cross (Megrez)", "AA", null, null, null, null, null, null, null, true),
-      new Move("Dragon's Beard ~ Left Inner", "}AA", "MH", null, null, null, null, null, null, true, false, false, false, false, false, false, true),
-      new Move("Dragon's Beard ~ Left Outer", "}Aa", "MH", null, null, null, null, null, null, true, false, false, false, false, false, false, true),
-      new Move("Dragon's Cross", "}AB", "MM", null, null, null, null, null),
-      new Move("Stampede Wave ~ Left Inner", "}B", "M", null, null, null, null, null, null, true, false, false, false, false, false, false, true),
-      new Move("Rear Kick", "}K", "M", null, null, null, null, null, null, false, true)
+
+      new Move("Dragon's Beard", "}A", "M", 22, 3, 11, 11, 14, null, false, false, false, false, false, false, false, true),
+      new Move("Dragon's Beard ~ Left Inner", "}AA", "MH", 22, 8, 18, 18, 34, null, true, false, false, false, false, false, false, true),
+      new Move("Dragon's Beard ~ Left Outer", "}Aa", "MH", 22, 8, 18, 18, 34, null, true, false, false, false, false, false, false, true),
+      new Move("Dragon's Cross", "}AB", "MM", 22, -16, "STN", "STN", 39),
+
+      new Move("Stampede Wave ~ Left Inner", "}B", "M", 26, -5, "LNC", "LNC", 30, null, true, false, false, false, false, false, false, true),
+      new Move("Rear Kick", "}K", "M", 18, -4, 8, "LNC", 20, null, false, true)
     ],
     // Behind Lower
     [
       new Move("Behind Lower (Alioth)", "3A", null, null, null, null, null, null, null, true),
-      new Move("Inverted Moon", "☺A", "H", null, null, null, null, null),
-      new Move("Black Serpent ~ Right Cross", "☺B", "M", null, null, null, null, null, null, true, true),
-      new Move("Black Serpent ~ Left Outer", "☺b", "M", null, null, null, null, null, null, true, true),
-      new Move("Fury Kicks", "☺KK", "LH", null, null, null, null, null)
+
+      new Move("Inverted Moon", "☺A", "H", 16, -18, -8, -8, 22),
+      new Move("Black Serpent ~ Right Cross", "☺B", "M", 22, 4, 14, 14, 16, null, true, true),
+      new Move("Black Serpent ~ Left Outer", "☺b", "M", 22, 4, 14, 14, 16, null, true, true),
+
+      new Move("Fury Kicks", "☺K", "L", 24, -22, -14, -14, 18),
+      new Move("Fury Kicks", "☺KK", "LH", 24, -14, "KND", "KND", 40)
     ],
     // Neutral Guard
     [
       new Move("Neutral Guard (Alkaid)", "♥B+K", null, null, null, null, null, null, "While in special stance/GI vs. high, mid vertical", true, false, false, true),
-      new Move("Shin Breaker", "☻A", "L", null, null, null, null, null, null, false, true),
-      new Move("Transforming Serpent ~ Right Cross", "☻BB", "MM", null, null, null, null, null, null, true),
-      new Move("Transforming Serpent ~ Left Outer", "☻Bb", "MM", null, null, null, null, null, null, true),
-      new Move("Transforming Serpent ~ Left Outer", "☻B", "M", null, null, null, null, null, null, true),
-      new Move("Guillotine Kick", "☻KK", "LM", null, null, null, null, null),
-      new Move("Raging Dragon Zodiac: Reprisal", "☻A+B+K", "M", null, null, null, null, null, "Return to right outer with A+B+K (hold)", false, false, false, false, false, false, true, true, false, false, true),
-      new Move("Seven Stars Fury ~ Right Outer", "♥B+KBBBA", "MMMMMMMMM", null, null, null, null, null, "Time precisely for increased damage", true, true),
-      new Move("Pure Seven", "♥6", "", null, null, null, null, null, "While in a special stance/GI vs. high, mid horizontal", true, false, false, true)
+      new Move("Shin Breaker", "☻A", "L", 16, -22, -6, -6, 20, null, false, true),
+
+      new Move("Transforming Serpent ~ Left Outer", "☻B", "M", 20, -21, -11, -11, 20, null, true),
+      new Move("Transforming Serpent ~ Right Cross", "☻BB", "MM", 20, 0, 10, 10, 44, null, true),
+      new Move("Transforming Serpent ~ Left Outer", "☻Bb", "MM", 20, 0, 10, 10, 24, null, true),
+
+      new Move("Guillotine Kick", "☻K", "L", 22, -4, 8, 8, 18),
+      new Move("Guillotine Kick", "☻KK", "LM", 22, -8, "KND", "KND", 46),
+
+      new Move("Raging Dragon Zodiac: Reprisal", "☻A+B+K", "M", 13, -2, -9, -9, 32, "Return to right outer with A+B+K (hold)", false, false, false, false, false, false, true, true, false, false, true),
+      
+      new Move("Seven Stars Fury ~ Right Outer", "♥B+KBBBA", "MMMMMMMMM", 20, -85, "KND", "KND", 58, "Time precisely for increased damage", true, true),
+      new Move("Pure Seven", "♥6", null, null, null, null, null, null, "While in a special stance/GI vs. high, mid horizontal", true, false, false, true)
     ]   
   ]
 

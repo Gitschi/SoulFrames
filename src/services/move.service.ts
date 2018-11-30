@@ -4890,32 +4890,40 @@ export class MoveService{
     ],
     // Simultaneous Press Moves
     [
-      new Move("Poison Breath", "A+B", "H", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Toxic Breath", "a+b", "m", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Bad Stomach to Backflip Kick", "z+xK", "MM", null, null, null, null, null, null, true),
-      new Move("Diggin Cyclone ~ Flea", "6A+B", "M", null, null, null, null, null, null, true),
-      new Move("Spine Divide", "4A+B", "M", null, null, null, null, null, null, false, true),
-      new Move("Deathcopter", "8A+B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
-      new Move("Deathcopter Slice", "8A+B2|G", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
-      new Move("Deathcopter Slice", "8z+x2|G", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
-      new Move("Deathcopter Trick", "2z+x4", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
-      new Move("Deathcopter Slice ~ Manji Dragonfly", "2z+xB+K", null, null, null, null, null, null, null, true),
-      new Move("Moonsault Slayer", "236A+B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
-      new Move("Flea", "B+K", null, null, null, null, null, null, null, true),
-      new Move("Indian Stance", "2B+K", null, null, null, null, null, null, null, true),
-      new Move("Manji Dragonfly", "8B+K", null, null, null, null, null, null, null, true),
-      new Move("Spinning Evade", "4B+KBBBBBB", null, null, null, null, null, null, "Costs health/Returns to downed position", true),
-      new Move("Soul Stealer", "A+K", "M", null, null, null, null, null, "GI vs. high, mid horizontal", false, false, false, true),
-      new Move("Harakiri", "2A+B", "M", null, null, null, null, null, "Costs health/Returns to downed position", false, false, false, false, false, false, false, false, true),
-      new Move("Manji Blood Dance", "2A+KAAAA", "MMMMM", null, null, null, null, null, "Costs health/Increases soul gauge(random)", false, false, false, false, false, false, false, false, true),
+      new Move("Poison Breath", "A+B", "H", 29, 4, "STN", "STN", 30, "TC[1-10]", false, true, false, false, false, false, false, true),
+      new Move("Toxic Breath", "a+b", "m", 36, 8, 'STN", "STN", 40, "TC[1-17]", false, true, false, false, false, false, false, true),
+      new Move("Bad Stomach to Backflip Kick", "z+xK", "MM", 39, 4, "STN", "STN", 18, "TJ[1-7]", true),
+      new Move("Diggin Cyclone ~ Flea", "6A+B", "M", 22, -8, "STN", "STN", 16, "TJ[8~]", true),
+      new Move("Spine Divide", "4A+B", "M", 24, -4, 6, 6, 36, null, false, true),
+      new Move("Deathcopter", "8A+B", "M", 114, -1, "STN", "STN", 80, "TJ[8-15]", false, false, false, false, false, false, false, false, true),
+      new Move("Deathcopter Slice", "8A+B2|G", "M", 114, -1, 140, "STN", "STN", "TJ[1-24]", false, false, false, false, false, false, false, false, true),
+      new Move("Deathcopter Slice", "8z+x2|G", "M", 25, -1, "STN", "STN", 40, "TJ[1-24]", false, false, false, false, false, false, false, false, true),
+      new Move("Deathcopter Trick", "2z+x4", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),//no data available on this one
+      new Move("Deathcopter Slice ~ Manji Dragonfly", "2z+xB+K", null, null, null, null, null, null, null, true),//no data available on this one
+      new Move("Moonsault Slayer", "236A+B", "M", 60, -21, "STN", "STN", 60, "TC[60-89] / TJ[10-60]", false, false, false, false, false, false, false, false, true),
+      new Move("Flea", "B+K", null, null, null, null, null, null, null, true),//no data available on this one
+      new Move("Indian Stance", "2B+K", null, null, null, null, null, null, null, true),//no data available on this one
+      new Move("Manji Dragonfly", "8B+K", null, null, null, null, null, null, null, true), //no data available on this one
+      new Move("Spinning Evade", "4B+KBBBBBB", null, null, null, null, null, null, "Costs health/Returns to downed position", true), //no data available on this one
+      new Move("Soul Stealer", "A+K", "M", 8, -14, 8, 8, 4, "GI vs. high, mid horizontal[5-9]", false, false, false, true),
+      new Move("Harakiri", "2A+B", "M", null, null, null, null, null, "Costs health/Returns to downed position", false, false, false, false, false, false, false, false, true),//no data on this one
+      new Move("Manji Blood Dance", "2A+K", "M", 30, -68, "STN", "STN", 90, "TC[80-101]", null, null, null, null, null, null, null, null, null),
+      new Move("Manji Blood Dance", "2A+KA", "MM", 30, 9, "STN", "STN", 110, null, null, null, null, null, null, null, null, null, null),
+      new Move("Manji Blood Dance", "2A+KAA", "MMM", 30, 7, "STN", "STN", 125, null, null, null, null, null, null, null, null, null, null),
+      new Move("Manji Blood Dance", "2A+KAAA", "MMMM", 30, 7, "STN", "STN", 135, null, null, null, null, null, null, null, null, null, null),
+      new Move("Manji Blood Dance", "2A+KAAAA", "MMMMM", 30, 7, "STN", "STN", 140, "Costs health/Increases soul gauge(random)", false, false, false, false, false, false, false, false, true),
       new Move("Confusion", "6A+K", null, null, null, null, null, null, "Returns to facing away", true),
-      new Move("Suicide", "6a+k", "M", null, null, null, null, null, "Costs health/Returns to downed position", false, false, false, false, false, false, false, false, true),
-      new Move("Manji Blood Dance", "6a+kAAAA", "MMMMM", null, null, null, null, null, "Costs health/Increases soul gauge(random)", false, false, false, false, false, false, false, false, true),
-      new Move("Double Suicide", "6a+kA+K", "MM", null, null, null, null, null, "Costs health/Returns to downed position", false, false, false, false, false, false, false, false, true),
+      new Move("Suicide", "6a+k", "M", 25, -106, "STN", "STN", 110, "Costs health/Returns to downed position", false, false, false, false, false, false, false, false, true),
+      new Move("Manji Blood Dance", "6a+kA", "MM", 25, 9, "STN", "STN", 130, "Costs health/Increases soul gauge(random)", false, false, false, false, false, false, false, false, true),
+      new Move("Manji Blood Dance", "6a+kAA", "MMM", 25, 7, "STN", "STN", 145, "Costs health/Increases soul gauge(random)", false, false, false, false, false, false, false, false, true),
+      new Move("Manji Blood Dance", "6a+kAAA", "MMMM", 25, 7, "STN", "STN", 155, "Costs health/Increases soul gauge(random)", false, false, false, false, false, false, false, false, true),
+      new Move("Manji Blood Dance", "6a+kAAAA", "MMMMM", 25, 7, "STN", "STN", 160, "Costs health/Increases soul gauge(random)", false, false, false, false, false, false, false, false, true),
+      new Move("Double Suicide", "6a+kA+K", "MM", 36, -106, "STN", "STN", 90, "Costs health/Returns to downed position/TC[101-122]", false, false, false, false, false, false, false, false, true),
       new Move("Flea", "TB+K", null, null, null, null, null, null, null, true),
       new Move("Indian Stance", "T2B+K", null, null, null, null, null, null, null, true),
       new Move("Manji Dragonfly", "T8B+K", null, null, null, null, null, null, null, true),
-      new Move("Harakiri", "2A+K", "M", null, null, null, null, null, "Costs health/Returns to downed position", false, false, false, false, false, false, false, false, true),
+      new Move("Harakiri", "2A+K", "M", 30, -68, "STN", "STN", 90, "Costs health/Returns to downed position/TC[80-101]", false, false, false, false, false, false, false, false, true),
+      new Move("Harakiri", "T2A+K", "M", 30, -68, "STN", "STN", 90, "Costs health/Returns to downed position/TC[80-101]", false, false, false, false, false, false, false, false, true),
       new Move("Indian Stance", "B+K", null, null, null, null, null, null, "While down(face up)", true) // While down (face up)
     ],
     // 8-Way Run Moves

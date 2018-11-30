@@ -4863,24 +4863,30 @@ export class MoveService{
     ],
     // Kick Moves 
     [
-      new Move("Side Kick", "K", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Ballerina Spin", "6K", "H", null, null, null, null, null),
-      new Move("Mid Kick", "3K", "M", null, null, null, null, null),
-      new Move("Arc Kick", "2K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Nozuchi Fumi", "1K", "L", null, null, null, null, null),
-      new Move("Wood Cutter", "4KB", "MM", null, null, null, null, null),
-      new Move("Wood Cutter", "4Kb", "MM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
-      new Move("Steel Wind", "236KK", "MM", null, null, null, null, null),
-      new Move("Poison Wind", "236Ko4", "M", null, null, null, null, null, null, true),
-      new Move("Steel Wind", "236KKo4", "MM", null, null, null, null, null, null, true),
-      new Move("Steel Wind ~ Manji Dragonfly", "236Kk", "M", null, null, null, null, null, null, true),
-      new Move("Arc Kick", "CK", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Knee Cap", "C3K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Manji Spin Low Kicks", "C1KKKKK", "LLLLL", null, null, null, null, null, "Returns to downed position"),
-      new Move("Rising Knee", "WK", "M", null, null, null, null, null),
-      new Move("Avoiding the Puddle", "JK", "M", null, null, null, null, null),
-      new Move("Reverse Koragashi", "TK", "H", null, null, null, null, null),
-      new Move("Reverse Dust Banishment", "T2K", "L", null, null, null, null, null, null, false, false, true)
+      new Move("Side Kick", "K", "H", 12, -6, 2, 2, 14, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Ballerina Spin", "6K", "H", 16, -16, "KND", "KND", 36, null),
+      new Move("Mid Kick", "3K", "M", 14, -6, 2, 2, 16, null),
+      new Move("Arc Kick", "2K", "L", 16, -14, -4, -4, 12, "TC[11~]", false, false, true),
+      new Move("Nozuchi Fumi", "1K", "L", 18, -14, 0, 0, 20, null),
+      new Move("Wood Cutter", "4K", "M", 18, -10, 0, 0, 18, null),
+      new Move("Wood Cutter", "4KB", "MM", 18, -8, 2, 2, 48, null),
+      new Move("Wood Cutter", "4Kb", "M", 10, -6, 4, 4, 22, null, false, false, false, false, false, false, false, false, true), //there's 3 versions off this move on 8WR but I don't know why
+      new Move("Steel Wind", "236K", "M", 28, -16, "STN", "STN", 29, "TC[4-6] / TJ[6-33]"),
+      new Move("Steel Wind", "236KK", "MM", 28, -14, "STN", "STN", 59, "TJ[2-26]"),
+      new Move("Poison Wind", "236Ko4", "M", 28, -16, "STN", "STN", 29, "TC[4-6] / TJ[6-33, 9~]", true),
+      new Move("Steel Wind", "236KKo4", "MM", 28, -14, "STN", "STN", 59, "TJ[2-26,9~]", true),
+      new Move("Steel Wind ~ Manji Dragonfly", "236Kk", "M", null, null, null, null, null, null, true), //not listed on 8WR
+      new Move("Arc Kick", "CK", "L", 16, -14, -4, -4, 12, "TC[2-4,10~]", false, false, true),
+      new Move("Knee Cap", "C3K", "L", 20, -20, "LNC", "LNC", 18, null, false, false, true),
+      new Move("Manji Spin Low Kicks", "C1K", "L", 18, -20, -4, -4, 8, "TC[2~]"),
+      new Move("Manji Spin Low Kicks", "C1KK", "LL", 18, -22, -12, -12, 16, "TC[1~]"),
+      new Move("Manji Spin Low Kicks", "C1KKK", "LLL", 18, -22, -12, -12, 32, "TC[1~]"),
+      new Move("Manji Spin Low Kicks", "C1KKKK", "LLLL", 18, -22, -12, -12, 38, "TC[1~]"),
+      new Move("Manji Spin Low Kicks", "C1KKKKK", "LLLLL", 18, -58, -48, -48, 48, "Returns to downed position"),
+      new Move("Rising Knee", "WK", "M", 12, -14, "LNC", "LNC", 18, "TC[2-11] / TJ[12-35]"),
+      new Move("Avoiding the Puddle (ATP)", "JK", "M", 20, -8, "KND", "KND", 20, "TJ[9-31]"),
+      new Move("Reverse Koragashi", "TK", "H", 14, -8, 2, 2, 16),
+      new Move("Reverse Dust Banishment", "T2K", "L", 16, -14, -2, -2, 14, "TC[18~]", false, false, true)
     ],
     // Simultaneous Press Moves
     [

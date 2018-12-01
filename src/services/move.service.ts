@@ -4928,28 +4928,32 @@ export class MoveService{
     ],
     // 8-Way Run Moves
     [
-      new Move("Kabuki", "#|^|(A", "M", null, null, null, null, null),
-      new Move("Kabuki Compendium", "#|^|(HA", "MM", null, null, null, null, null, "Absorbs soul gauge"),
-      new Move("Ganto", "@|*A", "H", null, null, null, null, null, null, false, true),
-      new Move("Flagstaff", "!|$|uA", "M", null, null, null, null, null),
-      new Move("Circium", "#|^|(B", "M", null, null, null, null, null),
-      new Move("Shrine", "@|*B", "M", null, null, null, null, null),
-      new Move("Sword Stab", "!|$|uB", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
-      new Move("Sword Poke Windmill", "!|$|uxA", "MMMMMMM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Face Splitter", "!|$|uxB", "H", null, null, null, null, null, null, false, true),
-      new Move("Fubuki", "#|^|(K", "M", null, null, null, null, null),
-      new Move("Guillotine Crow Kick", "@|*K", "MM", null, null, null, null, null),
-      new Move("Kangaroo Kick", "!|$|uK", "M", null, null, null, null, null, null, false, true),
-      new Move("Crying Spirit Sword", "#|^|(A+B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Crying Spirit Sword ~ Flea", "#|^|(a+b", null, null, null, null, null, null, null, true),
-      new Move("Crying Spirit Sword to Death", "#|^|(z+x2B", "L", null, null, null, null, null),
-      new Move("Solar Kick Shark Attack", "#|^|(B+KA+BK", "MHM", null, null, null, null, null, null, false, true),
-      new Move("Solar Kick Shark Attack ~ Indian Stance", "#|^|(B+Ka+b", "MH", null, null, null, null, null, null, true, true),
-      new Move("Reverse Solar Kick Shark Attack", "#|^|(b+kA+BK", "MHM", null, null, null, null, null, null, false, true),
-      new Move("Reverse Solar Kick Shark Attack ~ Indian Stance", "#|^|(b+ka+b", "MH", null, null, null, null, null, null, true, true),
-      new Move("Ninja Sun Flare", "@|*|!|$|uB+K", "M", null, null, null, null, null, "Returns to crouching on G cancel", false, false, false, false, false, false, false, false, false, true),
-      new Move("Ninja Sun Flare ~ Indian Stance", "@|*|!|$|ub+k", null, null, null, null, null, null, null, true),
-      new Move("Sliding", "RK", "L", null, null, null, null, null)
+      new Move("Kabuki", "#|^|(A", "M", 20, -12, 2, 2, 18),
+      new Move("Kabuki Compendium", "#|^|(HA", "MM", 20, 28, -6, 8, "STN", "Absorbs soul gauge"),
+      new Move("Ganto", "@|*A", "H", 14, -20, "KND", "KND", 30, "TC[6-24]", false, true),
+      new Move("Flagstaff", "!|$|uA", "M", 24, -6, "LNC", "LNC", 26),
+      new Move("Circium", "#|^|(B", "M", 22, 0, 8, 8, 32, null),
+      new Move("Shrine", "@|*B", "M", 16, -12, "LNC", "LNC", 15, "TC[4-15]"),
+      new Move("Sword Stab", "!|$|uB", "M", 80, -23, "STN", "STN", 130, null, false, false, false, false, false, false, false, false, true),
+      new Move("Sword Poke Windmill", "!|$|uxA", "MMMMMMM", 19, -8, "KND", "KND", 140, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Face Splitter", "!|$|uxB", "H", 17, -16, -2, "STN", 22, null, false, true),
+      new Move("Fubuki", "#|^|(K", "M", 16, -8, "LNC", "LNC", 24, "TJ[9-33]"),
+      new Move("Guillotine Crow Kick", "@|*K", "MM", 40, 2, 14, 14, 24, "TC[4-10]"),
+      new Move("Kangaroo Kick", "!|$|uK", "M", 26, -10, "LNC", "LNC", 30, "TC[5-58]", false, true),
+      new Move("Crying Spirit Sword", "#|^|(A+B", "M", 30, -4, "STN", "STN", 38, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Crying Spirit Sword ~ Flea", "#|^|(a+b", 30, -4, "STN", "STN", 38, "TJ[23~]", null, true),
+      new Move("Crying Spirit Sword to Death", "#|^|(z+x2B", "L", null, null, null, null, null), //not listed but it should be similar to the last 2 entries
+      new Move("Solar Kick Shark Attack", "#|^|(B+K", "L", 42, -17, -7, -7, 44, "TC[6-11,31-36] / TJ[11-30]", false, null),  //8WR says it's a low
+      new Move("Solar Kick Shark Attack", "#|^|(B+KA+B", "LH", 42, -26, -18, -18, 58, null, false, true),
+      new Move("Solar Kick Shark Attack", "#|^|(B+KA+BK", "LHM", 42, -18, "LNC", "LNC", 84, null, false, true),
+      new Move("Solar Kick Shark Attack ~ Indian Stance", "#|^|(B+Ka+b", "MH", null, null, null, null, null, null, true, true), //no data listed but I think it's just a SS
+      new Move("Reverse Solar Kick Shark Attack", "#|^|(b+k", null, 20, -17, -7, -7, 26, "TC[17-22] / TJ[14-16]", null, null),
+      new Move("Reverse Solar Kick Shark Attack", "#|^|(b+kA+B", "H", 20, -26, -18, "STN", 40, "TC[7-16,46-66] / TJ[16-46]", null, null),
+      new Move("Reverse Solar Kick Shark Attack", "#|^|(b+kA+BK", "HM", 20, -18, "LNC", "LNC", 66, "TC[1-51]", false, true),
+      new Move("Reverse Solar Kick Shark Attack ~ Indian Stance", "#|^|(b+ka+b", "H", 15, -26, -18, "STN", 14, "TC[7-16,46~] / TJ[16-46]", true, true),
+      new Move("Ninja Sun Flare", "@|*|!|$|uB+K", "M", 38, -10, "LNC", "LNC", 40, "Returns to crouching on G cancel", false, false, false, false, false, false, false, false, false, true),
+      new Move("Ninja Sun Flare ~ Indian Stance", "@|*|!|$|ub+k", null, null, null, null, null, null, null, true), //no data but it should be just a SS
+      new Move("Sliding", "RK", "L", 20, -22, "LNC", "LNC", 26, "TC[18~] / TJ[6-18]")
     ],
     // Throws
     [

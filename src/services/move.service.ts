@@ -4971,58 +4971,58 @@ export class MoveService{
     // ************ Stances *************
     // Flea
     [
-      new Move("Flea", "B+K", null, null, null, null, null, null, null, true),
-      new Move("Rolling Spark", "[A", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Skull Splitter", "[B", "M", null, null, null, null, null, "Can be held"),
-      new Move("Flea Kicker ~ Indian Stance", "[K", "M", null, null, null, null, null, null, true),
-      new Move("Flea Gouge", "[A+B", "M", null, null, null, null, null, "Absorbs soul gauge", false, false, false, false, false, false, false, true),
-      new Move("Flea Roll", "[B+K", null, null, null, null, null, null, null, false, false, true),
-      new Move("Jumping Flea ~ Flea", "[7|8|9", "M", null, null, null, null, null, null, true),
-      new Move("Flea Step ~ Flea", "[4|6", null, null, null, null, null, null, null, true),
-      new Move("Flea Digger ~ Flea", "[1|2|3", null, null, null, null, null, null, null, true),
-      new Move("Running Flea", "[66", "SSS", null, null, null, null, null, null, true),
-      new Move("Flea Gouge", "[66v", "SSSM", null, null, null, null, null, "Absorbs soul gauge"),
-      new Move("Flea ~ Manji Dragonfly", "[8B+K", null, null, null, null, null, null, null, true),
-      new Move("Flea ~ Indian Stance", "[2B+K", null, null, null, null, null, null, null, true)
+      new Move("Flea", "B+K", null, null, null, null, null, null, null, true),  //no data available
+      new Move("Rolling Spark", "[A", "L", 36, -16, 1, 1, 28, "TC[12-38] / TJ[1-12]", false, false, true),
+      new Move("Skull Splitter", "[B", "M", 14, -12, "LNC", "LNC", 20, "Can be held / TC[8-17] / TJ[1-8]"),
+      new Move("Flea Kicker ~ Indian Stance", "[K", "M", 24, -9, 3, 3, 25, "TJ[1-32]", true),
+      new Move("Flea Gouge", "[A+B", "M", 18, 4, "STN", "STN", 10, "Absorbs soul gauge / TJ[1-17]", false, false, false, false, false, false, false, true),
+      new Move("Flea Roll", "[B+K", null, null, null, null, null, null, null, false, false, true), //no data available
+      new Move("Jumping Flea ~ Flea", "[7|8|9", "M", 32, 6, "STN", "STN", 20, "TJ[1~]", true),
+      new Move("Flea Step ~ Flea", "[4|6", "M", 8, 4, "STN", "STN", 20, "TJ[~]", true),
+      new Move("Flea Digger ~ Flea", "[1|2|3", null, null, null, null, null, null, null, true), //no data available
+      new Move("Running Flea", "[66", "SSS", null, null, null, null, null, null, true), //no data available
+      new Move("Flea Gouge", "[66v", "SSSM", null, null, null, null, null, "Absorbs soul gauge"), //no data available
+      new Move("Flea ~ Manji Dragonfly", "[8B+K", null, null, null, null, null, null, null, true), //no data available
+      new Move("Flea ~ Indian Stance", "[2B+K", null, null, null, null, null, null, null, true) //no data available
     ],
     // Indian Stance
     [
-      new Move("Indian Stance", "2B+K", null, null, null, null, null, null, null, true),
+      new Move("Indian Stance", "2B+K", null, null, null, null, null, null, null, true), //no data available
       new Move("Indian Stance Healing", "]", null, null, null, null, null, null, "Increases soul gauge", true),
-      new Move("Warp Rolling Shark", "]A", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Englightened Sun Flare", "]B", "M", null, null, null, null, null, "Dodges high, mid & low", false, true),
-      new Move("Tobi Ushiwaka ~ Manji Dragonfly", "]K", "MM", null, null, null, null, null, null, true),
-      new Move("No Fear", "]A+K", "M", null, null, null, null, null, "Costs health/Returns to downed position", false, false, false, false, false, false, false, false, true),
-      new Move("Intrepid", "]a+k", "MM", null, null, null, null, null, "Costs health/Returns to downed position", false, false, false, false, false, false, false, false, true),
-      new Move("Manji Blood Star", "]A+KA", "MM", null, null, null, null, null, "Costs health/Returns to downed position", false, false, false, false, false, false, false, false, true),
-      new Move("Raging Kneel ~ Indian Stance", "]2B+K", null, null, null, null, null, null, "Extend the motion with 2(hold)", true),
-      new Move("Raging Kneel Head", "]2B+KB", "L", null, null, null, null, null, "Returns to downed position"),
+      new Move("Warp Rolling Shark", "]A", "L", 16, -16, 2, 2, 28, "REV[1-2] / TC[1~]", false, false, true),
+      new Move("Englightened Sun Flare", "]B", "M", 16, -14, "LNC", "LNC", 25, "Dodges high, mid & low", false, true),
+      new Move("Tobi Ushiwaka ~ Manji Dragonfly", "]K", "MM", 16, -3, 5, 23, 32, "TC[1-14] / TJ[14~]", true),
+      new Move("No Fear", "]A+K", "M", 30, -81, "STN", "STN", 60, "Costs health/Returns to downed position / TC[1-111]", false, false, false, false, false, false, false, false, true),
+      new Move("Intrepid", "]a+k", "MM", 30, -35, "STN", "STN", 100, "Costs health/Returns to downed position", false, false, false, false, false, false, false, false, true),
+      new Move("Manji Blood Star", "]A+KA", "MM", 30, -35, "STN", "STN", 140, "Costs health/Returns to downed position / TC[1-15,48~] / TJ[15-48]", false, false, false, false, false, false, false, false, true),
+      new Move("Raging Kneel ~ Indian Stance", "]2B+K", null, null, null, null, null, null, "Extend the motion with 2(hold)", true), //no data available
+      new Move("Raging Kneel Head", "]2B+KB", "L", 11, -35, -25, -25, 24, "Returns to downed position"),
       new Move("Warp", "]6|4|2|8", null, null, null, null, null, null),
-      new Move("Indian Stance ~ Flea", "]B+K", null, null, null, null, null, null, null, true),
-      new Move("Indian Stance ~ Manji Dragonfly", "]8B+K", null, null, null, null, null, null, null, true)
+      new Move("Indian Stance ~ Flea", "]B+K", null, null, null, null, null, null, null, true), // no data available
+      new Move("Indian Stance ~ Manji Dragonfly", "]8B+K", null, null, null, null, null, null, null, true) // no data available
     ],
     // Manji Dragonfly
     [
       new Move("Manji Dragonfly", "2B+K", null, null, null, null, null, null, null, true),
-      new Move("Akitsu Mandala", "{A", "MMM", null, null, null, null, null),
-      new Move("Dragonfly Blade", "{B", "M", null, null, null, null, null),
-      new Move("Dragonfly Sweep", "{K", "L", null, null, null, null, null),
-      new Move("Spirited Away ~ Manji Dragonfly", "{A+B", "H", null, null, null, null, null, null, true),
+      new Move("Akitsu Mandala", "{A", "MMM", 18, -12, "KND", "KND", 36, "TJ[1~]"),
+      new Move("Dragonfly Blade", "{B", "M", 30, 2, "STN", "STN", 26, "TC[31-50] / TJ[1-29]"),
+      new Move("Dragonfly Sweep", "{K", "L", 20, -16, 8, 8, 26, "TC[19-34] / TJ[1-17]"),
+      new Move("Spirited Away ~ Manji Dragonfly", "{A+B", "H", 16, -6, "STN", "STN", 12, "TJ[3~]", true),
       new Move("Spirited Away", "{A+B", "H", null, null, null, null, null, "Against midair opponent/Shifts to attack throw upon hit/Press K(just) when landing for meter", false, false, false, false, false, false, true),
       new Move("Manji Dragonfly ~ Move", "{6|2|8|4", null, null, null, null, null, null, "Increased speed while soul charged", true),
-      new Move("Manji Dragonfly ~ Flea", "{B+K", null, null, null, null, null, null, null, true),
-      new Move("Manji Dragonfly ~ Indian Stance", "{2B+K", null, null, null, null, null, null, null, true)
+      new Move("Manji Dragonfly ~ Flea", "{B+K", null, null, null, null, null, null, null, true), // no data
+      new Move("Manji Dragonfly ~ Indian Stance", "{2B+K", null, null, null, null, null, null, null, true) // no data
     ],
     // Super Dragonfly
     [
-      new Move("Super Dragonfly", "S{8B+K", null, null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Parachute Spinner", "S}A", "MM", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Transcendent Dragonfly", "S}B", "M", null, null, null, null, null, null, false, false, false, false, false, true, false, false, true),
-      new Move("Acrobatic Bliss", "S}K", "m", null, null, null, null, null, "When landing press K(just) to increase soul gauge", false, false, false, false, false, true),
-      new Move("Spinning Fall ~ Flea", "S}B+K", "M", null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Super Dragonfly ~ Manji Dragonfly", "S}8B+K", null, null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Daruma Drop ~ Indian Stance", "S}2B+K", "mM", null, null, null, null, null, "Becomes a low attack when at distance", true, false, false, false, false, true, false, true),
-      new Move("Paradise Death", "S}A+K", "M", null, null, null, null, null, "Costs health/Returns to downed position", false, false, false, false, false, true, false, false, true),
+      new Move("Super Dragonfly", "S{8B+K", null, null, null, null, null, null, null, true, false, false, false, false, true), //no data
+      new Move("Parachute Spinner", "S}A", "MM", 18, -8, "KND", "KND", 60, "TJ[1~]", false, false, false, false, false, true),
+      new Move("Transcendent Dragonfly", "S}B", "M", 21, 2, "STN", "STN", 30, "TC[22-32] / TJ[1-22]", false, false, false, false, false, true, false, false, true),
+      new Move("Acrobatic Bliss", "S}K", "m", 65, -100, "STN", "STN", 30, "When landing press K(just) to increase soul gauge / TJ[1-69]", false, false, false, false, false, true),
+      new Move("Spinning Fall ~ Flea", "S}B+K", "M", 54, 0, "STN", "STN", 60, "TJ[1-60]", true, false, false, false, false, true),
+      new Move("Super Dragonfly ~ Manji Dragonfly", "S}8B+K", null, null, null, null, null, null, null, true, false, false, false, false, true), // no data
+      new Move("Daruma Drop ~ Indian Stance", "S}2B+K", "mM", 54, 25, "KND", "KND", 70, "Becomes a low attack when at distance / TC[60-61] / TJ[1-60,1~]", true, false, false, false, false, true, false, true),
+      new Move("Paradise Death", "S}A+K", "M", 62, -24, "STN", "STN", 120, "Costs health/Returns to downed position / TJ[1-74]", false, false, false, false, false, true, false, false, true),
       new Move("Super Dragonfly ~ Move", "S}6|2|8|4", null, null, null, null, null, null, null, true, false, false, false, false, true),
     ]
   ]

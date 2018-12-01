@@ -4957,16 +4957,16 @@ export class MoveService{
     ],
     // Throws
     [
-      new Move("Sword Face Smash", "A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Jumping Body Slam", "4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Elegant Storm", "ZA+G", "H", null, null, null, null, null, "", false, false, false, false, false, false, true),
-      new Move("Wheels of Hell", "XA+G", "H", null, null, null, null, null, "", false, false, false, false, false, false, true),
-      new Move("Tornado Drop", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Soul Siphon", "6A+B", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Soul Possession", "6A+B6", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Rainbow Drop", "214A+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Manji Tatsumi", "SA+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
-      new Move("Nimbus", "S4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, true, true)
+      new Move("Sword Face Smash", "A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Jumping Body Slam", "4A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Elegant Storm", "ZA+G", "H", 18, null, null, null, null, "", false, false, false, false, false, false, true),
+      new Move("Wheels of Hell", "XA+G", "H", 18, null, null, null, null, "", false, false, false, false, false, false, true),
+      new Move("Tornado Drop", "VA+G", "H", 18, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      new Move("Soul Siphon", "6A+B", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Soul Possession", "6A+B6", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Rainbow Drop", "214A+G", "H", 18, null, null, null, null, null, false, false, false, false, false, false, true),
+      new Move("Manji Tatsumi", "SA+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
+      new Move("Nimbus", "S4A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, true, true)
     ],
     // ************ Stances *************
     // Flea

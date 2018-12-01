@@ -4825,10 +4825,10 @@ export class MoveService{
       new Move("Stone Fists", "C1AAAAA", "MMMMM", 12, -14, -4, -4, 50, "Returns to downed position"),
       new Move("Scowling Moon God", "WA", "M", 16, -12, 0, 0, 16, "tc[2-8]", false, null, null, null, null, null, null, null, null, null, null),
       new Move("Scowling Moon God ~ Manji Dragonfly", "WAA+B", "MM", 16, -9, "KND", "KND", 30, "Consumes soul gauge/No gauge cost when soul charge", true, false, false, false, false, false, false, false, false, false, true),
-      new Move("Kurama Itto", "J7A", "L", 34, -8, 6, 6, 24, ""TJ[13-36]", false, false, true),
-      new Move("Kurama Itto", "J8A", "L", 34, -8, 6, 6, 27, ""TJ[13-36]", false, false, true),
-      new Move("Kurama Itto", "J9A", "L", 34, -8, 6, 6, 30, ""TJ[13-36]", false, false, true),
-      new Move("Reverse Splinter Gale", "TA", "H", 14, -6, 6, 6, 12),
+      new Move("Kurama Itto", "J7A", "L", 34, -8, 6, 6, 24, "TJ[13-36]", false, false, true),
+      new Move("Kurama Itto", "J8A", "L", 34, -8, 6, 6, 27, "TJ[13-36]", false, false, true),
+      new Move("Kurama Itto", "J9A", "L", 34, -8, 6, 6, 30, "TJ[13-36]", false, false, true),
+      new Move("Reverse Splinter Gale", "TA", "H", 14, -6, 6, 6, 12, null),
       new Move("Reverse Grass Part", "T2A", "S", 14, -6, 8, 8, 14, "TC[11~]", false, false, true)
     ],
     // Vertical Moves
@@ -4855,7 +4855,7 @@ export class MoveService{
       new Move("Crashing Wave ~ Indian Stance", "1b", "L", null, null, null, null, null, null, true), //no data available
       new Move("Hell Divide", "1BB", "LM", 21, -4, 2, 2, 30, "TJ[1-20]"),
       new Move("Hannya Hammer", "4B", "H", 12, -12, 4, 4, 14, "Absorbs soul gauge"),
-      new Move("Snowflake", "CB", "M", 13, -9, 1, 1, 18, "TC[2-4,10~]", false, false, true),
+      new Move("Snowflake", "CB", "M", 13, -9, 1, 1, 18, 28, "TC[2-4,10~]", false, false, true),
       new Move("Inner Palm", "WB", "M", 16, -10, 10, "LNC", "TC[2-18]"),
       new Move("Quarter Moon", "JB", "M", 22, -8, 2, 2, 32, "TJ[7-29]"),
       new Move("Reverse Drizzle", "TB", "M", 16, -6, 4, 4, 18, null),
@@ -4891,7 +4891,7 @@ export class MoveService{
     // Simultaneous Press Moves
     [
       new Move("Poison Breath", "A+B", "H", 29, 4, "STN", "STN", 30, "TC[1-10]", false, true, false, false, false, false, false, true),
-      new Move("Toxic Breath", "a+b", "m", 36, 8, 'STN", "STN", 40, "TC[1-17]", false, true, false, false, false, false, false, true),
+      new Move("Toxic Breath", "a+b", "m", 36, 8, "STN", "STN", 40, "TC[1-17]", false, true, false, false, false, false, false, true),
       new Move("Bad Stomach to Backflip Kick", "z+xK", "MM", 39, 4, "STN", "STN", 18, "TJ[1-7]", true),
       new Move("Diggin Cyclone ~ Flea", "6A+B", "M", 22, -8, "STN", "STN", 16, "TJ[8~]", true),
       new Move("Spine Divide", "4A+B", "M", 24, -4, 6, 6, 36, null, false, true),

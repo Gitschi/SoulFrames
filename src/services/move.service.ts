@@ -4855,8 +4855,8 @@ export class MoveService{
       new Move("Crashing Wave ~ Indian Stance", "1b", "L", null, null, null, null, null, null, true), //no data available
       new Move("Hell Divide", "1BB", "LM", 21, -4, 2, 2, 30, "TJ[1-20]"),
       new Move("Hannya Hammer", "4B", "H", 12, -12, 4, 4, 14, "Absorbs soul gauge"),
-      new Move("Snowflake", "CB", "M", 13, -9, 1, 1, 18, 28, "TC[2-4,10~]", false, false, true),
-      new Move("Inner Palm", "WB", "M", 16, -10, 10, "LNC", "TC[2-18]"),
+      new Move("Snowflake", "CB", "M", 13, -9, 1, 1, 18, "TC[2-4,10~]", false, false, true),
+      new Move("Inner Palm", "WB", "M", 16, -10, 10, "LNC", 28, "TC[2-18]"),
       new Move("Quarter Moon", "JB", "M", 22, -8, 2, 2, 32, "TJ[7-29]"),
       new Move("Reverse Drizzle", "TB", "M", 16, -6, 4, 4, 18, null),
       new Move("Reverse Snowflake", "T2B", "M", 16, -8, 2, 2, 20, "TC[13~]", false, false, true)
@@ -4896,7 +4896,7 @@ export class MoveService{
       new Move("Diggin Cyclone ~ Flea", "6A+B", "M", 22, -8, "STN", "STN", 16, "TJ[8~]", true),
       new Move("Spine Divide", "4A+B", "M", 24, -4, 6, 6, 36, null, false, true),
       new Move("Deathcopter", "8A+B", "M", 114, -1, "STN", "STN", 80, "TJ[8-15]", false, false, false, false, false, false, false, false, true),
-      new Move("Deathcopter Slice", "8A+B2|G", "M", 114, -1, 140, "STN", "STN", "TJ[1-24]", false, false, false, false, false, false, false, false, true),
+      new Move("Deathcopter Slice", "8A+B2|G", "M", 114, -1, "STN", "STN", 140, "TJ[1-24]", false, false, false, false, false, false, false, false, true),
       new Move("Deathcopter Slice", "8z+x2|G", "M", 25, -1, "STN", "STN", 40, "TJ[1-24]", false, false, false, false, false, false, false, false, true),
       new Move("Deathcopter Trick", "2z+x4", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),//no data available on this one
       new Move("Deathcopter Slice ~ Manji Dragonfly", "2z+xB+K", null, null, null, null, null, null, null, true),//no data available on this one
@@ -4929,7 +4929,7 @@ export class MoveService{
     // 8-Way Run Moves
     [
       new Move("Kabuki", "#|^|(A", "M", 20, -12, 2, 2, 18),
-      new Move("Kabuki Compendium", "#|^|(HA", "MM", 20, 28, -6, 8, "STN", "Absorbs soul gauge"),
+      new Move("Kabuki Compendium", "#|^|(HA", "MM", 20, -6, 8, "STN", 28, "Absorbs soul gauge"),
       new Move("Ganto", "@|*A", "H", 14, -20, "KND", "KND", 30, "TC[6-24]", false, true),
       new Move("Flagstaff", "!|$|uA", "M", 24, -6, "LNC", "LNC", 26),
       new Move("Circium", "#|^|(B", "M", 22, 0, 8, 8, 32, null),
@@ -4941,7 +4941,7 @@ export class MoveService{
       new Move("Guillotine Crow Kick", "@|*K", "MM", 40, 2, 14, 14, 24, "TC[4-10]"),
       new Move("Kangaroo Kick", "!|$|uK", "M", 26, -10, "LNC", "LNC", 30, "TC[5-58]", false, true),
       new Move("Crying Spirit Sword", "#|^|(A+B", "M", 30, -4, "STN", "STN", 38, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Crying Spirit Sword ~ Flea", "#|^|(a+b", 30, -4, "STN", "STN", 38, "TJ[23~]", null, true),
+      new Move("Crying Spirit Sword ~ Flea", "#|^|(a+b", "M", 30, -4, "STN", "STN", 38, "TJ[23~]", null, true),
       new Move("Crying Spirit Sword to Death", "#|^|(z+x2B", "L", null, null, null, null, null), //not listed but it should be similar to the last 2 entries
       new Move("Solar Kick Shark Attack", "#|^|(B+K", "L", 42, -17, -7, -7, 44, "TC[6-11,31-36] / TJ[11-30]", false, null),  //8WR says it's a low
       new Move("Solar Kick Shark Attack", "#|^|(B+KA+B", "LH", 42, -26, -18, -18, 58, null, false, true),

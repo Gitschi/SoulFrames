@@ -5092,7 +5092,7 @@ export class MoveService{
     ],
     // Manji Dragonfly
     [
-      new Move("Manji Dragonfly", "2B+K", null, null, null, null, null, null, null, true),
+      new Move("Manji Dragonfly", "8B+K", null, null, null, null, null, null, null, true),
       new Move("Akitsu Mandala", "{A", "MMM", 18, -12, "KND", "KND", 36, "TJ[1~]"),
       new Move("Dragonfly Blade", "{B", "M", 30, 2, "STN", "STN", 26, "TC[31-50] / TJ[1-29]"),
       new Move("Dragonfly Sweep", "{K", "L", 20, -16, 8, 8, 26, "TC[19-34] / TJ[1-17]"),

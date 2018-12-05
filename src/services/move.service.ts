@@ -837,8 +837,8 @@ export class MoveService{
     [
       new Move("Cleaving Pirouette", "#|^|(A", "H", 18, -10, 0, 0, 14),
       new Move("Cleaving Pirouette", "#|^|(AA", "HH", 18, -6, 2, 2, 30),
-      new Move("Cleaving Pirouette ~ Quen Strike", "#|^|(AB", "HN", 18, -4, 10, "KND", 34),
-      new Move("Cleaving Pirouette ~ Quen Expel", "#|^|(ABUA", "HN", 18, -12, "KND", "KND", 44),
+      new Move("Cleaving Pirouette ~ Quen Strike", "#|^|(AB", "HM", 18, -4, 10, "KND", 34),
+      new Move("Cleaving Pirouette ~ Quen Expel", "#|^|(ABUA", "HM", 18, -12, "KND", "KND", 44),
       new Move("Cleaving Pirouette ~ Quen Charge", "#|^|(ABUB", "HM", 18, 6, "KND", "KND", 58, "Powers up when opponent is soul charged", false, true, false, false, false, false, false, true),
       new Move("Cleaving Pirouette ~ Glypth of Quen ~ Fleet Footwork", "#|^|(AB2|8B+K", "H", 18, null, null, null, 14, null, true),
       new Move("Toussant Two-Step", "#|^|(AK", "HL", 18, -10, 4, 4, 34, "2nd hit can be held"),
@@ -1940,9 +1940,16 @@ export class MoveService{
       new Move("Guillotine Kick", "☻KK", "LM", 22, -8, "KND", "KND", 46),
 
       new Move("Raging Dragon Zodiac: Reprisal", "☻A+B+K", "M", 13, -2, -9, -9, 32, "Return to right outer with A+B+K (hold)", false, false, false, false, false, false, true, true, false, false, true),
-      
-      new Move("Seven Stars Fury ~ Right Outer", "♥B+KBBBA", "MMMMMMMMM", 20, -85, "KND", "KND", 58, "Time precisely for increased damage", true, true),
-      new Move("Pure Seven", "♥6", null, null, null, null, null, null, "While in a special stance/GI vs. high, mid horizontal", true, false, false, true)
+    ],
+    // Special Stance
+    [
+      new Move("Pure Seven", "♥6", null, null, null, null, null, null, "While in a special stance/GI vs. high, mid horizontal", true, false, false, true),
+
+      new Move("Seven Stars Fury", "♥B+K", "MM", 20, -10, -2, -2, 6),
+      new Move("Seven Stars Fury", "♥B+KB", "MMMM", 20, -16, -6, -6, 14, "Time precisely for increased damage"),
+      new Move("Seven Stars Fury", "♥B+KBB", "MMMMMM", 20, -20, -10, -10, 24, "Time precisely for increased damage"),
+      new Move("Seven Stars Fury", "♥B+KBBB", "MMMMMMMM", 20, -18, -8, -8, 36, "Time precisely for increased damage"),
+      new Move("Seven Stars Fury ~ Right Outer", "♥B+KBBBA", "MMMMMMMMM", 20, -85, "KND", "KND", 58, "Time precisely for increased damage", true, true)
     ]   
   ]
 

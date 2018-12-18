@@ -12,7 +12,7 @@ export class CharService{
 
   // Array of objects for all characters
   private chars: Char[] = [
-    new Char("2B", "assets/imgs/characters/Astaroth.png", this.moveService.TwoB, this.stanceService.TwoB),
+    new Char("2B", "assets/imgs/characters/TwoB.png", this.moveService.TwoB, this.stanceService.TwoB),
     new Char("Astaroth", "assets/imgs/characters/Astaroth.png", this.moveService.Astaroth),
     new Char("Azwel", "assets/imgs/characters/Azwel.png", this.moveService.Azwel, this.stanceService.Azwel),
     new Char("Cervantes", "assets/imgs/characters/Cervantes.png", this.moveService.Cervantes, this.stanceService.Cervantes),

@@ -3,9 +3,9 @@ import { Stance } from "../models/stance.model";
 export class StanceService{
 
   TwoB = [
-    new Stance("Aggression Shift", "assets/imgs/stances/Azwel_BeautyOfBalance.png"),
-    new Stance("Aerial Leap", "assets/imgs/stances/Azwel_TragedyOfWar.png"),
-    new Stance("Angler Stance", "assets/imgs/stances/Azwel_ComedyOfErrors.png")
+    new Stance("Aggression Shift", "assets/imgs/stances/TwoB_AggressionShift.png"),
+    new Stance("Aerial Leap", "assets/imgs/stances/TwoB_AerialLeap.png"),
+    new Stance("Angler Stance", "assets/imgs/stances/TwoB_AnglerStance.png")
   ]
 
   Azwel = [

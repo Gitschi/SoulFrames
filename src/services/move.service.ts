@@ -21,6 +21,261 @@ import { Move } from "../models/move.model";
 
 export class MoveService{
 
+  TwoB = [
+    // Reversal Edge Attacks
+    [
+      new Move("Soul Stance: Aggressive Defense", "B+G", "M", null, null, null, null, null, null, false, false, false, false, true),
+      new Move("Soul Stance: Aggressive Defense", "b+g", "M", null, null, null, null, null, null, false, false, false, false, true, false, false, true),
+      new Move("Inverted Support", "rAAA", "HHHMM", null, null, null, null, null, null, false, true),
+      new Move("Inverted Assault Volley", "rAB", "HMMMM", null, null, null, null, null, null, false, true),
+      new Move("Inverted Support ~ Aggression Shift", "rAo6", "H", null, null, null, null, null, null, true, true),
+      new Move("Inverted Support ~ Back Step ~ Aggression Shift", "rAo4", "H", null, null, null, null, null, null, true, true),
+      new Move("Inverted Support ~ Aerial Leap", "rAo8", "H", null, null, null, null, null, null, true, true),
+      new Move("Inverted Skewer Sequence", "rB", "MM", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
+      new Move("Inverted Skewer: Augmented", "rb", "MM", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
+      new Move("Inverted Orbit Strike ~ Aerial Leap", "rK", "M", null, null, null, null, null, null, true, true),
+      new Move("Inverted Smash ~ Aerial Leap(Lethal Hit)", "rK", "MM", null, null, null, null, null, null, true, true, false, false, false, false, true)
+    ],
+    // Gauge Attacks
+    [
+      new Move("Suppression: Extermination Gambit", "A+B+K", "M", null, null, null, null, null, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Suppression: Extermination Gambit", "]A+B+K", "M", null, null, null, null, null, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Suppression: Extermination Gambit", "]AAA+B+K", "HHM", null, null, null, null, null, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Limiter Release: Self-Destruct", "6A+B+K", "M", null, null, null, null, null, "When at low health", false, false, false, false, false, false, true, false, false, false, true), // When at low health
+      new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Slash Sequence: Charged Blade", "SAAAA", "HHHHHHM", null, null, null, null, null, null, false, false, false, false, false, true),
+      new Move("Revolving Strike (First Class) ~ Aerial Leap", "S3AKK", "MMHHMM", null, null, null, null, null, null, true, false, false, false, false, true),
+      new Move("Severing Sequence (First Class) ~ Aerial Leap", "SBBBB", "MMMMM", null, null, null, null, null, null, true, false, false, false, false, true),
+      new Move("Assault Pattern: Charged Gatling", "S4BBB", "MMMmmm", null, null, null, null, null, null, false, false, false, false, false, true),
+      new Move("Mobilize: Spear Spin (First Class)", "S@|*AAA", "HHHH", null, null, null, null, null, null, false, true, false, false, false, true),
+      new Move("Mobilize: Piercing Assault (First Class)", "S#|^|(BB", "MM", null, null, null, null, null, null, false, false, false, false, false, true),
+      new Move("Shifted Slice: Charged Blade", "S[A", "MMM", null, null, null, null, null, null, false, false, false, false, false, true),
+      new Move("Shifted Slice: Charged Blade ~ Aggression Shift", "S[Ao6", "MMm", null, null, null, null, null, null, true, false, false, false, false, true),
+      new Move("Shifted Slice: Charged Blade ~ Back Step ~ Aggression Shift", "S[Ao4", "MMm", null, null, null, null, null, null, true, false, false, false, false, true),
+      new Move("Shifted Slice: Charged Blade ~ Aerial Leap", "S[Ao8", "MMm", null, null, null, null, null, null, true, false, false, false, false, true),
+      new Move("Shifted Support Kick ~ Aerial Leap: Charged Spear", "S[BB", "Lmm", null, null, null, null, null, null, true, false, false, false, false, true, false, true),
+      new Move("Airborne Slash Pattern: Charged Laser", "S]AAA", "HHHHHH", null, null, null, null, null, null, false, false, false, false, false, true),
+      new Move("Airborne Spear Cleave: Charged Spear", "S]B", "MMMm", null, null, null, null, null, null, false, false, false, false, false, true)
+    ],
+    // Horizontal Moves
+    [
+      new Move("Slash Sequence", "AAAA", "HHHHHH", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Slash Sequence ~ Aggression Shift", "AAAo6", "HHHHH", null, null, null, null, null, null, true, false, false, false, false, false, false, false, false, true),
+      new Move("Slash Sequence ~ Back Step ~ Aggression Shift", "AAAo4", "HHHHH", null, null, null, null, null, null, true, false, false, false, false, false, false, false, false, true),
+      new Move("Slash Sequence ~ Aerial Leap", "AAAo8", "HHHHH", null, null, null, null, null, null, true, false, false, false, false, false, false, false, false, true),
+      new Move("Slash Assault: I", "AAB", "HHMMM", null, null, null, null, null),
+      new Move("Slash Assault: II", "AAAB", "HHHHHMMM", null, null, null, null, null),
+      new Move("Augmented Revolving Slash", "a", "HHMMM", null, null, null, null, null, null, false, false, true),
+      new Move("Slash Support", "6AA", "HHH", null, null, null, null, null, "Cancel 2nd hit with G", false, false, false, false, false, false, false, false, false, true),
+      new Move("Revolving Assault", "3AA", "MMMM", null, null, null, null, null),
+      new Move("Lower Slash", "2A", "S", null, null, null, null, null, null, false, false, true),
+      new Move("Blade Sweep", "1A", "LLL", null, null, null, null, null, null, false, false, true),
+      new Move("Assault Helix", "4A", "HH", null, null, null, null, null, null, false, true),
+      new Move("Lower Slash", "CA", "S", null, null, null, null, null, null, false, false, true),
+      new Move("Rising Slash Sequence", "WA", "MH", null, null, null, null, null),
+      new Move("Leaping Horizontal Assault", "JA", "MHH", null, null, null, null, null),
+      new Move("Reversed Slash", "TA", "H", null, null, null, null, null),
+      new Move("Lower Reversed Slash", "T2A", "S", null, null, null, null, null, null, false, false, true)
+    ],
+    // Vertical Moves
+    [
+      new Move("Severing Sweep", "BA", "MLLL", null, null, null, null, null, null, false, false, true, false, false, false, false, false, false, true),
+      new Move("Severing Sequence", "BBB", "MMMM", null, null, null, null, null),
+      new Move("Augmented Severing Thrust", "b", "MH", null, null, null, null, null),
+      new Move("Augmented Severing Thrust(Counter)", "b", "MHM", null, null, null, null, null),
+      new Move("Hilt Assault", "b6", "H", null, null, null, null, null),
+      new Move("Projectile Slash Sequence", "6BBB", "MMMMMMM", null, null, null, null, null, null, false, true),
+      new Move("Projectile Slash Sequence ~ Aggression Shift", "6BBo6", "MMMMM", null, null, null, null, null, null, true, true),
+      new Move("Projectile Slash Sequence ~ Back Step ~ Aggression Shift", "6BBo4", "MMMMM", null, null, null, null, null, null, true, true),
+      new Move("Projectile Slash Sequence ~ Aerial Leap", "6BBo8", "MMMMM", null, null, null, null, null, null, true, true),
+      new Move("Augmented Spear Slash Sequence", "6b", "MMMMM", null, null, null, null, null),
+      new Move("Reversed Core Disruption", "6BK", "MMMM", null, null, null, null, null, "+2 analysis points", false, true),
+      new Move("Reverse Augmented Seismic Smash", "6Bk", "MMMM", null, null, null, null, null),
+      new Move("First Strike ~ Aerial Leap", "3B", "M", null, null, null, null, null, null, true),
+      new Move("Augmented First Strike ~ Aerial Leap", "3bo", "Mmmm", null, null, null, null, null, null, true),
+      new Move("Downward Severing Blade", "2B", "M", null, null, null, null, null, null, false, false, true),
+      new Move("Revolving Slash", "2xA", "HMMM", null, null, null, null, null, null, false, false, true),
+      new Move("Ground Thrust", "1B", "L", null, null, null, null, null),
+      new Move("Ground Thrust ~ Aggression Shift", "1Bo6", "L", null, null, null, null, null, null, true),
+      new Move("Ground Thrust ~ Back Step ~ Aggression Shift", "1Bo4", "L", null, null, null, null, null, null, true),
+      new Move("Ground Thrust ~ Aerial Leap", "1Bo8", "L", null, null, null, null, null, null, true),
+      new Move("Assault Pattern", "4BBB", "MMM", null, null, null, null, null, "Can be delayed"),
+      new Move("Assault Skewer", "4BB6B", "MMM", null, null, null, null, null, "Can be delayed"),
+      new Move("Lower Severing Blade", "CB", "M", null, null, null, null, null, null, false, false, true),
+      new Move("Rising Spear Slice", "WBB", "MM", null, null, null, null, null),
+      new Move("Rising Android Kick ~ Aerial Leap", "WBK", "MM", null, null, null, null, null),
+      new Move("Leaping Projectile Blade", "JB", "m", null, null, null, null, null),
+      new Move("Reversed Severing Blade", "TB", "M", null, null, null, null, null),
+      new Move("Lower Reversed Severing Blade", "T2B", "M", null, null, null, null, null, null, false, false, true)
+    ],
+    // Kicks
+    [
+      new Move("Android Kick", "K", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Android Kick ~ Angler Stance", "k", "H", null, null, null, null, null, null, true),
+      new Move("Multistrike", "6KB", "MMMM", null, null, null, null, null),
+      new Move("Multistrike Kick", "6KK", "MMMHH", null, null, null, null, null, "+1 analysis point"),
+      new Move("Charging Kick", "6Kk", "MMMH", null, null, null, null, null, "+2 analysis points/GI vs. high & mid", false, false, false, true),
+      new Move("Multistrike Kick ~ Aggression Shift", "6Ko6", "MMM", null, null, null, null, null, null, true),
+      new Move("Multistrike Kick ~ Back Step ~ Aggression Shift", "6Ko4", "MMM", null, null, null, null, null, null, true),
+      new Move("Multistrike Kick ~ Aerial Leap", "6Ko8", "MMM", null, null, null, null, null, null, true),
+      new Move("Brake Kick", "3K", "MM", null, null, null, null, null, "+1 analysis point"),
+      new Move("Brake Kick(Hold)", "3k", "MM", null, null, null, null, null, "+2 analysis points"),
+      new Move("Lower Unarmed Kick", "2K", "L", null, null, null, null, null, null, false, false, true),
+      new Move("Examine", "1K", "L", null, null, null, null, null, "+1 analysis point"),
+      new Move("Examine ~ Angler Stance", "1k", "L", null, null, null, null, null, "+1 analysis point", true),
+      new Move("Core Disruption", "4K", "MM", null, null, null, null, null, "+2 analysis points", false, true),
+      new Move("Augmented Seismic Smash", "4k", "MM", null, null, null, null, null),
+      new Move("Lower Unarmed Kick", "CK", "L", null, null, null, null, null, null, false, false, true),
+      new Move("Rising Brake Kick", "WK", "MM", null, null, null, null, null, "+1 analysis point"),
+      new Move("Rising Brake Kick(Hold)", "Wk", "MM", null, null, null, null, null, "+2 analysis points"),
+      new Move("Leaping Unarmed Strike", "JK", "M", null, null, null, null, null, "+3 analysis points"),
+      new Move("Reversed Unarmed Kick", "TK", "H", null, null, null, null, null),
+      new Move("Lower Reversed Unarmed Kick", "T2K", "L", null, null, null, null, null, null, false, false, true)
+    ],
+    // Simultaneous Press Moves
+    [
+      new Move("Pod Program R050: Spear", "A+B", "m", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
+      new Move("Pod Program R050: Spear", "a+b", "m", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
+      new Move("Pod Program R010: Laser", "6A+B", "H", null, null, null, null, null),
+      new Move("Pod Program R010: Laser", "6a+b", "H", null, null, null, null, null),
+      new Move("Pod Program R020: Mirage", "2A+B", "mmmmm", null, null, null, null, null, "Dodges high, mid & low"),
+      new Move("Pod Program R020: Mirage", "2a+b", "mmmmm", null, null, null, null, null, "Dodges high, mid & low"),
+      new Move("Pod Program R010: Laser (Upward Angle)", "4A+B", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
+      new Move("Pod Program R010: Laser (Upward Angle)", "4a+b", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
+      new Move("Pod Program R080: Wave", "8A+B", "mSSS", null, null, null, null, null, "Deals chip damage"),
+      new Move("Pod Program R080: Wave", "8a+b", "mSSS", null, null, null, null, null, "Deals chip damage", false, true),
+
+      // new Move("Angler Stance", "B+K", null, null, null, null, null, null, "Dodges high & mid(except kicks)", true),
+      // new Move("Angler Stance", "2B+K", null, null, null, null, null, null, "Dodges mid & low(except kicks)", true),
+      new Move("Counter Bomb", "B+K|2B+K", "M", null, null, null, null, null, "To evade opponent's attack"),
+      new Move("Counter Bomb ~ Cancel", "G", null, null, null, null, null, null, "Dodges high, mid & low"), // After succesfully dodging
+      new Move("Counter Bomb", "G", "M", null, null, null, null, null, "When dodging during counter bomb", false, false, false, false, false, false, false, true), // After succesfully dodging
+      
+      new Move("Crushing Kick", "6B+K", "MMM", null, null, null, null, null),
+      new Move("Hilt Bash", "4B+K", "MHM", null, null, null, null, null),
+      new Move("Floating Assault", "CB+K", "M", null, null, null, null, null),
+      new Move("Acrobatic Counter Assault", "TB+K", "HM", null, null, null, null, null, "GI vs. horizontals(except kicks)")
+    ],
+    // 8-Way Run Moves
+    [
+      new Move("Mobilize: Slash Pattern", "#|^|(A", "LH", null, null, null, null, null),
+      new Move("Mobilize: Slash Pattern ~ Aggression Shift", "#|^|(Ao6", "LH", null, null, null, null, null, null, true),
+      new Move("Mobilize: Slash Pattern ~ Back Step ~ Aggression Shift", "#|^|(Ao4", "LH", null, null, null, null, null, null, true),
+      new Move("Mobilize: Slash Pattern ~ Aerial Leap", "#|^|(Ao8", "LH", null, null, null, null, null, null, true),
+
+      new Move("Mobilize: Slashing Unarmed Kick", "#|^|(zK", "LHL", null, null, null, null, null, null, false, false, true),
+      new Move("Mobilize: Crush Sequence", "#|^|(zk", "LHM", null, null, null, null, null, null, false, true),
+      new Move("Mobilize: Spear Spin", "@|*AA", "HHH", null, null, null, null, null),
+      new Move("Mobilize: Spear Sequence", "@|*AB", "HHM", null, null, null, null, null, null, false, false, true),
+      new Move("Mobilize: Horizontal Assault", "!|$|uA", "MM", null, null, null, null, null),
+      new Move("Mobilize: Augmented Horizontal Assault", "!|$|ua", "MMMMM", null, null, null, null, null),
+      new Move("Mobilize: Piercing Thrust", "#|^|(B", "M", null, null, null, null, null),
+      
+      new Move("Mobilize: Piercing Thrust ~ Aggression Shift", "#|^|(Bo6", "M", null, null, null, null, null, null, true),
+      new Move("Mobilize: Piercing Thrust ~ Back Step ~ Aggression Shift", "#|^|(Bo4", "M", null, null, null, null, null, null, true),
+      new Move("Mobilize: Piercing Thrust ~ Aerial Leap", "#|^|(Bo8", "M", null, null, null, null, null, null, true),
+
+      new Move("Mobilize: Skewer", "@|*B", "M", null, null, null, null, null, null, false, true),
+      new Move("Mobilize: Skewer ~ Aggression Shift", "@|*Bo6", "M", null, null, null, null, null, null, true, true),
+      new Move("Mobilize: Skewer ~ Back Step ~ Aggression Shift", "@|*Bo4", "M", null, null, null, null, null, null, true, true),
+      new Move("Mobilize: Skewer ~ Aerial Leap", "@|*Bo8", "M", null, null, null, null, null, null, true, true),
+
+      new Move("Mobilize: Rotating Slash Assault", "!|$|uB", "M", null, null, null, null, null),
+      new Move("Mobilize: Rotating Slash Assault ~ Aggression Shift", "!|$|uBo6", "M", null, null, null, null, null, null, true),
+      new Move("Mobilize: Rotating Slash Assault ~ Back Step ~ Aggression Shift", "!|$|uBo4", "M", null, null, null, null, null, null, true),
+      new Move("Mobilize: Rotating Slash Assault ~ Aerial Leap", "!|$|uBo8", "M", null, null, null, null, null, null, true),
+      new Move("Mobilize: Rotating Slash Assault", "!|$|ub", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
+
+      new Move("Mobilize: Disposal Kick", "#|^|(K", "M", null, null, null, null, null, null, false, true),
+      new Move("Mobilize: Disposal Kick ~ Angler Stance", "#|^|(k", "M", null, null, null, null, null, null, true, true),
+      new Move("Mobilize: Spinning Strike", "@|*KK", "LHHHM", null, null, null, null, null),
+      new Move("Mobilize: Spinning Strike", "@|*Kk", "LHHHM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
+      new Move("Mobilize: Cyclone Kick", "!|$|uK", "HHH", null, null, null, null, null, "+2 analysis points"),
+
+      new Move("Mobilize: Cyclone Kick", "!|$|uk", "HHH", null, null, null, null, null, "+3 analysis points"),
+      new Move("Mobilized Pod Program R040: Blade", "eA+B", "MMMM", null, null, null, null, null),
+      new Move("Mobilize: Projectile Slash Patter", "#|^|(B+K", "MMMMM", null, null, null, null, null),
+      new Move("Mobilize: Scatter Spear", "@|*B+K", "MMM", null, null, null, null, null, null, false, false, true),
+      new Move("Mobilize: Reversed Severing Spin", "!|$|uB+K", "MMM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true, true),
+
+      new Move("Suppression: Unarmed Leg Throw", "#|^|(A+G", "H", null, null, null, null, null, "+2 analysis points/Neutral Breakable"),
+      new Move("Sliding Charge", "RK", "L", null, null, null, null, null)
+    ],
+    // Throws
+    [
+      new Move("Suppression: Slash Kick", "A+G", "H", null, null, null, null, null, "Neutral Breakable", false, false, false, false, false, false, true),
+      new Move("Suppression: Impaling Slash", "4A+G", "H", null, null, null, null, null, "Back Breakable", false, false, false, false, false, false, true),
+      new Move("Suppression: Reversed Projectile Blade", "ZA+G", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
+      new Move("Suppression: Support Thrust", "XA+G", "H", null, null, null, null, null, "+1 analysis point", false, false, false, false, false, false, true),
+      new Move("Suppression: Multistrike Protocol", "VA+G", "H", null, null, null, null, null, "Neutral Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      new Move("Suppression: Multistrike Protocol(just)", "VA+GA|B|Kj", "H", null, null, null, null, null, "Neutral Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      new Move("Suppression: Unarmed Leg Throw", "#|^|(A+G", "H", null, null, null, null, null, "+2 analysis points/Neutral Breakable"),
+      new Move("Suppression: Composite Kick", "[A+G", "H", null, null, null, null, null, "Neutral Breakable", false, false, false, false, false, false, true),
+      new Move("Suppression: Composite Slash", "[4A+G", "H", null, null, null, null, null, "Back Breakable", false, false, false, false, false, false, true)
+    ],
+    // ************ Stances *************
+    // Aggression Shift
+    [
+      new Move("Aggression Shift", "236", null, null, null, null, null, null, null, true),
+      new Move("Back Step ~ Aggression Shift", "214", null, null, null, null, null, null, null, true),
+      new Move("Shifted Slice", "[A", "MM", null, null, null, null, null),
+      new Move("Shifted Slice ~ Aggression shift", "[Ao6", "MM", null, null, null, null, null, null, true),
+      new Move("Shifted Slice ~ Back Step ~ Aggression Shift", "[Ao4", "MM", null, null, null, null, null, null, true),
+      new Move("Shifted Slice ~ Aerial Leap", "[Ao8", "MM", null, null, null, null, null, null, true),
+
+      new Move("Shifted Support Assault", "[BA", "LLL", null, null, null, null, null),
+      new Move("Shifted Support Kick ~ Aerial Leap", "[BB", "Lm", null, null, null, null, null, null, true),
+      new Move("Shifted Support Skewer (Augmented)", "[b", "M", null, null, null, null, null),
+
+      new Move("Shifted Strike Sequence", "[KK", "MMMMH", null, null, null, null, null),
+      new Move("Shifted Strike Sequence ~ Aggression Shift", "[Ko6", "MMMM", null, null, null, null, null, null, true),
+      new Move("Shifted Strike Sequence ~ Back Step ~ Aggression Shift", "[Ko4", "MMMM", null, null, null, null, null, null, true),
+      new Move("Shifted Strike Sequence ~ Aerial Leap", "[Ko8", "MMMM", null, null, null, null, null, null, true),
+
+      new Move("Pod Program R020: Mirage", "[A+B", "mmmmm", null, null, null, null, null, "Dodges high, mid & low"),
+      new Move("Pod Program R020: Mirage", "[a+b", "mmmmm", null, null, null, null, null, "Dodges high, mid & low"),
+      new Move("Shifted Crushing Rocket", "[B+K", "M", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Suppression: Composite Kick", "[A+G", "H", null, null, null, null, null, "Neutral Breakable", false, false, false, false, false, false, true),
+      new Move("Suppression: Composite Slash", "[4A+G", "H", null, null, null, null, null, "Back Breakable", false, false, false, false, false, false, true),
+      new Move("Emergency Brake", "[G", null, null, null, null, null, null)
+    ],
+    // Aerial Leap
+    [
+      new Move("Aerial Leap", "8B+K", null, null, null, null, null, null, null, true),
+      new Move("Airborne Slash Pattern", "]AAA", "HHHHH", null, null, null, null, null, "Can be delayed"),
+      new Move("Airborne Assault", "]AAB", "HHMM", null, null, null, null, null, "Can be delayed"),
+      new Move("Airborne Unarmed Strike", "]AAK", "HHM", null, null, null, null, null, "+2 analysis points/Can be delayed", false, true),
+      new Move("Airborne Spear Cleave", "]B", "MMM", null, null, null, null, null),
+      new Move("Airborne Support Kick", "]K", "HHH", null, null, null, null, null, "Can move using the D-pad"),
+      new Move("Pod Program A080: Wave", "]A+B", "mSSS", null, null, null, null, null, "Deals chip damage"),
+      new Move("Pod Program A080: Wave", "]a+b", "mSSS", null, null, null, null, null, "Deals chip damage", false, true),
+      new Move("Airborne Support Gambit ~ Aerial Leap", "]B+K", "HH", null, null, null, null, null, "During Aerial Leap A,B,K,A+B can only be used", true),
+      new Move("Airborne Aggression Shift", "]6", null, null, null, null, null, null, null, true),
+      new Move("Airborne Back Step ~ Aggression Shift", "]4", null, null, null, null, null, null, null, true),
+      new Move("Glide", "]7|8|9", null, null, null, null, null, null, "During Aerial Leap A,B,K,A+B can only be used")
+    ],
+    // Angler Stance
+    [
+      new Move("Angler Stance", "B+K", null, null, null, null, null, null, null, true),
+
+      new Move("Angler: Support Blade", "{A", "HH", null, null, null, null, null),
+      new Move("Angler: Support Blade ~ Angler Stance", "{a", "HH", null, null, null, null, null, null, true),
+      new Move("Angler: Support Gatling", "{B", "HHH", null, null, null, null, null),
+      new Move("Angler: Support Gatling ~ Angler Stance", "{b", "HHH", null, null, null, null, null, null, true),
+
+      new Move("Angler: Support Casting", "{K", "M", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Angler: Support Casting ~ Angler Stance", "{k", "M", null, null, null, null, null, "Shifts to attack throw upon hit", true, false, false, false, false, false, true),
+      new Move("Angler: Support Casting", "{6K", "M", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Angler: Support Casting ~ Angler Stance", "{6k", "M", null, null, null, null, null, "Shifts to attack throw upon hit", true, false, false, false, false, false, true),
+      new Move("Angler: Support Casting", "{4K", "M", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Angler: Support Casting ~ Angler Stance", "{4k", "M", null, null, null, null, null, "Shifts to attack throw upon hit", true, false, false, false, false, false, true),
+
+      new Move("Angler Stance ~ Aggression Shift", "{236", null, null, null, null, null, null, null, true),
+      new Move("Angler Stance ~ Back Step ~ Aggression Shift", "{214", null, null, null, null, null, null, null, true),
+      new Move("Angler Stance ~ Aerial Leap", "{7|8|9B+K", null, null, null, null, null, null, null, true)
+    ]
+  ]
+
   Astaroth = [
     // Reversal Edge Attacks
     [
@@ -4605,7 +4860,7 @@ export class MoveService{
     ],
     // Gauge Attacks
     [
-      new Move("Sublimating Blade", "A+B+K", "M", 16, -20, "LNC", "LNC", 15, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Sublimating Blade", "A+B+K", "M", 12, -20, "LNC", "LNC", 15, null, false, false, false, false, false, false, true, false, false, false, true),
       new Move("Soul Charge", "4A+B+K", "m", 2, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true), //inconsistent between 8WR and the spreadsheet
       new Move("Dazzling Song", "SA", "H", 10, -10, 0, 0, 8, null, false, false, false, false, false, true),
       new Move("Dazzling Song", "SAB", "HM", 10, -24, "STN", "STN", 28, "TC[17-38]", false, false, false, false, false, true),

@@ -3999,7 +3999,7 @@ export class MoveService{
       new Move("Possession Strike", "[2|8K", "M", 14, -26, null, null, 20),
       new Move("Exorcism", "[A+B", "M", 46, null, "KND", "KND", 60, null, false, false, false, false, false, false, false, false, true),
       new Move("Hover Lightning", "[B+K", "M", 48, -7, "STN", "STN", 30, null, false, true, true),
-      new Move("Return of the Sun", "[A+G", "H", null, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
+      new Move("Return of the Sun", "[A+G", "H", null, null, "KND", "KND", 30, "Breakable", false, false, false, false, false, false, true),
       new Move("Bow Breaker", "[6A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
       new Move("Possession Rush", "[6", null, null, null, null, null, null, null, true),
       new Move("Possession Rush", "[2|8", null, null, null, null, null, null, null, true)

@@ -1044,7 +1044,7 @@ export class MoveService{
     // Horizontal Moves
     [
       new Move("Steel Whirlwind", "A", "H", 12, -8, -4, -4, 10, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Steel Whirlwind", "AA", "HH", 12, -10, 2, 2, 24, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Steel Whirlwind", "AA", "HH", 12, -8, 2, 2, 24, null, false, false, false, false, false, false, false, false, false, true),
       new Move("Steel Whirlwind", "AAA", "HHM", 12, -8, 8, 8, 62, null, false, false, false, false, false, false, false, false, false, true),
       
       new Move("Svalblod Strike", "6A", "H", 14, -10, -4, 0, 14),
@@ -1055,16 +1055,17 @@ export class MoveService{
       new Move("Shank Slash", "2A", "S", 12, -6, 4, 4, 10, null, false, false, true),
 
       new Move("Sweeping Aard Thrust", "1A", "L", 26, -20, -10, -4, 18),
-      new Move("Sweeping Aard Thrust", "1AA", "Lm", 26, -10, 4, 4, 39),
+      new Move("Sweeping Aard Thrust", "1AA", "Lm", 26, -12, 4, 4, 39),
       new Move("Kingsweeper", "1AB", "LM", 26, -22, "KND", "KND", 41, null, false, true),
 
       new Move("Adrenaline Onslaught", "4A", "M", 22, -16, -6, null, 20, "Powers up when opponent is soul charged"),
-      new Move("Adrenaline Onslaught", "4AH", "MM", 22, null, null, null, 26, "Powers up when opponent is soul charged"),
+      new Move("Adrenaline Onslaught(counter)", "4AH", "MM", 22, null, null, null, 26, "Powers up when opponent is soul charged"),
       new Move("Adrenaline Onslaught", "4AHAj", "MMM", 22, null, null, null, 41, "Powers up when opponent is soul charged"),
 
       new Move("Gnomish Knee-Slash", "CA", "S", 12, -6, 4, 4, 10, null, false, false, true),
       new Move("Feline Lacerate", "WA", "M", 18, -10, 2, 2, 20),
       new Move("Griffin Swipe", "JA", "H", 22, -4, 6, 6, 18, "Damage differs slightly according to jump direction"),
+      
       new Move("Turnaround Smite", "TA", "H", null, null, null, null, 14),
       new Move("Turnaround Shincracker", "T2A", "S", null, null, null, null, 14, null, false, false, true)
     ],

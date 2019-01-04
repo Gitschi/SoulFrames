@@ -24,8 +24,8 @@ export class MoveService{
   TwoB = [
     // Reversal Edge Attacks
     [
-      new Move("Soul Stance: Aggressive Defense", "B+G", "M", null, null, null, null, null, null, false, false, false, false, true),
-      new Move("Soul Stance: Aggressive Defense", "b+g", "M", null, null, null, null, null, null, false, false, false, false, true, false, false, true),
+      new Move("Soul Stance: Aggressive Defense", "B+G", "M", 46, -10, null, null, 35, null, false, false, false, false, true),
+      new Move("Soul Stance: Aggressive Defense", "b+g", "M", 64, null, null, null, 45, null, false, false, false, false, true, false, false, true),
       new Move("Inverted Support", "rAAA", "HHHMM", null, null, null, null, null, null, false, true),
       new Move("Inverted Assault Volley", "rAB", "HMMMM", null, null, null, null, null, null, false, true),
       new Move("Inverted Support ~ Aggression Shift", "rAo6", "H", null, null, null, null, null, null, true, true),
@@ -38,10 +38,10 @@ export class MoveService{
     ],
     // Gauge Attacks
     [
-      new Move("Suppression: Extermination Gambit", "A+B+K", "M", 16, -16, "KND", "KND", null, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Suppression: Extermination Gambit", "A+B+K", "M", 16, -16, "KND", "KND", 75, null, false, false, false, false, false, false, true, false, false, false, true),
       new Move("Suppression: Extermination Gambit", "]A+B+K", "M", 16, -16, "KND", "KND", null, null, false, false, false, false, false, false, true, false, false, false, true),
       new Move("Suppression: Extermination Gambit", "]AAA+B+K", "HHM", 12, -16, "KND", "KND", null, null, false, false, false, false, false, false, true, false, false, false, true),
-      new Move("Limiter Release: Self-Destruct", "6A+B+K", "M", 36, -32, "KND", "KND", null, "When at low health", false, false, false, false, false, false, true, false, false, false, true), // When at low health
+      new Move("Limiter Release: Self-Destruct", "6A+B+K", "M", 36, -32, "KND", "KND", 116, "When at low health", false, false, false, false, false, false, true, false, false, false, true), // When at low health
       new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
       
       new Move("Slash Sequence: Charged Blade", "SAAAA", "HHHHHHM", null, 4, 6, 6, null, null, false, false, false, false, false, true),
@@ -1065,7 +1065,7 @@ export class MoveService{
       new Move("Gnomish Knee-Slash", "CA", "S", 12, -6, 4, 4, 10, null, false, false, true),
       new Move("Feline Lacerate", "WA", "M", 18, -10, 2, 2, 20),
       new Move("Griffin Swipe", "JA", "H", 22, -4, 6, 6, 18, "Damage differs slightly according to jump direction"),
-      
+
       new Move("Turnaround Smite", "TA", "H", null, null, null, null, 14),
       new Move("Turnaround Shincracker", "T2A", "S", null, null, null, null, 14, null, false, false, true)
     ],

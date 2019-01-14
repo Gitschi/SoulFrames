@@ -1715,8 +1715,8 @@ export class MoveService{
       new Move("Summon Suffering", "376231A+G", "H", 20, null, "KND", "KND", 60, "Not breakable", false, false, false, false, false, false, true),
       new Move("Summon Suffering(fast)", "376231A+GF", "H", 20, null, "KND", "KND", 65, "Not breakable", false, false, false, false, false, false, true),
       
-      new Move("Calamity Symphony", "3746916A+G", "H", 16, null, "KND", "KND", 80, "Brakable", false, false, false, false, false, false, true),
-      new Move("Calamity Symphony(fast)", "3746916A+GF", "H", 16, null, "KND", "KND", 90, "Brakable", false, false, false, false, false, false, true)
+      new Move("Calamity Symphony", "3746916A+G", "H", 16, null, "KND", "KND", 84, "Breakable", false, false, false, false, false, false, true),
+      new Move("Calamity Symphony(fast)", "3746916A+GF", "H", 16, null, "KND", "KND", 94, "Breakable", false, false, false, false, false, false, true)
     ],
     // ************ Stances *************
     // Serpent's Embrace
@@ -2422,7 +2422,7 @@ export class MoveService{
       new Move("Blunt Flames ~ Mist", "!|$|uBa", "MH", 19, -1, 9, 9, 34, null, true),
       new Move("Blunt Flames(Cancel) ~ Relic", "!|$|uBAxG", "MH", 19, -33, -23, -23, null, null, true),
 
-      new Move("Bell Breaker", "^K", "M", 16, -10, "STN", "STN", 24),
+      new Move("Bell Breaker", "^K", "M", 16, -10, 8, 8, 24),
       new Move("Rising Knee", "#|(K", "M", 14, -2, 4, "STN", 20),
       new Move("Shin Clip", "@|*K", "L", 18, -18, "STN", "STN", 20),
 
@@ -2543,178 +2543,194 @@ export class MoveService{
     ],
     // Horizontal Moves
     [
-      new Move("Plague Spreader", "A", "H", 16, -6, 4, 4, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Plague Spreader", "AA", "HM", 16, -12, "KND", "KND", null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Plague Spreader ~ Grim Stride", "Az6", "H", null, null, null, null, null, null, true),
-      new Move("Plague Spreader ~ Night Side Stance", "a", "H", 16, -5, 8, 8, null, null, true),
+      new Move("Plague Spreader", "A", "H", 16, -6, 4, 4, 16, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Plague Spreader", "AA", "HM", 16, -12, "KND", "KND", 50, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Plague Spreader ~ Grim Stride", "Az6", "H", 16, null, null, null, 16, null, true),
+      new Move("Plague Spreader ~ Night Side Stance", "a", "H", 16, -5, 8, 8, 16, null, true),
 
-      // levels missing
-      new Move("Quick Chainmail Buster", "zB", "M", 19, -16, "KND", "KND", null),
-      new Move("Quick Backspin Slash", "zxA", "H", 16, -2, "KND", "KND", null, null, false, true),
+      new Move("Quick Chainmail Buster", "zB", "M", 19, -16, "KND", "KND", 28),
+      new Move("Quick Backspin Slash", "zxA", "H", 16, -2, "KND", "KND", 32, null, false, true),
       new Move("Quick Backspin Slash(fast)", "zxAF", "H", null, null, null, null, null, null, false, true),
 
-      new Move("Quick Neck Buster", "zvA", "H", 16, 0, "KND", "KND", null, null, false, true),
-      new Move("Quick Neck Buster(far)", "zvA", "H", 16, 1, "KND", "KND", null, null, false, true),
-      new Move("Quick Neck Buster(fast)", "zvAF", "H", null, null, null, null, null, null, false, true),
+      new Move("Quick Neck Buster", "zvA", "H", 16, 0, "KND", "KND", 32, null, false, true),
+      new Move("Quick Neck Buster(far)", "zvA", "H", 16, 1, "KND", "KND", 32, null, false, true),
+      new Move("Quick Neck Buster(fast)", "zvAF", "H", 16, 0, "KND", "KND", 42, null, false, true),
 
-      new Move("Blood Storm", "6A", "H", 22, -16, -4, -4, null, "1st hit is Revenge attack"),
-      new Move("Blood Storm", "6AA", "HH", 22, 2, "KND", "KND", null, "1st hit is Revenge attack"),
-      new Move("Blood Storm ~ Night Side Stance", "6a", "H", 22, -10, 2, 2, null, "Revenge Attack", true),
-      new Move("Blood Storm ~ Night Behind Stance", "6AzG", "H", 22, -13, 3, 3, null, "Revenge Attack", true),
+      new Move("Blood Storm", "6A", "H", 22, -16, -4, -4, 20, "1st hit is Revenge attack"),
+      new Move("Blood Storm", "6AA", "HH", 22, 2, "KND", "KND", 50, "1st hit is Revenge attack"),
+      new Move("Blood Storm ~ Night Side Stance", "6a", "H", 22, -10, 2, 2, 20, "Revenge Attack", true),
+      new Move("Blood Storm ~ Night Behind Stance", "6AzG", "H", 22, -13, 3, 3, 20, "Revenge Attack", true),
 
-      new Move("Dire Vengeance", "w6A", "M", null, null, null, null, null, "GI vs. high, mid & low/Triggers Terror Charge", false, true, false, true, false, false, false, true),
+      new Move("Dire Vengeance", "w6A", "M", null, 2, "KND", "KND", 36, "GI vs. high, mid & low/Triggers Terror Charge", false, true, false, true, false, false, false, true),
       
-      new Move("Mail Crusher", "3A", "M", 20, -22, -4, -4, null),
-      new Move("Mail Crusher", "3AA", "MM", 20, -20, "KND", "KND", null),
-      new Move("Cursed Shadow", "3AK", "MH", 20, 2, "KND", "KND", null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Mail Crusher", "3A", "M", 20, -22, -4, -4, 20),
+      new Move("Mail Crusher", "3AA", "MM", 20, -20, "KND", "KND", 52),
+      new Move("Cursed Shadow", "3AK", "MH", 20, 2, "KND", "KND", 80, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
       
-      new Move("Jade Slicer", "2A", "L", 18, -14, -4, -4, null, null, false, false, true),
-      new Move("Shadow Slicer", "1A", "L", 32, null, 4, "KND", null, null, false, true),
-      new Move("Shadow Slicer", "1a", "L", null, 4, "KND", null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Jade Crusher", "1zK", "H", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Jade Crusher ~ Grim Stride", "1A6", "L", 32, -28, null, "KND", null, null, true, true),
-      
-      new Move("Back Blade", "4A", "H", 32, 4, "KND", "KND", null, null, false, false, false, false, false, false, false, true),
-      new Move("Jade Slicer", "CA", "L", null, null, null, null, null, null, false, false, true),
+      new Move("Jade Slicer", "2A", "L", 18, -14, -4, -4, 16, null, false, false, true),
 
-      new Move("Maelstrom", "WA", "M", 18, -20, -10, -10, null),
-      new Move("Maelstrom ~ Night Side Stance", "Wa", "M", 18, -4, 7, 7, null, null, true),
-      new Move("Maelstrom", "WAA", "ML", 18, -24, "KND", "KND", null),
-      new Move("Maelstrom ~ Grim Stride", "WAz6", "M", 18, -28, "KND", "KND", null, null, true),
-      new Move("Fatal Spin Slash", "JA", "H", 26, -10, "KND", "KND", null),
-      new Move("Turning Head Slash", "TA", "H", null, null, null, null, null),
-      new Move("Turning Leg Slash", "T2A", "S", null, null, null, null, null, null, false, false, true)
+      new Move("Shadow Slicer", "1A", "L", 32, -22, 4, "KND", 37, null, false, true),
+      new Move("Shadow Slicer ~ Grim Stride", "1A6", "L", 32, 0, null, "KND", 37, null, true, true),
+      new Move("Shadow Slicer", "1a", "L", null, 6, "KND", "KND", 52, null, false, true, false, false, false, false, false, true),
+      new Move("Shadow Slicer ~ Grim Stride", "1a6", "L", null, null, "KND", "KND", 52, null, true, true, false, false, false, false, false, true),
+
+      new Move("Jade Crusher", "1zK", "H", null, 2, "KND", "KND", 60, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Jade Crusher ~ Grim Stride", "1A6", "L", 32, -28, null, "KND", 37, null, true, true),
+      
+      new Move("Back Blade", "4A", "H", 32, 4, "KND", "KND", 40, null, false, false, false, false, false, false, false, true),
+      new Move("Jade Slicer", "CA", "L", 18, null, -4, 6, 16, null, false, false, true),
+
+      new Move("Maelstrom", "WA", "M", 18, -20, -10, -10, 20),
+      new Move("Maelstrom ~ Night Side Stance", "Wa", "M", 18, -4, 7, 7, 20, null, true),
+      new Move("Maelstrom", "WAA", "ML", 18, -24, "KND", "KND", 52),
+      new Move("Maelstrom ~ Grim Stride", "WAz6", "M", 18, -28, "KND", "KND", 20, null, true),
+
+      new Move("Fatal Spin Slash", "9JA", "H", 26, -10, "KND", "KND", 28),
+      new Move("Fatal Spin Slash", "8JA", "H", 26, -10, "KND", "KND", 25),
+      new Move("Fatal Spin Slash", "7JA", "H", 26, -10, null, null, 22),
+
+      new Move("Turning Head Slash", "TA", "H", null, null, null, null, 18),
+      new Move("Turning Leg Slash", "T2A", "S", null, null, null, null, 16, null, false, false, true)
     ],
     // Vertical Moves
     [
-      new Move("Chariot Splitter", "B", "M", 26, -18, "KND", "KND", null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Chariot Splitter", "BB", "MM", 26, -16, "KND", "KND", null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Chariot Splitter ~ Night Behind Stance", "Bx4", "M", 26, -8, "KND", "KND", null, null, true),
+      new Move("Chariot Splitter", "B", "M", 26, -18, "KND", "KND", 30, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Chariot Splitter", "BB", "MM", 26, -16, "KND", "KND", 56, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Chariot Splitter ~ Night Behind Stance", "Bx4", "M", 26, -8, "KND", "KND", 30, null, true),
       
-      new Move("Double Avenger", "6B", "M", 22, -16, "KND", "KND", null, "1st hit is Revenge attack"),
-      new Move("Double Avenger", "6BB", "MM", 22, -14, "KND", "KND", null, "1st hit is Revenge attack"),
+      new Move("Double Avenger", "6B", "M", 22, -16, "KND", "KND", 18, "1st hit is Revenge attack"),
+      new Move("Double Avenger", "6BB", "MM", 22, -14, "KND", "KND", 38, "1st hit is Revenge attack"),
       
-      new Move("Dire Vengeance", "w6B", "M", null, null, null, null, null, "GI vs. high, middle & low/Triggers Terror Charge", false, true, false, true, false, false, false, true),
+      new Move("Dire Vengeance", "w6B", "M", null, 2, "KND", "KND", 36, "GI vs. high, middle & low/Triggers Terror Charge", false, true, false, true, false, false, false, true),
      
-      new Move("Death Smash", "3B", "M", 22, -20, "LNC", "LNC", null), // startup might be 21
-      new Move("Death Smash ~ Night Side Stance", "3b", "M", 22, -8, "LNC", "LNC", null, null, true),
+      new Move("Death Smash", "3B", "M", 22, -20, "LNC", "LNC", 36),
+      new Move("Death Smash ~ Night Side Stance", "3b", "M", 22, -8, "LNC", "LNC", 36, null, true),
 
-      new Move("Shadow Buster", "2B", "M", 20, -8, 2, 2, null, null, false, false, true),
-      new Move("Shadow Buster ~ Night Lower Stance", "2b", "M", 20, -5, 7, 7, null, null, true),
+      new Move("Shadow Buster", "2B", "M", 20, -8, 2, 2, 18, null, false, false, true),
+      new Move("Shadow Buster ~ Night Lower Stance", "2b", "M", 20, -5, 7, 7, 18, null, true),
 
-      new Move("Dark Soul Impact", "1B", "L", 32, -16, "KND", "KND", null),
+      new Move("Dark Soul Impact", "1B", "L", 32, -16, "KND", "KND", 18),
 
-      new Move("Triple Headbutt", "4B", "M", 16, -10, 0, 0, null),
-      new Move("Triple Headbutt", "4BB", "MM", 16, -12, 2, 2, null),
-      new Move("Triple Headbutt", "4BBB", "MMM", 16, -14, "KND", "KND", null),
+      new Move("Triple Headbutt", "4B", "M", 16, -10, 0, 0, 15),
+      new Move("Triple Headbutt", "4BB", "MM", 16, -12, 2, 2, 25),
+      new Move("Triple Headbutt", "4BBB", "MMM", 16, -14, "KND", "KND", 40),
 
       new Move("Shadow Buster", "CB", "M", null, null, null, null, null, null, false, false, true),
       new Move("Shadow Buster ~ Night Lower Stance", "Cb", "M", null, null, null, null, null, null, true),
 
-      new Move("Soul Taker", "C3B", "M", 24, -22, "LNC", "LNC", null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Upper Claw", "WB", "M", 16, -22, "LNC", "LNC", null, null, false, true),
-      new Move("Upper Claw ~ Night Side Stance", "Wb", "M", 16, -2, "LNC", "LNC", null, null, true, true),
+      new Move("Soul Taker", "C3B", "M", 24, -22, "LNC", "LNC", 46, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Upper Claw", "WB", "M", 16, -22, "LNC", "LNC", 18, null, false, true),
+      new Move("Upper Claw ~ Night Side Stance", "Wb", "M", 16, -2, "LNC", "LNC", 18, null, true, true),
 
-      new Move("Fatal Buster", "JB", "M", null, null, null, null, null),
+      new Move("Fatal Buster", "9JB", "M", 34, -6, "KND", "KND", 32),
+      new Move("Fatal Buster", "8JB", "M", 34, -6, "KND", "KND", 29),
+      new Move("Fatal Buster", "7JB", "M", 34, -6, null, null, 26),
+
       new Move("Turning Sword Buster", "TB", "M", null, null, null, null, null),
       new Move("Turning Shadow Buster", "T2B", "M", null, null, null, null, null, null, false, false, true)
     ],
     // Kicks
     [
-      new Move("Jade Strike", "K", "H", 14, -8, 4, "KND", null, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Jade Strike", "K", "H", 14, -8, 4, "KND", 18, null, false, false, false, false, false, false, false, false, false, true),
       
-      new Move("Adamantine Cracker", "6K", "H", 16, -8, "KND", "KND", null, "Revenge attack", false, true),
-      new Move("Dire Vengeance", "w6K", "M", null, null, null, null, null, "GI vs. high, mid & low/Triggers Terror Charge", false, true, false, true, false, false, false, true),
+      new Move("Adamantine Cracker", "6K", "H", 16, -8, "KND", "KND", 24, "Revenge attack", false, true),
+      new Move("Dire Vengeance", "w6K", "M", null, 2, "KND", "KND", 36, "GI vs. high, mid & low/Triggers Terror Charge", false, true, false, true, false, false, false, true),
       
-      new Move("Dark Rush Kick", "3K", "M", 14, -8, 0, 0, null),
-      new Move("Dark Low Kick", "2K", "L", 16, -14, -4, -4, null, null, false, false, true),
+      new Move("Dark Rush Kick", "3K", "M", 14, -8, 0, 0, 14),
+      new Move("Dark Low Kick", "2K", "L", 16, -14, -4, -4, 12, null, false, false, true),
 
-      new Move("Earth Trample", "1K", "L", 20, -16, -2, null, null),
-      new Move("Earth Trample", "1k", "L", null, null, "KND", "KND", null, null, false, false, false, false, false, false, false, false, true),
+      new Move("Earth Trample", "1K", "L", 20, -16, -2, -2, 15),
+      new Move("Earth Trample", "1k", "L", null, null, "KND", "KND", 30, null, false, false, false, false, false, false, false, false, true),
 
-      new Move("Sinew Crusher", "4KB", "MM", null, null, null, null, null),
-      new Move("Double Death Strike", "4KK", "MH", null, null, null, null, null, "Shifts to attack throw upon hit/Triggers Terror Charge", false, false, false, false, false, false, true),
-      new Move("Dark Low Kick", "CK", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Dark Head Upper", "WK", "M", null, null, null, null, null),
-      new Move("Fatal Brave Kick", "JK", "M", 24, -8, 6, 6, null),
-      new Move("Turning Dark High Kick", "TK", "H", 12, -8, 2, 2, null),
-      new Move("Turning Dark Low Kick", "T2K", "L", 16, -14, -4, -4, null, null, false, false, true)
+      new Move("Sinew Crusher", "4K", "M", 18, -14, 0, 8, 18),
+      new Move("Sinew Crusher", "4KB", "MM", 18, -12, 0, 0, 37),
+      new Move("Double Death Strike", "4KK", "MH", 18, -6, "KND", "KND", 72, "Shifts to attack throw upon hit/Triggers Terror Charge", false, false, false, false, false, false, true),
+      new Move("Dark Low Kick", "CK", "L", 16, -14, -4, -4, 12, null, false, false, true),
+      new Move("Dark Head Upper", "WK", "M", 14, -16, 0, 0, 18),
+
+      new Move("Fatal Brave Kick", "9JK", "M", 24, -8, 6, "KND", 26),
+      new Move("Fatal Brave Kick", "8JK", "M", 24, -8, 6, "KND", 24),
+      new Move("Fatal Brave Kick", "7JK", "M", 24, -8, 6, 6, 22),
+
+      new Move("Turning Dark High Kick", "TK", "H", 12, -8, 2, 2, 16),
+      new Move("Turning Dark Low Kick", "T2K", "L", 16, -14, -4, -4, 18, null, false, false, true)
     ],
     // Simultaneous Press Moves
     [
       new Move("Midnight Launcher ~ Night Behind Stance", "A+B", "M", 32, 3, "LNC", "LNC", 42, null, true, true, false, false, false, false, false, true),
       new Move("Soul Wave", "6A+B", "M", 36, -14, "KND", "KND", 36, "Revenge attack/Triggers Terror Charge"),
-      new Move("Dire Vengeance", "w6A+B", "M", null, null, null, null, null, "GI vs. high, mid & low/Triggers Terror Charge", false, true, false, true, false, false, false, true),
-      new Move("Soul Smasher", "2A+B", "M", 19, -16, "KND", "KND", null, "Shifts to attack throw upon close-range hit/Triggers Terror Charge", false, false, false, false, false, false, true),
+      new Move("Dire Vengeance", "w6A+B", "M", null, 2, "KND", "KND", 36, "GI vs. high, mid & low/Triggers Terror Charge", false, true, false, true, false, false, false, true),
+      new Move("Soul Smasher", "2A+B", "M", 19, -16, "KND", "KND", 40, "Shifts to attack throw upon close-range hit/Triggers Terror Charge", false, false, false, false, false, false, true),
       new Move("Soul Smasher", "D2A+B", "M", 20, null, "KND", "KND", 40, "Shifts to attack throw upon close-range hit/Triggers Terror Charge", false, false, false, false, false, false, true),
-      new Move("Soul Blaze", "4A+B", "M", 67, null, "LNC", "LNC", null, null, false, false, false, false, false, false, false, false, true, true),
+      new Move("Soul Blaze", "4A+B", "M", 67, null, "LNC", "LNC", 75, null, false, false, false, false, false, false, false, false, true, true),
       new Move("Soul Wave (Ambush)", "TA+B", "M", 34, -20, "KND", "KND", null, "Revenge attack/Triggers Terror Charge", false, false, false, false, false, false, false, true),
-      new Move("Dire Vengeance", "wTA+B", "M", null, null, null, null, null, "GI vs. high, mid & low/Triggers Terror Charge", false, true, false, true, false, false, false, true)
+      new Move("Dire Vengeance", "wTA+B", "M", null, 2, "KND", "KND", 36, "GI vs. high, mid & low/Triggers Terror Charge", false, true, false, true, false, false, false, true)
     ],
     // 8-Way Run Moves
     [
-      new Move("Right Slasher", "#|^|(A", "H", 26, 2, "KND", "KND", null),
-      new Move("Right Slasher ~ Grim Stride", "#|^|(z6", "H", null, null, null, null, null, null, true),
+      new Move("Right Slasher", "#|^|(A", "H", 26, 2, "KND", "KND", 38),
+      new Move("Right Slasher ~ Grim Stride", "#|^|(z6", "H", 28, null, "KND", "KND", 38, null, true),
 
-      new Move("Death Rage", "@|*A", "M", 32, -10, 0, 0, null),
-      new Move("Death Rage", "@|*AA", "MM", 32, -16, "KND", "KND", null),
-      new Move("Death Rage ~ Grim Stride", "@|*Az6", "M", null, null, null, null, null, null, true),
+      new Move("Death Rage", "@|*A", "M", 32, -10, 0, 0, 23),
+      new Move("Death Rage", "@|*AA", "MM", 32, -16, "KND", "KND", 50),
+      new Move("Death Rage ~ Grim Stride", "@|*Az6", "M", 32, -4, 6, 6, 23, null, true),
 
-      new Move("Plague Storm", "!|$|uA", "M", 30, -12, "KND", "KND", null),
+      new Move("Plague Storm", "!|$|uA", "M", 30, -12, "KND", "KND", 40),
       new Move("Plague Storm ~ Grim Stride", "#|$|uz6", null, null, null, null, null, null, null, true),
 
-      new Move("Ether Splitter", "#|^|(B", "M", 19, -22, "LNC", "LNC", null),
-      new Move("Ether Splitter ~ Grim Stride", "#|^|(x6", "M", null, null, null, null, null, null, true),
-      new Move("Ether Splitter ~ Night Behind Stance", "#|^|(b", "M", null, null, "LNC", "LNC", null, null, true),
+      new Move("Ether Splitter", "#|^|(B", "M", 19, -22, "LNC", "LNC", 24),
+      new Move("Ether Splitter ~ Grim Stride", "#|^|(x6", "M", 20, 8, "SLNC", "SLNC", 24, null, true),
+      new Move("Ether Splitter ~ Night Behind Stance", "#|^|(b", "M", 20, null, "SLNC", "SLNC", 24, null, true),
       
-      new Move("Rook Splitter", "@|*B", "M", 40, -18, "KND", "KND", null, null, false, true, true),
-      new Move("Rook Splitter ~ Night Lower Stance", "@|*b", "M", 40, -11, "KND", "KND", null, null, true, true),
+      new Move("Rook Splitter", "@|*B", "M", 40, -18, "KND", "KND", 40, null, false, true, true),
+      new Move("Rook Splitter ~ Night Lower Stance", "@|*b", "M", 40, -11, "KND", "KND", 40, null, true, true),
 
-      new Move("Darkness Impact", "!|uB", "L", 40, -20, -4, -4, null),
-      new Move("Darkness Impact ~ Night Lower Stance", "!|ub", "L", 40, -13, 3, 3, null, null, true),
+      new Move("Darkness Impact", "!|uB", "L", 40, -20, -4, -4, 24),
+      new Move("Darkness Impact ~ Night Lower Stance", "!|ub", "L", 40, -13, 3, 3, 24, null, true),
       
-      new Move("Shadow Breaker", "$BB", "MM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Shadow Breaker ~ Night Side Stance", "$Bb", "MM", null, null, null, null, null, null, true, false, false, false, false, false, false, true),
+      new Move("Shadow Breaker", "$B", "M", 34, -8, "STN", "STN", 24),
+      new Move("Shadow Breaker", "$BB", "MM", 34, 2, "LNC", "LNC", 55, null, false, false, false, false, false, false, false, true),
+      new Move("Shadow Breaker ~ Night Side Stance", "$Bb", "MM", 34, 2, "LNC", "LNC", 55, null, true, false, false, false, false, false, false, true),
 
-      new Move("Shoulder Rush", "#|^|(K", "M", 16, -16, 2, 2, null),
-      new Move("Shoulder Rush ~ Grim Stride", "#|^|(c6", "M", 16, null, 12, 12, null, null, true),
+      new Move("Shoulder Rush", "#|^|(K", "M", 16, -16, 2, 2, 20),
+      new Move("Shoulder Rush ~ Grim Stride", "#|^|(c6", "M", 16, 4, 12, 12, 20, null, true),
 
-      new Move("Bloody Jade Impact", "@|*K", "m", 50, -9, null, null, null, "Becomes a low attack when at distance"),
+      new Move("Bloody Jade Impact", "@|*K", "m", 50, -10, "KND", "KND", 40, "Becomes a low attack when at distance"),
       // far version missing
 
       new Move("Drop Kick", "!|$|uK", "H", null, null, "KND", "KND", 52, "Returns to downed position", false, false, false, false, false, false, false, true),
-      new Move("Crimson Vortex", "#|^|(A+B", "M", 31, -2, "LNC", "LNC", null),
-      new Move("Sliding", "RK", "L", null, null, "KND", "KND", null)
+      new Move("Crimson Vortex", "#|^|(A+B", "M", 31, -2, "LNC", "LNC", 55),
+      new Move("Sliding", "RK", "L", 20, -22, "KND", "KND", null)
     ],
     // Throws
     [
-      new Move("Shoulder Claw Throw", "A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Soul Devour", "4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Doom's Invitation", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("Unholy Terror", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("Witch Hunt", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Flap Jack", "3A+G", "L", 18, -16, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Over Toss", "1A+G", "L", 18, -16, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true)
+      new Move("Shoulder Claw Throw", "A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
+      new Move("Soul Devour", "4A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
+      new Move("Doom's Invitation", "ZA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
+      new Move("Unholy Terror", "XA+G", "H", 18, null, "KND", "KND", 65, null, false, false, false, false, false, false, true),
+      new Move("Witch Hunt", "VA+G", "H", 18, null, "KND", "KND", 70, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      new Move("Flap Jack", "3A+G", "L", 18, -16, "KND", "KND", 30, "Breakable", false, false, false, false, false, false, true),
+      new Move("Over Toss", "1A+G", "L", 18, -16, "KND", "KND", 30, "Breakable", false, false, false, false, false, false, true)
     ],
     // ************ Stances *************
     // Grim Stride
     [
       new Move("Grim Stride", "236", null, null, null, null, null, null, null, true, false, true),
-      new Move("Grim Fang", "[A", "H", 28, -16, 10, "STN", null, "GI vs. high, mid vertical", false, false, false, true),
+      new Move("Grim Fang", "[A", "H", 28, -16, 10, "STN", 16, "GI vs. high, mid vertical", false, false, false, true),
       new Move("Evil Eye", "[zB", "H", 32, -18, 0, 0, null, null, false, true),
-      new Move("Grim Launcher", "[B", "M", 32, -10, "LNC", "LNC", null),
-      new Move("Grim Launcher ~ Grim Stride", "[x6", "M", 32, 1, "LNC", "LNC", null, null, true),
-      new Move("Grim Riser Kick", "[K", "M", 28, -14, "STN", "STN", null),
+      new Move("Grim Launcher", "[B", "M", 32, -10, "LNC", "LNC", 42),
+      new Move("Grim Launcher ~ Grim Stride", "[x6", "M", 32, 1, "LNC", "LNC", 42, null, true),
+      new Move("Grim Riser Kick", "[K", "M", 28, -14, "KND", "KND", 22),
     ],
     // Night Lower Stance
     [
       new Move("Night Lower Stance", "B+K", null, null, null, null, null, null, "Returns to crouch when cancelled", true),
       new Move("Night Lower Stance", "TB+K", null, null, null, null, null, null, "Reutrns to crouch when cancelled", true),
-      new Move("Leg Hacker", "]A", "L", 19, -10, 2, 2, null),
-      new Move("Leg Hacker ~ Night Side Stance", "]a", "L", 19, -4, 9, 9, null, null, true),
-      new Move("Death Horn Charge", "]B", "M", 8, -10, "KND", "KND", null, "Shifts to attack throw upon close-range hit", false, false, false, false, false, false, true),
-      new Move("Death Horn Charge ~ Night Behind Stance", "]b", "M", 8, 2, "STN", "STN", null, null, true),
-      new Move("Death Lifting Kick", "]K", "MH", 11, -6, null, null, null),
+      new Move("Leg Hacker", "]A", "L", 19, -10, 2, 2, 26),
+      new Move("Leg Hacker ~ Night Side Stance", "]a", "L", 19, -4, 9, 9, 26, null, true),
+      new Move("Death Horn Charge", "]B", "M", 8, -10, "KND", "KND", 60, "Shifts to attack throw upon close-range hit", false, false, false, false, false, false, true),
+      new Move("Death Horn Charge ~ Night Behind Stance", "]b", "M", 8, 2, "STN", "STN", 30, null, true),
+      new Move("Death Lifting Kick", "]K", "MH", 11, null, null, 22, null),
 
       new Move("Night Lower Stance ~ Night Behind Stance", "]6B+K", null, null, null, null, null, null, null, true),
       new Move("Night Lower Stance ~ Night Side Stance", "]4B+K", null, null, null, null, null, null, null, true),
@@ -2723,12 +2739,13 @@ export class MoveService{
     // Night Behind Stance
     [
       new Move("Night Behind Stance", "6B+K", null, null, null, null, null, null, null, true),
-      new Move("Terror Sweeper", "{A", "L", 20, -18, 8, "KND", null),
-      new Move("Terror Sweeper ~ Night Side Stance", "{a", "L", 20, -14, 6, 6, null, null, true),
-      new Move("Terror Vortex", "{B", "M", 22, -2, null, null, null),
+      new Move("Terror Sweeper", "{A", "L", 20, -18, 8, "KND", 30),
+      new Move("Terror Sweeper ~ Night Side Stance", "{a", "L", 20, -14, 6, 6, 30, null, true),
 
-      new Move("Knee Kick Rush", "{K", "M", 10, -8, 2, 2, null),
-      new Move("Knee Kick Rush", "{KK", "MH", 10, -10, -1, "STN", null),
+      new Move("Terror Vortex", "{B", "M", 22, -2, "KND", "LNC", 36),
+
+      new Move("Knee Kick Rush", "{K", "M", 10, -8, 2, 2, 12),
+      new Move("Knee Kick Rush", "{KK", "MH", 10, -10, -1, "STN", 30),
 
       new Move("Night Behind Stance ~ Night Lower Stance", "{B+K", null, null, null, null, null, null, null, true),
       new Move("Night Behind Stance ~ Night Side Stance", "{4B+K", null, null, null, null, null, null, null, true),
@@ -2737,35 +2754,41 @@ export class MoveService{
     // Night Side Stance
     [
       new Move("Night Side Stance", "4B+K", null, null, null, null, null, null, null, true),
-      new Move("Soul Biter", "}A", "M", 24, -10, 8, 8, null),
-      new Move("Soul Biter ~ Night Side Stance", "}a", "M", 24, -6, 13, 13, null, null, true),
-      new Move("Phantom Star", "}zB", "M", 25, -18, "STN", "STN", null, null, false, true),
-      new Move("Phantom Star ~ Night Behind Stance", "}zb", "M", 25, -2, "STN", "STN", null, null, true, true),
-      new Move("Phantom Splitter", "}B", "M", 20, -14, "LNC", "LNC", null),
-      new Move("Skull Chopper", "}xA", "H", 13, -16, "KND", "KND", null),
-      new Move("Skull Chopper(fast)", "}xAF", "H", null, null, null, null, null),
-      new Move("Night Front Kick", "}K", "H", null, null, null, null, null),
+      new Move("Soul Biter", "}A", "M", 24, -10, 8, 8, 22),
+      new Move("Soul Biter ~ Night Side Stance", "}a", "M", 24, -6, 13, 13, 22, null, true),
+
+      new Move("Phantom Star", "}zB", "M", 25, -18, "STN", "STN", 26, null, false, true),
+      new Move("Phantom Star ~ Night Behind Stance", "}zb", "M", 25, -2, "STN", "STN", 26, null, true, true),
+
+      new Move("Phantom Splitter", "}B", "M", 20, -14, "LNC", "LNC", 28),
+      new Move("Skull Chopper", "}xA", "H", 13, -16, "KND", "KND", 38),
+      new Move("Skull Chopper(fast)", "}xAF", "H", 13, null, "KND", "KND", 48),
+      new Move("Night Front Kick", "}K", "H", null, null, "KND", "KND", 16),
+
       new Move("Night Side Stance ~ Night Lower Stance", "}B+K", null, null, null, null, null, null, null, true),
       new Move("Night Side Stance ~ Night Behind Stance", "}6B+K", null, null, null, null, null, null, null, true),
       new Move("Night Side Stance ~ Grim Stride", "}236", null, null, null, null, null, null, null, true)
     ]
   ]
-
+ 
   Raphael = [
     // Reversal Edge Attacks
     [
       new Move("Venomous Strike", "B+G", "M", 44, -8, null, null, 30, "Shifts to clash upon hit", false, false, false, false, true),
       new Move("Venomous Strike", "b+g", "M", 83, null, null, null, 40, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
-      new Move("Venomous Strike ~ Arriere Gambit", "B+G4", "M", null, null, null, null, null, "vs. low attacks/ Shifts to clash upon hit", true, false, false, true, true),
+      new Move("Venomous Strike ~ Arriere Gambit", "B+G4", "M", null, 11, null, null, 30, "vs. low attacks/ Shifts to clash upon hit", true, false, false, true, true),
       new Move("Venomous Strike (Cancel) ~ Arriere Gambit", "x+n4", null, null, null, null, null, null, "vs. low attacks", true, false, false, true),
-      new Move("Fatal Sting", "B+GB", "MH", null, null, null, null, null, "1st hit shifts to clash upon hit", false, false, false, false, true),
-      new Move("Fatal Sting ~ Preparation", "B+Gb", "MH", null, null, null, null, null, "1st hit shifts to clash upon hit / Dodges high attacks", true, false, false, false, true),
-      new Move("Venomous Strike", "[B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Venomous Strike", "[b+g", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
-      new Move("Venomous Strike ~ Arriere Gambit", "[B+G", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", true, false, false, false, true, false, false, true),
-      new Move("Venomous Strike (Cancel) ~ Arriere Gambit", "[x+n4", null, null, null, null, null, null, "Shifts to clash upon hit or guard", true, false, false, false, true, false, false, true),
-      new Move("Fatal Sting", "[B+GB", "MH", null, null, null, null, null, "1st hit shifts to clash upon hit", false, false, false, false, true),
-      new Move("Fatal Sting ~ Preparation", "[B+Gb", "MH", null, null, null, null, null, "1st hit shifts to clash upon hit / Dodges high attacks", true, false, false, false, true),
+      new Move("Venomous Strike ~ Preparation", "B+G46", "M", null, 5, null, null, 30, "vs. low attacks/ Shifts to clash upon hit", true, false, false, true, true),
+
+      new Move("Fatal Sting", "B+GB", "MH", null, -4, 6, 6, 16, "1st hit shifts to clash upon hit", false, false, false, false, true),
+      new Move("Fatal Sting ~ Preparation", "B+Gb", "MH", null, 4, 14, 14, null, "1st hit shifts to clash upon hit / Dodges high attacks", true, false, false, false, true),
+      
+      new Move("Venomous Strike", "[B+G", "M", 44, -8, null, null, 30, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Venomous Strike", "[b+g", "M", 83, null, null, null, 40, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      
+      new Move("Fatal Sting", "[B+GB", "MH", null, -4, 6, 6, 16, "1st hit shifts to clash upon hit", false, false, false, false, true),
+      new Move("Fatal Sting ~ Preparation", "[B+Gb", "MH", null, 4, 14, 14, null, "1st hit shifts to clash upon hit / Dodges high attacks", true, false, false, false, true),
+      
       new Move("Toxic Talon", "rA", "H", null, 2, "KND", "KND", 30, null, false, true),
       new Move("Fatal Skewer", "rB", "M", null, null, "KND", "KND", 45, null, false, true, false, false, false, false, false, true),
       new Move("Bella Donna Spin", "rK", "MH", null, -2, "KND", "KND", 35, null, false, true)
@@ -2799,7 +2822,7 @@ export class MoveService{
     // Horizontal Moves
     [
       new Move("Temple Bayonet", "A", "H", 12, -6, 2, 2, 10, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Temple Bayonet", "AA", "HH", 12, -6, 0, 20, null, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Temple Bayonet", "AA", "HH", 12, -6, 0, 0, 20, null, false, false, false, false, false, false, false, false, false, true),
       new Move("Quick Needle", "AB", "HL", 12, -12, 0, 0, 25),
       
       new Move("Vicious Lullaby", "6A", "H", 18, -14, 0, 0, 12),
@@ -2808,9 +2831,9 @@ export class MoveService{
       new Move("Violent Blood", "3A", "M", 20, -12, 2, 2, 14, null, false, true),
       new Move("Cleaving Talon", "2A", "S", 12, -10, 4, 4, 10, null, false, false, true),
       new Move("Hell Snipe", "1A", "L", 20, -16, -4, -4, 15, null, false, false, true),
-      new Move("Heavy Mandritti", "4A", "H", 20, -16, "KND", 16, null), // disadvantage on guard -16 ~ 14
+      new Move("Heavy Mandritti", "4A", "H", 20, -16, "KND", "KND", 16), // disadvantage on guard -16 ~ 14
       new Move("Rising Wyvern", "46A", "H", 20, -12, 4, 4, 20, null, false, true),
-      new Move("Low Tondo Roveral", "CA", "S", 12, -10, 4, 10, null, null, false, false, true),
+      new Move("Low Tondo Roveral", "CA", "S", 12, -10, 4, 4, 10, null, false, false, true),
       new Move("Rising Tondo", "WA", "H", 18, -4, 8, 8, 14),
       new Move("Scarlet Talon", "JA", "M", null, null, null, null, null),
       new Move("Turning Attack au Fer", "TA", "H", 18, -6, 4, 4, 12),
@@ -2828,18 +2851,18 @@ export class MoveService{
       new Move("Rapid Arrogance", "BBB", "MMH", 14, -10, 0, 0, 38, "3rd hit can be delayed", false, false, false, false, false, false, false, false, false, true),
       new Move("Rapid Arrogance(just)", "BBBj", "MMH", 14, -8, 2, 2, 42, "3rd hit can be delayed", false, false, false, false, false, false, false, false, false, true),
       new Move("Phasing Moon", "BBK", "MMM", 14, -12, "KND", "KND", 48),
-      new Move("Rapid Arrogance ~ Arriere Gambit", "BBB4", "MMH", 14, -1, 9, 9, 38, null, true, false, false, true),
-      //46 move missing
+      new Move("Rapid Arrogance ~ Arriere Gambit", "BBB4", "MMH", 14, -1, 9, 9, 38, null, true),
+      new Move("Rapid Arrogance ~ Preparation", "BBB46", "MMH", 14, 1, 11, 11, 38, null, true),
 
       new Move("Rapid Arrogance ~ Arriere Gambit(just)", "BBB4j", "MMH", 14, 1, 11, 11, 38, null, true, false, false, true),
-      //46 move missing
+      new Move("Rapid Arrogance ~ Preparation(just)", "BBBj46", "MMH", 14, 3, 13, 13, 38, null, true, false, false, true),
 
       new Move("Rapid Arrogance", "BBBB", "MMHM", 14, -14, 2, 2, 58, "3rd hit can be delayed", false, false, false, false, false, false, false, false, false, true),
       new Move("Rapid Arrogance (just)", "BBBBj", "MMHM", 14, -14, 2, 2, 64),
       
       new Move("Triple Botta in Tempo", "6B", "H", 10, -12, -2, -2, 10),
       new Move("Triple Botta in Tempo ~ Arriere Gambit", "6B4", "H", 10, 0, 10, 10, 10, "GI vs. low attacks", true, false, false, true),
-      // 46 Move missing
+      new Move("Triple Botta in Tempo ~ Preparation", "6B46", "H", 10, 2, 12, 12, 10, null, true),
 
       new Move("Triple Botta in Tempo", "6BB", "HH", 10, -14, -2, -2, 20),
       new Move("Triple Botta in Tempo ~ Preparation", "6Bb", "HH", 10, -4, 8, 8, 20, "Dodges high attacks", true),
@@ -2872,11 +2895,11 @@ export class MoveService{
       new Move("Rising Threat", "WB", "M", 10, -12, -2, -2, 10),
       new Move("Rising Threat", "WBB", "MH", 10, -12, 2, 2, 20),
       new Move("Rising Threat ~ Arriere Gambit", "WBB4", "MH", 10, 0, 14, 14, 20, "vs. low attacks", true, false, false, true),
-      // 46 version missing?
+      new Move("Rising Threat ~ Preparation", "WBB46", "MH", 10, 2, 16, 16, 20, null, true),
 
       new Move("Sky Agente", "JB", "M", 28, -10, "KND", "KND", 24, "Damage slightly differs according to jump direction"),
-      new Move("Turning Montante", "TB", "M", null, null, null, null, null),
-      new Move("Low Turn Montante", "T2B", "M", null, null, null, null, null, null, false, false, true)
+      new Move("Turning Montante", "TB", "M", 16, -6, 4, 4, 18),
+      new Move("Low Turn Montante", "T2B", "M", 18, -8, 2, 2, 16, null, false, false, true)
     ],
     // Kick Moves 
     [
@@ -2897,6 +2920,7 @@ export class MoveService{
     // Dual Button Attacks
     [
       new Move("Enveloping Stocatta", "A+B", "M", 34, 2, "KND", "KND", 40, null, false, true, false, false, false, false, false, true),
+      new Move("Blood Roar", "8A+B", "HM", 18, -10, 4, 4, 35, "vs. high, middle horizontal/thrusting attacks (except kicks)", false, false, false, true),
       new Move("Fury of the Loup-Garou", "6A+B", "MH", 24, -2, 9, 9, 28),
       new Move("Fury of the Loup-Garou(hold)", "6a+b", "MH", 39, -2, "KND", "KND", 30),
 
@@ -2904,17 +2928,15 @@ export class MoveService{
 
       new Move("Assalto Montante Crescendo", "4A+B", "MM", 19, -16, 2, 2, 34),
       new Move("Assalto Montante Crescendo", "4A+BA", "MML", 19, -12, 6, 6, 58),
-
-      new Move("Blood Roar", "8A+B", "HM", 18, -10, 4, 4, 35, "vs. high, middle horizontal/thrusting attacks (except kicks)", false, false, false, true),
-      
-      new Move("Cantarella Needle (Advance)", "6B+K", "M", 18, -10, 4, "KND", 20),
-      new Move("Cantarella Needle (Left)", "6B+K8", "M", 18, -10, "KND", "KND", 20),
-      new Move("Cantarella Needle (Right)", "6B+K2", "M", 18, -10, "KND", "KND", 20),
       
       new Move("Spiral Envelopment", "B+K", null, null, null, null, null, null, "Dodges high, middle attacks/Increases evasion window by holding buttons", true),
       new Move("Circular Envelopment", "2B+K", null, null, null, null, null, null, "Dodges middle attacks/Increase evasion window by holding buttons", true),
       new Move("Sly Riposte", "B", "M", 10, -12, "STN", "STN", 25, "After successfully form dodging"),
       new Move("Sly Riposte ~ Arriere Gambit", "B4", "M", 10, null, "STN", "STN", 25, "After successfully form dodging", true, false, false, true),
+
+      new Move("Cantarella Needle (Advance)", "6B+K", "M", 18, -10, 4, "KND", 20),
+      new Move("Cantarella Needle (Left/Right)", "6B+K8|2", "M", 18, -10, "KND", "KND", 20),
+      
       new Move("Spiral Envelopment", "TB+K", null, null, null, null, null, null, "Dodges high, middle attacks/Increases evasion window by holding buttons", true),
       new Move("Circular Envelopment", "T2B+K", null, null, null, null, null, null, "Dodges middle attacks/Increase evasion window by holding buttons", true)
     ],
@@ -2922,13 +2944,13 @@ export class MoveService{
     [
       new Move("Bloody Slicer", "#|^|(A", "H", 22, -14, 4, 4, 22),
 
-      new Move("Merciless Stramazone", "@|*A", "H", null, -6, 10, 10, 12),
-      new Move("Merciless Stramazone", "@|*AA", "HH", null, -8, 12, 12, 30),
-      new Move("Merciless Stramazone ~ Arriere Gambit", "@|*AA4", "HH", null, -2, 20, 20, 30, "vs. low attacks", true, false, false, true),
-      //46 version missing
+      new Move("Merciless Stramazone", "@|*A", "H", 32, -6, 10, 10, 12),
+      new Move("Merciless Stramazone", "@|*AA", "HH", 32, -8, 12, 12, 30),
+      new Move("Merciless Stramazone ~ Arriere Gambit", "@|*AA4", "HH", 32, -3, 20, 20, 30, "vs. low attacks", true, false, false, true),
+      new Move("Merciless Stramazone ~ Preparation", "@|*AA46", "HH", 32, -8, 12, 12, 30, "vs. low attacks", true, false, false, true),
 
-      new Move("Deadly Strikes", "@|*AB", "HL", null, -18, -6, -6, 18),
-      new Move("Deadly Strikes ~ Preparation", "@|*Ab", "HL", null, -2, 8, 8, 18, "Dodges high attacks", true),
+      new Move("Deadly Strikes", "@|*AB", "HL", 22, -18, -6, -6, 18),
+      new Move("Deadly Strikes ~ Preparation", "@|*Ab", "HL", 22, -2, 8, 8, 18, "Dodges high attacks", true),
 
       new Move("Squalambrato Concierto", "!|$|uA", "M", 28, -10, 0, 8, 14),
       new Move("Squalambrato Concierto", "!|$|uAB", "MM", 28, -14, -2, -2, 30),
@@ -2936,13 +2958,13 @@ export class MoveService{
 
       new Move("Broken Thrust", "^B", "M", 16, -16, 4, 4, 18),
       new Move("Broken Thrust ~ Preparation", "^b", "M", 16, -6, 12, 12, 18, "Dodges high attacks", true),
-
-      new Move("Death Guise", "#|(B", "L", null, -16, 0, "KND", 20),
-      new Move("Valiant Falcon", "@|*BB", "MM", null, -16, "LNC", "LNC", 16),
+      new Move("Death Guise", "#|(B", "L", 38, -16, 0, "KND", 20),
+      new Move("Valiant Falcon", "@|*B", "M", 30, -4, 0, 0, 14),
+      new Move("Valiant Falcon", "@|*BB", "MM", 30, -16, "LNC", "LNC", 30),
       new Move("Aiming Shaft", "!|$|uB", "L", 34, -22, "KND", "KND", 35),
 
       new Move("Venom Side Kick", "#|^|(K", "H", 20, -10, "KND", "KND", 24),
-      new Move("Venom Roundhouse", "@|*K", "H", null, -6, 6, "KND", 16),
+      new Move("Venom Roundhouse", "@|*K", "H", 32, -6, 6, "KND", 16),
       new Move("Dark Moon", "!|$|uK", "M", 20, -10, "KND", "KND", 22, "Into Back turned on hit"),
 
       new Move("Wyvern's Tail", "#|^|(A+B", "M", 26, -2, "LNC", "LNC", 26, null, false, false, false, false, false, false, false, false, false, true),
@@ -2956,11 +2978,11 @@ export class MoveService{
     ],
     // Throws
     [
-      new Move("Unending Stings", "A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Death Puppet", "4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("A Lesson in Massacre", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("Undertaker", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("Pure Sacrifice", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      new Move("Unending Stings", "A+G", "H", 18, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, true),
+      new Move("Death Puppet", "4A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
+      new Move("A Lesson in Massacre", "ZA+G", "H", 18, null, "KND", "KND", 62, null, false, false, false, false, false, false, true),
+      new Move("Undertaker", "XA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
+      new Move("Pure Sacrifice", "VA+G", "H", 18, null, "KND", "KND", 72, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Thousand Hornets", "SA+G", "H", 18, null, "KND", "KND", 70, "Breakable", false, false, false, false, false, true, true)
     ],
     // ************ Stances *************
@@ -2992,12 +3014,9 @@ export class MoveService{
       new Move("Cantarella Needle (Retreat)", "[B+K", "M", 12, -10, 6, "KND", 30),
       new Move("Royal Poison: Fatal Dose", "[A+B+K", "M", 14, 2, "KND", "KND", 85, null, false, false, false, false, false, true, true, true),
 
-      new Move("Venomous Strike", "[B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Venomous Strike", "[b+g", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true, false, false, true),
-      new Move("Venomous Strike ~ Arriere Gambit", "[B+G4", "M", null, null, null, null, null, "vs. low attacks/Shifts to clash upon hit", true, false, false, true, true),
-      new Move("Venomous Strike(cancel) ~ Arriere Gambit", "[z+x4", null, null, null, null, null, null, "vs. low attacks/Shifts to clash upon hit", true, false, false, true),
-      new Move("Fatal Sting", "[B+GB", "MH", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Fatal Sting ~ Preparation", "[B+Gb", "MH", null, null, null, null, null, "Shifts to clash upon hit", true, false, false, false, true, false, false, true),
+      new Move("Venomous Strike", "[B+G", "M", 44, -8, null, null, 30, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Venomous Strike", "[b+g", "M", 83, null, null, null, 40, "Shifts to clash upon hit", false, false, false, false, true, false, false, true),
+
       new Move("Preparation ~ Preparation", "[6", null, null, null, null, null, null, "Dodges high attacks", true),
       new Move("Preparation ~ Arriere Gambit", "[4", null, null, null, null, null, null, "vs. low attacks", true, false, false, true),
       new Move("Preparation ~ Shadow Evade", "[2", null, null, null, null, null, null, "Can be held/Dodges high attacks", true)
@@ -3070,7 +3089,7 @@ export class MoveService{
       new Move("Violet Squall(far)", "6A", "H", 20, -18, "KND", "KND", 32, null, false, true),
 
       new Move("Wing Cross", "3A", "M", 26, -14, -6, -6, 14, null, false, false, true),
-      new Move("Wing Cross", "3AA", "ML", 26, -12, "KND", "KND", null, null, false, false, true),
+      new Move("Wing Cross", "3AA", "ML", 26, -12, "KND", "KND", 36, null, false, false, true),
 
       new Move("Knee Slicer", "2A", "S", 12, -6, 4, 4, 12, null, false, false, true),
       new Move("Opening Treasure", "1A", "L", 24, -16, "KND", "KND", 32, "Breakable/Shifts to attack throw upon hit", false, false, false, false, false, false, true),
@@ -3088,8 +3107,8 @@ export class MoveService{
       new Move("Twin Fang Strike", "WA", "M", 18, -4, 6, 6, 14),
       new Move("Twin Fang Strike", "WAA", "MM", 18, -8, 0, 0, 30),
 
-      new Move("Divine Biting Strike", "8|9JA", "L", 36, -10, "KND", "KND", 24),
-      new Move("Divine Biting Strike", "7JA", "L", 36, -16, -4, -4, 20),
+      new Move("Divine Biting Strike", "8|9JA", "L", 36, -8, "KND", "KND", 24),
+      new Move("Divine Biting Strike", "7JA", "L", 36, -15, -3, -3, 20),
 
       new Move("Reverse Dance Blade", "TA", "H", 20, -2, 8, 8, 16),
       new Move("Reverse Biting Snake", "T2A", "S", 16, -6, 4, 4, 18, null, false, false, true)
@@ -3163,7 +3182,7 @@ export class MoveService{
     // Simultaneous Press Moves
     [
       new Move("Roaring Heaven", "A+B", "M", 38, 6, "LNC", "LNC", 36, null, false, true, false, false, false, false, false, true),
-      new Move("Iron Chin Strike", "6A+B", "H", 18, -14, -4, -4, 26),
+      new Move("Iron Chin Strike", "6A+B", "H", 18, -8, 2, 2, 26),
       new Move("Sweeping Blade", "2A+B", "L", 36, 4, "KND", "KND", 30, "Returns to crouching on G cancel", false, true, false, false, false, false, false, true, false, true),
       
       new Move("Dancing Crane", "4A+B", "MMMM", 16, -8, 0, 0, 20, null, false, false, false, false, false, false, false, true, false, true),
@@ -3214,7 +3233,7 @@ export class MoveService{
       new Move("Spinning Divide", "#|^|(A+B", "M", 28, -8, "KND", "KND", 40),
       new Move("Seong's Diamond Crusher", "!|$|uA+B", "M", 40, -2, "LNC", "LNC", 42, null, false, true),
       new Move("Jagged Comet Blade", "#|^|(B+K", "MM", 18, -22, "KND", "KND", 32, null, false, false, true),
-      new Move("Jagged Comet Blade", "#|^|(b+k", "MMS", 18, -2, "LNC", "LNC", 47, null, false, false, true),
+      new Move("Jagged Comet Blade", "#|^|(b+k", "MMS", 18, -2, 6, 6, 47, null, false, false, true),
 
       new Move("Glory Wing", "!|$|uB+K", "M", 38, -6, "KND", "KND", 30),
       new Move("Talon Rush", "!|$|ub+k", "M", null, 8, "KND", "KND", 40, null, false, false, false, false, false, false, false, true),
@@ -3246,8 +3265,8 @@ export class MoveService{
   Siegfried = [
     // Reversal Edge Attacks
     [
-      new Move("Nightwalker", "B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Nightwalker", "b+g", "M", null, null, null, null, null, "Shifts to clash upon hit or block", false, false, false, false, true, false, false, true),
+      new Move("Nightwalker", "B+G", "M", null, null, null, null, 35, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Nightwalker", "b+g", "M", null, null, null, null, 45, "Shifts to clash upon hit or block", false, false, false, false, true, false, false, true),
       new Move("Anthem Slasher ~ Side Hold", "rA", "H", null, null, "KND", "KND", 22, null, true, true),
       new Move("Midnight Splitter", "rB", "M", 24, null, "LNC", "LNC", null, "Shifts to clash upon guard", false, true, false, false, false, false, false, true),
       new Move("Defiant Knee Stomp", "rKB", "MM", null, null, null, null, 33, null, false, true),
@@ -3262,8 +3281,8 @@ export class MoveService{
       new Move("Deep Scar", "A+B+K", "M", 20, -8, "KND", "KND", 88, "Progresses toward Dark Legacy", false, false, false, false, false, false, true, false, false, false, true),
       new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
       new Move("Rising Hilt ~ Chief Hold", "Sx6B", "MM", 16, 4, "KND", "KND", 45, null, true, false, false, false, false, true, false, true),
-      new Move("Brazen Splitter", "S4A+B+B", "MMM", 18, 2, "LNC", "LNC", null, null, false, false, false, false, false, true, false, true),
-      new Move("Kaizer Charge ~ Chief Hold", "S#|^|(KB", "MM", 16, 4, "LNC", "LNC", null, null, true, false, false, false, false, true, false, true),
+      new Move("Brazen Splitter", "S4A+BB", "MMM", 18, 2, "LNC", "LNC", 80, null, false, false, false, false, false, true, false, true),
+      new Move("Kaizer Charge ~ Chief Hold", "S#|^|(KB", "MM", 16, 4, "LNC", "LNC", 70, null, true, false, false, false, false, true, false, true),
       new Move("Reborn Grinder", "S[K", "MMM", 16, 4, "KND", "KND", 68, null, false, false, false, false, false, true, false, true),
       new Move("Haunted Assault", "S]AA", "HH", 28, 2, "KND", "KND", 83, null, false, false, false, false, false, true, false, true),
       new Move("Kick Rush Vortex", "S{KA+B", "MM", 10, 2, "LNC", "LNC", 53, null, false, false, false, false, false, true, false, true),
@@ -3393,12 +3412,11 @@ export class MoveService{
 
       new Move("Rising Night Kick", "WK", "MM", 12, -12, 2, 2, 26),
 
-      new Move("Diving Axle Headbutt", "JK", "L", 36, -16, -1, -1, null),
-      new Move("Diving Axle Headbutt", "JKK", "LM", 36, -16, 0, null, null),
+      new Move("Diving Axle Headbutt", "JK", "L", 36, -16, -1, -1, 14),
+      new Move("Diving Axle Headbutt", "JKK", "LM", 36, -16, 0, 0, 35),
 
-      new Move("Turning Grief High Kick", "TK", "H", 14, -8, 2, 2, null),
-
-      new Move("Turning Grief Low Kick", "T2K", "L", 18, -12, -4, -4, null, null, false, false, true)
+      new Move("Turning Grief High Kick", "TK", "H", 14, -8, 2, 2, 16),
+      new Move("Turning Grief Low Kick", "T2K", "L", 18, -12, -4, -4, 18, null, false, false, true)
     ],
     // Simultaneous Press Moves
     [
@@ -3441,14 +3459,14 @@ export class MoveService{
       new Move("Ascending Kick", "#|^|(KK", "MH", 16, 0, "KND", "KND", 50),
 
       new Move("Grievous Low Kick", "@|*K", "L", 20, -18, -4, -4, 20, null, false, false, true),
-      new Move("Grievous Low Kick ~ Base Hold", "@|*k", "L", 20, -12, 4, 4, null, null, true),
+      new Move("Grievous Low Kick ~ Base Hold", "@|*k", "L", 20, -12, 4, 4, 20, null, true),
 
       new Move("Drop Kick", "!|$|uK", "H", 30, -11, "KND", "KND", 50, "Returns to downed position"),
 
       new Move("Schwarz Drive", "#|^|(A+B", "MM", 20, -16, "KND", "KND", 43, "Can be held", false, true),
       new Move("Schwarz Drive(hold)", "#|^|(a+b", "MM", 20, -6, "KND", "KND", 45, null, false, true),
 
-      new Move("Sliding", "RK", "L", null, -18, "KND", "KND", 26)
+      new Move("Sliding", "RK", "L", 20, -22, "KND", "KND", 26)
     ],
     // Throws
     [
@@ -3594,7 +3612,7 @@ export class MoveService{
       new Move("Cutlass Europa", "4AAA", "HLM", 18, -24, "KND", "KND", 53),
       new Move("Cutlass Europa", "4aAAA", "HLML", 38, -16, "KND", "KND", 38),
       new Move("Cutlass Seraphim", "4AB", "HM", 18, -16, "KND", "KND", 38),
-      new Move("Cutlass Seraphim", "4aB", "HM", 74, null, null, null, 51),
+      new Move("Cutlass Seraphim", "4aB", "HM", 38, null, null, null, 51),
 
       new Move("Under Slide Blade", "CA", "S", 13, -6, 6, 6, 10, null, false, false, true),
       new Move("Full Turn Blade", "WA", "M", 16, -10, 4, 4, 18),
@@ -3607,14 +3625,12 @@ export class MoveService{
       new Move("Divine Mist", "B", "M", 14, -6, 0, 0, 14, null, false, false, false, false, false, false, false, false, false, true),
       new Move("Divine Mist", "BB", "MM", 14, -8, 2, 2, 28, null, false, false, false, false, false, false, false, false, false, true),
       new Move("Divine Mist", "BBB", "MMMM", 14, -6, "KND", "KND", 58, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Angel's Flow", "BK", "MH", 14, null, null, null, 32),
+      new Move("Angel's Flow", "BK", "MH", 14, -6, 2, 2, 32, null, false, false, false, false, false, false, false, false, false, true),
 
       new Move("Ascetic's Force", "6B", "M", 20, -10, -2, 4, 14, "GI vs. mid verticals(except Kicks, thrusting attacks)", false, false, false, true),
       new Move("Ascetic's Force", "6BA", "MM", 20, -13, 10, 10, 30, "GI vs. mid verticals(except Kicks, thrusting attacks)", false, false, false, true),
       
-      new Move("Ascetic's Blade", "6xA", "M", null, -13, "STN", "STN", 24, "GI vs. mid verticals(except Kicks, thrusting attacks)", false, false, false, true),
-      
-      // B only version missing
+      new Move("Ascetic's Blade", "6xA", "M", 44, -12, "STN", "STN", 24, "GI vs. mid verticals(except Kicks, thrusting attacks)", false, false, false, true),
       new Move("Press the Hilt", "6BB", "MM", 20, -8, 4, 4, 30, "GI vs. mid vericals(except kicks)", false, false, false, true),
 
       new Move("Paladin Purifier", "3B", "M", 20, -16, "LNC", "LNC", 22),
@@ -3649,15 +3665,15 @@ export class MoveService{
       new Move("Flapping Heel Kick", "3K", "M", 14, -6, 4, 4, 14),
       new Move("Spring Under Kick", "2K", "L", 16, -14, -2, -2, 12, null, false, false, true),
 
-      new Move("Tornado Low Kick", "1K", "L", 21, -14, -2, "KND", 20),
-      new Move("Tornado Low Kick", "1k", "L", null, -6, "KND", "KND", 30, null, false, true),
+      new Move("Tornado Low Kick", "1K", "L", 20, -14, -2, "KND", 18),
+      new Move("Tornado Low Kick", "1k", "L", 36, -6, "KND", "KND", 30, null, false, true),
 
       new Move("Rising Temple", "4K", "H", 14, -2, 8, 8, 20),
       new Move("Spring Under Kick", "CK", "L", 16, -14, -2, -2, 12, null, false, false, true),
       new Move("Angel's Spring", "WK", "MM", 16, -2, 8, 8, 20),
       new Move("Holy Crest Kick", "JK", "M", 22, -6, 6, 6, 18),
       new Move("Turning Holy High Kick", "TK", "H", 16, -4, 2, 2, 18),
-      new Move("Turning Angel Sweep", "T2K", "L", 18, null, null, null, 16, null, false, false, true)
+      new Move("Turning Angel Sweep", "T2K", "L", 18, -14, -2, -2, 16, null, false, false, true)
     ],
     // Simultaneous Press Moves
     [
@@ -3683,22 +3699,22 @@ export class MoveService{
       new Move("Angel Fall", "8B+KB", "MMM", 30, 2, "KND", "KND", 60),
       new Move("Angel's Sault", "8B+KK", "MMM", 30, -14, "KND", "KND", 42),
 
-      new Move("Heaven's Gate", "4B+K", "M", null, null, "LNC", "LNC", 50, null, false, false, false, false, false, false, false, false, true, true),
+      new Move("Heaven's Gate", "4B+K", "M", 64, null, "LNC", "LNC", 50, null, false, false, false, false, false, false, false, false, true, true),
       new Move("Dawn of Eos", "WB+K", "HM", 12, -6, "KND", "KND", 30),
       new Move("Hip Charge", "TB+K", "M", 16, -8, 8, 8, 24)
     ],
     // 8-Way Run Moves
     [
       new Move("Silent Cross", "#|^|(A", "M", 18, -13, 6, 6, 26),
-      new Move("Shield Rush", "@A", "H", null, -6, "KND", "KND", 28),
-      new Move("Inverse Shield Rush", "*A", "H", null, -6, 4, "LNC", 28),
+      new Move("Shield Rush", "@A", "H", 20, -6, "KND", "KND", 28),
+      new Move("Inverse Shield Rush", "*A", "H", 20, -6, 4, "LNC", 28),
       
       new Move("Reverse Mirage", "$A", "M", 24, -6, 4, "LNC", 20),
       new Move("Reverse Mirage(counter)", "H$A", "MM", 24, null, null, "LNC", 42, "Follow-up attack upon counter hit"),
       new Move("Reverse Mirage ~ Angel Step", "$A6", "M", 24, -8, 2, "LNC", 20, null, true),
 
-      new Move("Silent Stream", "!|uAA", "LM", null, -14, "KND", "KND", 40),
-      new Move("Silent Stream", "!|uAa", "LM", null, null, "KND", "KND", 54, null, false, false, false, false, false, false, false, false, true),
+      new Move("Silent Stream", "!|uAA", "LM", 26, -14, "KND", "KND", 40),
+      new Move("Silent Stream", "!|uAa", "LM", 26, null, "KND", "KND", 54, null, false, false, false, false, false, false, false, false, true),
       
       new Move("Olympus Cannon", "#|^|(B", "M", 24, -2, "LNC", "LNC", 31),
 
@@ -3713,7 +3729,7 @@ export class MoveService{
       new Move("Tornado Feint", "!|$|ukK", "M", 40, 4, "LNC", "LNC", 40),
 
       new Move("Lodestar Strike", "#|^|(A+B", "H", 18, -10, "KND", "KND", 40, null, false, true),
-      new Move("Ascension", "@|*A+B", "M", null, -14, "LNC", "LNC", 21),
+      new Move("Ascension", "@|*A+B", "M", 26, -14, "LNC", "LNC", 21),
       new Move("Twin Step Grace", "!|$|uA+B", "MM", 20, -6, "KND", "KND", 40),
 
       new Move("Jet Stream Rush", "#|^|(B+K", "M", 24, -8, 0, 0, 14),
@@ -3721,7 +3737,7 @@ export class MoveService{
       new Move("Jet Stream Rush", "#|^|(B+KAB", "MHM", 24, -14, "LNC", "LNC", 36),
       new Move("Olympus Shower", "@|*|!|$|uB+K", "M", 26, -6, "KND", "KND", 34, null, false, true),
       new Move("Heaven's Arch", "#|^|(A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, true, false, false, false, false, true),
-      new Move("Sliding", "RK", "L", null, null, null, null, 25)
+      new Move("Sliding", "RK", "L", 20, -20, "KND", "KND", 16)
     ],
     // Throws
     [
@@ -3757,9 +3773,9 @@ export class MoveService{
     [
       new Move("Twin Angel Step", "2366|23^", null, null, null, null, null, null, null, true),
 
-      new Move("Seraphim Blade", "]A", "M", 19, -14, -4, "KND", 20, "Second hit can be delayed", false, false, true),
-      new Move("Seraphim Blade", "]AA", "ML", 19, -12, 6, "STN", 46, "Second hit can be delayed", false, false, true),
-      new Move("Seraphim Echo", "]AB", "MM", 19, 4, "KND", "KND", 58, null, false, true, false, false, false, false, false, true),
+      new Move("Seraphim Blade", "]A", "M", 20, -14, -4, "KND", 18, null, false, false, true),
+      new Move("Seraphim Blade", "]AA", "ML", 20, -12, 6, "STN", 41, "Second hit can be delayed", false, false, true),
+      new Move("Seraphim Echo", "]AB", "MM", 20, 4, "KND", "KND", 55, null, false, true, false, false, false, false, false, true),
 
       new Move("Seraphim Strike", "]B", "M", 16, -14, "KND", "KND", 35, null, false, true),
 
@@ -3838,7 +3854,7 @@ export class MoveService{
     [
       new Move("Barbed Blades", "A", "H", 10, -10, -2, -2, 8, null, false, false, false, false, false, false, false, false, false, true),
       new Move("Barbed Blades", "AA", "HH", 10, -12, -4, -4, 16, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Barbed Blades", "AAA", "HHSH", 10, null, -2, "KND", 42, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Barbed Blades", "AAA", "HHSH", 10, -8, -2, "KND", 42, null, false, false, false, false, false, false, false, false, false, true),
       new Move("Shadow Ripper", "AAB", "HHM", 10, -16, -4, -4, 34, null, false, false, true),
       new Move("Death Penalty", "AAK", "HHH", 10, -2, 2, 2, 32),
 
@@ -3971,8 +3987,8 @@ export class MoveService{
     // Simultaneous Press Moves
     [
       new Move("Ninja Cannon", "A+B", "S", 30, 2, "LNC", "LNC", 24, null, false, true, true, false, false, false, false, true),
-      new Move("Ninja Cannon ~ Mekki-Maru", "A+BA", "SH", 30, -10, "LNC", "LNC", null, null, false, true, false, false, false, false, false, true),
-      new Move("Ninja Cannon ~ Possession", "A+BA4", "SH", 30, 1, "LNC", "LNC", null, null, true, true, false, false, false, false, false, true),
+      new Move("Ninja Cannon ~ Mekki-Maru", "A+BA", "SH", 30, -10, "LNC", "LNC", 24, null, false, true, false, false, false, false, false, true),
+      new Move("Ninja Cannon ~ Possession", "A+BA4", "SH", 30, 1, "LNC", "LNC", 24, null, true, true, false, false, false, false, false, true),
 
       new Move("Lightning Blaze", "z+xA", "H", 8, -12, -4, -4, 10),
       new Move("Lightning Blaze ~ Possession", "z+xA4", "H", 8, -2, 6, 6, 10, null, true),
@@ -3996,7 +4012,7 @@ export class MoveService{
       new Move("Piercing Wind", "@A", "H", 28, -4, 4, "STN", 14, null, false, false, true),
       new Move("Piercing Wind", "*A", "H", 28, -4, 4, "STN", 16, null, false, false, true),
       new Move("Piercing Wind ~ Possession", "@|*A4", "H", 28, -6, 2, 2, 14, null, true),
-      new Move("Bamboo Cutter", "!|$|uA", "H", 20, -8, -2, null, 18),
+      new Move("Bamboo Cutter", "!|$|uA", "H", 20, -8, -2, -2, 18),
       new Move("Assassin's Strike", "#|^|(B", "M", 18, null, "KND", "KND", 22, null, false, true),
       new Move("Illusion Scroll", "@|*B", "MM", 20, -12, "LNC", "LNC", 38),
       new Move("Cursed Talisman", "!|$|uB", "MM", 26, 4, "LNC", "LNC", 34, null, false, false, false, false, false, false, false, true),
@@ -4021,8 +4037,8 @@ export class MoveService{
       new Move("Cellar Drop", "XA+G", "H", 18, null, "KND", "KND", 62, null, false, false, false, false, false, false, true),
       new Move("Dropping the Bottle", "VA+G", "H", 18, null, "KND", "KND", 70, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Crossing the Cliff", "#|^|(A+G", "H", 18, null, "KND", "KND", 62, "Breakable", false, false, false, false, false, false, true),
-      new Move("Stalker Drop", "}A+G", "H", null, null, "KND", "KND", 50, null, false, false, false, false, false, false, true),
-      new Move("Return of the Sun", "[A+G", "H", null, null, "KND", "KND", 30, "Breakable", false, false, false, false, false, false, true),
+      new Move("Stalker Drop", "}A+G", "H", 18, null, "KND", "KND", 50, null, false, false, false, false, false, false, true),
+      new Move("Return of the Sun", "[A+G", "H", 18, null, "KND", "KND", 30, "Breakable", false, false, false, false, false, false, true),
       new Move("Bow Breaker", "[6A+G", "H", 18, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, true),
       new Move("Fallen Demon", "S[6A+G", "H", 18, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, true, true)
     ],
@@ -4054,8 +4070,8 @@ export class MoveService{
       new Move("Possession Strike", "[2|8K", "M", 14, -26, null, null, 20),
       new Move("Exorcism", "[A+B", "M", 46, null, "KND", "KND", 60, null, false, false, false, false, false, false, false, false, true),
       new Move("Hover Lightning", "[B+K", "M", 48, -7, "STN", "STN", 30, null, false, true, true),
-      new Move("Return of the Sun", "[A+G", "H", null, null, "KND", "KND", 30, "Breakable", false, false, false, false, false, false, true),
-      new Move("Bow Breaker", "[6A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Return of the Sun", "[A+G", "H", 18, null, "KND", "KND", 30, "Breakable", false, false, false, false, false, false, true),
+      new Move("Bow Breaker", "[6A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
       new Move("Possession Rush", "[6", null, null, null, null, null, null, null, true),
       new Move("Possession Rush", "[2|8", null, null, null, null, null, null, null, true)
     ],
@@ -4113,236 +4129,275 @@ export class MoveService{
   Talim = [
     // Reversal Edge Attacks
     [
-      new Move("Zephyr", "B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Zephyr", "b+g", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Zephyr", "B+G", "M", 48, -12, null, null, 30, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Zephyr", "b+g", "M", 68, null, null, null, 40, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      
       new Move("Zephyr ~ Wind Charmer", "x+v2|8", null, null, null, null, null, null, null, true),
       new Move("Zephyr ~ Wind Sault", "x+v6", null, null, null, null, null, null, null, true),
       new Move("Zephyr ~ Wind Fury", "x+v4", null, null, null, null, null, null, null, true),
-      new Move("Cloud Seeker", "rA", "H", null, null, null, null, null, null, false, true),
-      new Move("Cloud Seeker ~ Wind Charmer", "rA2|8", "H", null, null, null, null, null, null, true, true),
-      new Move("Cloud Seeker ~ Wind Sault", "rA6", "H", null, null, null, null, null, null, true, true),
-      new Move("Cloud Seeker ~ Wind Fury", "rA4", "H", null, null, null, null, null, null, true, true),
-      new Move("Swirling Current", "rBB", "MM", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Eddy Sipa", "rK", "M", null, null, null, null, null, null, false, true)
+      
+      new Move("Cloud Seeker", "rA", "H", null, -4, 6, 6, 21, null, false, true),
+      new Move("Cloud Seeker ~ Wind Charmer", "rA2|8", "H", null, 26, 34, null, 21, null, true, true),
+      new Move("Cloud Seeker ~ Wind Sault", "rA6", "H", null, 26, 34, null, 21, null, true, true),
+      new Move("Cloud Seeker ~ Wind Fury", "rA4", "H", null, 26, 34, null, 21, null, true, true),
+
+      new Move("Swirling Current", "rB", "M", null, null, 16, 16, 21, null, false, true, false, false, false, false, false, true),
+      new Move("Swirling Current", "rBB", "MM", null, null, "LNC", "LNC", 31, null, false, true, false, false, false, false, false, true),
+      new Move("Eddy Sipa", "rK", "M", null, null, -4, "KND", null, null, false, true)
     ],
     // Gauge Attacks
     [
       new Move("Dancing Tempest", "A+B+K", "MMM", null, null, null, null, null, "Restores health upon hit", false, false, false, false, false, false, true, false, false, false, true),
       new Move("Dancing Tempest", "TA+B+K", "MMM", null, null, null, null, null, "Restores health upon hit", false, false, false, false, false, false, true, false, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
-      new Move("Rapid Gale Barrage", "SAABB", "HHMM", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
-      new Move("Rapid Gale Barrage ~ Wind Fury", "SAABb", "HHMM", null, null, null, null, null, null, true, false, false, false, false, true, false, true),
-      new Move("Kampilan Witik Sweep", "SBKA", "MHLLL", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Tornado Assault Kamay", "S#|^|(AAAB", "HHMMMMM", null, null, null, null, null, "Time precisely for increased damage", false, false, false, false, false, true, false, true),
-      new Move("Changing Winds", "S#|^|(BB", "HM", null, null, null, null, null, null, false, true, false, false, false, true, false, true),
-      new Move("Tempest Assault", "S[ABB", "HHMMMM", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Arctic Winds", "S[AKAA", "HHLHMM", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Light Breeze", "S]B", "M", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
-      new Move("Light Breeze ~ Wind Fury", "S]b", "M", null, null, null, null, null, null, false, false, false, false, false, true, false, true)
+      new Move("Soul Charge", "4A+B+G", "m", 6, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
+     
+      new Move("Rapid Gale Barrage", "SAABB", "HHMM", 12, 2, "LNC", "LNC", 67, null, false, false, false, false, false, true, false, true),
+      new Move("Rapid Gale Barrage ~ Wind Fury", "SAABb", "HHMM", 12, 10, "LNC", "LNC", 67, null, true, false, false, false, false, true, false, true),
+      new Move("Kampilan Witik Sweep", "SBKA", "MHLLL", 14, -16, "KND", "KND", 70, null, false, false, false, false, false, true),
+
+      new Move("Tornado Assault Kamay", "S#|^|(AA", "HHMM", 16, -12, -2, -2, 39, null, false, false, false, false, false, true, false, true),
+      new Move("Tornado Assault Kamay", "S#|^|(AAA", "HHMMMM", 16, -14, -4, -4, 48, null, false, false, false, false, false, true, false, true),
+      new Move("Tornado Assault Kamay", "S#|^|(AAAB", "HHMMMMM", 16, 2, "LNC", "LNC", 68, "Time precisely for increased damage", false, false, false, false, false, true, false, true),
+      new Move("Tornado Assault Kamay(Just)", "S#|^|(AAABj", "HHMMMMM", 16, 2, "LNC", "LNC", 79, null, false, false, false, false, false, true, false, true),
+
+      new Move("Changing Winds", "S#|^|(BB", "HM", 22, 4, "KND", "KND", 51, null, false, true, false, false, false, true, false, true),
+      
+      new Move("Tempest Assault", "S[ABB", "HHMMMM", 32, -8, "LNC", "LNC", 61, null, false, false, false, false, false, true),
+      new Move("Arctic Winds", "S[AKAA", "HHLHMM", 32, -16, "LNC", "LNC", 61, null, false, false, false, false, false, true),
+      
+      new Move("Light Breeze", "S]B", "M", 38, 4, "LNC", "LNC", 39, null, false, false, false, false, false, true, false, true),
+      new Move("Light Breeze ~ Wind Fury", "S]b", "M", 38, 10, "LNC", "LNC", 39, null, false, false, false, false, false, true, false, true)
     ],
     // Horizontal Moves
     [
-      new Move("Weather Vane Buster", "A", "H", 12, -8, 2, 2, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Weather Vane Buster", "AA", "HH", 12, -8, 2, 2, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Weather Vane Buster", "AAA", "HHHH", 12, -4, 10, 10, null, "Returns to facing away", false, false, false, false, false, false, false, false, false, true),
-      new Move("Rapid Espada", "AAB", "HHM", 12, -16, -4, -4, null),
-      new Move("Rapid Espada", "AABA", "HHMH", 12, -4, 0, "LNC", null),
-      new Move("Rapid Espada ~ Wind Charmer", "AABA2|8", "HHMH", 12, null, null, null, null, null, true),
-      new Move("Rapid Espada ~ Wind Sault", "AABA6", "HHMH", 12, null, null, null, null, null, true),
-      new Move("Rapid Espada ~ Wind Fury", "AABA4", "HHMH", 12, null, null, null, null, null, true),
-      new Move("Rapid Barrage", "AABB", "HHMM", 12, -16, "STN", "STN", null),
-      new Move("Rapid Barrage ~ Wind Fury", "AAAb", "HHMM", 12, null, null, null, null, null, true),
-      new Move("Swift Espada", "AAA+B", "HHmH", 12, -16, "KND", "KND", null),
+      new Move("Weather Vane Buster", "A", "H", 12, -8, 2, 2, 8, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Weather Vane Buster", "AA", "HH", 12, -8, 2, 2, 18, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Weather Vane Buster", "AAA", "HHHH", 12, -4, 10, 10, 38, "Returns to facing away", false, false, false, false, false, false, false, false, false, true),
+      new Move("Rapid Espada", "AAB", "HHM", 12, -16, -4, -4, 32),
+      new Move("Rapid Espada", "AABA", "HHMH", 12, -4, 0, "LNC", 48),
+      new Move("Rapid Espada ~ Wind Charmer", "AABA2|8", "HHMH", 12, 24, 28, 28, 48, null, true),
+      new Move("Rapid Espada ~ Wind Sault", "AABA6", "HHMH", 12, 24, 28, 28, 48, null, true),
+      new Move("Rapid Espada ~ Wind Fury", "AABA4", "HHMH", 12, 24, 28, 28, 48, null, true),
+      new Move("Rapid Barrage", "AABB", "HHMM", 12, -16, "STN", "STN", 74),
+      new Move("Rapid Barrage ~ Wind Fury", "AAAb", "HHMM", 12, -18, null, null, 74, null, true),
+      new Move("Swift Espada", "AAA+B", "HHmH", 12, -16, "KND", "KND", 58),
       
-      new Move("Wind Dance", "z6", "HH", 18, -2, 6, 6, null),
+      new Move("Wind Dance", "z6", "HH", 18, -2, 6, 6, 22),
 
-      new Move("Mirror Fan Strikes", "6A", "H", 18, -16, -4, -4, null),
-      new Move("Mirror Fan Strikes", "6AA", "HH", 18, -16, "STN", "STN", null),
-      new Move("Mirror Fan Strikes ~ Wind Charmer", "6AA2|8", "HH", null, null, null, null, null, null, true),
-      new Move("Mirror Fan Strikes ~ Wind Sault", "6AA6", "HH", null, null, null, null, null, null, true),
-      new Move("Mirror Fan Strikes ~ Wind Fury", "6AA4", "HH", null, null, null, null, null, null, true),
-      new Move("Wind Walker", "6AB", "HM", 18, 2, "LNC", "LNC", null),
-      new Move("Mirror Fan Sipa", "6AK", "HM", 18, -14, 0, "STN", null),
-      new Move("Razor Storm", "3A", "MMMM", 22, -2, "KND", "KND", null, "Returns to facing away"),
-      new Move("Tuhod Slicer", "2A", "S", 12, -6, 6, 6, null, null, false, false, true),
-      new Move("Spinning Low Hiwa", "1A", "L", 30, -10, "STN", "STN", null, null, false, false, true),
+      new Move("Mirror Fan Strikes", "6A", "H", 18, -16, -4, -4, 18),
+      new Move("Mirror Fan Strikes", "6AA", "HH", 18, -16, "STN", "STN", 42),
+      new Move("Mirror Fan Strikes ~ Wind Charmer", "6AA2|8", "HH", 18, 24, "KND", "KND", 42, null, true),
+      new Move("Mirror Fan Strikes ~ Wind Sault", "6AA6", "HH", 18, 24, "KND", "KND", 42, null, true),
+      new Move("Mirror Fan Strikes ~ Wind Fury", "6AA4", "HH", 18, 24, "KND", "KND", 42, null, true),
+      new Move("Wind Walker", "6AB", "HM", 18, 2, "LNC", "LNC", 58),
+      new Move("Mirror Fan Sipa", "6AK", "HM", 18, -14, 0, "STN", 38),
+      new Move("Razor Storm", "3A", "MMMM", 22, -2, "KND", "KND", 20, "Returns to facing away"),
+      new Move("Tuhod Slicer", "2A", "S", 12, -6, 6, 6, 10, null, false, false, true),
+      new Move("Spinning Low Hiwa", "1A", "L", 30, -10, "STN", "STN", 25, null, false, false, true),
 
-      new Move("Witik Sipa", "4A", "H", 16, -8, 0, 0, null),
-      new Move("Witik Sipa", "4AA", "HM", 16, -4, 4, "KND", null),
-      new Move("Tuhod Slicer", "CA", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Left Witik", "WA", "M", 18, -8, "STN", "STN", null),
-      new Move("Diving Tuhod Slicer", "JA", "L", 40, -10, "STN", "STN", null, null, false, false, true),
-      new Move("Ice Wind Combo", "TAAB", "MMMMMMMMM", null, null, null, null, null),
-      new Move("Turning Tuhod Slicer", "T2A", "S", 14, -6, 6, 6, null, null, false, false, true)
+      new Move("Witik Sipa", "4A", "H", 16, -8, 0, 0, 14),
+      new Move("Witik Sipa", "4AA", "HM", 16, -4, 4, "KND", 30),
+      new Move("Tuhod Slicer", "CA", "S", 12, -6, 6, 6, 10, null, false, false, true),
+      new Move("Left Witik", "WA", "M", 18, -8, "STN", "STN", 25),
+      new Move("Diving Tuhod Slicer", "JA", "L", 40, -10, "STN", "STN", 48, null, false, false, true),
+
+      new Move("Ice Wind Combo", "TA", "MMM", 18, -16, -6, -6, 15),
+      new Move("Ice Wind Combo", "TAA", "MMMMMM", 18, -16, -4, -4, 30),
+      new Move("Ice Wind Combo", "TAAB", "MMMMMMMMM", 18, -20, "KND", "KND", 50),
+      new Move("Turning Tuhod Slicer", "T2A", "S", 14, -6, 6, 6, 10, null, false, false, true)
     ],
     // Vertical Moves
     [
-      new Move("Kampilan Flurry", "B", "M", 14, -8, 0, 0, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Kampilan Flurry", "BB", "MM", 14, -8, 2, 2, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Kampilan Flurry", "BBB", "MMM", 14, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true, false, false, false, false, true),
-      new Move("Kampilan Flurry", "BBb", "MMM", 14, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
-      new Move("Kampilan Flurry ~ Wind Charmer", "BB2|8", "MM", 14, null, null, null, null, null, true),
-      new Move("Kampilan Flurry ~ Wind Sault", "BBB6", "MM", 14, null, null, null, null, null, true),
-      new Move("Kampilan Flurry ~ Wind Fury", "BBB4", "MM", 14, null, null, null, null, null, true),
-      new Move("Kampilan Talon", "BK", "MH", 14, 24, -6, 4, 4),
+      new Move("Kampilan Flurry", "B", "M", 14, -8, 0, 0, 10, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Kampilan Flurry", "BB", "MM", 14, -8, 2, 2, 24, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Kampilan Flurry", "BBB", "MMM", 14, -12, null, null, 24, "Shifts to clash upon hit", false, false, false, false, true, false, false, false, false, true),
+      new Move("Kampilan Flurry", "BBb", "MMM", 14, null, null, null, 24, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Kampilan Flurry ~ Wind Charmer", "BB2|8", "MM", 14, null, null, null, 24, null, true),
+      new Move("Kampilan Flurry ~ Wind Sault", "BBB6", "MM", 14, null, null, null, 24, null, true),
+      new Move("Kampilan Flurry ~ Wind Fury", "BBB4", "MM", 14, null, null, null, 24, null, true),
+      new Move("Kampilan Talon", "BK", "MH", 14, -6, 4, 4, 30),
 
       new Move("Air Blade Thrust", "6B", "M", 18, -14, "STN", "STN", null),
       new Move("Air Blade Thrust", "6BB", "MM", 18, -20, "STN", "KND", null),
-      new Move("Air Blade Thrust", "6Bb", "MM", 18, 2, 0, 0, null, null, false, false, false, false, false, false, false, true),
-      new Move("Air Blade Thrust ~ Wind Charmer", "6BB|b2|8", "MM", 18, null, null, null, null, null, true),
-      new Move("Air Blade Thrust ~ Wind Sault", "6BB|b6", "MM", 18, null, null, null, null, null, true),
-      new Move("Air Blade Thrust ~ Wind Fury", "6BB|b4", "MM", 18, null, null, null, null, null, true),
+      new Move("Air Blade Thrust", "6Bb", "MM", 18, 2, 0, 0, 46, null, false, false, false, false, false, false, false, true),
+      new Move("Air Blade Thrust ~ Wind Charmer", "6BB|b2|8", "MM", 18, null, "KND", "KND", 46, null, true),
+      new Move("Air Blade Thrust ~ Wind Sault", "6BB|b6", "MM", 18, null, "KND", "KND", 46, null, true),
+      new Move("Air Blade Thrust ~ Wind Fury", "6BB|b4", "MM", 18, null, "KND", "KND", 46, null, true),
 
-      new Move("West Wind Combo", "3B", "MMM", 20, -12, "LNC", "LNC", null),
-      new Move("Turning Witik Blow", "2B", "M", 16, -10, 4, 4, null, "Returns to facing away"),
-      new Move("Gust Slicer", "4B", "M", 14, -16, 0, "KND", null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Gust Slicer", "4BA", "MH", 14, -4, 10, 10, null, "Returns to facing away", false, false, false, false, false, false, false, false, false, true),
-      new Move("Gust Slicer(Hold)", "4Ba", "MH", 14, -4, 10, 10, null, "Returns to facing away", false, false, false, false, false, false, false, false, false, true),
-      new Move("Gusting Vertical Abaniko", "4BB", "MM", 14, -4, 10, 10, null),
-      new Move("Cumulus Crash", "1B", "LL", 20, -14, "STN", "STN", null, null, false, false, true),
+      new Move("West Wind Combo", "3B", "MMM", 20, -12, "LNC", "LNC", 30),
+      new Move("Turning Witik Blow", "2B", "M", 16, -10, 4, 4, 22, "Returns to facing away"),
+      new Move("Gust Slicer", "4B", "M", 14, -16, 0, "STN", 12, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Gust Slicer", "4BA", "MH", 14, -4, 10, 10, 28, "Returns to facing away", false, false, false, false, false, false, false, false, false, true),
+      new Move("Gust Slicer(Hold)", "4Ba", "MH", 14, -4, 10, 10, 40, "Returns to facing away", false, false, false, false, false, false, false, false, false, true),
+      new Move("Gust Slicer(Cancel)", "4BzG", "M", 14, -14, 2, "STN", 12, "Returns to facing away"),
 
-      new Move("Blue Sky", "236B", "M", 24, -18, null, null, null),
-      new Move("Blue Sky", "236b", "M", 24, -6, null, null, null, null, false, true),
-      new Move("Whirlwind Hambalos", "214B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
+      new Move("Gusting Vertical Abaniko", "4BB", "MM", 14, -4, 10, 10, 38),
+      new Move("Cumulus Crash", "1B", "LL", 20, -14, 0, 6, 16, null, false, false, true),
+
+      new Move("Blue Sky", "236B", "M", 24, -18, "LNC", "LNC", 30),
+      new Move("Blue Sky", "236b", "M", 24, -6, "LNC", "LNC", 36, null, false, true),
+      new Move("Whirlwind Hambalos", "214B", "M", 62, null, "KND", "KND", 50, null, false, false, false, false, false, false, false, false, true),
       new Move("Whirlwind Hambalos (Cancel) ~ Wind Sault", "214xG", null, null, null, null, null, null, null, true),
-      new Move("Satik", "CB", "M", 14, -8, 2, 2, null, null, false, false, true),
+      new Move("Satik", "CB", "M", 14, -8, 2, 2, 18, null, false, false, true),
 
-      new Move("Rising Baraw", "C3B", "M", 16, -16, -10, -6, null, "Can be delayed"),
-      new Move("Rising Baraw", "C3BB", "MMM", 16, -22, "LNC", "LNC", null, "Can be delayed"),
-      new Move("Rising Baraw ~ Wind Charmer", "C3BB2|8", "MMM", null, null, null, null, null, null, true),
-      new Move("Rising Baraw ~ Wind Sault", "C3BB6", "MMM", null, null, null, null, null, null, true),
-      new Move("Rising Baraw ~ Wind Fury", "C3BB4", "MMM", null, null, null, null, null, null, true),
+      new Move("Rising Baraw", "C3B", "M", 16, -16, -10, -6, 10, "Can be delayed"),
+      new Move("Rising Baraw", "C3BB", "MMM", 16, -22, "LNC", "LNC", 25, "Can be delayed"),
+      new Move("Rising Baraw ~ Wind Charmer", "C3BB2|8", "MMM", 16, null, "LNC", "LNC", 25, null, true),
+      new Move("Rising Baraw ~ Wind Sault", "C3BB6", "MMM", 16, null, "LNC", "LNC", 25, null, true),
+      new Move("Rising Baraw ~ Wind Fury", "C3BB4", "MMM", 16, null, "LNC", "LNC", 25, null, true),
 
-      new Move("Rising Elbow Blade", "WB", "M", 12, -8, 4, 4, null),
-      new Move("Swift Leap", "JB", "H", 24, 2, "LNC", "LNC", null),
+      new Move("Rising Elbow Blade", "WB", "M", 12, -8, 4, 4, 15),
+      new Move("Swift Leap", "JB", "H", 24, 2, "LNC", "LNC", 28),
 
-      new Move("Baraw Punch Turn", "TB", "M", 20, -20, "KND", "KND", null),
-      new Move("Turning Satik", "T2B", "M", null, null, null, null, null, null, false, false, true)
+      new Move("Baraw Punch Turn", "TB", "M", 20, -20, "KND", "KND", 25),
+      new Move("Turning Satik", "T2B", "M", 16, -8, 2, 2, 18, null, false, false, true)
     ],
     // Kick Moves 
     [
-      new Move("High Sipa", "K", "H", 12, -8, 0, 0, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Side Sipa", "6K", "M", 16, -14, "STN", "STN", null),
-      new Move("Inner Sipa", "3K", "M", 14, -6, 4, 4, null),
-      new Move("Low Sipa Sweep", "2K", "L", 16, -14, "STN", "STN", null, null, false, false, true),
-      new Move("Sipa Trip", "1K", "L", 18, -14, "STN", "STN", null),
-      new Move("Roundhouse Sipa", "4K", "H", 16, -2, 8, 8, null),
+      new Move("High Sipa", "K", "H", 12, -8, 0, 0, 12, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Side Sipa", "6K", "M", 16, -14, "STN", "STN", 20),
+      new Move("Inner Sipa", "3K", "M", 14, -6, 4, 4, 16),
+      new Move("Low Sipa Sweep", "2K", "L", 16, -14, "STN", "STN", 12, null, false, false, true),
+      new Move("Sipa Trip", "1K", "L", 18, -14, "STN", "STN", 16),
+      new Move("Roundhouse Sipa", "4K", "H", 16, -2, 8, 8, 14),
 
-      // duplicate input below?
-      new Move("Front Sipa", "WK", "M", 14, -4, 8, 8, null),
-      new Move("Sipa Jump", "JK", "M", 23, -8, 2, 2, null),
+      new Move("Low Sipa Sweep", "CK", "L", 16, -14, "STN", "STN", 12, null, false, false, true),
+      new Move("Front Sipa", "WK", "M", 14, -4, 8, 8, 20),
+      new Move("Sipa Jump", "JK", "M", 23, -8, 2, 2, 55),
 
-      new Move("Diving Wind Sipa", "TK", "H", 16, null, "STN", "STN", null, "Returns to facing away"),
-      new Move("Turning Sipa Sweep", "T2K", "L", null, null, null, null, null, null, false, false, true)
+      new Move("Diving Wind Sipa", "TK", "H", 16, -14, "KND", "KND", 22, "Returns to facing away"),
+      new Move("Turning Sipa Sweep", "T2K", "L", 18, -14, 0, 0, 12, null, false, false, true)
     ],
     // Simultaneous Press Moves
     [
-      new Move("Ice Wind", "A+B", "M", 40, 2, "LNC", "LNC", null, "Returns to facing away on G cancel", false, true, false, false, false, false, false, true, false, true),
-      new Move("Shearing Blades", "6A+B", "M", 24, -12, "KND", "KND", null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Shearing Blades", "6a+b", "M", null, -6, "KND", "KND", null, null, false, true, false, false, false, false, false, false, false, true),
-      new Move("Crosswind", "3A+B", "HH", 20, -10, 4, 4, null, null, false, true),
+      new Move("Ice Wind", "A+B", "M", 40, 2, "LNC", "LNC", 35, "Returns to facing away on G cancel", false, true, false, false, false, false, false, true, false, true),
+      new Move("Ice Wind(Cancel)", "A+BG", null, null, null, null, null, null, "Returns to facing away"),
 
-      new Move("Rapid Force", "2A+B", "M", 20, -16, "STN", "KND", null),
-      new Move("Rapid Force ~ Wind Fury", "2a+b", "M", null, null, null, null, null, null, true),
+      new Move("Shearing Blades", "6A+B", "M", 24, -12, "KND", "KND", 36, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Shearing Blades", "6a+b", "M", null, -6, "KND", "KND", 36, null, false, true, false, false, false, false, false, false, false, true),
+      new Move("Shearing Blades(Cancel)", "6A+BG", null, null, null, null, null, null),
 
-      new Move("Twin Baraw Lift", "1A+B", "M", 18, -16, "STN", "LNC", null, null, false, true),
-      new Move("Twin Espadas", "4A+B", "MM", 20, -6, "STN", "STN", null, "Returns to facing away"),
-      new Move("Desert Gust", "CA+B", "HM", 22, -14, "LNC", "LNC", null),
+      new Move("Crosswind", "3A+B", "HH", 20, -10, 4, 4, 28, null, false, true),
 
-      new Move("Olisi Turn", "TA+B", "H", 24, 6, "STN", "STN", null, null, false, true),
+      new Move("Rapid Force", "2A+B", "M", 20, -16, "STN", "KND", 26),
+      new Move("Rapid Force ~ Wind Fury", "2a+b", "M", 20, -20, 8, 12, 26, null, true),
+
+      new Move("Twin Baraw Lift", "1A+B", "M", 18, -16, "STN", "LNC", 24, null, false, true),
+      new Move("Twin Espadas", "4A+B", "MM", 20, -6, "STN", "STN", 36, "Returns to facing away"),
+      new Move("Desert Gust", "CA+B", "HM", 22, -14, "LNC", "LNC", 30),
+
+      new Move("Olisi Turn", "TA+B", "H", 24, 6, "KND", "LNC", 30, null, false, true),
       new Move("Olisi Turn(Hold)", "Ta+b", "H", 24, 12, "STN", "STN", null, null, false, true, false, false, false, false, false, true),
 
-      new Move("Sudden Storm", "TB+KA+B", "MMMM", null, null, null, null, null, "Returns to facing away", false, false, false, false, false, false, false, true),
-      new Move("Sudden Storm", "Tb+kA+B", "MMMM", null, null, null, null, null, "Returns to facing away", false, false, false, false, false, false, false, false, true)
+      new Move("Wind Leap", "TB+K", null, null, null, null, null, null, null, true),
+      new Move("Wind Leap(Double Leap)", "Tb+k", null, null, null, null, null, null, null, true),
+      new Move("Sudden Storm", "TB+KA+B", "MMMM", 22, 12, "STN", "STN", 32, "Returns to facing away", false, false, false, false, false, false, false, true),
+      new Move("Sudden Storm", "Tb+kA+B", "MMMM", 22, null, "STN", "STN", 32, "Returns to facing away", false, false, false, false, false, false, false, false, true)
     ],
     // 8-Way Run Moves
     [
-      new Move("Flowing Gale Hook", "#|^|(A", "H", 16, -8, 2, 2, null),
-      new Move("Flowing Gale Hook ~ Wind Charmer", "#|^|(A2|8", "HH", 16, null, null, null, null, null, true),
-      new Move("Flowing Gale Hook ~ Wind Sault", "#|^|(A6", "HH", 16, null, null, null, null, null, true),
-      new Move("Flowing Gale Hook ~ Wind Fury", "#|^|(A4", "HH", 16, null, null, null, null, null, true),
+      new Move("Flowing Gale Hook", "#|^|(A", "H", 16, -8, 2, 2, 26),
+      new Move("Flowing Gale Hook ~ Wind Charmer", "#|^|(A2|8", "HH", 16, 16, 26, 26, 26, null, true),
+      new Move("Flowing Gale Hook ~ Wind Sault", "#|^|(A6", "HH", 16, 16, 26, 26, 26, null, true),
+      new Move("Flowing Gale Hook ~ Wind Fury", "#|^|(A4", "HH", 16, 16, 26, 26, 26, null, true),
 
-      new Move("Blade Cyclone", "@|*A", "MM", 18, -16, "STN", "STN", null),
-      new Move("Blade Cyclone ~ Wind Charmer", "@|*A2|8", "MM", 18, null, null, null, null, null, true),
-      new Move("Blade Cyclone ~ Wind Sault", "@|*A6", "MM", 18, null, null, null, null, null, true),
-      new Move("Blade Cyclone ~ Wind Fury", "@|*A4", "MM", 18, null, null, null, null, null, true),
+      new Move("Blade Cyclone", "@|*A", "MM", 18, -16, "STN", "STN", 36),
+      new Move("Blade Cyclone ~ Wind Charmer", "@|*A2|8", "MM", 18, 2, "LNC", "LNC", 36, null, true),
+      new Move("Blade Cyclone ~ Wind Sault", "@|*A6", "MM", 18, 2, "LNC", "LNC", 36, null, true),
+      new Move("Blade Cyclone ~ Wind Fury", "@|*A4", "MM", 18, 2, "LNC", "LNC", 36, null, true),
 
-      new Move("Double Abaniko", "!|$|uA", "H", 22, -12, 2, 2, null),
-      new Move("Double Abaniko", "!|$|uAA", "HM", 22, -14, "KND", "KND", null, null, false, true),
-      new Move("Double Abaniko", "!|$|uAa", "HM", 22, 8, "KND", "KND", null, null, false, false, false, false, false, false, false, true),
+      new Move("Double Abaniko", "!|$|uA", "H", 22, -12, 2, 2, 20),
+      new Move("Double Abaniko", "!|$|uAA", "HM", 22, -14, "KND", "KND", 50, null, false, true),
+      new Move("Double Abaniko", "!|$|uAa", "HM", 22, 8, "KND", "KND", 65, null, false, false, false, false, false, false, false, true),
 
-      new Move("Paayon Thrust", "#|^|(B", "H", 22, -4, "STN", "STN", null, null, false, true),
+      new Move("Paayon Thrust", "#|^|(B", "H", 22, -4, "STN", "STN", 26, null, false, true),
 
-      new Move("Gust Hook", "@|*B", "M", 22, -16, "LNC", "LNC", null),
-      new Move("Gust Hook", "@|*BB", "MM", 22, -14, "STN", "STN", null),
-      new Move("Gust Hook", "@|*BBj", "MMM", 22, -15, "STN", "STN", null), // on guard is probably wrong?
+      new Move("Gust Hook", "@|*B", "M", 22, -16, "LNC", "LNC", 20),
+      new Move("Gust Hook", "@|*BB", "MM", 22, -14, "STN", "STN", 45),
+      new Move("Gust Hook", "@|*BBj", "MMM", 22, -14, "STN", "STN", 55),
 
-      new Move("Isa Hampas", "!|$|uB", "M", 26, -14, "STN", "STN", null, "Returns to facing away", false, true),
-      new Move("Isa Hampas ~ Wind Charmer", "!|$|uB2|*", "M", 26, null, null, null, null, null, true),
-      new Move("Isa Hampas ~ Wind Sault", "!|$|uB6", "M", 26, null, null, null, null, null, true),
-      new Move("Isa Hampas ~ Wind Fury", "!|$|uB4", "M", 26, null, null, null, null, null, true),
+      new Move("Isa Hampas", "!|$|uB", "M", 26, -14, "STN", "STN", 28, "Returns to facing away", false, true),
+      new Move("Isa Hampas ~ Wind Charmer", "!|$|uB2|*", "M", 26, 16, 36, 36, 28, null, true),
+      new Move("Isa Hampas ~ Wind Sault", "!|$|uB6", "M", 26, 16, 36, 36, 28, null, true),
+      new Move("Isa Hampas ~ Wind Fury", "!|$|uB4", "M", 26, 16, 36, 36, 28, null, true),
 
-      new Move("Parabolic Sipa", "#|^|(K", "M", 34, 2, "LNC", "LNC", null, "Returns to facing away"),
-      new Move("Sipa Windmill", "@|*K", "H", 18, -4, 6, 6, null),
-      new Move("Sipa Rising", "!|$|uK", "MH", 18, -8, "STN", "STN", null),
+      new Move("Parabolic Sipa", "#|^|(K", "M", 34, 2, "LNC", "LNC", 20, "Returns to facing away"),
+      new Move("Sipa Windmill", "@|*K", "H", 18, -4, 6, 6, 16),
+      new Move("Sipa Rising", "!|$|uK", "MH", 18, -8, "STN", "STN", 38),
 
-      new Move("Rising Gale", "#|^|(A+B", "MM", 28, -10, "LNC", "LNC", null),
-      new Move("Rising Gale ~ Wind Charmer", "#|^|(A+B2|8", "MM", 28, null, null, null, null, null, true),
-      new Move("Rising Gale ~ Wind Sault", "#|^|(A+B6", "MM", 28, null, null, null, null, null, true),
-      new Move("Rising Gale ~ Wind Fury", "#|^|(A+B4", "MM", 28, null, null, null, null, null, true),
+      new Move("Rising Gale", "#|^|(A+B", "MM", 28, -10, "LNC", "LNC", 36),
+      new Move("Rising Gale ~ Wind Charmer", "#|^|(A+B2|8", "MM", 28, 26, "LNC", "LNC", 36, null, true),
+      new Move("Rising Gale ~ Wind Sault", "#|^|(A+B6", "MM", 28, 26, "LNC", "LNC", 36, null, true),
+      new Move("Rising Gale ~ Wind Fury", "#|^|(A+B4", "MM", 28, 26, "LNC", "LNC", 36, null, true),
 
-      new Move("Tumbling Razors", "!|$|uA+B", "MMMM", 24, -10, "STN", "STN", null),
-      new Move("Sipa Slide", "RK", "L", null, null, null, null, null),
-      new Move("Was Sipa Slide", "RK", "L", null, null, null, null, null, "While your health is low", false, true)
+      new Move("Tumbling Razors", "!|$|uA+B", "MMMM", 24, -10, "STN", "STN", 30),
+      new Move("Sipa Slide", "RK", "L", 20, -22, "KND", "KND", 26),
+      new Move("Was Sipa Slide", "RK", "L", 20, -10, "KND", "KND", 36, "While your health is low", false, true)
     ],
     // Throws
     [
-      new Move("Tagga Na Kamay", "A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Monsoon", "4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Tower Sipa", "ZA+G", "H", 18, null, "KND", "KND", null, "", false, false, false, false, false, false, true),
-      new Move("Piggyback Tulison", "XA+G", "H", 18, null, "KND", "KND", null, "", false, false, false, false, false, false, true),
-      new Move("Diving Wind Sipa Throw", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Sungabb Throw", "TA+G", "H", null, null, "KND", "KND", null, "Breakable", false, false, false,false, false, false, true),
-      new Move("Monsoon Season", "T4A+G4|6A", "H", null, null, "KND", "KND", null, "Breakable", false, false, false,false, false, false, true),
-      new Move("Tagga", "[A+G", "H", null, null, "KND", "KND", null, "Not Breakable", false, false, false,false, false, false, true)
+      new Move("Tagga Na Kamay", "A+G", "H", 18, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, true),
+      new Move("Monsoon", "4A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
+      new Move("Tower Sipa", "ZA+G", "H", 18, null, "KND", "KND", 55, null, false, false, false, false, false, false, true),
+      new Move("Piggyback Tulison", "XA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
+      new Move("Diving Wind Sipa Throw", "VA+G", "H", 18, null, "KND", "KND", 65, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      new Move("Sungabb Throw", "TA+G", "H", 20, null, "KND", "KND", 55, "Breakable", false, false, false,false, false, false, true),
+      new Move("Monsoon Season", "T4A+G4|6A", "H", 20, null, "KND", "KND", 40, "Breakable/75DMG with extension", false, false, false, false, false, false, true),
+      new Move("Tagga", "[A+G", "H", 20, null, "KND", "KND", 20, "Not Breakable", false, false, false,false, false, false, true)
     ],
     // ************ Stances *************
     // Wind Charmer
     [
       new Move("Wind Charmer", "2|8B+K", null, null, null, null, null, null, null, true),
-      new Move("Turning Kali Strikes", "[AB", "HMM", null, null, null, null, null, "Returns to facing away"),
-      new Move("Turning Kali Strikes ~ Wind Charmer", "[A2|8", "HH", null, null, null, null, null, null, true),
-      new Move("Turning Kali Strikes ~ Wind Sault", "[A6", "HH", null, null, null, null, null, null, true),
-      new Move("Turning Kali Strikes ~ Wind Fury", "[A4", "HH", null, null, null, null, null, null, true),
-      new Move("Kali Rush", "[AKA", "HHLH", null, null, null, null, null),
-      new Move("Baraw Strikes", "[BB", "MM", null, null, null, null, null),
-      new Move("Rising Baraw Slice", "[BB", "MM", null, null, null, null, null, "delay second hit/Time precisely for increased power", false, false, false, false, false, false, false, true), // delayed
-      new Move("Twirling Wind", "[K", "M", null, null, null, null, null, null, false, true),
-      new Move("Tuhod Strike", "[A+B", "L", null, null, null, null, null),
-      new Move("Tagga", "[A+G", "H", null, null, null, null, null, "Not Breakable", false, false, false, false, false, false, true)
+
+      new Move("Turning Kali Strikes", "[A", "HH", 32, -16, -8, -8, 16),
+      new Move("Turning Kali Strikes ~ Wind Charmer", "[A2|8", "HH", 32, 16, 24, 24, 16, null, true),
+      new Move("Turning Kali Strikes ~ Wind Sault", "[A6", "HH", 32, 16, 24, 24, 16, null, true),
+      new Move("Turning Kali Strikes ~ Wind Fury", "[A4", "HH", 32, 16, 24, 24, 16, null, true),
+      new Move("Turning Kali Strikes", "[AB", "HMM", 32, -4, 12, 12, 44, "Returns to facing away"),
+
+      new Move("Kali Rush", "[AK", "HHL", 32, -16, -6, -6, 37),
+      new Move("Kali Rush", "[AKA", "HHLH", 32, -4, 6, 6, 55),
+
+      new Move("Baraw Strikes", "[B", "M", 40, -12, 0, 0, 16),
+      new Move("Baraw Strikes", "[BB", "MM", 40, -12, 0, 0, 36),
+      new Move("Baraw Strikes(just)", "[BBj", "MM", 40, 0, "LNC", "LNC", 51),
+      new Move("Rising Baraw Slice", "[BB", "MM", 40, 0, "LNC", "LNC", 41, "delay second hit/Time precisely for increased power", false, false, false, false, false, false, false, true), // delayed
+      
+      new Move("Twirling Wind", "[K", "M", 34, -10, "KND", "KND", 20, null, false, true),
+      new Move("Tuhod Strike", "[A+B", "L", 52, 0, 10, 10, 26),
+      new Move("Tagga", "[A+G", "H", 20, null, "KND", "KND", 20, "Not Breakable", false, false, false,false, false, false, true)
     ],
     // Wind Sault
     [
       new Move("Wind Sault", "6B+K", null, null, null, null, null, null, null, true),
-      new Move("Double Inwardi", "]A", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Double Inwardi ~ Wind Charmer", "]A2|8", "L", null, null, null, null, null, null, true),
-      new Move("Double Inwardi ~ Wind Sault", "]A6", "L", null, null, null, null, null, null, true),
-      new Move("Double Inwardi ~ Wind Fury", "]A4", "L", null, null, null, null, null, null, true),
-      new Move("Double Bartikal", "]B", "M", null, null, null, null, null),
-      new Move("Double Bartikal ~ Wind Fury", "]b", "M", null, null, null, null, null, null, true),
-      new Move("Layout", "]K", "H", null, null, null, null, null, "Returns to downed on miss/Shifts to Wind Sault on hit"),
-      new Move("Reverse Wind", "]k", "M", null, null, null, null, null),
-      new Move("Rolling Storm", "]A+B", "MMM", null, null, null, null, null)
+      new Move("Double Inwardi", "]A", "L", 40, -20, 4, "STN", 26, null, false, false, true),
+      new Move("Double Inwardi ~ Wind Charmer", "]A2|8", "L", 40, null, 26, "STN", 26, null, true),
+      new Move("Double Inwardi ~ Wind Sault", "]A6", "L", 40, null, 26, "STN", 26, null, true),
+      new Move("Double Inwardi ~ Wind Fury", "]A4", "L", 40, null, 26, "STN", 26, null, true),
+
+      new Move("Double Bartikal", "]B", "M", 38, -14, "KND", "KND", 32),
+      new Move("Double Bartikal ~ Wind Fury", "]b", "M", 38, -16, "KND", "KND", 32, null, true),
+
+      new Move("Layout", "]K", "H", 33, -22, "KND", "KND", 20, "Returns to downed on miss/Shifts to Wind Sault on hit"),
+      new Move("Reverse Wind", "]k", "M", 28, -6, "KND", "KND", 28),
+
+      new Move("Rolling Storm", "]A+B", "MMM", 28, -16, "KND", "KND", 28)
     ],
     // Wind Fury
     [
       new Move("Wind Fury", "B+K", null, null, null, null, null, null, "Dodges high, mid horizontal(except kicks)", true),
       new Move("Leaping Wind Fury", "4B+K|$B+K", null, null, null, null, null, null, null, true),
-      new Move("Swooping Blade", "{A", "L", null, null, null, null, null, null, false, false, true),
+
+      new Move("Swooping Blade", "{A", "L", 36, -2, 14, "STN", 20, null, false, false, true),
       new Move("Swooping Blade (Cancel) ~ Wind Fury", "{zG", null, null, null, null, null, null, null, true),
-      new Move("Panay Hurricane", "{BoB", "MM", null, null, null, null, null, null, false, true),
-      new Move("Leaping Double Sipa", "{K", "MM", null, null, null, null, null),
-      new Move("Raging Wind", "{A+B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true, true),
+
+      new Move("Panay Hurricane", "{B", "M", 20, -20, -6, -6, 20, null, false, true),
+      new Move("Panay Hurricane", "{BoB", "MM", 20, -22, "LNC", "LNC", 83, null, false, true),
+
+      new Move("Leaping Double Sipa", "{K", "MM", 18, -8, "LNC", "LNC", 30),
+      new Move("Raging Wind", "{A+B", "M", 60, null, "KND", "KND", 60, null, false, false, false, false, false, false, false, false, true, true),
+
       new Move("Wind Fury ~ Wind Charmer", "{2|8", null, null, null, null, null, null, null, true),
       new Move("Wind Fury ~ Wind Sault", "{6", null, null, null, null, null, null, null, true),
       new Move("Wind Fury ~ Wind Fury", "{4", null, null, null, null, null, null, null, true)
@@ -4367,7 +4422,7 @@ export class MoveService{
     [
       new Move("Bleak Concerto", "]A+B+K", "M", 16, -16, "KND", "KND", 70, "May Trigger personality change", false, false, false, false, false, false, true, false, false, false, true),
       new Move("Bleak Concerto: Finale", "{A+B+K", "M", 16, -16, "KND", "KND", 90, null, false, false, false, false, false, false, true, false, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", 6, null, null, null, 0, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Soul Charge", "4A+B+G", "m", 6, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
       new Move("Alkonost's Cadence", "S{AKA", "HMM", 12, 2, "KND", "KND", 50, null, false, false, false, false, false, true, false, true),
       new Move("Snare Groove", "S]6ABB", "HLM", 18, 4, "LNC", "LNC", 56, null, false, false, false, false, false, true, false, true),
       new Move("Minerva's Symphony", "S{6ABB", "HMM", 22, 4, "KND", "KND", 98, "May trigger personality change", false, false, false, false, false, true, false, true),
@@ -4424,8 +4479,8 @@ export class MoveService{
     [
       new Move("Two-Step Stitch", "]B", "M", 16, -8, 2, 2, 12, null, false, false, false, false, false, false, false, false, false, true),
       new Move("Two-Step Stitch", "]BB", "MM", 16, -6, 4, 4, 26, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Two-Step Stitch", "]BBB", "MMM", 16, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true, false, false, false, false, true),
-      new Move("Two-Step Stitch", "]BBb", "MMM", 16, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Two-Step Stitch", "]BBB", "MMM", 16, null, null, null, 35, "Shifts to clash upon hit", false, false, false, false, true, false, false, false, false, true),
+      new Move("Two-Step Stitch", "]BBb", "MMM", 16, null, null, null, 45, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
       
       new Move("Back Step Pizzicato", "]x4", "M", 18, -14, -4, -4, 15),
       new Move("Hi-Wind Albatross", "x8", "H", 14, -8, 0, 0, 16, null, false, true),
@@ -4587,8 +4642,8 @@ export class MoveService{
   Voldo = [
     // Reversal Edge Attacks
     [
-      new Move("Secret Chamber", "B+G", "M", 16, -4, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Secret Chamber", "b+g", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Secret Chamber", "B+G", "M", 46, -4, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Secret Chamber", "b+g", "M", 66, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
       new Move("Forgery Finder ~ facing away", "B+G4", "M", 16, 2, 12, 12, null, "Returns to facing away"), // facing away
       new Move("Throat Slasher", "rA", "HH", null, null, null, null, null, null, false, true),
       new Move("Throat Slasher ~ facing away", "ra", "HH", null, null, null, null, null, "Returns to facing away", false, true), // facing away
@@ -4646,8 +4701,8 @@ export class MoveService{
       new Move("Scorpion Claw", "WA", "M", 16, -14, 2, 10, 16, null, false, true),
       new Move("Puppet Gear", "JA", "LL", 34, -10, 6, 6, 20),
 
-      new Move("Blind Scissors", "TA", "H", null, -8, 0, 0, 10, "Returns to facing away"),
-      new Move("Blind Scissors", "TAA", "HH", null, -6, 4, 4, 22, "Returns to facing away"),
+      new Move("Blind Scissors", "TA", "H", 10, -8, 0, 0, 10, "Returns to facing away"),
+      new Move("Blind Scissors", "TAA", "HH", 10, -6, 4, 4, 22, "Returns to facing away"),
       
       new Move("Faceless Fear", "T6A", "H", 15, -4, 8, 8, 12, "Returns to facing away"),
       new Move("Faceless Fear", "T6AA", "HH", 15, 0, "KND", "KND", 34, "Returns to facing away"),
@@ -4835,7 +4890,7 @@ export class MoveService{
     [
       new Move("Mantis Crawl", "B+K", null, null, null, null, null, null, "Returns to crouching on stance cancel with G", true),
       new Move("Mantis Crawl ~ Mantis Crawl", "[2|8", null, null, null, null, null, null, null, true),
-      new Move("Fool's Labyrinth ~ Mantis Crawl", "[A", "M", null, null, null, null, null, null, true),
+      new Move("Fool's Labyrinth ~ Mantis Crawl", "[A", "M", 22, -12, "STN", "STN", 26, null, true),
 
       new Move("Fanatic Fool ~ Mantis Crawl", "[A+B", null, null, null, null, null, null, null, true),
       new Move("Fool Ritual ~ Mantis Crawl", "[B+K", "m", 14, -19, -3, "LNC", 22, "GI vs. mid vertical", false, false, false, true),
@@ -4891,11 +4946,11 @@ export class MoveService{
       new Move("Death Roll", "S3A+B", null, null, null, null, null, null, "Returns to downed position when cancelling stance with G", true),
       new Move("Death Roll ~ Mantis Crawl", "S}2|8", null, null, null, null, null, null, null, true),
 
-      new Move("Superwyrm ~ Death Roll", "S}A", "LLL", null, null, null, null, null, null, true, false, false, false, false, true, false, true),
-      new Move("Superior Arachnid ~ Death Roll", "S}B", "MMM", null, null, null, null, null, null, true, false, false, false, false, true, false, true),
-      new Move("Superwyrm Escape ~ Death Roll", "S}K", "L", null, null, null, null, null, null, true),
-      new Move("Gravestone Cleaver", "S}A+B", "M", null, null, null, null, null, "Returns to downed position", false, false, false, false, false, false, false, false, true),
-      new Move("Back Strike ~ Mantis Crawl", "S}B+K", "MMM", null, null, null, null, null, "Revenge attack", true),
+      new Move("Superwyrm ~ Death Roll", "S}A", "LLL", 38, 15, "KND", "KND", 22, null, true, false, false, false, false, true, false, true),
+      new Move("Superior Arachnid ~ Death Roll", "S}B", "MMM", 28, 28, "KND", "KND", null, null, true, false, false, false, false, true, false, true),
+      new Move("Superwyrm Escape ~ Death Roll", "S}K", "L", 24, -20, 10, "KND", null, null, true),
+      new Move("Gravestone Cleaver", "S}A+B", "M", 78, null, null, null, null, "Returns to downed position", false, false, false, false, false, false, false, false, true),
+      new Move("Back Strike ~ Mantis Crawl", "S}B+K", "MMM", 20, -2, 8, 8, null, "Revenge attack", true),
       new Move("Maddening Slaps", "Sw}B+K", "H", null, null, null, null, null, "Returns to downed position", false, false, false, false, false, false, false, false, true)
     ]
   ]
@@ -5015,13 +5070,13 @@ export class MoveService{
       new Move("Swallow's Blade ~ Bea Her Hua", "6Ka", "MH", 26, -12, 4, 4, 18, "GI vs. high, mid horizontal", true, false, false, true),//data inconsistent between 8WR and the sreadsheet
       new Move("Chicken Kick", "3K", "M", 14, -8, 4, 4, 14, null),
       new Move("Woan Shyong Nibble", "2K", "L", 16, -14, -4, -4, 20, null),
-      new Move("Circle Breaker", "1K", "L", 24, -16, 2, "LNC", null),
+      new Move("Circle Breaker", "1K", "L", 24, -16, 2, "LNC", 20),
       new Move("Circle Breaker Feint Divide", "1cA", "M", 28, -10, 0, 0, 18, "TC[14-40,1~]"),
-      new Move("Circle Breaker Feint Divide", "1cAA", "MMM", 28, -8, 4, 4, null), //inconsistent frame data again
-      new Move("Circle Breaker Feint Divide", "1cAAB", "MMML", 28, -18, "KND", "KND", null), //inconsistent frame data again
-      new Move("Circle Breaker Feint Double Feng Yun", "1cAAK", "MMMM", 28, -16, 0, 0, null),
+      new Move("Circle Breaker Feint Divide", "1cAA", "MMM", 28, -8, 4, 4, 40), //inconsistent frame data again
+      new Move("Circle Breaker Feint Divide", "1cAAB", "MMML", 28, -18, "KND", "KND", 58), //inconsistent frame data again
+      new Move("Circle Breaker Feint Double Feng Yun", "1cAAK", "MMMM", 28, -16, 0, 0, 24),
       new Move("Shan Kick", "4K", "H", 16, -2, 4, 4, 16, null),
-      new Move("Woan Shyong Nibble", "CK", "L", 16, -2, "KND", "KND", null, null, false, false, true),
+      new Move("Woan Shyong Nibble", "CK", "L", 16, -2, "KND", "KND", 12, null, false, false, true),
       new Move("Rising Hou Ling Thorn", "C3K", "M", 15, -19, 5, "LNC", 26, null),
       new Move("Rising Hou Ling Thorn", "C3KB", "MH", 15, 10, "KND", "KND", 66, "TC[6-24]", false, true, false, false, false, false, false, true),
       new Move("Rising Shun Ling Thorn", "C3KB6", "MHH", 15, -4, "KND", "KND", 96, null),
@@ -5032,7 +5087,7 @@ export class MoveService{
       new Move("Advancing Tiger Thrust ~ Silent Xia Sheng", "Wk", "M", 12, null, null, null, null, null, true),
       new Move("Star Kick", "JK", "MM", 18, -12, 4, 4, 24, "TJ[7~]"),
       new Move("Star Kick", "JKK", "MMM", 18, 2, "STN", "STN", 42, "TJ[16-36]"),
-      new Move("Star Kick ~ Playful Xia Sheng", "JKK2", "H", null, null, null, null, null, null, true), //not listed anywhere
+      new Move("Star Kick ~ Playful Xia Sheng", "JKK2", "H", 18, null, "STN", "STN", 42, null, true),
       new Move("Spinning Yuen Kick", "TK", "H", 16, -4, 6, 6, 18, null),
       new Move("Spinning Woan Shyong Nibble", "T2K", "L", 18, -14, -4, -4, 18, "TC[13~]", false, false, true)
     ],
@@ -5051,16 +5106,16 @@ export class MoveService{
       new Move("Great Wall Chime", "3B+K", "M", 20, -16, 2, 2, 20),
       new Move("Great Wall Chime", "3B+KK", "MM", 20, -13, "LNC", "LNC", 42),
       new Move("Quake Step", "2B+K", "m", 40, 4, "STN", "STN", 36, "Becomes a low attack when at a distance", false, false, false, false, false, false, false, true),
-      new Move("Quake Step ~ Silent Xia Sheng", "2b+k", null, null, null, null, null, null, null, true),  //SS only
+      new Move("Quake Step ~ Silent Xia Sheng", "2b+k", null, null, null, null, null, null, null, true),
       new Move("Hwu Dye", "1B+K", "M", 24, -8, 4, 4, 24, "TC[5-13]", false),
-      new Move("Muu Ling", "4B+K", "M", 60, -2, "STN", "STN", 50, null, false, false, false, false, false, false, false, false, true, true),
+      new Move("Muu Ling", "4B+K", "M", 60, null, "STN", "STN", 50, null, false, false, false, false, false, false, false, false, true, true),
       new Move("Mei Guei Hue Feint", "C3B+K", "L", 17, 8, "STN", "STN", 58, null, false, false, false, false, false, false, false, true),
       new Move("Mei Guei Hue Feint ~ Silent Xia Sheng", "C3b+k", null, null, null, null, null, null, null, true),
       new Move("Shiang Gyh Kwei Feint", "8B+K", "L", 38, -12, 4, "LNC", 28, "Returns to crouch on cancel", false, false, false, false, false, false, false, false, false, true),
       new Move("Shiang Gyh Kwei Feint ~ Silent Xia Sheng", "8b+k", "L", 38, -12, 4, "LNC", 28, null, true),
       new Move("Reverse Chicken Kick", "TB+K", "M", 17, -7, 15, 15, 20, "TC[6-16]", false),
-      new Move("Circle Breaker", "T2B+K", "L", 22, -10, 10, 10, null),
-      new Move("Guei", "dA+B", "L", 6, -30, -20, -20, 5, "Returns to downed position", true) //intoStance iff. you consider WD a stance
+      new Move("Circle Breaker", "T2B+K", "L", 22, -10, 10, 10, 20),
+      new Move("Guei", "dA+B", "L", 6, -30, -20, -20, 5, "Returns to downed position", true)
     ],
     // 8-Way Run Moves
     [
@@ -5075,13 +5130,13 @@ export class MoveService{
       new Move("Lan Hua", "!|$ua", "MH", 38, 2, 18, 18, null, "impact speed not certain"),
       new Move("Playful Rhythm", "#|^|(B", "M", 20, -8, 4, "STN", 16, null),
       new Move("Playful Rhythm", "#|^|(BB", "MM", 20, -14, 4, "STN", 40, null),
-      new Move("Playful Rhythm", "#|^|(Bb", "MM", 26, 6, "STN", 36, null, null, false, true, false, false, false, false, false, true),
+      new Move("Playful Rhythm", "#|^|(Bb", "MM", 26, 6, "STN", "STN", 36, null, false, true, false, false, false, false, false, true),
       new Move("Playful Rhythm ~ Laughin Bea Her Hua", "#|^|(B4", "M", 20, -8, 4, "STN", 16, "GI vs. high, mid vertical", true, false, false, true),
       new Move("Playful Rhythm ~ Laughing Bea Her Hua", "#|^|(BB4", "MM", 20, -14, 4, "STN", 40, "GI vs. high, mid vertical", true, false, false, true),
       new Move("Playful Rhythm ~ Silent Xia Sheng", "#|^|(b", "M", 20, null, null, null, null, null, true), //needs damage
       new Move("Playful Slice", "@|*B", "MM", 20, -8, "STN", "STN", 28, null),
       new Move("Vengeful Lian Hua", "!|$|uB", "M", 32, -20, "LNC", "LNC", 36, null),
-      new Move("Vengeful Lian Hua ~ Laughin Bea Her Hua", "!|$|uB4", "M", 32, -20, "LNC", "LNC", null, "GI vs. high, middle vertical", true, false, false, true), //needs damage
+      new Move("Vengeful Lian Hua ~ Laughin Bea Her Hua", "!|$|uB4", "M", 32, -20, "LNC", "LNC", 36, "GI vs. high, middle vertical", true, false, false, true), //needs damage
       new Move("Woan Shyong Swing", "#|^|(K", "M", 12, -10, 2, 2, 18, null, null),
       new Move("Mei Hua Kick", "@|*K", "M", 36, 2, "STN", "STN", 30, null),
       new Move("Mei Hua Kick ~ Playful Xia Sheng", "@|*K2", "M", null, null, null, null, null, null, true), //no data available on this entry
@@ -5100,8 +5155,8 @@ export class MoveService{
     ],
     // Throws
     [
-      new Move("Yuen Chuei Shaur", "A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true), //just needs damage
-      new Move("Long Ling Sheang", "4A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true), //needs damage
+      new Move("Yuen Chuei Shaur", "A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true), //just needs damage
+      new Move("Long Ling Sheang", "4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true), //needs damage
       new Move("Tien E Sheang", "ZA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),   //needs damage
       new Move("Yng Dyi Yann", "XA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Yuh Luen Shaur", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
@@ -5111,7 +5166,7 @@ export class MoveService{
       new Move("Lo Tsai Shaur ~ Reverse Chicken Kick(just)", "Q1A+GB+Kj", "MM", 19, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Water Banquet", "214A+G", "HH", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Wind Chime", "]A+G|4A+G", "HH", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Twisting Lotus Flower", "S]A+G|4A+GB", "H", 18, 18, "STN", "STN", null, null, false, false, false, false, false, true, true)
+      new Move("Twisting Lotus Flower", "S]A+G|4A+GB", "H", 18, null, "STN", "STN", null, null, false, false, false, false, false, true, true)
     ],
     // ************ Stances *************
     // Hou Lee
@@ -5130,7 +5185,7 @@ export class MoveService{
       new Move("Great Wall", "]A+B", "M", 10, -16, "KND", "KND", 38, null, false, true),
       new Move("Dawn Blade", "]z+x6", "H", 10, -6, "KND", "KND", 38, null, false, true),
       new Move("Bea Her Hua", "]B+K", null, null, null, null, null, null, "GI vs. high, mid horizontal", true, false, false, true),
-      new Move("Wind Chime", "]A+G|4A+G", "HH", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true), //needs damage
+      new Move("Wind Chime", "]A+G|4A+G", "HH", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Playful Xia Sheng", "S]2", null, null, null, null, null, null, "Can be shifted to follow-up during SXS/Can be held", true, false, false, false, false, true),
       new Move("Summer Smile", "]K+G", "H", 51, 0, 10, 10, 1),
       new Move("Summer Blessing", "]6K+G", "MM", 25, 0, 10, 10, 1.1),
@@ -5197,7 +5252,7 @@ export class MoveService{
     // Horizontal Moves
     [
       new Move("Splinter Gale Lightning Blade", "A", "H", 10, -8, 0, 0, 10, null, null, null, null, null, null, null, null, null, null, null),
-      new Move("Splinter Gale Lightning Blade", "AA", "HH", 10, -8, -4, 28, null, null, null, null, null, null, null, null, null, null, null, null),
+      new Move("Splinter Gale Lightning Blade", "AA", "HH", 10, -8, -4, -4, 18, null, null, null, null, null, null, null, null, null, null, null),
       new Move("Splinter Gale Lightning Blade", "AAA", "HHH", 10, -6, 4, 4, 36, "TC[14-24", false, false, false, false, false, false, false, false, false, true),
       new Move("Heshikirigari", "6A", "H", 16, -14, 0, 0, 12, null, null, null),
       new Move("Heshikirigari", "6AA", "HH", 16, 0, 8, "LNC", 42, null, false, true),
@@ -5300,9 +5355,6 @@ export class MoveService{
       new Move("Deathcopter Trick", "2z+x4", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),//no data available on this one
       new Move("Deathcopter Slice ~ Manji Dragonfly", "2z+xB+K", null, null, null, null, null, null, null, true),//no data available on this one
       new Move("Moonsault Slayer", "236A+B", "M", 60, -21, "STN", "STN", 60, "TC[60-89] / TJ[10-60]", false, false, false, false, false, false, false, false, true),
-      new Move("Flea", "B+K", null, null, null, null, null, null, null, true),//no data available on this one
-      new Move("Indian Stance", "2B+K", null, null, null, null, null, null, null, true),//no data available on this one
-      new Move("Manji Dragonfly", "8B+K", null, null, null, null, null, null, null, true), //no data available on this one
       new Move("Spinning Evade", "4B+KBBBBBB", null, null, null, null, null, null, "Costs health/Returns to downed position", true), //no data available on this one
       new Move("Soul Stealer", "A+K", "M", 8, -14, 8, 8, 4, "GI vs. high, mid horizontal[5-9]", false, false, false, true),
       new Move("Harakiri", "2A+B", "M", null, null, null, null, null, "Costs health/Returns to downed position", false, false, false, false, false, false, false, false, true),//no data on this one
@@ -5322,8 +5374,7 @@ export class MoveService{
       new Move("Indian Stance", "T2B+K", null, null, null, null, null, null, null, true),
       new Move("Manji Dragonfly", "T8B+K", null, null, null, null, null, null, null, true),
       new Move("Harakiri", "2A+K", "M", 30, -68, "STN", "STN", 90, "Costs health/Returns to downed position/TC[80-101]", false, false, false, false, false, false, false, false, true),
-      new Move("Harakiri", "T2A+K", "M", 30, -68, "STN", "STN", 90, "Costs health/Returns to downed position/TC[80-101]", false, false, false, false, false, false, false, false, true),
-      new Move("Indian Stance", "B+K", null, null, null, null, null, null, "While down(face up)", true) // While down (face up)
+      new Move("Harakiri", "T2A+K", "M", 30, -68, "STN", "STN", 90, "Costs health/Returns to downed position/TC[80-101]", false, false, false, false, false, false, false, false, true)
     ],
     // 8-Way Run Moves
     [
@@ -5356,16 +5407,16 @@ export class MoveService{
     ],
     // Throws
     [
-      new Move("Sword Face Smash", "A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Jumping Body Slam", "4A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Elegant Storm", "ZA+G", "H", 18, null, null, null, null, "", false, false, false, false, false, false, true),
-      new Move("Wheels of Hell", "XA+G", "H", 18, null, null, null, null, "", false, false, false, false, false, false, true),
-      new Move("Tornado Drop", "VA+G", "H", 18, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Soul Siphon", "6A+B", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Soul Possession", "6A+B6", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Rainbow Drop", "214A+G", "H", 18, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Manji Tatsumi", "SA+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, true, true),
-      new Move("Nimbus", "S4A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, true, true)
+      new Move("Sword Face Smash", "A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Jumping Body Slam", "4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Elegant Storm", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Wheels of Hell", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Tornado Drop", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      new Move("Soul Siphon", "6A+B", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Soul Possession", "6A+B6", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Rainbow Drop", "214A+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Manji Tatsumi", "SA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, true, true),
+      new Move("Nimbus", "S4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, true, true)
     ],
     // ************ Stances *************
     // Flea
@@ -5386,7 +5437,8 @@ export class MoveService{
     ],
     // Indian Stance
     [
-      new Move("Indian Stance", "2B+K", null, null, null, null, null, null, null, true), //no data available
+      new Move("Indian Stance", "2B+K", null, null, null, null, null, null, null, true),
+      new Move("Indian Stance(From downed)", "B+K", null, null, null, null, null, null, "While down(face up)", true), // While down (face up)
       new Move("Indian Stance Healing", "]", null, null, null, null, null, null, "Increases soul gauge", true),
       new Move("Warp Rolling Shark", "]A", "L", 16, -16, 2, 2, 28, "REV[1-2] / TC[1~]", false, false, true),
       new Move("Englightened Sun Flare", "]B", "M", 16, -14, "LNC", "LNC", 25, "Dodges high, mid & low", false, true),
@@ -5407,7 +5459,7 @@ export class MoveService{
       new Move("Dragonfly Blade", "{B", "M", 30, 2, "STN", "STN", 26, "TC[31-50] / TJ[1-29]"),
       new Move("Dragonfly Sweep", "{K", "L", 20, -16, 8, 8, 26, "TC[19-34] / TJ[1-17]"),
       new Move("Spirited Away ~ Manji Dragonfly", "{A+B", "H", 16, -6, "STN", "STN", 12, "TJ[3~]", true),
-      new Move("Spirited Away", "{A+B", "H", null, null, null, null, null, "Against midair opponent/Shifts to attack throw upon hit/Press K(just) when landing for meter", false, false, false, false, false, false, true),
+      new Move("Spirited Away", "{MA+B", "H", 16, null, null, null, null, "Shifts to attack throw upon hit/Press K(just) when landing for meter", false, false, false, false, false, false, true),
       new Move("Manji Dragonfly ~ Move", "{6|2|8|4", null, null, null, null, null, null, "Increased speed while soul charged", true),
       new Move("Manji Dragonfly ~ Flea", "{B+K", null, null, null, null, null, null, null, true), // no data
       new Move("Manji Dragonfly ~ Indian Stance", "{2B+K", null, null, null, null, null, null, null, true) // no data
@@ -5443,7 +5495,7 @@ export class MoveService{
     // Gauge Attacks
     [
       new Move("The Voice from the Abyss", "M", "M", 34, 4, "KND", "KND", null, "Curses opponent on hit or guard/GI vs. high, mid & low", false, false, false, true, false, false, false, true, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", null, 8, 8, 0, null, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Soul Charge", "4A+B+G", "m", 6, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
       new Move("Ode to Humbaba", "S3AKB", "MHM", 16, -12, -1, -1, null, null, false, false, false, false, false, true),
       new Move("Ceremonial Sacrifice", "S1AB", "LHM", 18, -2, 4, 4, null, null, false, false, false, false, false, true),
       new Move("Void Nova", "SA+B", "mmmmmm", 36, 6, "STN", "STN", null, null, false, true, false, false, false, true, false, true),
@@ -5465,14 +5517,14 @@ export class MoveService{
 
       new Move("Hook of Namtar", "3A", "M", 16, -20, -4, "STN", 14),
       new Move("Hook of Namtar", "3AB", "MM", 16, 16, "STN", "KND", 34),
-      new Move("Hook of Namtar(hold)", "3Ab", "MM", null, 0, "KND", "KND", 54),
+      new Move("Hook of Namtar(hold)", "3Ab", "MM", 16, 0, "KND", "KND", 54),
       new Move("Humbaba's Flame", "3AK", "MH", 16, -10, 6, 6, 26),
 
       new Move("Mutter of Bashm", "2A", "S", 12, -6, 4, 4, 12, null, false, false, true),
       new Move("Bite of the Kulullu", "1A", "L", 18, -14, -4, -4, 14, null, false, false, true),
       new Move("Ilabrat's Sapara", "4Ao", "HM", 20, -2, 4, 4, 30),
 
-      new Move("Mutter of Bashm", "CA", "S", null, null, null, null, null, null, false, false, true),
+      new Move("Mutter of Bashm", "CA", "S", 12, -6, 4, 4, 12, null, false, false, true),
       new Move("Great Scythe of Shamash", "WA", "H", 18, -8, 4, 4, 26),
       new Move("Shamash the Just", "JA", "L", 38, -10, 0, 0, 28, null, false, false, true),
       new Move("Sin's Glance", "TA", "H", 18, -8, 10, 10, 30),
@@ -5485,83 +5537,86 @@ export class MoveService{
       new Move("Mighty Hammer of Ea", "BBB", "MMM", 16, -8, "KND", "KND", 58, null, false, false, false, false, false, false, false, false, false, true),
       
       new Move("Nergal's Anguish", "xA", "H", 21, -14, 0, 0, 24),
-      new Move("Adoration of Gilgamesh", "xK", "MM", 14, -14, 0, 0, null),
-      new Move("Adoration of Gilgamesh(fast)", "xKF", "MM", 14, -14, 6, 6, null),
+      new Move("Adoration of Gilgamesh", "xK", "MM", 14, -14, 0, 0, 28),
+      new Move("Adoration of Gilgamesh(fast)", "xKF", "MM", 14, -14, 6, 6, 32),
 
-      new Move("Nergal's Talon", "6B", "M", 20, -16, -4, -4, null, null, false, true),
-      new Move("Nergal's Talon", "6BB", "MS", 20, -6, 4, 4, null, null, false, true),
-      new Move("Nergal's Mockery", "6BK", "MM", 20, -16, 10, null, null),
+      new Move("Nergal's Talon", "6B", "M", 20, -16, -4, -4, 16, null, false, true),
+      new Move("Nergal's Talon", "6BB", "MS", 20, -6, 4, 4, 30, null, false, true),
+      new Move("Nergal's Mockery", "6BK", "MM", 20, -16, 10, 10, 32),
 
-      new Move("Paean to Ishtar", "3B", "M", 20, -14, "LNC", null, null),
-      new Move("Ea the Grand Ruler", "2B", "M", 16, -8, 2, null, null, null, false, false, true),
+      new Move("Paean to Ishtar", "3B", "M", 20, -14, "LNC", "LNC", 24),
+      new Move("Ea the Grand Ruler", "2B", "M", 16, -8, 2, 2, 20, null, false, false, true),
 
-      new Move("Asushunamir's Spear", "1B", "L", 16, -20, -4, "KND", null),
-      new Move("Lilitu's Ingress(Lv. 1)", "1BoB", "Lm", 16, -10, 6, null, null, "If opponent is cursed"),
-      new Move("Lilitu's Ingress(Lv. 2)", "1BoB", "Lm", 16, 0, 16, null, null, "If opponent is cursed"),
-      new Move("Lilitu's Ingress(Lv. 3)", "1BoB", "Lm", 16, 10, 26, null, null, "If opponent is cursed"),
+      new Move("Asushunamir's Spear", "1B", "L", 16, -20, -4, "KND", 20),
+      new Move("Lilitu's Ingress(Lv. 1)", "1BoB", "Lm", 16, -10, 6, 6, 20, "If opponent is cursed"),
+      new Move("Lilitu's Ingress(Lv. 2)", "1BoB", "Lm", 16, 0, 16, 16, 20, "If opponent is cursed"),
+      new Move("Lilitu's Ingress(Lv. 3)", "1BoB", "Lm", 16, 10, 26, 26, 20, "If opponent is cursed"),
 
-      new Move("Sacred Rite of Ishtar", "4B", "M", 16, -8, 0, "KND", null),
-      new Move("Sacred Rite of Ishtar(just)", "4BHBj", "MMH", 16, null, null, "LNC", null),
-      new Move("Belit-Sheri's Cleaver", "46B", "M", 16, -16, "KND", "KND", null),
-      new Move("Belit-Sheri's Cleaver(fast)", "46BF", "M", 16, -16, "KND", "KND", null),
-      new Move("Belit-Sheri's Ingress(Lv. 1)", "46BoB", "Mm", 16, -4, "KND", null, null, "If opponent is cursed"),
-      new Move("Belit-Sheri's Ingress(Lv. 2)", "46BoB", "Mm", 16, 6, "KND", null, null, "If opponent is cursed"),
-      new Move("Belit-Sheri's Ingress(Lv. 3)", "46BoB", "Mm", 16, 16, "KND", null, null, "If opponent is cursed"),
+      new Move("Sacred Rite of Ishtar", "4B", "M", 16, -8, 0, "KND", 14),
+      new Move("Sacred Rite of Ishtar(just)", "4BHBj", "MMH", 16, null, null, "LNC", 49),
+      new Move("Belit-Sheri's Cleaver", "46B", "M", 16, -16, "KND", "KND", 28),
+      new Move("Belit-Sheri's Cleaver(fast)", "46BF", "M", 16, -16, "KND", "KND", 34),
+      new Move("Belit-Sheri's Ingress(Lv. 1)", "46BoB", "Mm", 16, -4, "KND", "KND", 28, "If opponent is cursed"),
+      new Move("Belit-Sheri's Ingress(Lv. 2)", "46BoB", "Mm", 16, 6, "KND", "KND", 28, "If opponent is cursed"),
+      new Move("Belit-Sheri's Ingress(Lv. 3)", "46BoB", "Mm", 16, 16, "KND", "KND", 28, "If opponent is cursed"),
 
-      new Move("Ea the Grand Ruler", "CB", "M", null, null, null, null, null, null, false, false, true),
+      new Move("Ea the Grand Ruler", "CB", "M", 16, -8, 2, 2, 20, null, false, false, true),
       
-      new Move("Ode to Mamnenaum", "WB", "M", 20, -12, "KND", null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
-      new Move("Anu the Radiant", "JB", "M", 28, -8, 4, null, null),
-      new Move("Nergal's Grapple", "TBB", "MS", 24, -8, "KND", null, null),
-      new Move("Ea's Glare", "T2B", "M", 18, -8, 2, null, null, null, false, false, true)
+      new Move("Ode to Mamnenaum", "WB", "M", 20, -12, "KND", "KND", 45, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Anu the Radiant", "JB", "M", 28, -8, 4, 4, 24),
+
+      new Move("Nergal's Grapple", "TB", "M", 24, -14, 4, 4, 18),
+      new Move("Nergal's Grapple", "TBB", "MS", 24, -8, "KND", "KND", 38),
+      new Move("Ea's Glare", "T2B", "M", 18, -8, 2, 2, 16, null, false, false, true)
     ],
     // Kicks
     [
-      new Move("Will of Gilgamesh", "K", "H", 12, -10, -2, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Will of Gilgamesh", "KK", "HL", 12, -16, 0, null, null, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Will of Gilgamesh", "K", "H", 12, -10, -2, -2, 12, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Will of Gilgamesh", "KK", "HL", 12, -16, 0, 0, 24, null, false, false, false, false, false, false, false, false, false, true),
       
-      new Move("Triumph of Gilgamesh", "k6", "H", 16, -12, "KND", null, null),
-      new Move("Hound of Tiamat", "6K", "H", 12, -12, 4, "KND", null, "Curses opponent upon hit", false, true),
-      new Move("Command of Tiamat", "3K", "M", 14, -8, 4, null, null, "Curses opponent upon hit"),
-      new Move("Shamhat's Allure", "2K", "L", 16, -14, -2, null, null, null, false, false, true),
-      new Move("Enkidu's Frenzy", "1K", "L", 26, -16, -4, "KND", null, null, false, false, true),
-      new Move("Lament for Enkidu", "4K", "M", 14, -16, 0, null, null, null, false, true),
+      new Move("Triumph of Gilgamesh", "k6", "H", 16, -12, "KND", "KND", 24),
+      new Move("Hound of Tiamat", "6K", "H", 12, -12, 4, "KND", 20, "Curses opponent upon hit", false, true),
+      new Move("Command of Tiamat", "3K", "M", 14, -8, 4, 4, 14, "Curses opponent upon hit"),
+      new Move("Shamhat's Allure", "2K", "L", 16, -14, -4, -4, 14, null, false, false, true),
+      new Move("Enkidu's Frenzy", "1K", "L", 26, -16, -4, "KND", 16, null, false, false, true),
+      new Move("Lament for Enkidu", "4K", "M", 14, -16, 0, 0, 18, null, false, true),
 
-      new Move("Shamhat's Allure", "CK", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Devotion to Ninsun", "C3K", "H", 14, -2, 12, null, null),
+      new Move("Shamhat's Allure", "CK", "L", 16, -14, -4, -4, 14, null, false, false, true),
+      new Move("Devotion to Ninsun", "C3K", "H", 14, -2, 12, 12, 20),
 
-      new Move("Enlil's Enmity", "WK", "M", 12, -10, 0, null, null),
-      new Move("Enlil's Enmity", "WKB", "MM", 12, -14, 0, null, null),
+      new Move("Enlil's Enmity", "WK", "M", 12, -10, 0, 0, 14),
+      new Move("Enlil's Enmity", "WKB", "MM", 12, -14, 0, 0, 34),
 
-      new Move("Enkidu the Valiant", "JK", "H", 22, -10, "KND", null, null),
+      new Move("Enkidu the Valiant", "JK", "H", 22, -10, "KND", "KND", null),
       new Move("Enkidu's Glance", "TK", "M", 18, -8, "KND", "KND", null, "Returns to facing away"),
       new Move("Shamhat's Glare", "T2K", "L", 20, -20, "KND", "KND", null, null, false, false, true)
     ],
     // Simultaneous Press Moves
     [
-      new Move("Anshar's Halberd", "A+B", "H", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
+      new Move("Anshar's Halberd", "A+B", "H", 36, 6, 22, 22, null, null, false, true, false, false, false, false, false, true),
       
-      new Move("Marduk's Thunder", "6A+B", "MM", 18, -16, 4, 4, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Marduk's Thunder", "6A+BB", "MMM", 18, -8, "KND", "KND", null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Marduk's Thunder", "6A+Bb", "MMM", 18, 4, "KND", "KND", null, null, false, false, false, false, false, false, false, true, false, true),
+      new Move("Marduk's Thunder", "6A+B", "MM", 18, -16, -4, -4, 26, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Marduk's Thunder", "6A+BB", "MMM", 18, -8, "KND", "KND", 56, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Marduk's Thunder", "6A+Bb", "MMM", 18, 4, "KND", "KND", 66, null, false, false, false, false, false, false, false, true, false, true),
       
-      new Move("Anu's Justice", "2A+B", "M", 30, 2, "KND", "KND", null, null, false, false, false, false, false, false, false, true),
-      new Move("Tiamat's Frenzy", "4A+B", "MMM", 28, -14, 2, 2, null),
+      new Move("Anu's Justice", "2A+B", "M", 30, 2, "KND", "KND", 30, null, false, false, false, false, false, false, false, true),
+      new Move("Tiamat's Frenzy", "4A+B", "MMM", 28, -14, 4, 4, null),
 
       new Move("Offering to Kishar", "8A+B", "H", 28, null, null, null, null, null, false, false, false, false, false, false, true),
       new Move("Offering to Kishar", "M8A+B", "H", 28, null, "STN", "STN", null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
       
       new Move("Tiamat's Quaking Blow", "B+K", "M", 16, 12, "KND", "KND", null, "Curses oppponent upon hit or guard/Power increases according to K timing", false, false, false, false, false, false, false, true, false, true),
-      new Move("Tiamat's Quaking Blow", "B+KK", "M", null, null, null, null, null, "Curses oppponent upon hit or guard/Power increases according to K timing", false, false, false, false, false, false, false, true, false, true),
+      new Move("Tiamat's Quaking Blow", "B+KK", "M", 16, 4, 4, 4, null, "Curses oppponent upon hit or guard/Power increases according to K timing", false, false, false, false, false, false, false, true, false, true),
       
       new Move("Curse of Nergal", "6B+K", "M", 22, -8, 4, 4, null),
       new Move("Curse of Nergal", "6B+KA", "MH", 22, -8, 12, "STN", null),
       
-      new Move("Immortal Utnapishtim", "2B+K", "LM", 16, -4, 10, null, null),
+      new Move("Immortal Utnapishtim", "2B+K", "LM", 16, -4, 10, 10, null),
       new Move("Confession to Lahamu", "4B+K", "MM", 24, -17, "KND", "KND", null),
       new Move("Tiamat's Fury", "8B+K", "M", 18, -22, "KND", "KND", null),
-      new Move("Enlil's Admonition", "WB+K", "M", 22, null, null, null, null),
-      new Move("Adad's Great Shears", "TB+K", "MM", 16, 4, "KND", "KND", null, "Can be held", false, false, false, false, false, false, false, true)
+      new Move("Enlil's Admonition", "WB+K", "M", 22, -34, -22, -22, null),
+      new Move("Adad's Great Shears", "TB+K", "MM", 16, 4, "KND", "KND", null, "Can be held", false, false, false, false, false, false, false, true),
+      new Move("Adad's Great Shears(Hold)", "Tb+k", "MM", null, null, "KND", "KND", null, null, false, false, false, false, false, false, false, true)
     ],
     // 8-Way Run Moves
     [
@@ -5600,10 +5655,10 @@ export class MoveService{
       new Move("Apsu the Origin", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
       new Move("Ea of the Abyss", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
       new Move("Marduk the Tempest", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Nergal's Bloodthirst", "6A+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Nergal's Bloodthirst", "6A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Judgement of Nergal", "6A+GA|2A", "M", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("Roar of Nergal", "6A+GB", "M", 18, null, null, null, null, null, false, false, false, false, false, false, true),
-      new Move("Uridimmu's Howl", "6A+GK", "M", 18, null, null, null, null, "Curses opponent on hit", false, false, false, false, false, false, true),
+      new Move("Roar of Nergal", "6A+GB", "M", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Uridimmu's Howl", "6A+GK", "M", 18, null, "KND", "KND", null, "Curses opponent on hit", false, false, false, false, false, false, true),
       new Move("Fatal Gravity", "SA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, true, true)
     ]
   ]

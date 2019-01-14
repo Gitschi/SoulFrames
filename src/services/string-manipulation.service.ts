@@ -126,9 +126,10 @@ export class StringManipulationService{
       case "n": //Slide G
         return "assets/imgs/input/Sg.png";
 
-      //Multi Button
-      case "M": // A~B Horizontal ~ Vertical
-        return "assets/imgs/input/M.png";
+      // Deprecated!
+      // Multi Button
+      /*case "M": // A~B Horizontal ~ Vertical
+        return "assets/imgs/input/M.png";*/
 
       case "N": // B~A Vertical ~ Horizontal
         return "assets/imgs/input/N.png";

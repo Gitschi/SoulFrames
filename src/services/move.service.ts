@@ -369,13 +369,13 @@ export class MoveService{
     ],
     // Horizontal Moves
     [
-      new Move("Annihilation", "A", "H", 20, -4, 2, 6, null, null, false, false, false, false, false, false, true, false, false, true),
+      new Move("Annihilation", "A", "H", 20, -4, 2, 6, 18, null, false, false, false, false, false, false, true, false, false, true),
       new Move("Annihilation", "AA", "HH", 20, -8, 2, 2, 38, "Can be delayed", false, false, false, false, false, false, true, false, false, true),
-      new Move("Annihilation(counter)", "HAA", "HH", 20, -4, 2, 6, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true, false, false, true),
+      new Move("Annihilation(counter)", "HAA", "HH", 20, -4, 2, 6, 38, "Shifts to attack throw upon hit", false, false, false, false, false, false, true, false, false, true),
       new Move("Destruction", "AB", "HM", 20, -12, 0, 0, 40, "Can be delayed"),
 
       new Move("Hades Control", "6A", "H", 18, -6, 4, 14, 18, null, false, false, false, false, false, false, true),
-      new Move("Hades Control(counter)", "H6A", "H", 18, -6, 4, 18, null, "Shits to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Hades Control(counter)", "H6A", "H", 18, -6, 4, 18, 18, "Shits to attack throw upon hit", false, false, false, false, false, false, true),
 
       new Move("Ax Blow", "3A", "M", 20, -12, 0, "KND", 24),
       new Move("Hades Break", "2A", "L", 20, -14, -4, -4, 18, null, false, false, true),
@@ -401,11 +401,12 @@ export class MoveService{
       new Move("Hades Break", "CA", "L", 20, -14, -4, -4, 18, null, false, false, true),
       new Move("Reverse Spiral Ax", "WA", "H", 26, -2, "KND", "KND", 52),
 
-      // Possibly different according to direction
-      new Move("Great Annihilation", "JA", "H", 26, -14, "KND", "KND", null),
+      new Move("Great Annihilation", "9JA", "H", 26, -14, "KND", "KND", 25),
+      new Move("Great Annihilation", "8JA", "H", 26, -14, "KND", "KND", 22),
+      new Move("Great Annihilation", "7JA", "H", 26, -14, -4, -4, 20),
 
-      new Move("Reverse Ax Split", "TA", "H", null, null, null, null, null),
-      new Move("Lower Hades Split", "T2A", "S", null, null, null, null, null, null, false, false, true)
+      new Move("Reverse Ax Split", "TA", "H", 22, -8, 2, 2, 20),
+      new Move("Lower Hades Split", "T2A", "S", 22, -6, 4, 4, 18, null, false, false, true)
     ],
     // Vertical Moves
     [
@@ -415,8 +416,8 @@ export class MoveService{
 
       new Move("Command Kicks", "xK", "MM", 20, -12, -2, -2, 26, "2nd hit can be delayed"),
       new Move("Command Kicks", "xKK", "MMM", 20, -2, 14, 14, 53, "2nd hit can be delayed"),
-      new Move("Castigate", "xKA+G", "MMM", 20, null, "KND", "KND", 66, null, false, false, false, false, false, false, true),
-      new Move("Bluster", "xK4A+G", "MMM", 20, null, "KND", "KND", 66, null, false, false, false, false, false, false, true),
+      new Move("Castigate", "xKA+G", "MMM", 20, -42, "KND", "KND", 66, null, false, false, false, false, false, false, true),
+      new Move("Bluster", "xK4A+G", "MMM", 20, -42, "KND", "KND", 66, null, false, false, false, false, false, false, true),
 
       new Move("Ax Offering", "x6", "M", 18, -18, -2, 4, 28, null),
       new Move("Ax Offering", "x6B", "MM", 18, -4, 4, 14, 39, "2nd hit can be delayed", false, false, false, false, false, false, true),
@@ -440,11 +441,15 @@ export class MoveService{
       new Move("Gorefang", "4bb", "MM", 42, 10, "KND", "KND", 57, null, false, false, false, false, false, false, false, true),
 
       new Move("Dark Split", "CB", "M", 20, -10, 6, 6, 24, null, false, false, true),
-      new Move("Hades Rising", "WB", "M", null, null, null, null, null),
-      new Move("Hades Rising", "Wb", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Greater divide", "JB", "M", null, null, null, null, null),
-      new Move("Reverse Dark Split", "TB", "M", null, null, null, null, null),
-      new Move("Lower Dark Split", "T2B", "M", 22, null, null, null, 22, null, false, false, true)
+      new Move("Hades Rising", "WB", "M", 20, -12, 6, "KND", 32),
+      new Move("Hades Rising", "Wb", "M", 26, 6, "KND", "KND", 40, null, false, true, false, false, false, false, false, true),
+
+      new Move("Greater divide", "9JB", "M", 30, -14, "KND", "KND", 32),
+      new Move("Greater divide", "8JB", "M", 30, -14, "KND", "KND", 29),
+      new Move("Greater divide", "7JB", "M", 30, -14, 0, 0, 26),
+
+      new Move("Reverse Dark Split", "TB", "M", 22, -10, 2, 2, 22),
+      new Move("Lower Dark Split", "T2B", "M", 22, -12, -2, -2, 26, null, false, false, true)
     ],
     // Kicks
     [
@@ -458,16 +463,22 @@ export class MoveService{
       new Move("Reverse Tamer", "1KA", "LH", 26, 0, "KND", "KND", 68),
 
       new Move("Dark Tamer", "4K", "M", 18, -12, -2, -2, 19, "1st hit can be held"),
-      new Move("Dark Tamer", "4KA", "MH", 18, -1, "KND", "KND", null, "1st hit can be held/2nd hit can be delayed"),
+      new Move("Dark Tamer", "4KA", "MH", 18, -1, "KND", "KND", 55, "1st hit can be held/2nd hit can be delayed"),
       new Move("Dark Coercion", "4Ka", "MM", 18, -8, 6, "KND", 55),
 
-      new Move("Bull Kick", "CK", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Bull Rage", "C3K", "M", null, null, null, null, null),
-      new Move("Rising Torment", "WKA", "MH", null, null, null, null, null),
-      new Move("Rising Carnage", "Wka", "MM", null, null, null, null, null),
-      new Move("Great Kick", "JK", "M", null, null, null, null, null),
-      new Move("Reverse Bull Kick", "TK", "H", null, null, null, null, null),
-      new Move("Lower Sweep", "T2K", "L", null, null, null, null, null, null, false, false, true)      
+      new Move("Dark Tamer", "4k", "M", 46, -4, 6, 6, 38),
+      new Move("Dark Tamer", "4kA", "MH", 46, -1, "KND", "KND", 65, "1st hit can be held/2nd hit can be delayed"),
+      new Move("Dark Coercion", "4ka", "MM", 46, -8, 6, "KND", 74),
+
+      new Move("Bull Kick", "CK", "L", 16, -14, -4, -4, 14, null, false, false, true),
+      new Move("Bull Rage", "C3K", "M", 18, -12, "KND", "KND", 30),
+
+      new Move("Rising Torment", "WK", "M", 16, -14, 2, "KND", 18),
+      new Move("Rising Torment", "WKA", "MH", 16, -1, "KND", "KND", 48),
+      new Move("Rising Carnage", "Wka", "MM", 16, -8, 6, "KND", 51),
+      new Move("Great Kick", "JK", "M", 26, -10, 2, 2, 24, "Damage differs slightly depending on jump direction"),
+      new Move("Reverse Bull Kick", "TK", "H", 16, -8, 2, 2, 16),
+      new Move("Lower Sweep", "T2K", "L", 18, -14, -2, -2, 18, null, false, false, true)      
     ],
     // Simultaneous Press Moves
     [
@@ -477,7 +488,7 @@ export class MoveService{
       new Move("Titan Ax(Near)", "2A+B", "M", 28, -20, -8, -8, 32),
 
       new Move("Breath of Hades", "4A+B", "M", 20, -18, "KND", "KND", 26),
-      new Move("Breath of Hades", "4a+b", "M", 20, null, "KND", "KND", 56, "Shifts to attack throw upon hit", false, false, false, false, false, false, true, false, true),
+      new Move("Breath of Hades", "4a+b", "M", 20, 56, "KND", "KND", 56, "Shifts to attack throw upon hit", false, false, false, false, false, false, true, false, true),
 
       new Move("Flip Titan Ax", "8A+B", "M", 28, -20, "KND", "KND", 52),
       new Move("Guard Crusher", "B+K", "H", 22, -4, 14, 14, 16, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
@@ -530,12 +541,12 @@ export class MoveService{
       new Move("Titan Ax(Near)", "@A+B", "M", 28, -20, -8, -8, 32),
       new Move("Flip Titan Ax", "*A+B", "M", 28, -20, "KND", "KND", 52),
 
-      new Move("Vicious Madness", "#|^|(A+G", "H", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
-      new Move("Underworld Pull", "Q#|^|(A+G2", "M", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
-      new Move("Cursed Earth", "!|$|uA+G", "H", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
-      new Move("Cursed Flesh", "!|$|uA+Gbj", "H", null, null, null, null, null, "2nd hit can be held", false, false, false, false, false, false, true),
-      new Move("Uproot", "Q!|$|uA+G2", "M", null, null, null, null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
-      new Move("Sliding", "RK", "L", null, null, "KND", "KND", 26)
+      new Move("Vicious Madness", "#|^|(A+G", "H", 46, null, "KND", "KND", 40, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
+      new Move("Underworld Pull", "Q#|^|(A+G2", "M", 45, null, "KND", null, 45, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
+      new Move("Cursed Earth", "!|$|uA+G", "H", 46, null, "KND", "KND", 60, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
+      new Move("Cursed Flesh", "!|$|uA+Gbj", "H", null, null, "KND", "KND", null, "2nd hit can be held", false, false, false, false, false, false, true),
+      new Move("Uproot", "Q!|$|uA+G2", "M", 45, null, "KND", "KND", 40, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
+      new Move("Sliding", "RK", "L", 20, -22, "KND", "KND", 26)
     ],
     // Throws
     [
@@ -548,24 +559,24 @@ export class MoveService{
 
       new Move("Maelstrom Divide", "Q8A+G", "M", 28, null, "KND", "KND", 55, "Not breakable", false, false, false, false, false, false, true),
       new Move("Bludgeoning Crush", "Q2A+G", "M", 14, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, false, true),
-      new Move("Apocalypse Pound", "SQ2A+G", "M", null, null, "KND", "KND", null, "Breakable", false, false, false, false, false, true, false, true),
+      new Move("Apocalypse Pound", "SQ2A+G", "M", 14, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, true, false, true),
       new Move("Drop of Lava", "Q1A+G", "M", 14, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, false, true),
-      new Move("Apocalypse Drop", "S1A+GA+G", "M", null, null, "KND", "KND", null, "Breakable", false, false, false, false, false, true, true),
+      new Move("Apocalypse Drop", "S1A+GA+G", "M", 14, null, "KND", "KND", 80, "Breakable", false, false, false, false, false, true, true),
       
       new Move("Wrath of the Accursed", "MA+G", "H", 18, null, "KND", "KND", 29, null, false, false, false, false, false, false, true),
       new Move("Wrath of the Damned", "M4A+G", "H", 18, null, "KND", "KND", 29, null, false, true, false, false, false, false, true),
       new Move("Titan Bomb", "236A+G", "H", 18, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, false, true),
       new Move("Titan Bomb(fast)", "236A+GF", "H", 18, null, "KND", "KND", 65, "Breakable", false, false, false, false, false, false, true),
       new Move("Titan Bomb(hold)", "236a+g", "H", 45, null, "KND", "KND", 65, "Breakable", false, false, false, false, false, false, true),
-      new Move("Apocalypse Destroyer", "S236A+GA+G", "H", null, null, "KND", "KND", null, "Breakable", false, false, false, false, false, true, true),
+      new Move("Apocalypse Destroyer", "S236A+GA+G", "H", 18, null, "KND", "KND", 85, "Breakable", false, false, false, false, false, true, true),
       
       new Move("Flight of the Wicked", "214A+G", "H", 18, null, "LNC", "LNC", 35, "Breakable/Can be held/Unable to break when held", false, false, false, false, false, false, true),
       new Move("Flight of the Wicked(fast)", "214A+Gj", "H", 18, null, "LNC", "LNC", 40, "Breakable/Can be held/Unable to break when held", false, false, false, false, false, false, true),
       new Move("Flight of the Wicked(hold)", "214a+g", "H", 40, null, "LNC", "LNC", 40, "Breakable/Can be held/Unable to break when held", false, false, false, false, false, false, true),
 
       new Move("Wicked Twister", "214A+G2|8A", "H", 18, null, "KND", "KND", 52, null, false, false, false, false, false, false, true),
-      new Move("Ride of the Wicked", "S214A+G", "H", null, null, null, null, null, "Breakable/Can be held/Unable to break when held", false, false, false, false, false, true, true),
-      new Move("Wicked Twister of Carnage", "S214A+G2|8A", "H", null, null, null, null, null, null, false, false, false, false, false, true, true),
+      new Move("Ride of the Wicked", "S214A+G", "H", 18, null, "LNC", "LNC", 45, "Breakable", false, false, false, false, false, true, true),
+      new Move("Wicked Twister of Carnage", "S214A+G2|8A", "H", 18, null, "KND", "KND", 68, null, false, false, false, false, false, true, true),
       
       new Move("Obsidian Drop", "28A+G", null, 18, null, "KND", "KND", 55, null, false, false, false, false, false, false, true),
       new Move("Obsidian Drop(fast)", "28A+GF", null, 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
@@ -576,10 +587,9 @@ export class MoveService{
       new Move("Vicious Fury", "S#|^|(A+G", "H", null, null, "KND", "KND", null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, true, true),
       new Move("Underworld Pull", "Q#|^|(A+G2", "M", 45, null, "KND", null, 45, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
       new Move("Cursed Earth", "!|$|uA+G", "H", 46, null, "KND", "KND", 60, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
-      new Move("Cursed Earth", "!|$|uA+GB", "H", 46, null, "KND", "KND", 71, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
+      new Move("Cursed Earth", "!|$|uA+Gbj", "H", 46, null, "KND", "KND", 71, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true),
 
-      new Move("Cursed Flesh", "!|$|uA+Gbj", "H", null, null, "KND", "KND", null, "2nd hit can be held", false, false, false, false, false, false, true),
-      new Move("Cursed Altar", "S!|$|uA+G", "H", null, null, "KND", null, null, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, true, true),
+      new Move("Cursed Altar", "S!|$|uA+G", "H", 46, null, "KND", "KND", 78, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, true, true),
       new Move("Uproot", "Q!|$|uA+G2", "M", 45, null, "KND", "KND", 40, "Breakable/Revenge attack/Unable to break when revenge is active", false, false, false, false, false, false, true)
     ]
   ]
@@ -631,9 +641,11 @@ export class MoveService{
       new Move("Impulse Pincer", "C3A", "HH", 18, 0, "KND", "KND", 40, "NC / Ax"), 
       new Move("Righteous Judgment", "C1A", "L", 16, -12, 0, 0, 18, "TC / ~FC / Spear", false, false, true),
       new Move("Double Cross Baptism", "WA", "M", 18, -10, 7, 7, 20, "TC"),
+
       new Move("Absolute Devotion", "9A", "L", 32, -16, 2, 2, 22, "TJ[13-28] / ~FC / Ax", false, false, true),
       new Move("Radical Liberty", "8A", "M", 26, -2, 2, 2, null, "TJ[8-32] / Opp. ~BT (hit) / Sword"),
       new Move("Thorough Inquest", "7A", "L", 40, -18, 4, 4, null, "TJ[13-?] / ~FC / Spear", false, false, true),
+
       new Move("Faith Betrayal", "TA", "H", 14, -6, 4, null, 12, "Sword", ),
       new Move("Martyr of Progress", "T2A", "S", 16, -6, 4, null, 12, "TC[11~] / ~FC / Sword", false, false, true)
     ],
@@ -661,7 +673,7 @@ export class MoveService{
       new Move("Save the Betrayed", "1B", "L", 18, -16, -4, -4, 16, "GI[L 11-24]/ SS on GI / TC[23-?] / Spear", true),
       new Move("Save the Betrayed", "1BB", "LH", 18, -8, 8, 8, 40, "GI vs. low", false, false, false, true),
       new Move("Instruct the Unwise", "4B", "M", 28, 4, 8, 8, 25, "GI vs. mid", false, true, false, true, false, false, false, true),
-      new Move("Nihilism", "CB", "M", 15, null, 5, 5, 22, null, false, false, true),
+      new Move("Nihilism", "CB", "M", 15, -8, 5, 5, 22, null, false, false, true),
       new Move("Coup D'etat", "C3B", "MM", 16, -8, "LNC", "LNC", 22, "Ax"),
       new Move("Coup D'etat", "C3BB", "MM", 16, -8, "KND", "KND", 41),
       new Move("Talon Spear", "C1B", "M", 12, -14, "LNC", "LNC", 24, "Sword"),
@@ -800,8 +812,8 @@ export class MoveService{
       new Move("Infernal Flare ~ Dread Storm", "@|(b+k", null, null, null, null, null, null, "against wall", true, false, false, false, false, true),
       new Move("Infernal Flare ~ Dread Charge", "!|$|uB+K", null, null, null, null, null, null, null, true, false, false, false, false, true),
       new Move("Infernal Flare ~ Dread Storm", "!|$|ub+k", null, null, null, null, null, null, "against wall", true, false, false, false, false, true),
-      new Move("Shrieking Sixties", "S{2|8BA", "MM", 14, null, "KND", "KND", 41, null, false, true, false, false, false, true),
 
+      new Move("Shrieking Sixties", "S{2|8BA", "MM", 14, null, "KND", "KND", 41, "-18 to -32 on guard", false, true, false, false, false, true),
       new Move("Shrieking Geo Da Ray", "S{2|8BB", "MM", 11, 2, "LNC", "LNC", 66, null, false, false, false, false, false, true, false, true),
       new Move("Shrieking Geo Da Ray(far)", "S{2|8BB", "MM", 11, 14, "LNC", "LNC", 66, null, false, false, false, false, false, true, false, true),
 
@@ -822,7 +834,7 @@ export class MoveService{
 
       new Move("Half-Mast Wave", "6A", "H", 16, -10, 0, 0, 16),
       new Move("Half-Mast Wave", "6AA", "HH", 16, -6, "KND", "KND", 26),
-      new Move("Half-Mast Wave ~ Dread Charge", "6Aa", "HH", 16, null, null, null, null, null, true), // Data missing
+      new Move("Half-Mast Wave ~ Dread Charge", "6Aa", "HH", 16, 0, "KND", "KND", 26, null, true),
       new Move("Half-Mast Windmill", "6AB", "HMH", 16, -12, "KND", "KND", 30),
 
       new Move("Scissor Wave", "3A", "MM", 16, -12, 6, 6, 32),
@@ -871,7 +883,7 @@ export class MoveService{
 
       new Move("Slay Storm", "CB", "M", 14, -8, -3, -3, 18, null, false, false, true),
       new Move("Devastater", "WB", "M", 18, -10, "LNC", "LNC", 30),
-      new Move("Devastater ~ Dread Charge", "Wb", "M", 18, null, null, null, null, null, true),
+      new Move("Devastater ~ Dread Charge", "Wb", "M", 18, -20, "LNC", "LNC", 30, null, true),
       new Move("Deck Lifter", "JB", "M", 40, -12, "LNC", "LNC", 28),
       new Move("Aft Blade Storm", "TB", "M", 16, -6, 4, 4, 18),
       new Move("Sub Slay Storm", "T2B", "M", 18, -8, 2, 2, 18, null, false, false, true)
@@ -899,15 +911,15 @@ export class MoveService{
     [
       new Move("Iceberg Circular ~ Dread Charge", "A+B", "M", 38, -14, "LNC", "LNC", 25, null, true, true, false, false, false, false, false, true),
       new Move("Pirate's Scheme", "6A+B", null, null, null, null, null, null, "GI vs. horizontal attacks(except kicks)", false, false, false, true),
-      new Move("Pirate's Scheme", "6A+BI", null, null, null, null, null, null, "Becomes a middle attack when at a distance", false, false, false, false, false, false, true),
+      new Move("Pirate's Scheme", "6A+BI", null, null, null, null, null, 40, "Becomes a middle attack when at a distance", false, false, false, false, false, false, true),
       
       new Move("Killer X", "2A+B", "M", 18, -10, "KND", "KND", 30, null, false, true, true),
-      new Move("Genocidal Culverin", "4A+B", "H", 40, null, null, null, 60, "Gun technique", false, false, false, false, false, false, false, false, true),
+      new Move("Genocidal Culverin", "4A+B", "H", 40, null, "KND", "KND", 60, "Gun technique", false, false, false, false, false, false, false, false, true),
       new Move("Bloody Culverin", "8A+B", "H", 16, null, "KND", "KND", 21, "Gun technique", false, false, false, false, false, false, false, false, true),
       new Move("Anchor Bow Heel", "B+K", "M", 30, -4, 6, "LNC", 30, "GI vs. high, mid horizontal", false, false, false, true),
       
       new Move("Pirate's Tactics", "6B+K", null, null, null, null, null, null, "GI vs. vertical(except kicks)", false, false, false, true),
-      new Move("Pirate's Tactics", "6B+KI", "M", null, null, null, null, null, "Gun technique", false, false, false, false, false, false, false, false, true),
+      new Move("Pirate's Tactics", "6B+KI", "M", null, null, null, null, 40, "Gun technique", false, false, false, false, false, false, false, false, true),
       
       new Move("High Tide Anchoring", "2B+K", "M", 22, -16, "KND", "KND", 30),
       new Move("High Tide Anchoring", "2b+k", "m", 38, -14, "KND", "KND", 40),
@@ -960,18 +972,18 @@ export class MoveService{
       new Move("Dark Flame ~ Dread Storm", "@|*b+k", null, null, null, null, null, null, "Against the wall", true),
       new Move("Dark Flame ~ Dread Charge", "!|$|uB+K", null, null, null, null, null, null, null, true),
       new Move("Dark Flame ~ Dread Storm", "!|$|ub+k", null, null, null, null, null, null, "Against the wall", true),
-      new Move("Dead Compass", "#|^|(A+G", "H", 18, null, 4, 4, null, "Not Breakable", false, false, false, false, false, false, true),
+      new Move("Dead Compass", "#|^|(A+G", "H", 18, null, 4, 4, 0, "Not Breakable", false, false, false, false, false, false, true),
       new Move("Sliding", "RK", "L", 20, -22, "KND", "KND", 26)
     ],
     // Throws
     [
-      new Move("Sadistic Cross", "A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Cannonball Split", "4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Figurehead Break", "ZA+G", "H", 18, null, "KND", "KND", null, "", false, false, false, false, false, false, true),
-      new Move("Jolly Roger Hoist", "XA+G", "H", 18, null, "KND", "KND", null, "", false, false, false, false, false, false, true),
-      new Move("Flush Flood", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Dead Compass", "#|^|(A+G", "H", 18, null, 4, 4, null, "Not Breakable/6 DMG on wall hit", false, false, false, false, false, false, true),
-      new Move("Curse of the Ancient Mariner", "S236A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, true, true)
+      new Move("Sadistic Cross", "A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
+      new Move("Cannonball Split", "4A+G", "H", 18, null, "KND", "KND", 35, "Breakable", false, false, false, false, false, false, true),
+      new Move("Figurehead Break", "ZA+G", "H", 18, null, "KND", "KND", 65, null, false, false, false, false, false, false, true),
+      new Move("Jolly Roger Hoist", "XA+G", "H", 18, null, "KND", "KND", 55, null, false, false, false, false, false, false, true),
+      new Move("Flush Flood", "VA+G", "H", 18, null, "KND", "KND", 65, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      new Move("Dead Compass", "#|^|(A+G", "H", 18, null, 4, 4, 0, "Not Breakable/6 DMG on wall hit", false, false, false, false, false, false, true),
+      new Move("Curse of the Ancient Mariner", "S236A+G", "H", 18, 70, "KND", "KND", null, "Breakable", false, false, false, false, false, true, true)
     ],
     // ************ Stances *************
     // Dread Charge
@@ -1184,31 +1196,31 @@ export class MoveService{
   Groh = [
     // Reversal Edge Attacks
     [
-      new Move("Glory's End", "B+G", "M", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Glory's End", "b+g", "M", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
-      new Move("Destruction of Logres", "rA", "H", null, null, null, null, null, null, false, true),
-      new Move("Path to Avalon", "rB", "MMM", null, null, null, null, null, "Shifts to clash upon guard", false, true, false, false, false, false, false, true),
-      new Move("Path to Avalon ~ Avenger", "rB6", "MMM", null, null, null, null, null, null, true, true, false, false, false, false, false, true),
-      new Move("Guinevere's Indiscretion", "rK", "M", null, null, null, null, null, null, false, true)
+      new Move("Glory's End", "B+G", "M", 46, -4, null, null, 35, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Glory's End", "b+g", "M", 66, null, null, null, 45, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Destruction of Logres", "rA", "H", null, 2, "STN", "STN", 22, null, false, true),
+      new Move("Path to Avalon", "rB", "MMM", null, null, "STN", "STN", 32, "Shifts to clash upon guard", false, true, false, false, false, false, false, true),
+      new Move("Path to Avalon ~ Avenger", "rB6", "MMM", null, null, "STN", "STN", 32, null, true, true, false, false, false, false, false, true),
+      new Move("Guinevere's Indiscretion", "rK", "M", null, -14, "STN", "STN", 24, null, false, true)
     ],
     // Gauge Attacks
     [
-      new Move("Chevalier Mal Fet", "A+B+K", "M", 16, -16, "KND", "KND", null, null, false, false, false, false, false, false, true, false, false, true),
+      new Move("Chevalier Mal Fet", "A+B+K", "M", 16, -16, "KND", "KND", 80, null, false, false, false, false, false, false, true, false, false, true),
       new Move("Soul Charge", "4A+B+G", "m", 6, 3, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true), // +4 on block?
      
-      new Move("Questing Fang ~ Steed of the Night", "S6AA6", "HM", null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Guilt Seeker", "S1AK", "Lm", 26, -22, "KND", "KND", null, "Shifts to attack throw upon hit", false, false, false, false, false, true, true),
-      new Move("Calamitous Judgment", "S3BB", "MMMM", 18, -8, "KND", "KND", null),
-      new Move("Curse of Morgan ~ Steed of the Night", "S1BB6", "LM", null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Benevolence Step ~ Steed of the Night", "S4B6", "M", null, null, null, null, null, null, true, true, false, false, false, true),
-      new Move("Wasteland", "S2A+B", "L", null, null, null, null, null, null, false, false, true, false, false, true, false, true),
-      new Move("War of Benwick ~ Steed of the Night", "S4A+B6", "M", null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Morgan's Deception ~ Steed of the Night", "S4B+K6", "M", null, null, null, null, null, null, true, false, false, false, false, true),
+      new Move("Questing Fang ~ Steed of the Night", "S6AA6", "HM", 16, 23, "KND", "KND", 41, null, true, false, false, false, false, true),
+      new Move("Guilt Seeker", "S1AK", "Lm", 26, -22, "KND", "KND", 78, "Shifts to attack throw upon hit", false, false, false, false, false, true, true),
+      new Move("Calamitous Judgment", "S3BB", "MMMM", 18, -8, "KND", "KND", 75),
+      new Move("Curse of Morgan ~ Steed of the Night", "S1BB6", "LM", 22, 26, 31, 31, 54, null, true, false, false, false, false, true),
+      new Move("Benevolence Step ~ Steed of the Night", "S4B6", "M", 22, 19, 31, 31, 18, null, true, true, false, false, false, true),
+      new Move("Wasteland", "S2A+B", "L", 38, 4, "KND", "KND", 49, null, false, false, true, false, false, true, false, true),
+      new Move("War of Benwick ~ Steed of the Night", "S4A+B6", "M", 34, null, "LNC", "LNC", 38, null, true, false, false, false, false, true),
+      new Move("Morgan's Deception ~ Steed of the Night", "S4B+K6", "M", 26, null, null, null, 30, null, true, false, false, false, false, true),
       new Move("Steed of the Night", "S[6", null, null, null, null, null, null, null, true, false, false, false, false, true),
       new Move("Cover of Darkness", "S[4", null, null, null, null, null, null, null, true, false, false, false, false, true),
-      new Move("Demon King Slayer", "S[6A", "HH", 33, 4, "KND", "KND", null, null, false, false, false, false, false, true, false, true),
-      new Move("Calamity's Collapse", "S[6B", "MMM", 38, -8, "KND", "KND", null, null, false, false, false, false, false, true),
-      new Move("Destructive Order", "S[6K", "M", 31, -2, "KND", "KND", null, null, false, false, false, false, false, true)
+      new Move("Demon King Slayer", "S[6A", "HH", 33, 4, "KND", "KND", 66, null, false, false, false, false, false, true, false, true),
+      new Move("Calamity's Collapse", "S[6B", "MMM", 38, -8, "KND", "KND", 77, null, false, false, false, false, false, true),
+      new Move("Destructive Order", "S[6K", "M", 31, -2, "KND", "KND", 38, null, false, false, false, false, false, true)
     ],
     // Horizontal Moves
     [
@@ -1254,94 +1266,93 @@ export class MoveService{
 
       new Move("Benevolence Step", "4B", "M", 22, -7, 4, "STN", 18, null, false, true),
       new Move("Kneeling Strike", "CB", "M", 14, -10, 2, 2, 14, null, false, false, true),
-      new Move("Ascending Thrust", "WB", "M", 14, -12, 0, 0, null),
-      new Move("Ascending Thrust ~ Avenger", "WB6", "M", 14, -4, 8, 8, null, null, true),
+      new Move("Ascending Thrust", "WB", "M", 14, -12, 0, 0, 20),
+      new Move("Ascending Thrust ~ Avenger", "WB6", "M", 14, -4, 8, 8, 20, null, true),
       new Move("Vaulting Strike", "JB", "M", 30, -8, "KND", "KND", 28),
       new Move("Penitent Strike", "TB", "M", 16, -8, 2, 2, 16),
       new Move("Atoning Strike", "T2B", "M", 18, -10, 2, 2, 18, null, false, false, true)
     ],
     // Kick Moves 
     [
-      // Damage missing from here =======================================================================================
+      new Move("Noble Courage", "K", "H", 12, -8, 0, 0, 12, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Lofty Faith", "6K", "H", 16, -10, 4, 4, 16),
+      new Move("Rising Courage", "3K", "M", 14, -4, 6, 10, 14),
+      new Move("Vigilant Courage", "2K", "L", 16, -14, -4, -4, 14, null, false, false, true),
+      new Move("Chivalrous Courage", "1K", "L", 24, -14, 0, "KND", 20, null, false, false, true),
+      new Move("Valiant Strike", "4K", "M", 22, -10, "KND", "KND", 24),
 
-      new Move("Noble Courage", "K", "H", 12, -8, 0, 0, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Lofty Faith", "6K", "H", 16, -10, 4, 4, null),
-      new Move("Rising Courage", "3K", "M", 14, -4, 6, 10, null),
-      new Move("Vigilant Courage", "2K", "L", 16, -14, -4, -4, null, null, false, false, true),
-      new Move("Chivalrous Courage", "1K", "L", 24, -14, 0, "KND", null, null, false, false, true),
-      new Move("Valiant Strike", "4K", "M", 22, -10, "KND", "KND", null),
-
-      new Move("Kneeling Swipe", "CK", "L", 16, -14, -4, -4, null, null , false, false, true),
-      new Move("Ascending Knee", "WK", "M", 12, -8, 6, 6, null),
-      new Move("Vaulting Drive", "JK", "M", 22, -10, 4, 4, null),
-      new Move("Penitent Blow", "TK", "H", 14, -8, 2, 2, null),
-      new Move("Atoning Swipe", "T2K", "L", 18, -14, -4, -4, null, null, false, false, true)
+      new Move("Kneeling Swipe", "CK", "L", 16, -14, -4, -4, 14, null , false, false, true),
+      new Move("Ascending Knee", "WK", "M", 12, -8, 6, 6, 16),
+      new Move("Vaulting Drive", "JK", "M", 22, -10, 4, 4, 20),
+      new Move("Penitent Blow", "TK", "H", 14, -8, 2, 2, 14),
+      new Move("Atoning Swipe", "T2K", "L", 18, -14, -4, -4, 14, null, false, false, true)
     ],
     // Simultaneous Press Moves
     [
-      new Move("Scarlet Sleeve", "A+B", "M", 38, 4, "KND", "KND", null, null, false, true, false, false, false, false, false, true),
-      new Move("Scarlet Sleeve ~ Avenger", "A+B6", "M", 38, 9, "KND", "KND", null, null, true, true, false, false, false, false, false, true),
+      new Move("Scarlet Sleeve", "A+B", "M", 38, 4, "KND", "KND", 35, null, false, true, false, false, false, false, false, true),
+      new Move("Scarlet Sleeve ~ Avenger", "A+B6", "M", 38, 9, "KND", "KND", 35, null, true, true, false, false, false, false, false, true),
 
-      new Move("Broceliande's Splendor", "6A+B", "MM", 24, -14, "KND", "STN", null, null, false, true),
-      new Move("Broceliande's Splendor ~ Avenger", "6A+B6", "MM", 24, -6, "KND", "STN", null, null, true, true),
+      new Move("Broceliande's Splendor", "6A+B", "MM", 24, -14, "KND", "STN", 32, null, false, true),
+      new Move("Broceliande's Splendor ~ Avenger", "6A+B6", "MM", 24, -6, "KND", "STN", 32, null, true, true),
 
-      new Move("Dolorous Stroke", "2A+B", "L", 46, 4, "KND", "KND", null, null, false, false, true, false, false, false, false, true),
-      new Move("War of Benwick", "4A+B", "M", 34, -8, "LNC", "LNC", null),
+      new Move("Dolorous Stroke", "2A+B", "L", 46, 4, "KND", "KND", 35, null, false, false, true, false, false, false, false, true),
+      new Move("War of Benwick", "4A+B", "M", 34, -8, "LNC", "LNC", 35),
 
-      new Move("Sir Gareth's Zest", "8A+B", "MM", 24, -24, "LNC", "LNC", null),
-      new Move("Sir Gareth's Zest ~ Avenger", "8A+B6", "MM", 24, -22, "LNC", "LNC", null, null, true),
+      new Move("Sir Gareth's Zest", "8A+B", "MM", 24, -24, "LNC", "LNC", 51),
+      new Move("Sir Gareth's Zest ~ Avenger", "8A+B6", "MM", 24, -22, "LNC", "LNC", 51, null, true),
 
-      new Move("Battle of Bedegraine ~ Avenger", "6B+K", "MM", 26, -8, "LNC", "LNC", null, null, true),
-      new Move("Gallatin Eclipse", "2B+K", "M", 60, null, "KND", "KND", null, null, false, false, false, false, false, false, false, false, true, true),
-      new Move("Morgan's Deception", "4B+K", "M", 26, -6, 0, 0, null),
-      new Move("Daredevil", "8B+K", "M", 36, -6, "KND", "KND", null),
-      new Move("Merlin's Counsel", "TB+K", "M", 18, -12, "STN", "STN", null)
+      new Move("Battle of Bedegraine ~ Avenger", "6B+K", "MM", 26, -8, "LNC", "LNC", 44, null, true),
+      new Move("Gallatin Eclipse", "2B+K", "M", 60, null, "KND", "KND", 60, null, false, false, false, false, false, false, false, false, true, true),
+      new Move("Morgan's Deception", "4B+K", "M", 26, -6, 0, 0, 28),
+      new Move("Daredevil", "8B+K", "M", 36, -6, "KND", "KND", 35),
+      new Move("Merlin's Counsel", "TB+K", "M", 18, -12, "STN", "STN", 20)
     ],
     // 8-Way Run Moves
     [
-      new Move("Sir Lancelot's Fervor", "#|^|(A", "H", 18, -8, 0, 0, null),
-      new Move("Sir Lancelot's Fervor", "#|^|(AA", "HM", 18, -14, "KND", "KND", null),
+      new Move("Sir Lancelot's Fervor", "#|^|(A", "H", 18, -8, 0, 0, 16),
+      new Move("Sir Lancelot's Fervor", "#|^|(AA", "HM", 18, -14, "KND", "KND", 34),
 
-      new Move("Bertilak the Headless", "@|*A", "H", 22, -2, "KND", "KND", null, "Can be held"),
-      new Move("Morgause's Mischief", "!|$|uA", "H", 34, -4, 4, "STN", null, "GI vs. high, mid verical(exept kicks)", false, true, false, true),
+      new Move("Bertilak the Headless", "@|*A", "H", 22, -2, "KND", "KND", 28),
+      new Move("Bertilak the Headless(hold)", "@|*a", "H", 22, -2, "STN", "STN", 40),
+      new Move("Morgause's Mischief", "!|$|uA", "H", 34, -4, 4, "STN", 30, "GI vs. high, mid verical(exept kicks)", false, true, false, true),
 
-      new Move("Sir Gawain's Charge", "#|^|(B", "M", 22, -10, -2, -2, null),
-      new Move("Sir Gawain's Charge", "#|^|(BB", "MM", 22, -10, "KND", "KND", null),
+      new Move("Sir Gawain's Charge", "#|^|(B", "M", 22, -10, -2, -2, 18),
+      new Move("Sir Gawain's Charge", "#|^|(BB", "MM", 22, -10, "KND", "KND", 43),
 
-      new Move("Sable Grief", "@|*B", "M", 22, -16, "LNC", "LNC", null, null, false, true),
-      new Move("Troubadour's Elegy", "@|*xA", "H", 17, -6, 6, 6, null),
-      new Move("King Pellinore's Delight", "!|$|uB", "M", 28, 2, "KND", "KND", null),
-      new Move("Intrepid Adventure", "#|^(K", "M", 24, -12, "LNC", "LNC", null),
-      new Move("Chivalrous Courage", "@|*K", "L", 24, -14, 0, 0, null, null, false, false, true),
-      new Move("Faith's Reprisal", "!|$|uK", "M", 28, -14, "STN", "STN", null, null, false, true),
-      new Move("Sir Tristan's Triumph", "@|*|#|^|(A+B", "MM", 22, -16, "KND", "KND", null),
+      new Move("Sable Grief", "@|*B", "M", 22, -16, "LNC", "LNC", 32, null, false, true),
+      new Move("Troubadour's Elegy", "@|*xA", "H", 17, -6, 6, 6, 24),
+      new Move("King Pellinore's Delight", "!|$|uB", "M", 28, 2, "KND", "KND", 36),
+      new Move("Intrepid Adventure", "#|^(K", "M", 24, -12, "LNC", "LNC", 22),
+      new Move("Chivalrous Courage", "@|*K", "L", 24, -14, 0, 0, 20, null, false, false, true),
+      new Move("Faith's Reprisal", "!|$|uK", "M", 28, -14, "STN", "STN", 24, null, false, true),
+      new Move("Sir Tristan's Triumph", "@|*|#|^|(A+B", "MM", 22, -16, "KND", "KND", 52),
 
-      new Move("Sir Garlon's Wile", "#|^|(B+K", "MM", 18, -14, 0, 0, null),
-      new Move("Sir Garlon's Wile ~ Avenger", "#|^|(B+K6", "MM", 18, -5, 9, 9, null, null, true),
+      new Move("Sir Garlon's Wile", "#|^|(B+K", "MM", 18, -14, 0, 0, 32),
+      new Move("Sir Garlon's Wile ~ Avenger", "#|^|(B+K6", "MM", 18, -5, 9, 9, 32, null, true),
 
-      new Move("Sir Percival's Gratitude", "@|*|!|$|uB+K", "MH", 18, -14, "KND", "KND", null),
-      new Move("Dauntless Slide", "RK", "L", 18, -5, "KND", "KND", null)
+      new Move("Sir Percival's Gratitude", "@|*|!|$|uB+K", "MH", 18, -14, "KND", "KND", 36),
+      new Move("Dauntless Slide", "RK", "L", 20, -22, "KND", "KND", 26)
     ],
     // Throws
     [
-      new Move("Gamlann's Lament", "A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Lohengrin's Courage", "4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Nimue's Embrace", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("Sire Balin's Sword", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("Astolat's Echo", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true)
+      new Move("Gamlann's Lament", "A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
+      new Move("Lohengrin's Courage", "4A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
+      new Move("Nimue's Embrace", "ZA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
+      new Move("Sire Balin's Sword", "XA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
+      new Move("Astolat's Echo", "VA+G", "H", 18, null, "KND", "KND", 65, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true)
     ],
     // ************ Stances *************
     // Avenger
     [
       new Move("Avenger", "B+K", null, null, null, null, null, null, null, true),
-      new Move("Endless Quest", "[A", "LLLL", 24, -20, "KND", "KND", null, "Can be held", false, true),
+      new Move("Endless Quest", "[A", "LLLL", 24, -20, "KND", "KND", 45, "Can be held", false, true),
 
-      new Move("Nameless Blade", "[B", "MM", 12, -12, 3, 3, null, "Can be delayed"),
-      new Move("Nameless Blade", "[BB", "MMMM", 12, -6, 6, 6, null, "Can be delayed"),
+      new Move("Nameless Blade ~ Avenger", "[B", "MM", 12, -12, 3, 3, 20, "Can be delayed", true),
+      new Move("Nameless Blade", "[BB", "MMMM", 12, -6, 6, 6, 45, "Can be delayed"),
 
-      new Move("Corbenic's Veil", "[K", "L", 16, -11, 3, 3, null),
-      new Move("Arondight's Roar", "[A+B", "M", 20, -16, "KND", "KND", null, "Shifts to attack throw upon hit"),
-      new Move("Sir Galahad's Bravery", "[B+K", "MM", 28, 8, "KND", "KND", null, null, false, true, false, false, false, false, false, true),
+      new Move("Corbenic's Veil ~ Avenger", "[K", "L", 16, -11, 3, 3, 14, null, true),
+      new Move("Arondight's Roar", "[A+B", "M", 20, -16, "KND", "KND", 56, "Shifts to attack throw upon hit"),
+      new Move("Sir Galahad's Bravery", "[B+K", "MM", 28, 8, "KND", "KND", 40, null, false, true, false, false, false, false, false, true),
       new Move("Avenger ~ Side Step", "[2|8", null, null, null, null, null, null, null, true)
     ]
   ]
@@ -1516,7 +1527,7 @@ export class MoveService{
     ],
     // Horizontal Moves
     [
-      new Move("Biting Raven", "A", "H", 12, -8, -2, 2, 8, null, false, true, false, false, false, false, false, false, false, true),
+      new Move("Biting Raven", "A", "H", 12, -8, -2, 2, 8, null, false, false, false, false, false, false, false, false, false, true),
       new Move("Biting Raven", "AA", "HH", 12, -12, 2, 2, 26, null, false, true, false, false, false, false, false, false, false, true),
       new Move("Governance", "AK", "HM", 12, -8, 6, 6, 28),
 
@@ -1566,7 +1577,7 @@ export class MoveService{
       new Move("Warning Mood ~ Serpent's Embrace", "6Ba", "MH", 18, 4, 8, 8, 40, null, true),
       new Move("Warning Immortal", "6BB", "MM", 18, -8, 6, 6, 34),
 
-      new Move("Ivy Lick", "6x8", "H", null, null, null, null, null, null, false, false, false, false, false, false, true),
+      new Move("Ivy Lick", "6x8", "H", 12, -20, -10, -10, 20, null, false, false, false, false, false, false, true),
       new Move("Ivy Lick", "M6x8", "H", 12, null, "KND", "KND", 41, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
       new Move("Silhouette", "6x8K", "HL", 12, -14, 2, 2, 36),
 
@@ -1658,8 +1669,7 @@ export class MoveService{
     [
       new Move("Damned Mark", "#|^|(A", "M", 20, -8, 2, 2, 24),
       new Move("Sparking Blade", "#|^|(a", "MM", 20, -12, -4, -4, 44, null, false, true),
-      new Move("Wolf Lash", "*A", "H", 26, -12, 0, 0, 18, null, false, true),
-      new Move("Wolf Sign", "@A", "H", null, null, null, null, null, null, false, true),
+      new Move("Wolf Lash", "*|@A", "H", 26, -12, 0, 0, 18, null, false, true),
 
       new Move("Cursed Soul", "!|$|uA", "M", 24, -8, 2, 2, 24),
       new Move("Insanity Light", "!|$|ua", "M", 28, -24, 8, 8, 34, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
@@ -1699,7 +1709,7 @@ export class MoveService{
       new Move("Sunset Cradle", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
       new Move("Sweet Dominance", "VA+G", "H", 18, null, "KND", "KND", 70, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       
-      new Move("Vile Condemnation", "2|3A+G", "L", 28, -14, "KND", "KND", 45, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
+      new Move("Vile Condemnation", "2|3A+G", "L", 28, -14, "KND", "KND", 50, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
       new Move("Vile Condemnation", "C2|3A+G", "L", 28, -14, "KND", "KND", 45, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
       
       new Move("Summon Suffering", "376231A+G", "H", 20, null, "KND", "KND", 60, "Not breakable", false, false, false, false, false, false, true),
@@ -1778,8 +1788,8 @@ export class MoveService{
       new Move("Heavy Bo", "S#|^|(B", "M", 16, -10, "KND", "KND", 49, "Shifts to attack throw upon close-range hit", false, false, false, false, false, true, true),
       new Move("Vermillion Bird Descends", "S#|^|(A+B", "MHM", 30, 8, "KND", "KND", 50, null, false, false, false, false, false, true, false, true),
       new Move("White Tiger Mark", "S#|^|(B+K", "MMM", 20, 0, 12, 12, 43, null, false, false, false, false, false, true),
-      new Move("Festival of the Damned", "SA+G", "H", 18, null, null, null, 40, "Breakable", false, false, false, false, false, true, true),
-      new Move("Festival of the Dead", "S4A+G", "H", 18, null, null, null, 65, "Breakable", false, false, false, false, false, true, true),
+      new Move("Festival of the Damned", "SA+G", "H", 18, null, "LNC", "LNC", 40, "Breakable", false, false, false, false, false, true, true),
+      new Move("Festival of the Dead", "S4A+G", "H", 18, null, "KND", "KND", 65, "Breakable", false, false, false, false, false, true, true),
     ],
     // Horizontal Moves
     [
@@ -1827,8 +1837,9 @@ export class MoveService{
 
       new Move("Phoenix Claw", "1B", "L", 18, -16, 0, 0, 18),
 
-      new Move("Weaver", "4BB", "HM", 14, -4, null, null, 45, "Shifts to clash upon hit", false, true, false, false, true),
-      new Move("Weaver", "4Bb", "HM", 14, null, null, null, 57, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Tip Shock", "4B", "H", 14, -14, 2, "STN", 10, "Shifts to clash upon hit", false, true, false, false, true),
+      new Move("Tip Shock", "4BB", "HM", 14, -4, null, null, 45, "Shifts to clash upon hit", false, true, false, false, true),
+      new Move("Tip Shock", "4Bb", "HM", 14, null, null, null, 57, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
 
       new Move("Rushing Waterfall", "CB", "M", 22, -4, 4, 4, 23),
       new Move("Rushing Waterfall", "CBB", "MM", 22, -2, 6, 6, 47),
@@ -1901,7 +1912,7 @@ export class MoveService{
       new Move("Heavy Bo ~ Monument", "#|^|(B6", "M", 16, null, null, null, 28, "GI vs. horizontal (except kicks)", true, false, false, true),
 
       new Move("Raven Slaughter", "@|*B", "M", 20, -14, "LNC", "LNC", 28),
-      new Move("Raven Slaughter", "@|*b", "M", 40, null, "LNC", null, 30, null, false, true),
+      new Move("Raven Slaughter", "@|*b", "M", 40, -14, "LNC", "LNC", 30, null, false, true),
 
       new Move("Phoenix Thrust", "!|$|uB", "M", 26, -18, "KND", "KND", 40),
       new Move("Stream Thrust", "!|$|ux2", "L", 28, -18, -6, -6, 20),
@@ -2038,7 +2049,7 @@ export class MoveService{
       new Move("Serpent's Bane ~ Right Outer", "4a", "H", 24, -4, 6, 6, 18, null, true),
       new Move("Serpent's Bane", "4AA", "HM", 24, -14, -4, -4, 34),
       new Move("Nunchaku Slap to Steel Dragon ~ Left Outer", "4AB", "HH", 24, -13, "KND", "KND", 42, null, true),
-      new Move("Nunchaku Slap to Steel Dragon ~ Left Inner", "4Ax4", "HMMMMMMMMMM", 24, -8, "KND", "KND", null, null, true, false, false, false, false, false, false, false, false, true),
+      new Move("Nunchaku Slap to Steel Dragon ~ Left Inner", "4Ax4", "HMMMMMMMMMM", 24, -8, "KND", "KND", 42, null, true, false, false, false, false, false, false, false, false, true),
       new Move("Serpent's Bane ~ Behind Lower", "4AAA", "HMM", 24, 8, 17, 17, 46, null, true),
       new Move("Serpent's Bane", "4AAAB", "HMMM", 24, -16, "STN", "STN", 61),
 
@@ -2425,13 +2436,13 @@ export class MoveService{
     ],
     // Throws
     [
-      new Move("Sea of Madness", "A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Zen Blade", "4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Gates of Hell", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("8th Bill of Punishment", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("Divine Gift", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Lion's Clutch", "6A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Lion's Clutch", "]A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true)
+      new Move("Sea of Madness", "A+G", "H", 18, null, "KND", "KND", 40, "Breakable", false, false, false, false, false, false, true),
+      new Move("Zen Blade", "4A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
+      new Move("Gates of Hell", "ZA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
+      new Move("8th Bill of Punishment", "XA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
+      new Move("Divine Gift", "VA+G", "H", 18, null, "KND", "KND", 65, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      new Move("Lion's Clutch", "6A+G", "H", 18, null, "KND", "KND", 40, "Breakable", false, false, false, false, false, false, true),
+      new Move("Lion's Clutch", "]A+G", "H", 18, null, "KND", "KND", 40, "Breakable", false, false, false, false, false, false, true)
     ],
     // ************ Stances *************
     // Silent Step
@@ -2469,8 +2480,8 @@ export class MoveService{
       new Move("Divide", "]A+B", "M", 28, -8, "KND", "KND", 36, "Revenge Attack"),
       new Move("Divide", "]A+Bw", "M", 42, null, "LNC", "LNC", 56, null, false, false, false, false, false, false, false, false, true),
       
-      new Move("Lion's Clutch", "6A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Lion's Clutch", "]A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Lion's Clutch", "6A+G", "H", 18, null, "KND", "KND", 40, "Breakable", false, false, false, false, false, false, true),
+      new Move("Lion's Clutch", "]A+G", "H", 18, null, "KND", "KND", 40, "Breakable", false, false, false, false, false, false, true),
 
       new Move("Relic", "]B+K", null, null, null, null, null, null, null, true),
       new Move("Mist Step", "]66|44", null, null, null, null, null, null, null, true),

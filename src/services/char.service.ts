@@ -18,7 +18,7 @@ export class CharService{
     new Char("Cervantes", "assets/imgs/characters/Cervantes.png", this.moveService.Cervantes, this.stanceService.Cervantes),
     new Char("Geralt", "assets/imgs/characters/Geralt.png", this.moveService.Geralt),
     new Char("Groh", "assets/imgs/characters/Groh.png", this.moveService.Groh, this.stanceService.Groh),
-    new Char("Inferno", "assets/imgs/characters/Inferno.png", this.moveService.Inferno, this.stanceService.Inferno),
+    //new Char("Inferno", "assets/imgs/characters/Inferno.png", this.moveService.Inferno, this.stanceService.Inferno), // Inferno is not finished nor relevant
     new Char("Ivy", "assets/imgs/characters/Ivy.png", this.moveService.Ivy, this.stanceService.Ivy),
     new Char("Kilik", "assets/imgs/characters/Kilik.png", this.moveService.Kilik, this.stanceService.Kilik),
     new Char("Maxi", "assets/imgs/characters/Maxi.png", this.moveService.Maxi, this.stanceService.Maxi),

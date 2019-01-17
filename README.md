@@ -1,12 +1,12 @@
 # SoulFrames
-This project is a frame data application being developed with ionic for the game Soul Calibur 6™.
+This project is a frame data application being developed with ionic for the 6th iteration of a game about Souls and Swords.
 I laid the ground work for this project over the course of about 6 months while having no prior experience with Angular or Ionic.
 For this reason I believe there are a lot of parts that need refactoring and improvement, however my focus is on making the app functional
 and delivering correct frame data to the users as fast as possible and worry about improving performance and design after that.
 
-We are using the intellectual property of Bandai Namco here and I'm doing my best not to infringe upon it by avoiding the usage of official
-art and such. I had a short talk with the producer of the game and even though he couldn't give me an official OK on it, he seemed pleased
-with the existance of such an app for the community as long as it is not being made with the goal of monitary gain.
+## Contributions
+We are always happy to have programmers or people with character and frame data knowledge join the cause and help out.
+Just hit me up through one of the links below.
 
 ## Set Up
 Just download the repository, navigate to its root and run __npm install__ to download all dependencies.

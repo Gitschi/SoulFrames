@@ -3357,8 +3357,8 @@ export class MoveService{
       new Move("Shadow Buster", "2B", "M", 24, -8, 2, 2, 18, null, false, false, true),
       new Move("Shadow Buster ~ Base Hold", "2b", "M", 24, 2, 12, 12, 18, null, true),
 
-      new Move("Grief Impact", "1B", "L", 30, -10, "KND", "KND", 30),
-      new Move("Grief Impact ~ Base Hold", "1b", "L", 30, 6, "KND", "KND", 30, null, true),
+      new Move("Grief Impact", "1B", "L", 34, -10, "KND", "KND", 30),
+      new Move("Grief Impact ~ Base Hold", "1b", "L", 34, 6, "KND", "KND", 30, null, true),
 
       new Move("Thrust Throw", "4B", "M", 24, -16, "KND", "KND", 62, "Shifts to attack throw upon close-range hit", false, false, false, false, false, false, true),
 

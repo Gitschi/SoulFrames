@@ -1,34 +1,38 @@
-import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
+import { Component, ViewChild } from "@angular/core";
+import { Nav, Platform } from "ionic-angular";
+import { StatusBar } from "@ionic-native/status-bar";
+import { SplashScreen } from "@ionic-native/splash-screen";
 
-import { HomePage } from '../pages/home/home';
-import { NotationsPage } from '../pages/notations/notations';
+import { HomePage } from "../pages/home/home";
+import { NotationsPage } from "../pages/notations/notations";
 //import { HowtousePage } from '../pages/howtouse/howtouse';
-import { SupportPage } from '../pages/support/support';
+import { SupportPage } from "../pages/support/support";
+import { NotesPage } from "../pages/notes/notes";
 
 @Component({
-  templateUrl: 'app.html'
+  templateUrl: "app.html"
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   rootPage: any = HomePage;
 
-  pages: Array<{title: string, component: any}>;
+  pages: Array<{ title: string; component: any }>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen
+  ) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage },
-      { title: 'Notations', component: NotationsPage},
+      { title: "Home", component: HomePage },
+      { title: "Notations", component: NotationsPage },
       //{ title: 'How to use Frame Data', component: HowtousePage},
-      { title: 'About Soul Frames', component: SupportPage}
+      { title: "About Soul Frames", component: SupportPage }
     ];
-
   }
 
   initializeApp() {

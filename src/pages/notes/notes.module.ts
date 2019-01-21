@@ -4,10 +4,10 @@ import { NgModule } from "@angular/core";
 
 @NgModule({
   declarations: [
-    //FrameSheetPage,
+    //NotesPage,
   ],
   imports: [
     //IonicPageModule.forChild(FrameSheetPage),
   ]
 })
-export class FrameSheetPageModule {}
+export class NotePageModule {}

@@ -1,8 +1,26 @@
 <ion-header>
   <ion-navbar>
-		<ion-title><p id="navTitle">{{ this.charService.selectedChar.name }}</p></ion-title>
-		<ion-icon name="funnel" class="navBarIcon" id="navFunnelIcon" (click)="openFilterMenu()"></ion-icon>
-		<ion-icon name="help-circle" class="navBarIcon" id="navHelpIcon" (click)="goToOtherPageNotations()"></ion-icon>
+    <ion-title
+      ><p id="navTitle">{{ this.charService.selectedChar.name }}</p></ion-title
+    >
+    <ion-icon
+      name="clipboard"
+      class="navBarIcon"
+      id="navNotesicon"
+      (click)="openNotesModal()"
+    ></ion-icon>
+    <ion-icon
+      name="funnel"
+      class="navBarIcon"
+      id="navFunnelIcon"
+      (click)="openFilterMenu()"
+    ></ion-icon>
+    <ion-icon
+      name="help-circle"
+      class="navBarIcon"
+      id="navHelpIcon"
+      (click)="goToOtherPageNotations()"
+    ></ion-icon>
   </ion-navbar>
 </ion-header>
 
@@ -10,109 +28,171 @@
 <filters></filters>
 
 <ion-content>
-	<ion-scroll scrollX="true" scrollY="true" class="scrollContainer" locking="false">
-		<ion-row nowrap class="headerRow shadow">
-			<ion-col class="sheetColumn wideCol">
-				<div>Move</div>
-			</ion-col>
-			<ion-col class="sheetColumn wideCol">
-				<div>Command</div>
-			</ion-col>
-			<ion-col class="sheetColumn narrowCol">
-				<div>Level</div>
-			</ion-col>
-			<ion-col class="sheetColumn narrowCol">
-				<div>IMP</div>
-			</ion-col>
-			<ion-col class="sheetColumn narrowCol">
-				<div>GRD</div>
-			</ion-col>
-			<ion-col class="sheetColumn narrowCol">
-				<div>Hit</div>
-			</ion-col>
-			<ion-col class="sheetColumn narrowCol">
-				<div>CH</div>
-			</ion-col>
-			<ion-col class="sheetColumn narrowCol">
-				<div>DMG</div>
-			</ion-col>
-			<ion-col class="sheetColumn narrowCol">
-					<div>Attr</div>
-			</ion-col>	
-			<ion-col class="sheetColumn wideCol">
-				<div>Notes</div>
-			</ion-col>
-		</ion-row>
+  <ion-scroll
+    scrollX="true"
+    scrollY="true"
+    class="scrollContainer"
+    locking="false"
+  >
+    <ion-row nowrap class="headerRow shadow">
+      <ion-col class="sheetColumn wideCol"> <div>Move</div> </ion-col>
+      <ion-col class="sheetColumn wideCol"> <div>Command</div> </ion-col>
+      <ion-col class="sheetColumn narrowCol"> <div>Level</div> </ion-col>
+      <ion-col class="sheetColumn narrowCol"> <div>IMP</div> </ion-col>
+      <ion-col class="sheetColumn narrowCol"> <div>GRD</div> </ion-col>
+      <ion-col class="sheetColumn narrowCol"> <div>Hit</div> </ion-col>
+      <ion-col class="sheetColumn narrowCol"> <div>CH</div> </ion-col>
+      <ion-col class="sheetColumn narrowCol"> <div>DMG</div> </ion-col>
+      <ion-col class="sheetColumn narrowCol"> <div>Attr</div> </ion-col>
+      <ion-col class="sheetColumn wideCol"> <div>Notes</div> </ion-col>
+    </ion-row>
 
-		<ng-container *ngFor="let category of this.moveList; let i = index">
-			<ng-container *ngIf="this.moveList[i][0]">  <!-- Only Shows header if array holds moves -->
-				<ng-container *ngIf="this.categoryView"> <!-- hidden when no-category mode -->
-					<ion-row nowrap class="spreadGap"> 
-						<div>
-							<p *ngIf="i < this.nonStanceCategories" class="gapHeader">{{ this.categoryList[i] }}</p>		
-							<p *ngIf="i >= this.nonStanceCategories" class="gapHeader gapHeaderStance">{{ this.charService.selectedChar.stanceList[i -this.nonStanceCategories].term }}</p>
-						</div>
-					</ion-row>	
-				</ng-container>
-			
-				<ion-row class="sheetRow" nowrap *ngFor="let move of category">
-					<ion-col class="sheetColumn wideCol">
-						<div>{{ move.term }}</div>
-					</ion-col>
-					<ion-col class="sheetColumn wideCol">
-						<div class="colInnerDiv">
-							<img class="inputImg" *ngFor="let commandImg of move.command" [src]="commandImg">
-						</div>
-					</ion-col>
-					<ion-col class="sheetColumn narrowCol">
-						<div class="colInnerDiv">
-							<img class="levelImg" *ngFor="let levelImg of move.level" [src]="levelImg">
-						</div>
-					</ion-col>
-					<ion-col class="sheetColumn narrowCol">
-						<div>{{ move.impact }}</div>
-					</ion-col>
-					<ion-col class="sheetColumn narrowCol">
-						<div class="targetNum" [style.color]="this.setTextColor(move.guard)">{{ move.guard }}</div>
-					</ion-col>
-					<ion-col class="sheetColumn narrowCol">
-						<div class="targetNum" [style.color]="this.setTextColor(move.hit)">{{ move.hit }}</div>
-					</ion-col>
-					<ion-col class="sheetColumn narrowCol">
-						<div class="targetNum" [style.color]="this.setTextColor(move.counterHit)">{{ move.counterHit }}</div>
-					</ion-col>
-					<ion-col class="sheetColumn narrowCol">
-						<div>{{ move.damage }}</div>
-					</ion-col>
-					<ion-col class="sheetColumn narrowCol">
-						<div class="colInnerDiv">
-							<img *ngIf="move.intoStance" [src]="this.attributes.SS" class="attributeImage">
-							<img *ngIf="move.lethalHit" [src]="this.attributes.LH" class="attributeImage">
-							<img *ngIf="move.intoCrouch" [src]="this.attributes.FC" class="attributeImage">
-							<img *ngIf="move.guardImpact" [src]="this.attributes.GI" class="attributeImage">
-							<img *ngIf="move.reversalEdge" [src]="this.attributes.RE" class="attributeImage">
-							<img *ngIf="move.soulCharge" [src]="this.attributes.SC" class="attributeImage">
-							<img *ngIf="move.grab" [src]="this.attributes.TH" class="attributeImage">
-							<img *ngIf="move.breakAttack" [src]="this.attributes.BA" class="attributeImage">
-							<img *ngIf="move.unblockableArt" [src]="this.attributes.UA" class="attributeImage">
-							<img *ngIf="move.guardCancelable" [src]="this.attributes.GC" class="attributeImage">
-							<img *ngIf="move.soulGauge" [src]="this.attributes.SG" class="attributeImage">
-						</div>
-					</ion-col>			
-					<ion-col class="sheetColumn wideCol">
-						<div>{{ move.notes }}</div>		
-					</ion-col>
-				</ion-row>
-			</ng-container>
-		</ng-container>
-		<!-- Displays Text when moveList array is completely empty -->
-		<ng-container *ngIf="this.moveListIsEmpty">
-			<p id="noResultText">
-				No matching results.<br>
-				Try applying less filters.<br><br>
-				When using threshold filters,<br>
-				don't set Min above Max.
-			</p>
-		</ng-container>
+    <ng-container *ngFor="let category of this.moveList; let i = index">
+      <ng-container *ngIf="this.moveList[i][0]">
+        <!-- Only Shows header if array holds moves -->
+        <ng-container *ngIf="this.categoryView">
+          <!-- hidden when no-category mode -->
+          <ion-row nowrap class="spreadGap">
+            <div>
+              <p *ngIf="i < this.nonStanceCategories" class="gapHeader">
+                {{ this.categoryList[i] }}
+              </p>
+              <p
+                *ngIf="i >= this.nonStanceCategories"
+                class="gapHeader gapHeaderStance"
+              >
+                {{
+                  this.charService.selectedChar.stanceList[
+                    i - this.nonStanceCategories
+                  ].term
+                }}
+              </p>
+            </div>
+          </ion-row>
+        </ng-container>
+
+        <ion-row class="sheetRow" nowrap *ngFor="let move of category">
+          <ion-col class="sheetColumn wideCol">
+            <div>{{ move.term }}</div>
+          </ion-col>
+          <ion-col class="sheetColumn wideCol">
+            <div class="colInnerDiv">
+              <img
+                class="inputImg"
+                *ngFor="let commandImg of move.command"
+                [src]="commandImg"
+              />
+            </div>
+          </ion-col>
+          <ion-col class="sheetColumn narrowCol">
+            <div class="colInnerDiv">
+              <img
+                class="levelImg"
+                *ngFor="let levelImg of move.level"
+                [src]="levelImg"
+              />
+            </div>
+          </ion-col>
+          <ion-col class="sheetColumn narrowCol">
+            <div>{{ move.impact }}</div>
+          </ion-col>
+          <ion-col class="sheetColumn narrowCol">
+            <div
+              class="targetNum"
+              [style.color]="this.setTextColor(move.guard)"
+            >
+              {{ move.guard }}
+            </div>
+          </ion-col>
+          <ion-col class="sheetColumn narrowCol">
+            <div class="targetNum" [style.color]="this.setTextColor(move.hit)">
+              {{ move.hit }}
+            </div>
+          </ion-col>
+          <ion-col class="sheetColumn narrowCol">
+            <div
+              class="targetNum"
+              [style.color]="this.setTextColor(move.counterHit)"
+            >
+              {{ move.counterHit }}
+            </div>
+          </ion-col>
+          <ion-col class="sheetColumn narrowCol">
+            <div>{{ move.damage }}</div>
+          </ion-col>
+          <ion-col class="sheetColumn narrowCol">
+            <div class="colInnerDiv">
+              <img
+                *ngIf="move.intoStance"
+                [src]="this.attributes.SS"
+                class="attributeImage"
+              />
+              <img
+                *ngIf="move.lethalHit"
+                [src]="this.attributes.LH"
+                class="attributeImage"
+              />
+              <img
+                *ngIf="move.intoCrouch"
+                [src]="this.attributes.FC"
+                class="attributeImage"
+              />
+              <img
+                *ngIf="move.guardImpact"
+                [src]="this.attributes.GI"
+                class="attributeImage"
+              />
+              <img
+                *ngIf="move.reversalEdge"
+                [src]="this.attributes.RE"
+                class="attributeImage"
+              />
+              <img
+                *ngIf="move.soulCharge"
+                [src]="this.attributes.SC"
+                class="attributeImage"
+              />
+              <img
+                *ngIf="move.grab"
+                [src]="this.attributes.TH"
+                class="attributeImage"
+              />
+              <img
+                *ngIf="move.breakAttack"
+                [src]="this.attributes.BA"
+                class="attributeImage"
+              />
+              <img
+                *ngIf="move.unblockableArt"
+                [src]="this.attributes.UA"
+                class="attributeImage"
+              />
+              <img
+                *ngIf="move.guardCancelable"
+                [src]="this.attributes.GC"
+                class="attributeImage"
+              />
+              <img
+                *ngIf="move.soulGauge"
+                [src]="this.attributes.SG"
+                class="attributeImage"
+              />
+            </div>
+          </ion-col>
+          <ion-col class="sheetColumn wideCol">
+            <div>{{ move.notes }}</div>
+          </ion-col>
+        </ion-row>
+      </ng-container>
+    </ng-container>
+    <!-- Displays Text when moveList array is completely empty -->
+    <ng-container *ngIf="this.moveListIsEmpty">
+      <p id="noResultText">
+        No matching results.<br />
+        Try applying less filters.<br /><br />
+        When using threshold filters,<br />
+        don't set Min above Max.
+      </p>
+    </ng-container>
   </ion-scroll>
 </ion-content>

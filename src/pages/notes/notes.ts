@@ -11,11 +11,11 @@ import { CharService } from "../../services/char.service";
 
 @IonicPage()
 @Component({
-  selector: "page-frame-sheet",
-  templateUrl: "frame-sheet.html",
+  selector: "notes-page",
+  templateUrl: "notes.html",
   providers: []
 })
-export class FrameSheetPage {
+export class NotesPage {
   // Sets how many arrays the object has before stances
   nonStanceCategories: number = 8;
 
@@ -78,23 +78,16 @@ export class FrameSheetPage {
     this.menuCtrl.open("filtersMenu");
   }
 
-  //Opens modal section for the character's notes
-  openNotesModal() {
-    this.menuCtrl.open("notesModal");
-  }
-
   // Disables menu swipe on this page
   ionViewDidEnter() {
     this.menuCtrl.swipeEnable(false, "mainMenu");
     this.menuCtrl.swipeEnable(false, "filtersMenu");
-    this.menuCtrl.swipeEnable(false, "notesModal");
   }
 
   // Re-enables menu swipe when leaving page
   ionViewWillLeave() {
     this.menuCtrl.swipeEnable(true, "mainMenu");
     this.menuCtrl.swipeEnable(true, "filtersMenu");
-    this.menuCtrl.swipeEnable(true, "notesModal");
   }
 
   // Sets text color for Guard, Hit and CounterHit

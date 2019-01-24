@@ -5494,8 +5494,8 @@ export class MoveService{
     ],
     // Gauge Attacks
     [
-      new Move("The Voice from the Abyss", "M", "M", 34, 4, "KND", "KND", null, "Curses opponent on hit or guard/GI vs. high, mid & low", false, false, false, true, false, false, false, true, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", 6, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("The Voice from the Abyss", "A+B+K", "M", 34, 8, "KND", "KND", null, "Curses opponent on hit or guard/GI vs. high, mid & low", false, false, false, true, false, false, false, true, false, false, true),
+      new Move("Soul Charge", "4A+B+K", "m", 6, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
       new Move("Ode to Humbaba", "S3AKB", "MHM", 16, -12, -1, -1, null, null, false, false, false, false, false, true),
       new Move("Ceremonial Sacrifice", "S1AB", "LHM", 18, -2, 4, 4, null, null, false, false, false, false, false, true),
       new Move("Void Nova", "SA+B", "mmmmmm", 36, 6, "STN", "STN", null, null, false, true, false, false, false, true, false, true),
@@ -5511,14 +5511,14 @@ export class MoveService{
       
       new Move("Bashum's Whisper", "z6", "M", 14, -4, 0, 6, 10),
 
-      new Move("Damnation of Ereshkigal", "6A", "H", 18, -16, 4, "STN", 14),
+      new Move("Damnation of Ereshkigal", "6A", "H", 18, -10, 0, 0, 14),
       new Move("Damnation of Ereshkigal", "6AA", "HH", 18, 6, "KND", "KND", 30),
       new Move("Ereshkigal's Snare", "6AB", "HM", 18, -8, "STN", "STN", 30, null, false, true),
 
-      new Move("Hook of Namtar", "3A", "M", 16, -20, -4, "STN", 14),
+      new Move("Hook of Namtar", "3A", "M", 16, -16, -2, -2, 14),
       new Move("Hook of Namtar", "3AB", "MM", 16, 16, "STN", "KND", 34),
       new Move("Hook of Namtar(hold)", "3Ab", "MM", 16, 0, "KND", "KND", 54),
-      new Move("Humbaba's Flame", "3AK", "MH", 16, -10, 6, 6, 26),
+      new Move("Humbaba's Flame", "3AK", "MH", 16, -8, 10, 10, 26),
 
       new Move("Mutter of Bashm", "2A", "S", 12, -6, 4, 4, 12, null, false, false, true),
       new Move("Bite of the Kulullu", "1A", "L", 18, -14, -4, -4, 14, null, false, false, true),
@@ -5621,6 +5621,8 @@ export class MoveService{
     // 8-Way Run Moves
     [
       new Move("Judgment of Shamash", "#|^|(A", "MM", 20, -14, 12, 12, null, "Can be held"),
+      new Move("Judgment of Shamash(hold)", "#|^|(A", "MM", 20, -4, 12, 12, null),
+      
       new Move("Talon of Zu", "@|*Ao", "LL", 34, -8, 6, 6, null),
       new Move("Sickle of Sin", "!|$|uA", "M", 26, -16, 0, 0, null),
       new Move("Ishtar's Mercy", "#|^|(B", "M", 18, -8, 10, "KND", null, null, false, true),
@@ -5631,7 +5633,7 @@ export class MoveService{
       new Move("Ea's Judgment", "$b", "M", null, 0, "KND", "KND", null, null, false, true),
       
       new Move("Enkidu's Valor", "#|^|(K", "H", 16, -8, 10, 10, null),
-      new Move("Enkidu's Bravery", "#|^|(cB", "HM", 16, -4, 4, 4, null),
+      new Move("Enkidu's Bravery", "#|^|(cB", "HM", 18, -4, 4, 4, null),
 
       new Move("The Ark of Utnapishtim", "@|*K", "H", 22, 0, 4, 4, null, null, false, false, true),
       new Move("The Ark of Utnapishtim", "@|*KK", "HH", 22, -2, "KND", "KND", null, null, false, false, true),

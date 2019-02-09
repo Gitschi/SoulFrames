@@ -2347,8 +2347,8 @@ export class MoveService{
       new Move("Heaven Cannon", "3B", "M", 18, -14, "LNC", "LNC", 26, null, false, true),
       new Move("Air Tale", "2B", "M", 13, -7, 3, 3, 14),
 
-      new Move("Leap of the Loach", "1B", "L", 20, -24, "STN", "STN", 16, null, false, false, true),
-      new Move("Leap of the Loach", "1BB", "LM", 20, -28, "STN", "STN", 44, null, false, false, true),
+      new Move("Leap of the Loach", "1B", "L", 20, -24, -14, -14, 16, null, false, false, true),
+      new Move("Leap of the Loach", "1BB", "LM", 20, -28, -10, -10, 44, null, false, false, true),
       new Move("Sun Flip ~ Relic", "1BA+B", "LM", 20, 4, "LNC", "LNC", 52, null, true, true, false, false, false, false, false, true),
 
       new Move("Wind Hole Upper", "4B", "H", 16, -4, 6, 6, 18),
@@ -3229,7 +3229,7 @@ export class MoveService{
       new Move("Circular Heaven Spin Kick", "#|^|(KKK", "MMH", 22, -8, 8, "STN", 34),
 
       new Move("Thunder Kick", "@|*K", "M", 30, 0, "KND", "KND", 30),
-      new Move("Circular Blade Kick", "!|$|uK", "M", 26, -12, 8, 8, 32, null, false, true),
+      new Move("Circular Blade Kick", "!|$|uK", "M", 26, -8, 8, 8, 32, null, false, true),
       new Move("Spinning Divide", "#|^|(A+B", "M", 28, -8, "KND", "KND", 40),
       new Move("Seong's Diamond Crusher", "!|$|uA+B", "M", 40, -2, "LNC", "LNC", 42, null, false, true),
       new Move("Jagged Comet Blade", "#|^|(B+K", "MM", 18, -22, "KND", "KND", 32, null, false, false, true),

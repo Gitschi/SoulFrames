@@ -323,7 +323,7 @@ export class MoveService{
     // Reversal Edge Attacks
     [
       new Move("Woebringer", "B+G", "M", 50, -12, null, null, null, "Shifts to clash upon hit", false, false, false, false, true),
-      new Move("Woebringer", "b+g", "M", 70, 50, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Woebringer", "b+g", "M", 70, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
       new Move("Ax of Woe", "rA", "H", null, -6, "KND", "KND", 54, null, false, true),
       new Move("Rending Torment", "rB", "M", null, null, "KND", "KND", 63, "Shifts to attack throw upon hit/Shifts to clash upon guard", false, true, false, false, false, false, true, true),
       new Move("Eviscerate", "rK", "M", null, 14, 14, 14, 36, null, false, true, false, false, false, false, false, true)

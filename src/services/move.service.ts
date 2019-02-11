@@ -243,8 +243,8 @@ export class MoveService{
     [
       new Move("Suppression: Slash Kick", "A+G", "H", 18, null, "KND", "KND", 45, "Neutral Breakable", false, false, false, false, false, false, true),
       new Move("Suppression: Impaling Slash", "4A+G", "H", 18, null, "KND", "KND", 50, "Back Breakable", false, false, false, false, false, false, true),
-      new Move("Suppression: Reversed Projectile Blade", "ZA+G", "H", 18, null, "KND", "KND", 70, null, false, false, false, false, false, false, true),
-      new Move("Suppression: Support Thrust", "XA+G", "H", 18, null, "KND", "KND", 70, "+1 analysis point", false, false, false, false, false, false, true),
+      new Move("Suppression: Reversed Projectile Blade", "ZA+G", "H", 18, null, "KND", "KND", 70, "Breakable", false, false, false, false, false, false, true),
+      new Move("Suppression: Support Thrust", "XA+G", "H", 18, null, "KND", "KND", 70, "Breakable/+1 analysis point", false, false, false, false, false, false, true),
       new Move("Suppression: Multistrike Protocol", "VA+G", "H", 18, null, "KND", "KND", 69, "Neutral Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Suppression: Multistrike Protocol(just)", "VA+GA|B|Kj", "H", 18, null, "KND", "KND", 80, "Neutral Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Suppression: Unarmed Leg Throw", "#|^|(A+G", "H", 18, null, "KND", "KND", 55, "+2 analysis points/Neutral Breakable"),
@@ -553,8 +553,8 @@ export class MoveService{
       new Move("Hades Destroyer", "A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
       new Move("Colossus", "6A+G", "H", 18, null, "KND", "KND", 40, "Breakable", false, false, false, false, false, false, true),
       new Move("Festival of Havoc", "4A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
-      new Move("Beat Down", "ZA+G", "H", 18, null, "KND", "KND", 67, null, false, false, false, false, false, false, true),
-      new Move("On Silent Wings", "XA+G", "H", 18, null, "KND", "KND", 65, null, false, false, false, false, false, false, true),
+      new Move("Beat Down", "ZA+G", "H", 18, null, "KND", "KND", 67, "Breakable", false, false, false, false, false, false, true),
+      new Move("On Silent Wings", "XA+G", "H", 18, null, "KND", "KND", 65, "Breakable", false, false, false, false, false, false, true),
       new Move("Death Crush", "VA+G", "H", 18, null, "KND", "KND", 75, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
 
       new Move("Maelstrom Divide", "Q8A+G", "M", 28, null, "KND", "KND", 55, "Not breakable", false, false, false, false, false, false, true),
@@ -985,8 +985,8 @@ export class MoveService{
     [
       new Move("Sadistic Cross", "A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
       new Move("Cannonball Split", "4A+G", "H", 18, null, "KND", "KND", 35, "Breakable", false, false, false, false, false, false, true),
-      new Move("Figurehead Break", "ZA+G", "H", 18, null, "KND", "KND", 65, null, false, false, false, false, false, false, true),
-      new Move("Jolly Roger Hoist", "XA+G", "H", 18, null, "KND", "KND", 55, null, false, false, false, false, false, false, true),
+      new Move("Figurehead Break", "ZA+G", "H", 18, null, "KND", "KND", 65, "Breakable", false, false, false, false, false, false, true),
+      new Move("Jolly Roger Hoist", "XA+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
       new Move("Flush Flood", "VA+G", "H", 18, null, "KND", "KND", 65, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Dead Compass", "#|^|(A+G", "H", 18, null, 4, 4, 0, "Not Breakable/6 DMG on wall hit", false, false, false, false, false, false, true),
       new Move("Curse of the Ancient Mariner", "S236A+G", "H", 18, 70, "KND", "KND", null, "Breakable", false, false, false, false, false, true, true)
@@ -1192,8 +1192,8 @@ export class MoveService{
     [
       new Move("Monster Slayer", "A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
       new Move("Geralt's Fury", "4A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
-      new Move("Temerian Devil", "ZA+G", "H", 18, null, "KND", "KND", 65, null, false, false, false, false, false, false, true),
-      new Move("Adrenaline Rush", "XA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
+      new Move("Temerian Devil", "ZA+G", "H", 18, null, "KND", "KND", 65, "Breakable", false, false, false, false, false, false, true),
+      new Move("Adrenaline Rush", "XA+G", "H", 18, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, false, true),
       new Move("Mutant's Wrath", "VA+G", "H", 18, null, "KND", "KND", 70, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Vaulting Aard Hammer", "A+G|4A+GA+B", "H", 18, null, "KND", "KND", 70, "Consumes soul gauge/No gauge cost when soul charged", false, true, false, false, false, false, true, false, false, false, true),
     ]
@@ -1343,8 +1343,8 @@ export class MoveService{
     [
       new Move("Gamlann's Lament", "A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
       new Move("Lohengrin's Courage", "4A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
-      new Move("Nimue's Embrace", "ZA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
-      new Move("Sire Balin's Sword", "XA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
+      new Move("Nimue's Embrace", "ZA+G", "H", 18, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, false, true),
+      new Move("Sire Balin's Sword", "XA+G", "H", 18, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, false, true),
       new Move("Astolat's Echo", "VA+G", "H", 18, null, "KND", "KND", 65, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true)
     ],
     // ************ Stances *************
@@ -1477,8 +1477,8 @@ export class MoveService{
     [
       new Move("Reign of Doom", "A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
       new Move("Soul Devour", "4A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Doom's Invitation", "ZA+G", "H", null, null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Unholy Terror", "XA+G", "H", null, null, null, null, null, null, null, false, false, false, false, false, true),
+      new Move("Doom's Invitation", "ZA+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Unholy Terror", "XA+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
       new Move("Witch Hunt", "VA+G", "H", null, null, null, null, null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true)
     ],
     // ************ Stances *************
@@ -1711,8 +1711,8 @@ export class MoveService{
     [
       new Move("Dominion Throw", "A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
       new Move("Primal Dominance", "4A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
-      new Move("Heartless Guide", "ZA+G", "H", 18, null, "KND", "KND", 55, null, false, false, false, false, false, false, true),
-      new Move("Sunset Cradle", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Heartless Guide", "ZA+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
+      new Move("Sunset Cradle", "XA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Sweet Dominance", "VA+G", "H", 18, null, "KND", "KND", 70, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       
       new Move("Vile Condemnation", "2|3A+G", "L", 28, -14, "KND", "KND", 50, "Shifts to attack throw upon hit", false, false, false, false, false, false, true),
@@ -1944,8 +1944,8 @@ export class MoveService{
     [
       new Move("Light Breeze", "A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
       new Move("Heaven Dance", "4A+G", "H", 18, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, true),
-      new Move("Cutting Sadness", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("Summer Gale", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Cutting Sadness", "ZA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Summer Gale", "XA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Phoenix Pounce", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Festival of the Damned", "SA+G", "H", 18, null, "LNC", "LNC", 40, "Breakable", false, false, false, false, false, true, true),
       new Move("Festival of the Dead", "S4A+G", "H", 18, null, "KND", "KND", 65, "Breakable", false, false, false, false, false, true, true)
@@ -2180,8 +2180,8 @@ export class MoveService{
     [
       new Move("Falling Heaven Dragon", "A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
       new Move("Lynching", "4A+G", "H", 18, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, true),
-      new Move("Dragon Destroyer", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("Leaving the Dragon Nest ~ Behind Lower", "XA+G", "H", 18, null, "KND", "KND", null, null, true, false, false, false, false, false, true),
+      new Move("Dragon Destroyer", "ZA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Leaving the Dragon Nest ~ Behind Lower", "XA+G", "H", 18, null, "KND", "KND", null, "Breakable", true, false, false, false, false, false, true),
       new Move("Parting the Waves", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true)
     ],
     // ************ Stances *************
@@ -2446,8 +2446,8 @@ export class MoveService{
     [
       new Move("Sea of Madness", "A+G", "H", 18, null, "KND", "KND", 40, "Breakable", false, false, false, false, false, false, true),
       new Move("Zen Blade", "4A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
-      new Move("Gates of Hell", "ZA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
-      new Move("8th Bill of Punishment", "XA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
+      new Move("Gates of Hell", "ZA+G", "H", 18, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, false, true),
+      new Move("8th Bill of Punishment", "XA+G", "H", 18, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, false, true),
       new Move("Divine Gift", "VA+G", "H", 18, null, "KND", "KND", 65, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Lion's Clutch", "6A+G", "H", 18, null, "KND", "KND", 40, "Breakable", false, false, false, false, false, false, true),
       new Move("Lion's Clutch", "]A+G", "H", 18, null, "KND", "KND", 40, "Breakable", false, false, false, false, false, false, true)
@@ -2714,8 +2714,8 @@ export class MoveService{
     [
       new Move("Shoulder Claw Throw", "A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
       new Move("Soul Devour", "4A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
-      new Move("Doom's Invitation", "ZA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
-      new Move("Unholy Terror", "XA+G", "H", 18, null, "KND", "KND", 65, null, false, false, false, false, false, false, true),
+      new Move("Doom's Invitation", "ZA+G", "H", 18, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, false, true),
+      new Move("Unholy Terror", "XA+G", "H", 18, null, "KND", "KND", 65, "Breakable", false, false, false, false, false, false, true),
       new Move("Witch Hunt", "VA+G", "H", 18, null, "KND", "KND", 70, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Flap Jack", "3A+G", "L", 18, -16, "KND", "KND", 30, "Breakable", false, false, false, false, false, false, true),
       new Move("Over Toss", "1A+G", "L", 18, -16, "KND", "KND", 30, "Breakable", false, false, false, false, false, false, true)
@@ -2988,8 +2988,8 @@ export class MoveService{
     [
       new Move("Unending Stings", "A+G", "H", 18, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, true),
       new Move("Death Puppet", "4A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
-      new Move("A Lesson in Massacre", "ZA+G", "H", 18, null, "KND", "KND", 62, null, false, false, false, false, false, false, true),
-      new Move("Undertaker", "XA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
+      new Move("A Lesson in Massacre", "ZA+G", "H", 18, null, "KND", "KND", 62, "Breakable", false, false, false, false, false, false, true),
+      new Move("Undertaker", "XA+G", "H", 18, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, false, true),
       new Move("Pure Sacrifice", "VA+G", "H", 18, null, "KND", "KND", 72, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Thousand Hornets", "SA+G", "H", 18, null, "KND", "KND", 70, "Breakable", false, false, false, false, false, true, true)
     ],
@@ -3252,8 +3252,8 @@ export class MoveService{
     [
       new Move("Crushing Soul", "A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
       new Move("Dropping Embrace", "4A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
-      new Move("Riding Mustang", "ZA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
-      new Move("Mi-na Frankensteiner", "XA+G", "H", 18, null, "KND", "KND", 64, null, false, false, false, false, false, false, true),
+      new Move("Riding Mustang", "ZA+G", "H", 18, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, false, true),
+      new Move("Mi-na Frankensteiner", "XA+G", "H", 18, null, "KND", "KND", 64, "Breakable", false, false, false, false, false, false, true),
       new Move("Stalk Cutter", "VA+G", "H", 18, null, "KND", "KND", 72, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Furious Swing", "46A+G", "H", 18, null, "KND", "KND", 0, "Breakable", false, false, false, false, false, false, true),
       new Move("Furious Swing ~ Stone Shock", "46A+GB", "M", 18, null, "KND", "KND", 30), // guard frames missing
@@ -3480,8 +3480,8 @@ export class MoveService{
     [
       new Move("Hilt Impact", "A+G", "H", 18, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, true),
       new Move("Lingering Regret", "4A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
-      new Move("Calamity Fall", "ZA+G", "H", 18, null, "KND", "KND", 62, null, false, false, false, false, false, false, true),
-      new Move("Silent Pride", "XA+G", "H", 18, null, "KND", "KND", 57, null, false, false, false, false, false, false, true),
+      new Move("Calamity Fall", "ZA+G", "H", 18, null, "KND", "KND", 62, "Breakable", false, false, false, false, false, false, true),
+      new Move("Silent Pride", "XA+G", "H", 18, null, "KND", "KND", 57, "Breakable", false, false, false, false, false, false, true),
       new Move("Neutral Judge", "VA+G", "H", 18, null, "KND", "KND", 72, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Nightmare Killer", "6A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, true, false, false, false, false, true),
       new Move("Flap Jack", "3A+G", "L", 18, -16, "KND", "KND", 30, "Breakable", false, false, false, false, false, false, true),
@@ -3752,9 +3752,9 @@ export class MoveService{
       new Move("Widow Maker", "A+G", "H", 18, null, "KND", "KND", 40, "Breakable", false, false, false, false, false, false, true),
       new Move("Widow Maker", "A+G@", "H", 18, null, "KND", "KND", 35, "Breakable", false, false, false, false, false, false, true),
       new Move("Holy Cracker", "4A+G", "H", 18, null, "KND", "KND", 40, "Breakable", false, false, false, false, false, false, true),
-      new Move("Heaven To Hell", "4A+GA|4A", "H", 18, null, "KND", "KND", 65, null, false, false, false, false, false, false, true),
-      new Move("Round Knocker", "ZA+G", "H", 18, null, "KND", "KND", 40, null, false, false, false, false, false, false, true),
-      new Move("Broken Promise", "XA+G", "H", 18, null, "KND", "KND", 70, null, false, false, false, false, false, false, true),
+      new Move("Heaven To Hell", "4A+GA|4A", "H", 18, null, "KND", "KND", 65, "Breakable", false, false, false, false, false, false, true),
+      new Move("Round Knocker", "ZA+G", "H", 18, null, "KND", "KND", 40, "Breakable", false, false, false, false, false, false, true),
+      new Move("Broken Promise", "XA+G", "H", 18, null, "KND", "KND", 70, "Breakable", false, false, false, false, false, false, true),
       new Move("Bottoms Up", "VA+G", "H", 18, null, "KND", "KND", 35, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Heaven's Arch", "#|^|(A+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, true, false, false, false, false, true),
     ],
@@ -4041,11 +4041,11 @@ export class MoveService{
     [
       new Move("Strangulation Blade", "A+G", "H", 18, null, "KND", "KND", 48, "Breakable", false, false, false, false, false, false, true),
       new Move("Departure in Fire", "4A+G", "H", 18, null, "KND", "KND", 52, "Breakable", false, false, false, false, false, false, true),
-      new Move("Jute Burial", "ZA+G", "H", 18, null, "KND", "KND", 62, null, false, false, false, false, false, false, true),
-      new Move("Cellar Drop", "XA+G", "H", 18, null, "KND", "KND", 62, null, false, false, false, false, false, false, true),
+      new Move("Jute Burial", "ZA+G", "H", 18, null, "KND", "KND", 62, "Breakable", false, false, false, false, false, false, true),
+      new Move("Cellar Drop", "XA+G", "H", 18, null, "KND", "KND", 62, "Breakable", false, false, false, false, false, false, true),
       new Move("Dropping the Bottle", "VA+G", "H", 18, null, "KND", "KND", 70, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Crossing the Cliff", "#|^|(A+G", "H", 18, null, "KND", "KND", 62, "Breakable", false, false, false, false, false, false, true),
-      new Move("Stalker Drop", "}A+G", "H", 18, null, "KND", "KND", 50, null, false, false, false, false, false, false, true),
+      new Move("Stalker Drop", "}A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
       new Move("Return of the Sun", "[A+G", "H", 18, null, "KND", "KND", 30, "Breakable", false, false, false, false, false, false, true),
       new Move("Bow Breaker", "[6A+G", "H", 18, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, true),
       new Move("Fallen Demon", "S[6A+G", "H", 18, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, true, true)
@@ -4346,8 +4346,8 @@ export class MoveService{
     [
       new Move("Tagga Na Kamay", "A+G", "H", 18, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, true),
       new Move("Monsoon", "4A+G", "H", 18, null, "KND", "KND", 50, "Breakable", false, false, false, false, false, false, true),
-      new Move("Tower Sipa", "ZA+G", "H", 18, null, "KND", "KND", 55, null, false, false, false, false, false, false, true),
-      new Move("Piggyback Tulison", "XA+G", "H", 18, null, "KND", "KND", 60, null, false, false, false, false, false, false, true),
+      new Move("Tower Sipa", "ZA+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
+      new Move("Piggyback Tulison", "XA+G", "H", 18, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, false, true),
       new Move("Diving Wind Sipa Throw", "VA+G", "H", 18, null, "KND", "KND", 65, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Sungabb Throw", "TA+G", "H", 20, null, "KND", "KND", 55, "Breakable", false, false, false,false, false, false, true),
       new Move("Monsoon Season", "T4A+G4|6A", "H", 20, null, "KND", "KND", 40, "Breakable/75DMG with extension", false, false, false, false, false, false, true),
@@ -4632,8 +4632,8 @@ export class MoveService{
     [
       new Move("Death Spindle", "A+G", "H", 18, null, null, null, 45, "Breakable/+5DMG in Gloomy", false, false, false, false, false, false, true),
       new Move("Poison Apple", "4A+G", "H", 18, null, null, null, 50, "Breakable/+5DMG in Gloomy", false, false, false, false, false, false, true),
-      new Move("Sweet Lullaby", "ZA+G", "H", 18, null, null, null, 55, "+5DMG in Gloomy", false, false, false, false, false, false, true),
-      new Move("Bloody Tale", "XA+G", "H", 18, null, null, null, 60, "+5DMG in Gloomy", false, false, false, false, false, false, true),
+      new Move("Sweet Lullaby", "ZA+G", "H", 18, null, null, null, 55, "Breakable/+5DMG in Gloomy", false, false, false, false, false, false, true),
+      new Move("Bloody Tale", "XA+G", "H", 18, null, null, null, 60, "Breakable/+5DMG in Gloomy", false, false, false, false, false, false, true),
       new Move("Glass Slippers", "VA+G", "H", 18, null, null, null, 70, "Breakable only by Voldo & Astaroth/+5DMG in Gloomy", false, false, false, false, false, false, true),
       new Move("Grim Reaper", "S]6A+G", "H", 18, null, null, null, 60, "Not breakable/May trigger personality change", false, false, false, false, false, true, true)
     ],
@@ -4883,8 +4883,8 @@ export class MoveService{
     [
       new Move("Spinning Umbrella", "A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Catacomb Throw", "4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Fool's Inquest", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("Bush Whacker", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Fool's Inquest", "ZA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Bush Whacker", "XA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Sadistic Spider", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       
       new Move("Bloody Drill", "T#|^|(A+G", "H", null, null, null, null, null, "Breakable", false, false, false, false, false, false, true),
@@ -5175,7 +5175,7 @@ export class MoveService{
       new Move("Lo Tsai Shaur ~ Reverse Chicken Kick(just)", "Q1A+GB+Kj", "MM", 19, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Water Banquet", "214A+G", "HH", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Wind Chime", "]A+G|4A+G", "HH", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Twisting Lotus Flower", "S]A+G|4A+GB", "H", 18, null, "STN", "STN", null, null, false, false, false, false, false, true, true)
+      new Move("Twisting Lotus Flower", "S]A+G|4A+GB", "H", 18, null, "STN", "STN", null, "Breakable", false, false, false, false, false, true, true)
     ],
     // ************ Stances *************
     // Hou Lee
@@ -5421,12 +5421,12 @@ export class MoveService{
     [
       new Move("Sword Face Smash", "A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Jumping Body Slam", "4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Elegant Storm", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("Wheels of Hell", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Elegant Storm", "ZA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Wheels of Hell", "XA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Tornado Drop", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Soul Siphon", "6A+B", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Soul Possession", "6A+B6", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Rainbow Drop", "214A+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Rainbow Drop", "214A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Manji Tatsumi", "SA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, true, true),
       new Move("Nimbus", "S4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, true, true)
     ],
@@ -5666,12 +5666,12 @@ export class MoveService{
     [
       new Move("Ereshkigal the Ruthless", "A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Kingu the Sly Lord", "4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Apsu the Origin", "ZA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("Ea of the Abyss", "XA+G", "H", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Apsu the Origin", "ZA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Ea of the Abyss", "XA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Marduk the Tempest", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
       new Move("Nergal's Bloodthirst", "6A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Judgement of Nergal", "6A+GA|2A", "M", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
-      new Move("Roar of Nergal", "6A+GB", "M", 18, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      new Move("Judgement of Nergal", "6A+GA|2A", "M", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
+      new Move("Roar of Nergal", "6A+GB", "M", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
       new Move("Uridimmu's Howl", "6A+GK", "M", 18, null, "KND", "KND", null, "Curses opponent on hit", false, false, false, false, false, false, true),
       new Move("Fatal Gravity", "SA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, true, true)
     ]

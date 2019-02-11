@@ -3286,11 +3286,11 @@ export class MoveService{
     ],
     // Gauge Attacks
     [
-      new Move("Deep Scar", "A+B+K", "M", 20, -8, "KND", "KND", 88, "Progresses toward Dark Legacy", false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Deep Scar", "A+B+K", "M", 20, -8, "KND", "KND", 80, "Progresses toward Dark Legacy", false, false, false, false, false, false, true, false, false, false, true),
       new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
       new Move("Rising Hilt ~ Chief Hold", "Sx6B", "MM", 16, 4, "KND", "KND", 45, null, true, false, false, false, false, true, false, true),
       new Move("Brazen Splitter", "S4A+BB", "MMM", 18, 2, "LNC", "LNC", 80, null, false, false, false, false, false, true, false, true),
-      new Move("Kaizer Charge ~ Chief Hold", "S#|^|(KB", "MM", 16, 4, "LNC", "LNC", 70, null, true, false, false, false, false, true, false, true),
+      new Move("Kaizer Charge ~ Chief Hold", "S#|^|(KB", "MM", 16, 4, "LNC", "LNC", 60, null, true, false, false, false, false, true, false, true),
       new Move("Reborn Grinder", "S[K", "MMM", 16, 4, "KND", "KND", 68, null, false, false, false, false, false, true, false, true),
       new Move("Haunted Assault", "S]AA", "HH", 28, 2, "KND", "KND", 83, null, false, false, false, false, false, true, false, true),
       new Move("Kick Rush Vortex", "S{KA+B", "MM", 10, 2, "LNC", "LNC", 53, null, false, false, false, false, false, true, false, true),
@@ -3390,7 +3390,7 @@ export class MoveService{
     [
       new Move("Grief High Kick", "K", "H", 12, -8, 0, 0, 14, null, false, false, true),
 
-      new Move("Grief Side Kick", "6K", "M", 18, -6, 4, "KND", 14),
+      new Move("Grief Side Kick", "6K", "M", 18, -6, 4, "KND", 20),
 
       new Move("Axle Head Upper", "3K", "M", 14, -10, -2, -2, 16),
       new Move("Axle Head Upper", "3KK", "ML", 14, -18, -8, -8, 26),
@@ -3471,7 +3471,7 @@ export class MoveService{
 
       new Move("Drop Kick", "!|$|uK", "H", 30, -11, "KND", "KND", 50, "Returns to downed position"),
 
-      new Move("Schwarz Drive", "#|^|(A+B", "MM", 19, -16, "KND", "KND", 39, "Can be held", false, true),
+      new Move("Schwarz Drive", "#|^|(A+B", "MM", 20, -16, "KND", "KND", 39, "Can be held", false, true),
       new Move("Schwarz Drive(hold)", "#|^|(a+b", "MM", 20, -8, "KND", "KND", 45, null, false, true),
 
       new Move("Sliding", "RK", "L", 20, -22, "KND", "KND", 26)
@@ -3491,7 +3491,7 @@ export class MoveService{
     // Base Hold
     [
       new Move("Base Hold", "B+K", null, null, null, null, null, null, "GI vs. middle, low horizontal(except kicks)", true, false, false, true),
-      new Move("Reborn Storm", "[A", "L", 28, -16, "KND", "KND", 26),
+      new Move("Reborn Storm", "[A", "L", 28, -16, 2, "KND", 26),
       new Move("Reborn Storm", "[z2", null, null, null, null, null, null, null, false, false, true),
       new Move("Reborn Kaiser", "[B", "M", 34, -6, "SLC", "SLC", 28, null, false, true),
       new Move("Reborn Basher", "[K", "M", 16, -16, "KND", "KND", 20),
@@ -3557,7 +3557,7 @@ export class MoveService{
 
       new Move("High Kick Beta", "}K", "H", 10, -8, "KND", "KND", 18),
 
-      new Move("Shadow Slasher", "}A+B", "L", 18, -24, "STN", "STN", 22),
+      new Move("Shadow Slasher", "}A+B", "L", 18, -20, "STN", "STN", 22),
 
       new Move("Side Hold ~ Reverse Side Hold", "}6B+K", null, null, null, null, null, null, null, true),
       new Move("Side Hold ~ Chief Hold", "}2|8B+K", null, null, null, null, null, null, null, true),

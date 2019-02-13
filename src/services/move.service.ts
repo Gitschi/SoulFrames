@@ -5493,26 +5493,26 @@ export class MoveService{
   Zasalamel = [
     // Reversal Edge Attacks
     [
-      new Move("Ereshkigal's Embrace", "B+K", "MM", null, null, null, null, null, "Shifts to clash upon hit", false, false, false, false, false, true),
-      new Move("Ereshkigal's Embrace", "b+g", "MM", null, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, false, true, false, true),
-      new Move("Namtar's Execution Spike", "rAo", "HH", null, null, null, null, null, null, false, true),
-      new Move("Ugallu's Threat", "rB", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
+      new Move("Ereshkigal's Embrace", "B+G", "MM", 46, 2, null, null, null, "Shifts to clash upon hit", false, false, false, false, false, true),
+      new Move("Ereshkigal's Embrace", "b+g", "MM", 66, null, null, null, null, "Shifts to clash upon hit or guard", false, false, false, false, false, true, false, true),
+      new Move("Namtar's Execution Spike", "rAo", "HH", null, 6, "STN", null, null, null, false, true),
+      new Move("Ugallu's Threat", "rB", "M", null, null, 10, null, null, null, false, true, false, false, false, false, false, true),
 
-      new Move("Ugallu's Ingress(Lv. 1)", "rBoB", "Mm", null, null, null, null, null, "If opponent is cursed"), // only if opponent is cursed
-      new Move("Ugallu's Ingress(Lv. 2)", "rBoB", "Mm", null, null, null, null, null, "If opponent is cursed"), // only if opponent is cursed
-      new Move("Ugallu's Ingress(Lv. 3)", "rBoB", "Mm", null, null, null, null, null, "If opponent is cursed"), // only if opponent is cursed
+      new Move("Ugallu's Ingress(Lv. 1)", "rBoB", "Mm", null, null, 24, null, null, "If opponent is cursed"), // only if opponent is cursed
+      new Move("Ugallu's Ingress(Lv. 2)", "rBoB", "Mm", null, null, 34, null, null, "If opponent is cursed"), // only if opponent is cursed
+      new Move("Ugallu's Ingress(Lv. 3)", "rBoB", "Mm", null, null, 44, null, null, "If opponent is cursed"), // only if opponent is cursed
 
-      new Move("Feral Hound Uridimmu", "rK", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true)
+      new Move("Feral Hound Uridimmu", "rK", "M", null, 4, "STN", null, null, null, false, true, false, false, false, false, false, true)
     ],
     // Gauge Attacks
     [
       new Move("The Voice from the Abyss", "A+B+K", "M", 34, 8, "KND", "KND", null, "Curses opponent on hit or guard/GI vs. high, mid & low", false, false, false, true, false, false, false, true, false, false, true),
       new Move("Soul Charge", "4A+B+K", "m", 6, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
-      new Move("Ode to Humbaba", "S3AKB", "MHM", 16, -12, -1, -1, null, null, false, false, false, false, false, true),
+      new Move("Ode to Humbaba", "S3AKB", "MHM", 16, -8, "KND", "KND", null, null, false, false, false, false, false, true),
       new Move("Ceremonial Sacrifice", "S1AB", "LHM", 18, -2, 4, 4, null, null, false, false, false, false, false, true),
       new Move("Void Nova", "SA+B", "mmmmmm", 36, 6, "STN", "STN", null, null, false, true, false, false, false, true, false, true),
       new Move("Temple of Eternity", "S2A+B", "M", 30, 2, "KND", "KND", null, "Curses opponent upon hit/Shifts to attack throw upon hit", false, false, false, false, false, true, true, true),
-      new Move("Ishtar's Return", "@|*BBvB", "MMH", 22, -14, "LNC", "LNC", null, null, false, false, false, false, false, true),
+      new Move("Ishtar's Return", "@|*BBvB", "MMH", 22, -12, "LNC", "LNC", null, null, false, false, false, false, false, true),
       new Move("Fatal Gravity", "SA+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, true, true)
     ],
     // Horizontal Moves
@@ -5586,7 +5586,7 @@ export class MoveService{
       new Move("Will of Gilgamesh", "K", "H", 12, -10, -2, -2, 12, null, false, false, false, false, false, false, false, false, false, true),
       new Move("Will of Gilgamesh", "KK", "HL", 12, -16, 0, 0, 24, null, false, false, false, false, false, false, false, false, false, true),
       
-      new Move("Triumph of Gilgamesh", "k6", "H", 16, -12, "KND", "KND", 24),
+      new Move("Triumph of Gilgamesh", "K6", "H", 16, -12, "KND", "KND", 24),
       new Move("Hound of Tiamat", "6K", "H", 12, -12, 4, "KND", 20, "Curses opponent upon hit", false, true),
       new Move("Command of Tiamat", "3K", "M", 14, -8, 4, 4, 14, "Curses opponent upon hit"),
       new Move("Shamhat's Allure", "2K", "L", 16, -14, -4, -4, 14, null, false, false, true),
@@ -5619,6 +5619,7 @@ export class MoveService{
       
       new Move("Tiamat's Quaking Blow", "B+K", "M", 16, 12, "KND", "KND", null, "Curses oppponent upon hit or guard/Power increases according to K timing", false, false, false, false, false, false, false, true, false, true),
       new Move("Tiamat's Quaking Blow", "B+KK", "M", 16, 4, 4, 4, null, "Curses oppponent upon hit or guard/Power increases according to K timing", false, false, false, false, false, false, false, true, false, true),
+      new Move("Tiamat's Quaking Blow(slight charge)", "B+KK", "M", null, 12, "KND", "KND", null, "Curses oppponent upon hit or guard", false, false, false, false, false, false, false, true, false, true),
       
       new Move("Curse of Nergal", "6B+K", "M", 22, -8, 4, 4, null),
       new Move("Curse of Nergal", "6B+KA", "MH", 22, -8, 12, "STN", null),
@@ -5628,7 +5629,7 @@ export class MoveService{
       new Move("Tiamat's Fury", "8B+K", "M", 18, -22, "KND", "KND", null),
       new Move("Enlil's Admonition", "WB+K", "M", 22, -34, -22, -22, null),
       new Move("Adad's Great Shears", "TB+K", "MM", 16, 4, "KND", "KND", null, "Can be held", false, false, false, false, false, false, false, true),
-      new Move("Adad's Great Shears(Hold)", "Tb+k", "MM", null, null, "KND", "KND", null, null, false, false, false, false, false, false, false, true)
+      new Move("Adad's Great Shears(Hold)", "Tb+k", "MM", null, 12, "KND", "KND", null, null, false, false, false, false, false, false, false, true)
     ],
     // 8-Way Run Moves
     [
@@ -5653,9 +5654,9 @@ export class MoveService{
       new Move("Enkidu's Karma", "!|$|uK", "H", 24, -8, "KND", "KND", null, "GI vs. low attacks", false, true, false, true),
 
       new Move("Wrath of Tiamat", "#|^(A+B", "M", 22, -24, "KND", "KND", null),
-      new Move("Tiamat's Ingress(Lv. 1)", "#|^|(A+BoB", "Mm", null, null, null, null, null, "If opponent is cursed"),
-      new Move("Tiamat's Ingress(Lv. 2)", "#|^|(A+BoB", "Mm", null, null, null, null, null, "If opponent is cursed"),
-      new Move("Tiamat's Ingress(Lv. 3)", "#|^|(A+BoB", "Mm", null, null, null, null, null, "If opponent is cursed"),
+      new Move("Tiamat's Ingress(Lv. 1)", "#|^|(A+BoB", "Mm", 22, -14, null, null, null, "If opponent is cursed"),
+      new Move("Tiamat's Ingress(Lv. 2)", "#|^|(A+BoB", "Mm", 22, -4, null, null, null, "If opponent is cursed"),
+      new Move("Tiamat's Ingress(Lv. 3)", "#|^|(A+BoB", "Mm", 22, 4, null, null, null, "If opponent is cursed"),
 
       new Move("Prayer to Belit-ili", "!|$|uA+B", "M", 20, -12, "LNC", "LNC", null, null, false, true),
       new Move("Blessing for Lahamu", "#|^|(B+K", "M", 28, -10, "LNC", "LNC", null, null, false, true),

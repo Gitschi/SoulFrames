@@ -334,7 +334,7 @@ export class MoveService{
       new Move("Soul Charge", "4A+B+G", "m", 6, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
       new Move("Bringer of Ruin", "S1AA", "LL", 36, null, "KND", "KND", 65, "Revenge attack/1st hit can be held", false, false, false, false, false, true),
       new Move("Ruinous Discus Breaker", "S1AB", "LM", 36, null, "KND", "KND", 70, "Revenge attack/1st hit can be held", false, false, false, false, false, true, false, true),
-      new Move("Decimation Charge", "S4AA", "HH", 14, 4, 14, 14, 26, "Revenge attack/Can be delayed/2nd hit shifts to attack throw upon hit", false, false, false, false, false, true, true),
+      new Move("Decimation Charge", "S4AA", "HH", 12, 4, 14, 14, 26, "Revenge attack/Can be delayed/2nd hit shifts to attack throw upon hit", false, false, false, false, false, true, true),
       new Move("Cerberus Surge", "S236A", "MMMMMMMMM", 20, 8, "KND", "KND", 68, null, false, false, false, false, false, true),
 
       new Move("Unstoppable Great Divide", "SBB", "MM", 20, null, "LNC", "LNC", 44, null, false, false, false, false, false, true, false, false, false, true),
@@ -1771,7 +1771,7 @@ export class MoveService{
     ],
     // Gauge Attacks
     [
-      new Move("Ling-Shen Su Phoenix Loop", "A+B+K", "M", 16, -8, null, null, 79, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Ling-Shen Su Phoenix Loop", "A+B+K", "M", 20, -8, null, null, 79, null, false, false, false, false, false, false, true, false, false, false, true),
       new Move("Soul Charge", "4A+B+G", "m", null, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
       new Move("Forbidden Moonset", "SA+B+K", "H", 11, null, null, null, 107, null, false, false, false, false, false, true, true, false, true),
 

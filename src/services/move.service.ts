@@ -1838,7 +1838,7 @@ export class MoveService{
       new Move("Twin Bo Upper", "6BB", "MM", 16, -12, "KND", "KND", 40, "Can be delayed", false, true),
       new Move("Twin Bo Upper(delayed)", "6BB", "MM", 16, -8, "KND", "KND", 40, null, false, true),
 
-      new Move("Dragon Tree Bo", "3B", "M", 19, -11, "LNC", "LNC", 26, null, false, true),
+      new Move("Dragon Tree Bo", "3B", "M", 19, -12, "LNC", "LNC", 26, null, false, true),
 
       new Move("Rushing Waterfall", "2B", "M", 22, -8, 2, 2, 23),
       new Move("Rushing Waterfall", "2BB", "MM", 22, -2, 6, 6, 47),
@@ -4741,7 +4741,7 @@ export class MoveService{
 
       new Move("Ecstasy", "2B", "M", 16, -10, 0, 0, 16),
       new Move("Ecstasy ~ facing away", "2b", "M", 16, -10, 2, 2, 16, "Returns to facing away"),
-      new Move("Power Slave ~ facing away", "2BB", "MM", 16, -17, -1, -1, 34, "Returns to facing away", false, true),
+      new Move("Power Slave ~ facing away", "2BB", "MM", 16, -14, -1, -1, 34, "Returns to facing away", false, true),
       
       new Move("Rat Cheeze", "1B", "L", 17, -14, -2, -2, 12),
       new Move("Rat Cheeze", "1BB", "LL", 17, -14, -2, -2, 24),
@@ -4755,7 +4755,7 @@ export class MoveService{
       new Move("Satanic Elbow", "666B", "M", 18, -12, 0, "STN", 26, null, false, true),
       
       new Move("Fencer Mantis", "CB", "M", 14, -10, 2, 2, 18, null, false, false, true),
-      new Move("Rat Drill ~ facing away", "C3B", "M", 18, -16, "KND", "KND", 26, "Returns to crouching and facing away", false, false, true),
+      new Move("Rat Drill ~ facing away", "C3B", "M", 18, -12, "KND", "KND", 26, "Returns to crouching and facing away", false, false, true),
       new Move("Fading Sanity", "WB", "M", 24, -4, "LNC", "LNC", 32),
       new Move("Fading Sanity ~ Mantis Crawl", "Wb", "M", 24, -4, "LNC", "LNC", 32, null, true),
       new Move("Frolicking Port de Bras", "JB", "M", 24, -8, 2, 2, 25, "Damage differs slightly according to jump direction"),
@@ -5226,9 +5226,9 @@ export class MoveService{
     ],
     // Gauge Attacks
     [
-      new Move("Ghost Thief Funeral", "A+B+K", "M", 8, 4, 9, 9, 36, "Shifts to attack throw upon hit/Absorbs soul gauge", false,false, false, false, false, false, true, true, false, false, true),
+      new Move("Ghost Thief Funeral", "A+B+K", "M", 24, 4, 9, 9, 36, "i24~30 depending on situation/Absorbs soul gauge", false,false, false, false, false, false, true, true, false, false, true),
       new Move("Soul Charge", "4A+B+G", "m", 6, 0, 8, 8, 0, "Freezes on F3", false, false, false, false, false, false, false, true, false, false, true),
-      new Move("Banishing Kurikara", "AAA+B", "HMM", 14, 2, 8, 8, 33, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Banishing Kurikara", "AAA+B", "HMMM", 14, 2, 8, 8, 33, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, true, false, false, true),
       new Move("Swirling Blossom", "4zA+B", "HHHHHH", 18, 8, "KND", "KND", 26, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, true, false, false, true),
       new Move("Shoki Gehosen", "6BBA+B", "MHM", 14, -8, "LNC", "LNC", 56, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, false, false, false, true),
       new Move("Shoki Gehosen", "6BBBA+B", "MHHM", 14, -8, "LNC", "LNC", 64, "Consumes soul gauge/No gauge cost when soul charge", false, false, false, false, false, false, false, false, false, false, true),
@@ -5369,7 +5369,6 @@ export class MoveService{
       new Move("Moonsault Slayer", "236A+B", "M", 60, -21, "STN", "STN", 60, "TC[60-89] / TJ[10-60]", false, false, false, false, false, false, false, false, true),
       new Move("Spinning Evade", "4B+KBBBBBB", null, null, null, null, null, null, "Costs health/Returns to downed position", true), //no data available on this one
       new Move("Soul Stealer", "A+K", "M", 8, -14, 8, 8, 4, "GI vs. high, mid horizontal[5-9]", false, false, false, true),
-      new Move("Harakiri", "2A+B", "M", null, null, null, null, null, "Costs health/Returns to downed position", false, false, false, false, false, false, false, false, true),//no data on this one
       new Move("Manji Blood Dance", "2A+K", "M", 30, -68, "STN", "STN", 90, "TC[80-101]", null, null, null, null, null, null, null, null, null),
       new Move("Manji Blood Dance", "2A+KA", "MM", 30, 9, "STN", "STN", 110, null, null, null, null, null, null, null, null, null, null),
       new Move("Manji Blood Dance", "2A+KAA", "MMM", 30, 7, "STN", "STN", 125, null, null, null, null, null, null, null, null, null, null),
@@ -5436,6 +5435,7 @@ export class MoveService{
       new Move("Flea", "B+K", null, null, null, null, null, null, null, true),  //no data available
       new Move("Rolling Spark", "[A", "L", 36, -16, 1, 1, 28, "TC[12-38] / TJ[1-12]", false, false, true),
       new Move("Skull Splitter", "[B", "M", 14, -12, "LNC", "LNC", 20, "Can be held / TC[8-17] / TJ[1-8]"),
+      new Move("Skull Splitter(hold)", "[b", "M", null, null, "LNC", "LNC", null),
       new Move("Flea Kicker ~ Indian Stance", "[K", "M", 24, -9, 3, 3, 25, "TJ[1-32]", true),
       new Move("Flea Gouge", "[A+B", "M", 18, 4, "STN", "STN", 10, "Absorbs soul gauge / TJ[1-17]", false, false, false, false, false, false, false, true),
       new Move("Flea Roll", "[B+K", null, null, null, null, null, null, null, false, false, true), //no data available
@@ -5454,7 +5454,7 @@ export class MoveService{
       new Move("Indian Stance Healing", "]", null, null, null, null, null, null, "Increases soul gauge", true),
       new Move("Warp Rolling Shark", "]A", "L", 16, -16, 2, 2, 28, "REV[1-2] / TC[1~]", false, false, true),
       new Move("Englightened Sun Flare", "]B", "M", 16, -14, "LNC", "LNC", 25, "Dodges high, mid & low", false, true),
-      new Move("Tobi Ushiwaka ~ Manji Dragonfly", "]K", "MM", 16, 1, 9, 27, 32, "TC[1-14] / TJ[14~]", true),
+      new Move("Tobi Ushiwaka ~ Manji Dragonfly", "]K", "MM", 16, 8, null, 27, 32, "TC[1-14] / TJ[14~]", true),
       new Move("No Fear", "]A+K", "M", 30, -81, "STN", "STN", 60, "Costs health/Returns to downed position / TC[1-111]", false, false, false, false, false, false, false, false, true),
       new Move("Intrepid", "]a+k", "MM", 30, -35, "STN", "STN", 100, "Costs health/Returns to downed position", false, false, false, false, false, false, false, false, true),
       new Move("Manji Blood Star", "]A+KA", "MM", 30, -35, "STN", "STN", 140, "Costs health/Returns to downed position / TC[1-15,48~] / TJ[15-48]", false, false, false, false, false, false, false, false, true),
@@ -5470,7 +5470,7 @@ export class MoveService{
       new Move("Akitsu Mandala", "{A", "MMM", 18, -12, "KND", "KND", 36, "TJ[1~]"),
       new Move("Dragonfly Blade", "{B", "M", 30, 2, "STN", "STN", 26, "TC[31-50] / TJ[1-29]"),
       new Move("Dragonfly Sweep", "{K", "L", 20, -16, 8, 8, 26, "TC[19-34] / TJ[1-17]"),
-      new Move("Spirited Away ~ Manji Dragonfly", "{A+B", "H", 16, -4, "STN", "STN", 12, "TJ[3~]", true),
+      new Move("Spirited Away ~ Manji Dragonfly", "{A+B", "H", 16, -14, "STN", "STN", 12, "TJ[3~]", true),
       new Move("Spirited Away", "{MA+B", "H", 16, null, null, null, null, "Shifts to attack throw upon hit/Press K(just) when landing for meter", false, false, false, false, false, false, true),
       new Move("Manji Dragonfly ~ Move", "{6|2|8|4", null, null, null, null, null, null, "Increased speed while soul charged", true),
       new Move("Manji Dragonfly ~ Flea", "{B+K", null, null, null, null, null, null, null, true), // no data

@@ -800,7 +800,7 @@ export class MoveService{
     ],
     // Gauge Attacks
     [
-      new Move("Casa de Leviathan", "A+B+K", "M", 16, -18, "KND", "KND", 80, "Gun technique", false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Casa de Leviathan", "A+B+K", "M", 16, -16, "KND", "KND", 80, "-12 to -16 on GRD, Gun technique", false, false, false, false, false, false, true, false, false, false, true),
       new Move("Soul Charge", "4A+B+G", "m", 6, 0, 10, 10, 0, null, false, false, false, false, false, false, false, true, false, false, true),
       new Move("Deep Sea Storm Flare", "SBBBB", "MMMM", 33, 9, "KND", "KND", 36, null, false, false, false, false, false, true, false, true),
       new Move("Head Snap Kick ~ Infernal Flare", "Sxk", "M", 26, -22, "KND", "KND", 30, null, true, false, false, false, false, true),
@@ -834,7 +834,7 @@ export class MoveService{
       new Move("Bridgette Cannonball", "AAA", "HHMH", 12, -12, "KND", "KND", 35, null, false, false, false, false, false, false, false, false, false, true),
       
       new Move("Pirate's Cross", "zB", "HM", 14, -18, -4, -4, 40),
-      new Move("Storm Signal", "z6", "HM", 18, -8, 6, 6, 30),
+      new Move("Storm Signal", "z6", "HM", 18, -8, 6, 6, 30, "-16 GRD if only 2nd is blocked"),
 
       new Move("Half-Mast Wave", "6A", "H", 16, -10, 0, 0, 16),
       new Move("Half-Mast Wave", "6AA", "HH", 16, -6, "KND", "KND", 26),
@@ -3207,7 +3207,7 @@ export class MoveService{
       new Move("Fang Barrage", "6B+K", "MMMMM", 18, -14, "KND", "KND", 52),
       new Move("Shadow Fang", "2B+K", "L", 24, -16, -2, "KND", 18),
       new Move("Retreating Sands", "4B+K", "MMM", 36, -6, "KND", "KND", 30, "GI vs. high & mid vertical(except kicks)", false, false, false, true),
-      new Move("Celestial Kick ~ Lingering Step", "WB+K", "MM", 20, -37, "LNC", "LNC", 28, null, true, true),
+      new Move("Celestial Kick ~ Lingering Step", "WB+K", "MM", 20, -22, "LNC", "LNC", 28, null, true, true),
 
       new Move("Leaping Horse Vault", "8B+K", "M", 22, -14, 2, 2, 16),
       new Move("Leaping Horse Vault", "8B+KB", "MM", 22, -14, 2, 2, 26),

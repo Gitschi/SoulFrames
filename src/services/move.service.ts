@@ -1316,7 +1316,7 @@ export class MoveService{
     // 8-Way Run Moves
     [
       new Move("Sir Lancelot's Fervor", "#|^|(A", "H", 18, -8, 0, 0, 16),
-      new Move("Sir Lancelot's Fervor", "#|^|(AA", "HM", 18, -14, "KND", "KND", 34),
+      new Move("Sir Lancelot's Fervor", "#|^|(AA", "HM", 18, -12, "KND", "KND", 34),
 
       new Move("Bertilak the Headless", "@|*A", "H", 22, -2, "KND", "KND", 28),
       new Move("Bertilak the Headless(hold)", "@|*a", "H", 22, -2, "STN", "STN", 40),

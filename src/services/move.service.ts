@@ -557,7 +557,7 @@ export class MoveService{
       new Move("On Silent Wings", "XA+G", "H", 18, null, "KND", "KND", 65, "Breakable", false, false, false, false, false, false, true),
       new Move("Death Crush", "VA+G", "H", 18, null, "KND", "KND", 75, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
 
-      new Move("Maelstrom Divide", "Q8A+G", "M", 28, null, "KND", "KND", 55, "Not breakable", false, false, false, false, false, false, true),
+      new Move("Maelstrom Divide", "Q8A+G", "M", 28, null, "KND", "KND", 55, "Not breakable/[TJ on frame 1]", false, false, false, false, false, false, true),
       new Move("Bludgeoning Crush", "Q2A+G", "M", 14, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, false, true),
       new Move("Apocalypse Pound", "SQ2A+G", "M", 14, null, "KND", "KND", 60, "Breakable", false, false, false, false, false, true, false, true),
       new Move("Drop of Lava", "Q1A+G", "M", 14, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, false, true),

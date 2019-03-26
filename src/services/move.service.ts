@@ -1160,8 +1160,8 @@ export class MoveService{
       new Move("Cleaving Pirouette ~ Glypth of Quen ~ Fleet Footwork", "#|^|(AB2|8B+K", "H", 18, null, null, null, 14, null, true),
       new Move("Toussant Two-Step", "#|^|(AK", "HL", 18, -10, 4, 4, 34, "2nd hit can be held"),
       
-      new Move("Sword Deflection", "@|*A", "M", 32, -14, 0, 0, 18, "GI vs. mid horizontal(except kicks)", false, true, false, true),
-      new Move("Deadly Retribution", "!|$|uA", "H", 26, -12, "KND", "KND", 60, "Shifts to attack throw upon close-range hit/Powers up when opponent is soul charged", false, false, false, false, false, false, true),
+      new Move("Sword Deflection", "@|*A", "M", 32, -12, 0, 0, 18, "GI vs. mid horizontal(except kicks)", false, true, false, true),
+      new Move("Deadly Retribution", "!|$|uA", "H", 26, -8, "KND", "KND", 60, "Shifts to attack throw upon close-range hit/Powers up when opponent is soul charged", false, false, false, false, false, false, true),
 
       new Move("Gyrating Slash", "^B", "M", 30, -16, -4, -4, 18, "Powers up when opponent is soul charged", false, true),
       new Move("Gyrating Slash", "^BA", "MH", 30, -6, 4, 4, 34, "Powers up when opponent is soul charged", false, true),
@@ -1170,7 +1170,7 @@ export class MoveService{
       new Move("Fiery Dancer", "#|(B", "MM", 18, -14, "STN", "STN", 36),
       new Move("Circle of Power", "@|*B", "M", 42, -2, "KND", "KND", 36),
 
-      new Move("Swift Silver", "!|$|uB", "M", 26, -18, -8, -8, 14, "Powers up when opponent is soul charged"),
+      new Move("Swift Silver", "!|$|uB", "M", 26, -12, -8, -8, 14, "Powers up when opponent is soul charged"),
       new Move("Swift Silver", "!|$|uBB", "MM", 26, -16, "KND", "KND", 32, "Powers up when opponent is soul charged"),
 
       new Move("Sir Ravix Roundhouse", "#|^|(K", "M", 18, -6, 4, 4, 16),

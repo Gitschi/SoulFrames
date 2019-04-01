@@ -8,6 +8,13 @@ export class StanceService{
     new Stance("Angler Stance", "assets/imgs/stances/TwoB_AnglerStance.png")
   ]
 
+  Amy = [
+    new Stance("Amaryllis Spin", "assets/imgs/stances/Azwel_BeautyOfBalance.png"),
+    new Stance("Lilith Parry", "assets/imgs/stances/Azwel_TragedyOfWar.png"),
+    new Stance("Merrow Parry", "assets/imgs/stances/Azwel_ComedyOfErrors.png"),
+    new Stance("Biondetta Parry", "assets/imgs/stances/Azwel_ComedyOfErrors.png")
+  ]
+
   Azwel = [
     new Stance("Beauty of Balance", "assets/imgs/stances/Azwel_BeautyOfBalance.png"),
     new Stance("Tragedy of War", "assets/imgs/stances/Azwel_TragedyOfWar.png"),

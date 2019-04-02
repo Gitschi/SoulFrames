@@ -324,14 +324,14 @@ export class MoveService{
     [
       new Move("Sanctuaire", "B+G", "M", null, null, null, null, null, null, false, false, false, false, true),
       new Move("Sanctuaire", "b+g", "M", null, null, null, null, null, null, false, false, false, false, true, false, false, true),
-      new Move("Reprisal's Thorn", "x+v6", "M", null, null, null, null, null, null, false, false, false, false, true),
-      new Move("Reprisal's Talon", "x+v6A", "H", null, null, null, null, null, null, false, false, false, false, true),
+      new Move("Reprisal's Thorn", "x+n6", "M", null, null, null, null, null, null, false, false, false, false, true),
+      new Move("Reprisal's Talon", "x+n6A", "H", null, null, null, null, null, null, false, false, false, false, true),
       new Move("Cimetiere", "rA", "HH", null, null, null, null, null, null, false, true),
       new Move("Cimetiere(White)", "rA", "HH", null, null, null, null, null, "White Rose at max", false, true),
       new Move("Feu Follet", "rB", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
       new Move("Feu Follet(White)", "rB", "M", null, null, null, null, null, "White Rose at max", false, true, false, false, false, false, false, true),
       new Move("Envers de la Lune", "rK", "M", null, null, null, null, null, null, false, true),
-      new Move("Envers de la Lune", "rK", "M", null, null, null, null, null, "White Rose at max", false, true)
+      new Move("Envers de la Lune(White)", "rK", "M", null, null, null, null, null, "White Rose at max", false, true)
     ],
     // Gauge Attacks
     [

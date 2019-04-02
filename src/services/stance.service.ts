@@ -9,10 +9,10 @@ export class StanceService{
   ]
 
   Amy = [
-    new Stance("Amaryllis Spin", "assets/imgs/stances/Azwel_BeautyOfBalance.png"),
-    new Stance("Lilith Parry", "assets/imgs/stances/Azwel_TragedyOfWar.png"),
-    new Stance("Merrow Parry", "assets/imgs/stances/Azwel_ComedyOfErrors.png"),
-    new Stance("Biondetta Parry", "assets/imgs/stances/Azwel_ComedyOfErrors.png")
+    new Stance("Amaryllis Spin", "assets/imgs/stances/Amy_AmaryllisSpin.png"),
+    new Stance("Lilith Parry", "assets/imgs/stances/Amy_LilithParry.png"),
+    new Stance("Merrow Parry", "assets/imgs/stances/Amy_MerrowParry.png"),
+    new Stance("Biondetta Parry", "assets/imgs/stances/Amy_BiondettaParry.png")
   ]
 
   Azwel = [

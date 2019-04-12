@@ -46,4 +46,4 @@ When adding or editing a move, make sure to check out the notations written down
 #### Contact
 * Soul Frames Discord: https://discord.gg/DaCRjrE
 * My Discord: Gitschi#8564
-* My Twitter: [@superturbokanji](https://twitter.com/SuperTurboKanji)
+* My Twitter: [@GitschiDev](https://twitter.com/gitschidev)

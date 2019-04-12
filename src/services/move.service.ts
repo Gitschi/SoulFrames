@@ -354,147 +354,188 @@ export class MoveService{
     ],
     // Horizontal Moves
     [
-      new Move("Laurier Cutter", "AAA", "HHM", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Laurier Rouge(Red)", "AAA", "HHMMM", null, null, null, null, null, "Red Rose at max", false, false, false, false, false, false, false, false, false, true),
-      new Move("Flash Needle", "AB", "HL", null, null, null, null, null),
-      new Move("Laurier Wolfsbane", "AK", "HH", null, null, null, null, null),
-      new Move("Hilt Strike", "z6", "H", null, null, null, null, null),
-      new Move("Young Wyvern", "6AA", "MMH", null, null, null, null, null),
-      new Move("Young Wyvern ~ Amaryllis Spin", "6AA6", "MMH", null, null, null, null, null, null, true),
-      new Move("Agile Wyvern", "6a", "MH", null, null, null, null, null),
-      new Move("Agile Wyvern ~ Amaryllis Spin", "6a6", "MH", null, null, null, null, null, null, true),
-      new Move("Insigne Ardent", "6AB", "MMm", null, null, null, null, null, "White Rose +1"),
-      new Move("Lien Ardent", "6Ab", "MMm", null, null, null, null, null, "White Rose +1"),
-      new Move("Air Blade", "3A", "M", null, null, null, null, null),
-      new Move("Twirling Talon", "2A", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Heel Cutter", "1A", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Heel Cutter ~ Merrow Parry", "1a", "L", null, null, null, null, null, "GI vs. low", true, false, false, true),
-      new Move("Graceful Cutter", "4A", "L", null, null, null, null, null),
-      new Move("Graceful Rouge(Red)", "4AA", "Lm", null, null, null, null, null, "Red Rose at max"),
-      new Move("Heavy Mandritti", "46A", "H", null, null, null, null, null, null, false, true),
-      new Move("Evidence Rouge(Red)", "214A", "L", null, null, null, null, null, "Red Rose at max", false, false, true, false, false, false, false, true),
-      new Move("Twirling Talon", "CA", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Frigid Stramazone", "C3AA", "MM", null, null, null, null, null, "Can be delayed", false, false, true),
-      new Move("Petite Wyvern", "WA", "H", null, null, null, null, null),
-      new Move("Turning Attack au Fer", "TA", "H", null, null, null, null, null),
-      new Move("Low Turn Attack au Fer", "T2A", "S", null, null, null, null, null, null, false, false, true),
-      new Move("Sky Botte", "JA", "H", null, null, null, null, null)
+      new Move("Laurier Cutter", "A", "H", 12, -6, 2, 2, 8, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Laurier Cutter", "AA", "HH", 12, -10, 0, 0, 16, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Laurier Cutter", "AAA", "HHM", 12, -12, 2, 2, 32, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Laurier Rouge(Red)", "AAA", "HHMMM", 12, -6, 6, 6, 40, "Red Rose at max", false, false, false, false, false, false, false, false, false, true),
+      new Move("Flash Needle", "AB", "HL", 12, -12, -2, -2, 18),
+      new Move("Laurier Wolfsbane", "AK", "HH", 12, -12, 6, 6, 22),
+
+      new Move("Hilt Strike", "z6", "H", 14, -2, 6, 10, 10),
+
+      new Move("Young Wyvern", "6A", "MM", 18, -12, 0, 0, 20),
+      new Move("Young Wyvern", "6AA", "MMH", 18, -4, 6, 6, 42),
+      new Move("Young Wyvern ~ Amaryllis Spin", "6AA6", "MMH", 18, null, null, null, 42, null, true), //frames missing
+      new Move("Agile Wyvern", "6a", "MH", 18, -4, 6, 6, 32),
+      new Move("Agile Wyvern ~ Amaryllis Spin", "6a6", "MH", 18, null, null, null, 32, null, true), //frames missing
+      new Move("Insigne Ardent", "6AB", "MMm", 18, -6, 4, 4, 24, "White Rose +1"),
+      new Move("Lien Ardent", "6Ab", "MMm", 18, 2, 12, 12, 24, "White Rose +1"),
+
+      new Move("Air Blade", "3A", "M", 14, -6, 6, 10, 16),
+      new Move("Twirling Talon", "2A", "S", 12, -6, 6, 6, 10, null, false, false, true),
+
+      new Move("Heel Cutter", "1A", "L", 18, -16, -2, -2, 12, null, false, false, true),
+      new Move("Heel Cutter ~ Merrow Parry", "1a", "L", 18, null, null, null, 12, "GI vs. low", true, false, false, true), //frames missing
+
+      new Move("Graceful Cutter", "4A", "L", 16, -20, 0, 0, 16),
+      new Move("Graceful Rouge(Red)", "4AA", "Lm", 16, -16, 0, 0, 28, "Red Rose at max"),
+      new Move("Heavy Mandritti", "46A", "H", 20, -12, 6, 6, 18, null, false, true),
+      new Move("Evidence Rouge(Red)", "214A", "L", 36, 0, 6, "KND", 26, "Red Rose at max", false, false, true, false, false, false, false, true),
+
+      new Move("Twirling Talon", "CA", "S", 12, -6, 6, 6, 10, null, false, false, true),
+      new Move("Frigid Stramazone", "C3A", "M", 18, -10, 4, 4, 12, "Can be delayed", false, false, true),
+      new Move("Frigid Stramazone", "C3AA", "MM", 18, -12, 6, 6, 24, "Can be delayed", false, false, true),
+      new Move("Petite Wyvern", "WA", "H", 16, -6, 6, 6, 22),
+      new Move("Turning Attack au Fer", "TA", "H", null, null, null, null, 12), //frames missing
+      new Move("Low Turn Attack au Fer", "T2A", "S", null, null, null, null, 10, null, false, false, true), //frames missing
+      new Move("Sky Botte", "JA", "H", 26, -7, 5, 5, 20)
     ],
     // Vertical Moves
     [
-      new Move("Silent Grace", "BA", "MH", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Silent Arrogance", "BBBB", "MMHM", null, null, null, null, null),
-      new Move("Silent Arrogance ~ Lilith Parry", "BBBB+K", "MMH", null, null, null, null, null, "GI vs. mid", true, false, false, true, false, false, false, false, false),
-      new Move("Silent Arrogance ~ Merrow Parry", "BBB2B+K", "MMH", null, null, null, null, null, "GI vs. low", true, false, false, true, false, false, false, false, false),
-      new Move("Silent Arrogance ~ Biondetta Parry", "BBB8B+K", "MMH", null, null, null, null, null, "GI vs. high", true, false, false, true, false, false, false, false, false),
-      new Move("Stained Spike", "x2", "L", null, null, null, null, null),
-      new Move("Triple Botta in Tempo", "6BBB", "HHM", null, null, null, null, null),
-      new Move("Triple Botta in Tempo(just)", "6BBBj", "HHM", null, null, null, null, null),
-      new Move("Triple Botta in Tempo ~ Amaryllis Spin", "6BB6", "HH", null, null, null, null, null, null, true),
-      new Move("Luna Strike", "3B", "M", null, null, null, null, null),
-      new Move("Decussate Strike", "3xA", "ML", null, null, null, null, null),
-      new Move("Fendante", "2B", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Silent Impale", "1B", "L", null, null, null, null, null, null, false, true, true),
-      new Move("Floral Signet", "4B", "Mm", null, null, null, null, null, "Red Rose +1"),
-      new Move("Venin Rouge(Red)", "4BoB", "MM", null, null, null, null, null, "Red Rose at max"),
-      new Move("Advance Splitter Crescendo", "666BA", "MH", null, null, null, null, null),
-      new Move("Rouge Splitter(Red)", "666BA", "MH", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Splitter Signet", "666BB", "MH", null, null, null, null, null, "Red Rose +1"),
-      new Move("Splitter Stratageme", "666Bb", "MS", null, null, null, null, null, "Red Rose +1"),
-      new Move("Advance Splitter Crescendo ~ Lilith Parry", "666BB+K", "M", null, null, null, null, null, "GI vs. mid", true, false, false, true),
-      new Move("Advance Splitter Crescendo ~ Merrow Parry", "666B2B+K", "M", null, null, null, null, null, "GI vs. low", true, false, false, true),
-      new Move("Advance Splitter Crescendo ~ Biondetta Parry", "666B8B+K", "M", null, null, null, null, null, "GI vs. high", true, false, false, true),
-      new Move("Falling Prayer", "46B", "M", null, null, null, null, null, null, false, true, true),
-      new Move("Evidence Blanche(White)", "214B", "Mm", null, null, null, null, null, "White Rose at max"),
-      new Move("Crouching Montante", "CB", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Advance Slicer", "C3B", "M", null, null, null, null, null),
-      new Move("Shadow Stinger", "C1B", "L", null, null, null, null, null),
-      new Move("Frigid Signet", "WBB", "HH", null, null, null, null, null, "Red Rose +1"),
-      new Move("Turning Montante", "TB", "M", null, null, null, null, null),
-      new Move("Low Turn Montante", "T2B", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Sky Agente", "JB", "M", null, null, null, null, null, null, false, false, true)
+      new Move("Silent Grace", "B", "M", 14, -8, 2, 2, 10, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Silent Grace", "BA", "MH", 14, -8, 6, 6, 28, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Silent Arrogance", "BB", "MM", 14, -8, 0, 0, 22),
+      new Move("Silent Arrogance", "BBB", "MMH", 14, -10, -2, 4, 34),
+      new Move("Silent Arrogance", "BBBB", "MMHM", 14, -8, 4, 4, 56),
+      new Move("Silent Arrogance ~ Lilith Parry", "BBBB+K", "MMH", 14, null, null, null, 34, "GI vs. mid", true, false, false, true, false, false, false, false, false), //frames missing
+      new Move("Silent Arrogance ~ Merrow Parry", "BBB2B+K", "MMH", 14, null, null, null, 34, "GI vs. low", true, false, false, true, false, false, false, false, false), //frames missing
+      new Move("Silent Arrogance ~ Biondetta Parry", "BBB8B+K", "MMH", 14, null, null, null, 34, "GI vs. high", true, false, false, true, false, false, false, false, false), //frames missing
+      
+      new Move("Stained Spike", "x2", "L", 18, -14, -2, -2, 12),
+      new Move("Triple Botta in Tempo", "6B", "H", 10, -8, -2, -2, 8),
+      new Move("Triple Botta in Tempo", "6BB", "HH", 10, -10, -4, -4, 14),
+      new Move("Triple Botta in Tempo", "6BBB", "HHM", 10, -14, 0, 0, 30),
+      new Move("Triple Botta in Tempo(just)", "6BBBj", "HHM", 10, -14, 0, 0, 35),
+      new Move("Triple Botta in Tempo ~ Amaryllis Spin", "6BB6", "HH", 10, null, null, null, 14, null, true), //frames missing
+
+      new Move("Luna Strike", "3B", "M", 20, -14, "LNC", "LNC", 22),
+      new Move("Decussate Strike", "3xA", "ML", 20, -14, "KND", "KND", 40),
+      new Move("Fendante", "2B", "M", 16, -8, 2, 2, 14, null, false, false, true),
+      new Move("Silent Impale", "1B", "L", 18, -18, "KND", "KND", 18, null, false, true, true),
+      new Move("Floral Signet", "4B", "Mm", 18, -8, 2, "KND", 30, "Red Rose +1"),
+      new Move("Venin Rouge(Red)", "4BoB", "MM", 18, -10, "KND", "KND", 52, "Red Rose at max"),
+
+      new Move("Advance Splitter Crescendo", "666B", "M", 16, -12, -2, "LNC", 18),
+      new Move("Advance Splitter Crescendo", "666BA", "MH", 16, -8, "KND", "KND", 35),
+      new Move("Rouge Splitter(Red)", "666BA", "MH", 16, 0, "STN", "STN", 43, null, false, false, false, false, false, false, false, true),
+      new Move("Splitter Signet", "666BB", "MH", 16, -14, -6, "KND", 21, "Red Rose +1"),
+      new Move("Splitter Stratageme", "666Bb", "MS", 16, -12, -2, "KND", 21, "Red Rose +1"),
+      new Move("Advance Splitter Crescendo ~ Lilith Parry", "666BB+K", "M", 16, null, null, null, 18, "GI vs. mid", true, false, false, true), //frames missing
+      new Move("Advance Splitter Crescendo ~ Merrow Parry", "666B2B+K", "M", 16, null, null, null, 18, "GI vs. low", true, false, false, true), //frames missing
+      new Move("Advance Splitter Crescendo ~ Biondetta Parry", "666B8B+K", "M", 16, null, null, null, 18, "GI vs. high", true, false, false, true), //frames missing
+      
+      new Move("Falling Prayer", "46B", "M", 18, -6, 10, "KND", 22, null, false, true, true),
+      new Move("Evidence Blanche(White)", "214B", "Mm", 14, -18, "KND", "KND", 25, "White Rose at max"),
+      new Move("Crouching Montante", "CB", "M", 16, -8, 2, 2, 14, null, false, false, true),
+      new Move("Advance Slicer", "C3B", "M", 18, -10, "KND", "KND", 22),
+      new Move("Shadow Stinger", "C1B", "L", 22, -16, -4, -4, 18),
+
+      new Move("Frigid Signet", "WB", "H", 14, -6, 8, 8, 18),
+      new Move("Frigid Signet", "WBB", "HH", 14, -12, 2, 2, 22, "Red Rose +1"),
+      new Move("Turning Montante", "TB", "M", null, null, null, null, 18), //frames missing
+      new Move("Low Turn Montante", "T2B", "M", null, null, null, null, 16, null, false, false, true), //frames missing
+      new Move("Sky Agente", "JB", "M", 28, -6, "KND", "KND", 22, null, false, false, true)
     ],
     // Kick Moves 
     [
-      new Move("Venom High Kick", "K", "H", null, null, null, null, null, null, false, false, false, false, false, false, false, false, false, true),
-      new Move("Nightshade Kick", "6K", "H", null, null, null, null, null),
-      new Move("Nightshade Kick ~ Amaryllis Spin", "6K6", "H", null, null, null, null, null, null, true),
-      new Move("Venom Side Kick", "3K", "M", null, null, null, null, null),
-      new Move("Sweep Kick", "2K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Snowdrop", "1K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Dual Stinger Kick", "4KK", "HM", null, null, null, null, null, "Can be delayed"),
-      new Move("Venom Swing Kick", "46K", "M", null, null, null, null, null),
-      new Move("Sweep Kick", "CK", "L", null, null, null, null, null, null, false, false, true),
-      new Move("High Back Kick", "C3K", "M", null, null, null, null, null),
-      new Move("Bella Donna", "WKA", "MH", null, null, null, null, null),
-      new Move("Turning Venom High Kick", "TK", "H", null, null, null, null, null),
-      new Move("Turning Sweep Kick", "T2K", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Dark Moon", "JK", "M", null, null, null, null, null)
+      new Move("Venom High Kick", "K", "H", 12, -8, 0, 0, 10, null, false, false, false, false, false, false, false, false, false, true),
+      new Move("Nightshade Kick", "6K", "H", 18, -12, 6, 6, 16),
+      new Move("Nightshade Kick ~ Amaryllis Spin", "6K6", "H", 18, null, null, null, 16, null, true), //frames missing
+      new Move("Venom Side Kick", "3K", "M", 14, -6, 4, 4, 12),
+      new Move("Sweep Kick", "2K", "L", 16, -14, -4, -4, 10, null, false, false, true),
+      new Move("Snowdrop", "1K", "L", 20, -12, 0, 0, 16, null, false, false, true),
+
+      new Move("Dual Stinger Kick", "4K", "H", 16, -12, 0, "KND", 10),
+      new Move("Dual Stinger Kick", "4KK", "HM", 16, -8, 6, "KND", 26, "Can be delayed"),
+
+      new Move("Venom Swing Kick", "46K", "M", 16, -6, 4, 4, 16),
+      new Move("Sweep Kick", "CK", "L", 16, -14, -4, -4, 10, null, false, false, true),
+      new Move("High Back Kick", "C3K", "M", 16, -12, 14, 14, 18),
+
+      new Move("Bella Donna", "WK", "M", 12, -16, -4, -4, 14),
+      new Move("Bella Donna", "WKA", "MH", 12, 4, "STN", "STN", 24),
+      new Move("Turning Venom High Kick", "TK", "H", null, null, null, null, 12), //frames missing
+      new Move("Turning Sweep Kick", "T2K", "L", null, null, null, null, 10, null, false, false, true), //frames missing
+      new Move("Dark Moon", "JK", "M", 24, -8, 4, 4, 16)
     ],
     // Simultaneous Press Moves
     [
-      new Move("Crimson Danseuse", "A+B", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
-      new Move("Reprisal's Thorn", "6A+B", "M", null, null, null, null, null),
-      new Move("Reprisal's Talon", "6z+xA", "H", null, null, null, null, null),
-      new Move("Silent Curtsey", "2A+B", "L", null, null, null, null, null, null, false, false, true),
-      new Move("Assalto Montante Crescendo", "4A+BA", "MML", null, null, null, null, null),
-      new Move("Assalto Montante Crescendo ~ Amaryllis Spin", "4A+B6", "MM", null, null, null, null, null, null, true),
-      new Move("Dark Abyss", "8A+B", "M", null, null, null, null, null),
-      new Move("Lilith Parry", "B+K|WB+K", null, null, null, null, null, null, "GI vs. mid", true, false, false, true),
-      new Move("Rouge Signet", "6B+K", "H", null, null, null, null, null, "Red Rose +1"),
-      new Move("Rouge Griffe", "6b+k", "S", null, null, null, null, null, "Red Rose +1"),
-      new Move("Merrow Parry", "2B+K|CB+K", null, null, null, null, null, null, "GI vs. low", true, false, false, true),
-      new Move("Insigne Blanc", "4B+K", "m", null, null, null, null, null, "White Rose +1"),
-      new Move("Lien Blanc", "4b+k", "m", null, null, null, null, null, "White Rose +1"),
-      new Move("Biondetta Parry", "8B+K", null, null, null, null, null, null, "GI vs. high", true, false, false, true),
-      new Move("Circular Blitz", "TB+K", "M", null, null, null, null, null),
-      new Move("Circular Blitz ~ Amaryllis Spin", "TB+K6", "M", null, null, null, null, null, null, true)
+      new Move("Crimson Danseuse", "A+B", "M", 36, 4, "KND", "KND", 36, null, false, true, false, false, false, false, false, true),
+      new Move("Reprisal's Thorn", "6A+B", "M", 38, 4, "KND", "KND", 38),
+      new Move("Reprisal's Talon", "6z+xA", "H", 38, -4, "STN", "STN", 24),
+      new Move("Silent Curtsey", "2A+B", "L", 28, -14, 2, "KND", 22, null, false, false, true),
+
+      new Move("Assalto Montante Crescendo", "4A+B", "MM", 18, -16, 2, 2, 22),
+      new Move("Assalto Montante Crescendo", "4A+BA", "MML", 18, -12, 6, 6, 44),
+      new Move("Assalto Montante Crescendo ~ Amaryllis Spin", "4A+B6", "MM", 18, null, null, null, 22, null, true), //frames missing
+      new Move("Dark Abyss", "8A+B", "M", 26, -14, "KND", "KND", 30),
+      new Move("Lilith Parry", "B+K|WB+K", null, null, null, null, null, null, "GI vs. mid", true, false, false, true), //unnecessary?
+      new Move("Rouge Signet", "6B+K", "H", 20, -14, -6, -6, 4, "Red Rose +1"),
+      new Move("Rouge Griffe", "6b+k", "S", 20, -12, -2, -2, 4, "Red Rose +1"),
+      new Move("Merrow Parry", "2B+K|CB+K", null, null, null, null, null, null, "GI vs. low", true, false, false, true), //unnecessary ?
+      new Move("Insigne Blanc", "4B+K", "m", 34, -4, 6, 6, 4, "White Rose +1"),
+      new Move("Lien Blanc", "4b+k", "m", 38, 2, 12, 12, 4, "White Rose +1"),
+      new Move("Biondetta Parry", "8B+K", null, null, null, null, null, null, "GI vs. high", true, false, false, true), //unnecessary ?
+      new Move("Circular Blitz", "TB+K", "M", 16, -6, "STN", "STN", 22),
+      new Move("Circular Blitz ~ Amaryllis Spin", "TB+K6", "M", 16, null, null, null, 22, null, true) //frames missing
     ],
     // 8-Way Run Moves
     [
-      new Move("Falcon's Stride", "#|^|(A", "MHM", null, null, null, null, null),
-      new Move("Falcon's Stride ~ Lilith Parry", "#|^|(AB+K", "MHM", null, null, null, null, null, "GI vs. mid", true, false, false, true),
-      new Move("Falcon's Stride ~ Merrow Parry", "#|^|(A2B+K", "MHM", null, null, null, null, null, "GI vs. low", true, false, false, true),
-      new Move("Falcon's Stride ~ Biondetta Parry", "#|^|(A8B+K", "MHM", null, null, null, null, null, "GI vs. high", true, false, false, true),
-      new Move("Descending Talon", "@|*A", "M", null, null, null, null, null),
-      new Move("Squalambrato Concierto Crescendo", "!|$|uABA", "MMH", null, null, null, null, null),
-      new Move("Squalambrato Rogue(Red)", "!|$|uABA", "MMH", null, null, null, null, null, "Red Rose at max", false, false, false, false, false, false, false, true),
-      new Move("Squalambrato Concierto Crescendo ~ Lilith Parry", "!|$|uABB+K", "MM", null, null, null, null, null, "GI vs. mid", true, false, false, true),
-      new Move("Squalambrato Concierto Crescendo ~ Merrow Parry", "!|$|uAB2B+K", "MM", null, null, null, null, null, "GI vs. low", true, false, false, true),
-      new Move("Squalambrato Concierto Crescendo ~ Biondetta Parry", "!|$|uAB8B+K", "MM", null, null, null, null, null, "GI vs. high", true, false, false, true),
-      new Move("Advance Splitter Crescendo", "#|^|(BA", "MH", null, null, null, null, null),
-      new Move("Advance Splitter Crescendo(Red)", "#|^|(BA", "MH", null, null, null, null, null, "Red Rose at max", false, false, false, false, false, false, false, true),
-      new Move("Splitter Signet", "#|^|(BB", "MH", null, null, null, null, null, "Red Rose +1"),
-      new Move("Splitter Stratageme", "#|^|(Bb", "MH", null, null, null, null, null, "Red Rose +1"),
-      new Move("Advance Splitter Crescendo ~ Lilith Parry", "#|^|(BB+K", "M", null, null, null, null, null, "GI vs. mid", true, false, false, true),
-      new Move("Advance Splitter Crescendo ~ Merrow Parry", "#|^|(BB+K", "M", null, null, null, null, null, "GI vs. low", true, false, false, true),
-      new Move("Advance Splitter Crescendo ~ Biondetta Parry", "#|^|(BB+K", "M", null, null, null, null, null, "GI vs. high", true, false, false, true),
-      new Move("Soaring Flutter", "@|*B", "M", null, null, null, null, null, null, false, true),
-      new Move("Dread Flower", "!|$|uB", "M", null, null, null, null, null),
-      new Move("Guirlande Blanche(White)", "!|$|uBBB", "MMMMMMMMMM", null, null, null, null, null),
-      new Move("Moonbow Foxglove", "#|^|(K", "M", null, null, null, null, null),
-      new Move("Halfmoon Wolfsbane", "@|*K", "M", null, null, null, null, null),
-      new Move("Unholy Kick", "!|$|uK", "M", null, null, null, null, null),
-      new Move("High Arc", "@|*|#|^|(A+B", "M", null, null, null, null, null),
-      new Move("Bloody Funeral", "!|$|uA+B", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, false, true),
+      new Move("Falcon's Stride", "#|^|(A", "MHM", 20, -12, 2, 2, 30),
+      new Move("Falcon's Stride ~ Lilith Parry", "#|^|(AB+K", "MHM", 20, null, null, null, 30, "GI vs. mid", true, false, false, true), //frames missing
+      new Move("Falcon's Stride ~ Merrow Parry", "#|^|(A2B+K", "MHM", 20, null, null, null, 30, "GI vs. low", true, false, false, true), //frames missing
+      new Move("Falcon's Stride ~ Biondetta Parry", "#|^|(A8B+K", "MHM", 20, null, null, null, 30, "GI vs. high", true, false, false, true), //frames missing
+
+      new Move("Descending Talon", "@|*A", "M", 44, 5, "STN", "STN", 30),
+
+      new Move("Squalambrato Concierto Crescendo", "!|$|uA", "M", 28, -12, -2, -2, 14),
+      new Move("Squalambrato Concierto Crescendo", "!|$|uAB", "MM", 28, -12, 2, 2, 31),
+      new Move("Squalambrato Concierto Crescendo", "!|$|uABA", "MMH", 28, -8, "KND", "KND", 50),
+      new Move("Squalambrato Rogue(Red)", "!|$|uABA", "MMH", 28, 0, "STN", "STN", 59, "Red Rose at max", false, false, false, false, false, false, false, true),
+      new Move("Squalambrato Concierto Crescendo ~ Lilith Parry", "!|$|uABB+K", "MM", 28, null, null, null, 31, "GI vs. mid", true, false, false, true), //frames missing
+      new Move("Squalambrato Concierto Crescendo ~ Merrow Parry", "!|$|uAB2B+K", "MM", 28, null, null, null, 31, "GI vs. low", true, false, false, true), //frames missing
+      new Move("Squalambrato Concierto Crescendo ~ Biondetta Parry", "!|$|uAB8B+K", "MM", 28, null, null, null, 31, "GI vs. high", true, false, false, true), //frames missing
+
+      new Move("Advance Splitter Crescendo", "#|^|(B", "M", 16, -12, -2, "LNC", 16),
+      new Move("Advance Splitter Crescendo", "#|^|(BA", "MH", 16, -8, "KND", "KND", 33),
+      new Move("Advance Splitter Crescendo(Red)", "#|^|(BA", "MH", 16, 0, "STN", "STN", 41, "Red Rose at max", false, false, false, false, false, false, false, true),
+      new Move("Splitter Signet", "#|^|(BB", "MH", 16, -14, -6, "KND", 19, "Red Rose +1"),
+      new Move("Splitter Stratageme", "#|^|(Bb", "MH", 16, -12, -2, "KND", 19, "Red Rose +1"),
+      new Move("Advance Splitter Crescendo ~ Lilith Parry", "#|^|(BB+K", "M", 16, null, null, null, 16, "GI vs. mid", true, false, false, true), //frames missing
+      new Move("Advance Splitter Crescendo ~ Merrow Parry", "#|^|(BB+K", "M", 16, null, null, null, 16, "GI vs. low", true, false, false, true), //frames missing
+      new Move("Advance Splitter Crescendo ~ Biondetta Parry", "#|^|(BB+K", "M", 16, null, null, null, 16, "GI vs. high", true, false, false, true), //frames missing
+      
+      new Move("Soaring Flutter", "@|*B", "M", 18, -8, "LNC", "LNC", 18, null, false, true),
+      new Move("Dread Flower", "!|$|uB", "M", 34, -8, "STN", "STN", 30),
+      new Move("Guirlande Blanche(White)", "!|$|uBB", "MMMMMMMMM", 34, -4, "KND", "KND", 56),
+      new Move("Guirlande Blanche(White)", "!|$|uBBB", "MMMMMMMMMM", 34, -12, "KND", "KND", 70),
+
+      new Move("Moonbow Foxglove", "#|^|(K", "M", 18, -6, 8, "KND", 22),
+      new Move("Halfmoon Wolfsbane", "@|*K", "M", 24, -2, 8, 8, 20),
+      new Move("Unholy Kick", "!|$|uK", "M", 27, -4, "LNC", "LNC", 26),
+
+      new Move("High Arc", "@|*|#|^|(A+B", "M", 26, -10, "LNC", "LNC", 24),
+      new Move("Bloody Funeral", "!|$|uA+B", "M", 54, null, null, null, 60, null, false, false, false, false, false, false, false, false, true),
       new Move("Bloody Funeral(Cancel) ~ Amaryllis Spin", "!|$|uz+xG", null, null, null, null, null, null, null, true),
-      new Move("Bleak Touch", "#|^|(B+K", "M", null, null, null, null, null, null, false, true),
-      new Move("Bleak Touch ~ Amaryllis Spin", "#|^|(B+Ko6", "M", null, null, null, null, null, null, true, true),
-      new Move("Torrid Thrust", "@|*B+K", "M", null, null, null, null, null),
-      new Move("Torrid Thrust ~ Amaryllis Spin", "@|*B+K6", "M", null, null, null, null, null, null, true),
+
+      new Move("Bleak Touch", "#|^|(B+K", "M", 22, -14, 6, 12, 20, null, false, true),
+      new Move("Bleak Touch ~ Amaryllis Spin", "#|^|(B+Ko6", "M", 22, null, null, "STN", 20, null, true, true), //frames missing
+      new Move("Torrid Thrust", "@|*B+K", "M", 35, -6, 10, "KND", 22),
+      new Move("Torrid Thrust ~ Amaryllis Spin", "@|*B+K6", "M", 35, null, "STN", "STN", 22, null, true), //frames missing
       new Move("Torrid Thrust(Cancel)", "@|*x+cG", null, null, null, null, null, null),
-      new Move("Crimson Slicer", "@|*x+cGA", "H", null, null, null, null, null),
-      new Move("Assault Blade", "@|*x+cGB", "H", null, null, null, null, null),
-      new Move("Velvet Cleaver", "RK", "L", null, null, null, null, null)
+
+      new Move("Crimson Slicer", "@|*x+cGA", "H", null, -4, 8, 8, 18), //frames missing
+      new Move("Assault Blade", "@|*x+cGB", "H", null, 0, "STN", "STN", 28), //frames missing
+      new Move("Velvet Cleaver", "RK", "L", null, -22, "KND", "KND", 26) //frames missing
     ],
     // Throws
     [
-      new Move("Ghost Hound", "A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Ephemeral Wing", "4A+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("A Lesson in Massacre", "ZA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, true, false, false, false, false, true),
-      new Move("Forget Me Not", "XA+G", "H", 18, null, "KND", "KND", null, "Breakable", false, false, false, false, false, false, true),
-      new Move("Pure Sacrifice", "VA+G", "H", 18, null, "KND", "KND", null, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
-      new Move("Hidden Garden", "214A+G", "H", 18, null, "KND", "KND", null, "Back Breakable", false, false, false, false, false, false, true),
+      new Move("Ghost Hound", "A+G", "H", 18, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, true),
+      new Move("Ephemeral Wing", "4A+G", "H", 18, null, "KND", "KND", 45, "Breakable", false, false, false, false, false, false, true),
+      new Move("A Lesson in Massacre", "ZA+G", "H", 18, null, "KND", "KND", 62, "Breakable", false, true, false, false, false, false, true),
+      new Move("Forget Me Not", "XA+G", "H", 18, null, "KND", "KND", 55, "Breakable", false, false, false, false, false, false, true),
+      new Move("Pure Sacrifice", "VA+G", "H", 18, null, "KND", "KND", 65, "Breakable only by Voldo & Astaroth", false, false, false, false, false, false, true),
+      new Move("Hidden Garden", "214A+G", "H", 18, null, "KND", "KND", 25, "Back Breakable", false, false, false, false, false, false, true),
       new Move("Amaryllis Fling", "[A+G|4A+G", "H", null, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
       new Move("Fleur des Enfers", "S[A+G|4A+G", "H", null, null, "KND", "KND", null, null, false, false, false, false, false, true, true)
     ],

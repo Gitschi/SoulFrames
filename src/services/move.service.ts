@@ -114,10 +114,10 @@ export class MoveService{
 
       new Move("First Strike ~ Aerial Leap", "3B", "M", 20, -5, "LNC", "LNC", null, null, true),
       new Move("Augmented First Strike ~ Aerial Leap", "3bo", "Mmmm", 32, 6, null, null, null, null, true),
-      new Move("Downward Severing Blade", "2B", "M", 16, -12, 2, 2, null, null, false, false, true),
+      new Move("Downward Severing Blade", "2B", "M", 16, -8, 2, 2, null, null, false, false, true),
       new Move("Revolving Slash", "2xA", "HMMM", 16, -6, 10, 10, null, null, false, false, true),
 
-      new Move("Ground Thrust", "1B", "L", 18, -12, -4, -4, null),
+      new Move("Ground Thrust", "1B", "L", 18, -14, -4, -4, null),
       new Move("Ground Thrust ~ Aggression Shift", "1Bo6", "L", 18, -6, 2, 2, null, null, true),
       new Move("Ground Thrust ~ Back Step ~ Aggression Shift", "1Bo4", "L", 18, null, null, null, null, null, true),
       new Move("Ground Thrust ~ Aerial Leap", "1Bo8", "L", 18, null, null, null, null, null, true),
@@ -146,14 +146,14 @@ export class MoveService{
       new Move("Multistrike Kick ~ Aggression Shift", "6Ko6", "MMM", 16, -6, 6, 6, null, null, true),
       new Move("Multistrike Kick ~ Back Step ~ Aggression Shift", "6Ko4", "MMM", 16, null, null, null, null, null, true),
       new Move("Multistrike Kick ~ Aerial Leap", "6Ko8", "MMM", 16, null, null, null, null, null, true),
-      new Move("Multistrike", "6KB", "MMMM", 16, -16, "KND", "KND", null),
+      new Move("Multistrike", "6KB", "MMMM", 16, -18, "KND", "KND", null),
       new Move("Multistrike Kick", "6KK", "MMMHH", 16, -6, 8, 8, null, "+1 analysis point"),
       new Move("Charging Kick", "6Kk", "MMMH", 16, 2, "KND", "KND", null, "+2 analysis points/GI vs. high & mid", false, false, false, true),
 
       new Move("Brake Kick", "3K", "MM", 14, -8, 2, 2, null, "+1 analysis point"),
       new Move("Brake Kick(Hold)", "3k", "MM", 14, -2, "STN", "STN", null, "+2 analysis points"),
 
-      new Move("Lower Unarmed Kick", "2K", "L", 16, -12, -4, -4, null, null, false, false, true),
+      new Move("Lower Unarmed Kick", "2K", "L", 16, -14, -4, -4, null, null, false, false, true),
       new Move("Examine", "1K", "L", 20, -14, -2, -2, null, "+1 analysis point"),
       new Move("Examine ~ Angler Stance", "1k", "L", 20, null, null, null, null, "+1 analysis point", true),
       new Move("Core Disruption", "4K", "MM", 16, -8, 2, 2, 22, "+2 analysis points", false, true),

@@ -322,35 +322,36 @@ export class MoveService{
   Amy = [
     // Reversal Edge Attacks
     [
-      new Move("Sanctuaire", "B+G", "M", null, null, null, null, null, null, false, false, false, false, true),
-      new Move("Sanctuaire", "b+g", "M", null, null, null, null, null, null, false, false, false, false, true, false, false, true),
-      new Move("Reprisal's Thorn", "x+n6", "M", null, null, null, null, null, null, false, false, false, false, true),
-      new Move("Reprisal's Talon", "x+n6A", "H", null, null, null, null, null, null, false, false, false, false, true),
-      new Move("Cimetiere", "rA", "HH", null, null, null, null, null, null, false, true),
-      new Move("Cimetiere(White)", "rA", "HH", null, null, null, null, null, "White Rose at max", false, true),
+      new Move("Sanctuaire", "B+G", "M", 16, -6, 6, 6, 30, "Shifts to clash upon hit", false, false, false, false, true),
+      new Move("Sanctuaire", "b+g", "M", null, null, null, null, 40, "Shifts to clash upon hit or guard", false, false, false, false, true, false, false, true),
+      new Move("Reprisal's Thorn", "x+n6", "M", null, 4, "STN", "STN", 38, null, false, false, false, false, true),
+      new Move("Reprisal's Talon", "x+n6A", "H", null, -4, "STN", "STN", 24, null, false, false, false, false, true),
+      new Move("Cimetiere", "rA", "HH", null, -4, "STN", "STN", null, null, false, true),
+      new Move("Cimetiere(White)", "rA", "HH", null, -4, "STN", "STN", null, "White Rose at max", false, true),
       new Move("Feu Follet", "rB", "M", null, null, null, null, null, null, false, true, false, false, false, false, false, true),
       new Move("Feu Follet(White)", "rB", "M", null, null, null, null, null, "White Rose at max", false, true, false, false, false, false, false, true),
-      new Move("Envers de la Lune", "rK", "M", null, null, null, null, null, null, false, true),
-      new Move("Envers de la Lune(White)", "rK", "M", null, null, null, null, null, "White Rose at max", false, true)
+      new Move("Envers de la Lune", "rK", "M", null, 0, "LNC", "LNC", null, null, false, true),
+      new Move("Envers de la Lune(White)", "rK", "M", null, 0, "LNC", "LNC", null, "White Rose at max", false, true)
     ],
     // Gauge Attacks
     [
-      new Move("Alea Rogue", "A+B+K", "M", null, null, null, null, null, null, false, false, false, false, false, false, true, false, false, false, true),
-      new Move("Alea Blanc", "6A+B+K", "M", null, null, null, null, null, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Alea Rogue", "A+B+K", "M", 16, -20, "LNC", "LNC", 66, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Alea Blanc", "6A+B+K", "M", 16, -20, "LNC", "LNC", 66, null, false, false, false, false, false, false, true, false, false, false, true),
       new Move("Rose Mystique(Red/White)", "A+B+K|6A+B+K", "M", null, null, null, null, null, "White & Red Rose at max", false, false, false, false, false, false, true, false, false, false, true),
       new Move("Soul Charge", "4A+B+G", "m", null, null, null, null, null, null, false, false, false, false, false, false, false, true, false, false, true),
-      new Move("Rose de Rage(Red)", "SAAA", "HHMMMMM", null, null, null, null, null, "Red Rose at max", false, false, false, false, false, true, false, true),
-      new Move("Rose Diabolique(Red)", "S4AAA", "LmHH", null, null, null, null, null, "Red Rose at max", false, false, false, false, false, true),
-      new Move("En Chasse", "S6BBBB", "HHMm", null, null, null, null, null, null, false, false, false, false, false, true),
-      new Move("Rose de Lumiere(White)", "S214BB", "MmM", null, null, null, null, null, "White Rose at max", false, false, false, false, false, true),
-      new Move("Rose Vive(White)", "SC3BB", "MM", null, null, null, null, null, "White Rose at max", false, false, false, false, true, true),
-      new Move("Vol de Nuit", "S[A", "MH", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
-      new Move("Spirale D'Execution", "S[KAB", "MHH", null, null, null, null, null, null, false, false, false, false, false, true),
+      new Move("Rose de Rage(Red)", "SAAA", "HHMMMMM", 12, 0, "LNC", "LNC", 39, "Red Rose at max", false, false, false, false, false, true, false, true),
+      new Move("Rose Diabolique(Red)", "S4AAA", "LmHH", 16, -12, "KND", "KND", 45, "Red Rose at max", false, false, false, false, false, true),
+      new Move("En Chasse", "S6BBBB", "HHMm", 10, -8, "STN", "STN", 46, null, false, false, false, false, false, true),
+      new Move("Rose de Lumiere(White)", "S214BB", "MmM", 14, -15, "LNC", "LNC", 67, "White Rose at max", false, false, false, false, false, true),
+      new Move("Rose Vive(White)", "SC3BB", "MM", 18, -6, null, null, null, "White Rose at max/Shifts to clash upon hit", false, false, false, false, true, true),
+
+      new Move("Vol de Nuit", "S[A", "MH", 16, 0, "STN", "STN", null, null, false, false, false, false, false, true, false, true),
+      new Move("Spirale D'Execution", "S[KAB", "MHH", 17, -23, "STN", "STN", 48, "Red Rose +1", false, false, false, false, false, true),
       new Move("Rose de la Gloire(Red)", "S[A+B", "MH", null, null, null, null, null, "Red Rose at max", false, false, false, false, false, true, true, true),
-      new Move("Fleur des Enfers", "S[A+G|4A+G", "H", null, null, null, null, null, null, false, false, false, false, false, true, true),
-      new Move("Bal du Soir", "S]A+B", "M", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
-      new Move("Bal du Soir", "S{A+B", "M", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
-      new Move("Bal du Soir", "S}A+B", "M", null, null, null, null, null, null, false, false, false, false, false, true, false, true),
+      new Move("Fleur des Enfers", "S[A+G|4A+G", "H", null, null, "KND", "KND", 60, null, false, false, false, false, false, true, true),
+      new Move("Bal du Soir", "S]A+B", "M", 20, 4, "STN", "STN", 41, null, false, false, false, false, false, true, false, true),
+      new Move("Bal du Soir", "S{A+B", "M", 20, 4, "STN", "STN", 41, null, false, false, false, false, false, true, false, true),
+      new Move("Bal du Soir", "S}A+B", "M", 20, 4, "STN", "STN", 41, null, false, false, false, false, false, true, false, true),
     ],
     // Horizontal Moves
     [
@@ -386,8 +387,8 @@ export class MoveService{
       new Move("Frigid Stramazone", "C3A", "M", 18, -10, 4, 4, 12, "Can be delayed", false, false, true),
       new Move("Frigid Stramazone", "C3AA", "MM", 18, -12, 6, 6, 24, "Can be delayed", false, false, true),
       new Move("Petite Wyvern", "WA", "H", 16, -6, 6, 6, 22),
-      new Move("Turning Attack au Fer", "TA", "H", null, null, null, null, 12), //frames missing
-      new Move("Low Turn Attack au Fer", "T2A", "S", null, null, null, null, 10, null, false, false, true), //frames missing
+      new Move("Turning Attack au Fer", "TA", "H", 18, -15, -5, -5, 12),
+      new Move("Low Turn Attack au Fer", "T2A", "S", 14, -17, -5, -5, 10, null, false, false, true),
       new Move("Sky Botte", "JA", "H", 26, -7, 5, 5, 20)
     ],
     // Vertical Moves
@@ -432,8 +433,8 @@ export class MoveService{
 
       new Move("Frigid Signet", "WB", "H", 14, -6, 8, 8, 18),
       new Move("Frigid Signet", "WBB", "HH", 14, -12, 2, 2, 22, "Red Rose +1"),
-      new Move("Turning Montante", "TB", "M", null, null, null, null, 18), //frames missing
-      new Move("Low Turn Montante", "T2B", "M", null, null, null, null, 16, null, false, false, true), //frames missing
+      new Move("Turning Montante", "TB", "M", 16, -16, -6, -6, 18),
+      new Move("Low Turn Montante", "T2B", "M", 18, -17, -7, -7, 16, null, false, false, true),
       new Move("Sky Agente", "JB", "M", 28, -6, "KND", "KND", 22, null, false, false, true)
     ],
     // Kick Moves 
@@ -454,8 +455,8 @@ export class MoveService{
 
       new Move("Bella Donna", "WK", "M", 12, -16, -4, -4, 14),
       new Move("Bella Donna", "WKA", "MH", 12, 4, "STN", "STN", 24),
-      new Move("Turning Venom High Kick", "TK", "H", null, null, null, null, 12), //frames missing
-      new Move("Turning Sweep Kick", "T2K", "L", null, null, null, null, 10, null, false, false, true), //frames missing
+      new Move("Turning Venom High Kick", "TK", "H", 14, -11, -1, -1, 12),
+      new Move("Turning Sweep Kick", "T2K", "L", 16, -18, -6, -6, 10, null, false, false, true),
       new Move("Dark Moon", "JK", "M", 24, -8, 4, 4, 16)
     ],
     // Simultaneous Press Moves
@@ -469,13 +470,10 @@ export class MoveService{
       new Move("Assalto Montante Crescendo", "4A+BA", "MML", 18, -12, 6, 6, 44),
       new Move("Assalto Montante Crescendo ~ Amaryllis Spin", "4A+B6", "MM", 18, null, null, null, 22, null, true), //frames missing
       new Move("Dark Abyss", "8A+B", "M", 26, -14, "KND", "KND", 30),
-      new Move("Lilith Parry", "B+K|WB+K", null, null, null, null, null, null, "GI vs. mid", true, false, false, true), //unnecessary?
       new Move("Rouge Signet", "6B+K", "H", 20, -14, -6, -6, 4, "Red Rose +1"),
       new Move("Rouge Griffe", "6b+k", "S", 20, -12, -2, -2, 4, "Red Rose +1"),
-      new Move("Merrow Parry", "2B+K|CB+K", null, null, null, null, null, null, "GI vs. low", true, false, false, true), //unnecessary ?
       new Move("Insigne Blanc", "4B+K", "m", 34, -4, 6, 6, 4, "White Rose +1"),
       new Move("Lien Blanc", "4b+k", "m", 38, 2, 12, 12, 4, "White Rose +1"),
-      new Move("Biondetta Parry", "8B+K", null, null, null, null, null, null, "GI vs. high", true, false, false, true), //unnecessary ?
       new Move("Circular Blitz", "TB+K", "M", 16, -6, "STN", "STN", 22),
       new Move("Circular Blitz ~ Amaryllis Spin", "TB+K6", "M", 16, null, null, null, 22, null, true) //frames missing
     ],
@@ -544,18 +542,25 @@ export class MoveService{
     [
       new Move("Amaryllis Spin", "236", null, null, null, null, null, null, null, true),
       new Move("Amaryllis Spin(Red)", "236", null, null, null, null, null, null, "Red Rose at max/Move further than normal", true),
-      new Move("Amaryllis Flame", "[A", "MH", null, null, null, null, null),
-      new Move("Stocatta Slicer", "[BB", "MMMMM", null, null, null, null, null),
-      new Move("Songe Rouge(Red)", "[BBB", "MMMMMM", null, null, null, null, null, "Red Rose at max"),
-      new Move("Stocatta Sicer ~ Lilith Parry", "[b", "MMMM", null, null, null, null, null, "GI vs. mid", true, false, false, true),
-      new Move("Amaryllis Spiral", "[KA", "MH", null, null, null, null, null),
-      new Move("Amaryllis Spiral(just)", "[KAj", "MH", null, null, null, null, null),
-      new Move("Insigne de l'Aile", "[KB", "Mm", null, null, null, null, null, "White Rose +1"),
-      new Move("Ange Blanc(Red)", "[KBB", "MmM", null, null, null, null, null, "Red rose at max"),
-      new Move("Frigid Moon", "[KK", "MM", null, null, null, null, null),
-      new Move("Fang Signet", "[A+B", "MH", null, null, null, null, null, "Red Rose +1", false, false, true),
-      new Move("Rouge Vexation(Red)", "[A+B", "MH", null, null, null, null, null, "Shifts to attack throw upon hit", false, false, false, false, false, false, true, true),
+      new Move("Amaryllis Flame", "[A", "MH", 16, -14, "STN", "STN", 27),
+
+      new Move("Stocatta Slicer", "[B", "MMMM", 14, -12, -2, "STN", 22),
+      new Move("Stocatta Slicer", "[BB", "MMMMM", 14, -14, "STN", "STN", 42),
+      new Move("Songe Rouge(Red)", "[BBB", "MMMMMM", 14, -12, "STN", "STN", 60, "Red Rose at max"),
+
+      new Move("Stocatta Sicer ~ Lilith Parry", "[b", "MMMM", 14, null, null, null, 22, "GI vs. mid", true, false, false, true), // frames missing
+
+      new Move("Amaryllis Spiral", "[K", "M", 17, -17, -9, -9, 10),
+      new Move("Amaryllis Spiral", "[KA", "MH", 17, -10, "KND", "KND", 33),
+      new Move("Amaryllis Spiral(just)", "[KAj", "MH", 17, -10, "KND", "KND", 38),
+      new Move("Insigne de l'Aile", "[KB", "Mm", 17, -18, -8, -8, 13, "White Rose +1"),
+      new Move("Ange Blanc(Red)", "[KBB", "MmM", 17, -4, "LNC", "LNC", 45, "Red rose at max"),
+      new Move("Frigid Moon", "[KK", "MM", 17, -12, "KND", "KND", 26),
+
+      new Move("Fang Signet", "[A+B", "MH", 22, -6, "LNC", "LNC", 28, "Red Rose +1", false, false, true),
+      new Move("Rouge Vexation(Red)", "[A+B", "MH", 22, 0, "LNC", "LNC", 72, "Shifts to attack throw upon hit", false, false, false, false, false, false, true, true),
       new Move("Amaryllis Fling", "[A+G|4A+G", "H", null, null, "KND", "KND", null, null, false, false, false, false, false, false, true),
+      
       new Move("Lilith Parry", "[B+K", null, null, null, null, null, null, "GI vs. mid", true, false, false, true),
       new Move("Merrow Parry", "[2B+K", null, null, null, null, null, null, "GI vs. low", true, false, false, true),
       new Move("Biondetta Parry", "[8B+K", null, null, null, null, null, null, "GI vs. high", true, false, false, true)
@@ -564,15 +569,19 @@ export class MoveService{
     [
       new Move("Lilith Parry", "B+K", null, null, null, null, null, null, "GI vs. mid", true, false, false, true),
       new Move("Lilith Parry(White)", "B+K", null, null, null, null, null, null, "White Rose at max/GI vs. mid/Higher GI than normal", true, false, false, true),
-      new Move("Arctic Dispersion", "]AA", "MM", null, null, null, null, null),
-      new Move("Artctic Dispersion ~ Biondetta Parry", "]Aa", "MM", null, null, null, null, null, null, true, false, false, true),
-      new Move("Arctic Fang", "]AB", "MM", null, null, null, null, null, "Shifts to follow-up attack upon hit which increases soul gauge", false, false, false, false, false, false, false, false, true),
-      new Move("Arctic Dance", "]AK", "MMM", null, null, null, null, null),
-      new Move("Frigid Thrust", "]BB", "HM", null, null, null, null, null),
-      new Move("Etoile Blanche(White)", "]BBB", "HMM", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
-      new Move("Frigid Thrust ~ Lilith Parry", "]b", "H", null, null, null, null, null, "GI vs. mid", true, false, false, true),
-      new Move("Frozen Violet", "]BK", "HH", null, null, null, null, null, "Returns to facing away"),
-      new Move("Night Toe Kick", "]K", "M", null, null, null, null, null, null, false, true),
+
+      new Move("Arctic Dispersion", "]A", "M", 16, -12, -2, 6, 14),
+      new Move("Arctic Dispersion", "]AA", "MM", 16, -14, 2, "STN", 30),
+      new Move("Artctic Dispersion ~ Biondetta Parry", "]Aa", "MM", 16, null, null, null, 30, null, true, false, false, true), // Frames missing
+      new Move("Arctic Fang", "]AB", "MM", 16, null, "STN", "STN", 40, "Shifts to follow-up attack upon hit which increases soul gauge", false, false, false, false, false, false, false, false, true),
+      new Move("Arctic Dance", "]AK", "MMM", 16, -2, "STN", "STN", 38),
+      
+      new Move("Frigid Thrust", "]B", "H", 12, -8, 0, 0, 16),
+      new Move("Frigid Thrust", "]BB", "HM", 12, -12, 6, 6, 34),
+      new Move("Etoile Blanche(White)", "]BBB", "HMM", 12, 2, "KND", "KND", 58, null, false, false, false, false, false, false, false, true),
+      new Move("Frigid Thrust ~ Lilith Parry", "]b", "H", 12, -8, 0, 0, 16, "GI vs. mid", true, false, false, true),
+      new Move("Frozen Violet", "]BK", "HH", 12, -4, 10, 10, 38, "Returns to facing away"),
+      new Move("Night Toe Kick", "]K", "M", 18, -12, "LNC", "LNC", 18, null, false, true),
       new Move("Merrow Parry", "]2B+K", null, null, null, null, null, null, "GI vs. low", true, false, false, true),
       new Move("Biondetta Parry", "]8B+K", null, null, null, null, null, null, "GI vs. high", true, false, false, true),
       new Move("Amaryllis Spin", "]236", null, null, null, null, null, null, null, true)
@@ -581,10 +590,11 @@ export class MoveService{
     [
       new Move("Merrow Parry", "2B+K", null, null, null, null, null, null, "GI vs. low", true, false, false, true),
       new Move("Merrow Parry(White)", "2B+K", null, null, null, null, null, null, "White Rose at max/GI vs. low/Higher GI than normal", true, false, false, true),
-      new Move("Vengeful Talon", "{A", "M", null, null, null, null, null, null, false, true),
-      new Move("Renard et Belette", "{B", "M", null, null, null, null, null, null, false, false, true),
-      new Move("Renard Blanc(White)", "{B", "M", null, null, null, null, null, null, false, false, true, false, false, false, false, true),
-      new Move("Shark Tooth", "{K", "L", null, null, null, null, null, null, false, true, true),
+      new Move("Vengeful Talon", "{A", "M", 20, -8, 8, 8, 26, null, false, true),
+      new Move("Renard et Belette", "{B", "M", 33, -6, "STN", "STN", 22, null, false, false, true),
+      new Move("Renard Blanc(White)", "{B", "M", 33, 4, "STN", "STN", 32, null, false, false, true, false, false, false, false, true),
+      new Move("Shark Tooth", "{K", "L", 18, -18, "LNC", "LNC", 26, null, false, true, true),
+
       new Move("Lilith Parry", "{B+K", null, null, null, null, null, null, "GI vs. mid", true, false, false, true),
       new Move("Biondetta Parry", "{8B+K", null, null, null, null, null, null, "GI vs. high", true, false, false, true),
       new Move("Amaryllis Spin", "{236", null, null, null, null, null, null, null, true)
@@ -593,11 +603,13 @@ export class MoveService{
     [
       new Move("Biondetta Parry", "8B+K", null, null, null, null, null, null, "GI vs. high", true, false, false, true),
       new Move("Biondetta Parry(White)", "8B+K", null, null, null, null, null, null, "White Rose at max/GI vs. high/Higher GI than normal", true, false, false, true),
-      new Move("Night Hawk", "}A", "M", null, null, null, null, null),
-      new Move("Nuit Blanche(White)", "}A", "M", null, null, null, null, null, null, false, false, false, false, false, false, false, true),
+
+      new Move("Night Hawk", "}A", "M", 32, -6, "STN", "STN", 26),
+      new Move("Nuit Blanche(White)", "}A", "M", 32, 4, "STN", "STN", 36, null, false, false, false, false, false, false, false, true),
       new Move("Nigh Hawk(Cancel) ~ Merrow Parry", "}zG", null, null, null, null, null, null, "GI vs. low", true, false, false, true),
-      new Move("Hidden Thorn", "}B", "M", null, null, null, null, null, null, false, true),
-      new Move("Silent Sweep", "}K", "L", null, null, null, null, null),
+      new Move("Hidden Thorn", "}B", "M", 20, -2, "STN", "STN", 16, null, false, true),
+      new Move("Silent Sweep", "}K", "L", 30, -2, "STN", "STN", 36),
+
       new Move("Lilith Parry", "}B+K", null, null, null, null, null, null, "GI vs. mid", true, false, false, true),
       new Move("Merrow Parry", "}2B+K", null, null, null, null, null, null, "GI vs. low", true, false, false, true),
       new Move("Amaryllis Spin", "}236", null, null, null, null, null, null, null, true)
@@ -5818,7 +5830,7 @@ export class MoveService{
       new Move("Ceremonial Sacrifice", "S1AB", "LHM", 18, -2, 4, 4, null, null, false, false, false, false, false, true),
       new Move("Void Nova", "SA+B", "mmmmmm", 36, 6, "STN", "STN", null, null, false, true, false, false, false, true, false, true),
       new Move("Temple of Eternity", "S2A+B", "M", 30, 2, "KND", "KND", null, "Curses opponent upon hit/Shifts to attack throw upon hit", false, false, false, false, false, true, true, true),
-      new Move("Cosmic Embryo", "SB+KB", "M", null, 4, 4, 4, 22, "Curses opponent upon hit or guard/does chip damage", false, false, false, false, false, true, false, true), // startup missing
+      new Move("Cosmic Embryo", "SB+KB", "M", 36, 4, 4, 4, 22, "Curses opponent upon hit or guard/does chip damage", false, false, false, false, false, true, false, true), // startup missing
       new Move("Ishtar's Return", "@|*BBvB", "MMH", 22, -12, "LNC", "LNC", null, null, false, false, false, false, false, true),
       new Move("Fatal Gravity", "SA+G", "H", 18, null, null, null, null, "Breakable", false, false, false, false, false, true, true)
     ],

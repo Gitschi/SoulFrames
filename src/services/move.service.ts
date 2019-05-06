@@ -3108,9 +3108,9 @@ export class MoveService{
     ],
     // Gauge Attacks
     [
-      new Move("Royal Poison", "A+B+G", "M", 18, -8, "KND", "KND", 70, null, false, false, false, false, false, false, true, false, false, false, true),
-      new Move("Royal Poison: Fatal Dose", "[A+B+G", "M", 14, 2, "KND", "KND", 65, null, false, false, false, false, false, false, true, true, false, false, true),
-      new Move("Soul Charge", "4A+B+G", "m", 6, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
+      new Move("Royal Poison", "A+B+K", "M", 18, -8, "KND", "KND", 70, null, false, false, false, false, false, false, true, false, false, false, true),
+      new Move("Royal Poison: Fatal Dose", "[A+B+K", "M", 14, 2, "KND", "KND", 65, null, false, false, false, false, false, false, true, true, false, false, true),
+      new Move("Soul Charge", "4A+B+K", "m", 6, 0, 8, 8, 0, null, false, false, false, false, false, false, false, true, false, false, true),
       
       new Move("Viper Hiss", "S6AB", "HM", 18, 2, "KND", "KND", 35, null, false, false, false, false, false, true, false, true),
       new Move("Viper Hiss ~ Preparation", "S6Ab", "HM", 16, 8, "KND", "KND", 35, "Dodges high attacks", true, false, false, false, false, true, false, true),
